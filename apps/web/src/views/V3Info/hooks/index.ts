@@ -1,5 +1,4 @@
 import { ChainId } from '@pancakeswap/chains'
-import { GraphQLClient } from 'graphql-request'
 import { useMemo } from 'react'
 import { multiChainId } from 'state/info/constant'
 import { useChainNameByQuery } from 'state/info/hooks'
@@ -11,9 +10,7 @@ import { components } from 'state/info/api/schema'
 import { fetchPoolsForToken } from 'state/info/queries/tokens/fetchPoolsForToken'
 import { fetchTokenChartData } from 'state/info/queries/tokens/fetchTokenChartData'
 import { fetchedTokenData } from 'state/info/queries/tokens/fetchTokenData'
-import { fetchedTokenDatas } from 'state/info/queries/tokens/fetchTokenDatas'
 import {
-  Block,
   ChartDayData,
   PoolChartEntry,
   PoolDataForView,

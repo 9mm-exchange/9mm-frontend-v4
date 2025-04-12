@@ -22,7 +22,10 @@ export function getStableSwapSubgraphs({ theGraphApiKey }: Pick<SubgraphParams, 
   } as const
 }
 
-export function getV3Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParams) {
+export function getV3Subgraphs({
+  noderealApiKey,
+  theGraphApiKey = '2e49631ace452362bcf744c2c94ca145',
+}: SubgraphParams) {
   return {
     [ChainId.ETHEREUM]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/CJYGNhb7RvnhfBDjqpRnD3oxgyhibzc7fkAMa38YV3oS`,
     [ChainId.GOERLI]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-goerli',
@@ -37,7 +40,7 @@ export function getV3Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParam
     [ChainId.LINEA]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/6gCTVX98K3A9Hf9zjvgEKwjz7rtD4C1V173RYEdbeMFX`,
     [ChainId.LINEA_TESTNET]:
       'https://thegraph.goerli.zkevm.consensys.net/subgraphs/name/pancakeswap/exchange-v3-linea-goerli',
-    [ChainId.BASE]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/5YYKGBcRkJs6tmDfB3RpHdbK2R5KBACHQebXVgbUcYQp`,
+    [ChainId.BASE]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/BnAEbKRkCW2oKKggWn8AKP7NVQhwJTaxMMfio5ngCZRV`,
     [ChainId.BASE_TESTNET]: 'https://api.studio.thegraph.com/query/45376/exchange-v3-base-testnet/version/latest',
     [ChainId.OPBNB]: `https://open-platform-ap.nodereal.io/${noderealApiKey}/opbnb-mainnet-graph-query/subgraphs/name/pancakeswap/exchange-v3`,
     [ChainId.OPBNB_TESTNET]: null,
@@ -49,7 +52,10 @@ export function getV3Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParam
   } as const satisfies Record<ChainId, string | null>
 }
 
-export function getV2Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParams) {
+export function getV2Subgraphs({
+  noderealApiKey,
+  theGraphApiKey = '2e49631ace452362bcf744c2c94ca145',
+}: SubgraphParams) {
   return {
     [ChainId.BSC]: 'https://proxy-worker-api.pancakeswap.com/bsc-exchange',
     [ChainId.ETHEREUM]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/9opY17WnEPD4REcC43yHycQthSeUMQE26wyoeMjZTLEx`,
@@ -59,7 +65,7 @@ export function getV2Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParam
     [ChainId.LINEA_TESTNET]: 'https://thegraph.goerli.zkevm.consensys.net/subgraphs/name/pancakeswap/exhange-eth/',
     [ChainId.ARBITRUM_ONE]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/EsL7geTRcA3LaLLM9EcMFzYbUgnvf8RixoEEGErrodB3`,
     [ChainId.LINEA]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/Eti2Z5zVEdARnuUzjCbv4qcimTLysAizsqH3s6cBfPjB`,
-    [ChainId.BASE]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/2NjL7L4CmQaGJSacM43ofmH6ARf6gJoBeBaJtz9eWAQ9`,
+    [ChainId.BASE]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/AGSFbAGFt8y1ztxRAV6t6rVtdiP5MBLBiHUUFfYuVnEf`,
     [ChainId.OPBNB]: `https://open-platform-ap.nodereal.io/${noderealApiKey}/opbnb-mainnet-graph-query/subgraphs/name/pancakeswap/exchange-v2`,
   }
 }

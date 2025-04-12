@@ -8,7 +8,7 @@ import { queryTokenList } from './queryTokenList'
 
 const tokens: HomePageToken[] = [
   {
-    id: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+    id: '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c',
     symbol: 'BTC',
     chainId: 56,
     price: 0,
@@ -16,7 +16,7 @@ const tokens: HomePageToken[] = [
     percent: 0,
   },
   {
-    id: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+    id: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
     symbol: 'ETH',
     chainId: 56,
     price: 0,
@@ -32,7 +32,7 @@ const tokens: HomePageToken[] = [
     percent: 0,
   },
   {
-    id: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    id: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
     chainId: 56,
     symbol: 'CAKE',
     price: 0,
