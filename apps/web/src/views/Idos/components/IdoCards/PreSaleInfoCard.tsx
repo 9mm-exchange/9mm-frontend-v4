@@ -43,8 +43,11 @@ export const PreSaleInfoCard: React.FC = () => {
   )
 }
 
-export const PreSaleEligibleCard: React.FC = () => {
+export const PreSaleEligibleCard: React.FC<{ projectId: string | undefined }> = ({ projectId }) => {
   const { t } = useTranslation()
+  const link = useMemo(() => {
+    return getSnapshotDeepLink(projectId ?? '')
+  }, [projectId])
 
   return (
     <CardWrapper>
@@ -52,7 +55,15 @@ export const PreSaleEligibleCard: React.FC = () => {
         <FlexGap>
           <CheckmarkCircleIcon color="success" width="24px" />
         </FlexGap>
-        <Text>{t('You are eligible to join this sale when TGE goes live!')}</Text>
+        <FlexGap flexDirection="column">
+          <Text>{t('You are eligible to join this sale when TGE goes live!')}</Text>
+          <Flex onClick={() => window.open(link)}>
+            <Text color="positive60" bold>
+              {t('View details')}
+            </Text>
+            <ChevronRightIcon color="positive60" width="24px" ml="2px" />
+          </Flex>
+        </FlexGap>
       </FlexGap>
     </CardWrapper>
   )
@@ -86,11 +97,11 @@ export const SnapshotNotPassCard: React.FC<{ projectId: string | undefined }> = 
       </Text>
       <Text color="textSubtle">
         {t(
-          `Unfortunately you do not meet the participation requirements this time. To qualify, you must have maintained at least $100 in eligible aggregated assets across both your Binance Wallet Keyless Address (Binance Spot tokens or Alpha Platform tokens) and Exchange Account for 7 consecutive days before TGE. Note: LSD-type tokens are excluded.`,
+          `Unfortunately you do not meet the participation requirements this time. To qualify, participants must have purchased Binance Alpha tokens via Binance Wallet (Keyless) or through Spot/Funding accounts on Binance Exchange within the 30-day period preceding the TGE start date.`,
         )}
       </Text>
       <Flex onClick={() => window.open(link)}>
-        <Text color="failure">{t('View Snapshots')}</Text>
+        <Text color="failure">{t('View details')}</Text>
         <ChevronRightIcon color="failure" width="24px" ml="2px" />
       </Flex>
     </ErrorCardWrapper>

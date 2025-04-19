@@ -3,9 +3,9 @@ import { usePopper } from "react-popper";
 import { styled } from "styled-components";
 import { Box, Flex } from "../../../../components/Box";
 import { ChevronDownIcon } from "../../../../components/Svg";
-import { UserMenuProps, variants } from "./types";
 import MenuIcon from "./MenuIcon";
 import { UserMenuItem } from "./styles";
+import { UserMenuProps, variants } from "./types";
 
 export const StyledUserMenu = styled(Flex)`
   align-items: center;
@@ -129,7 +129,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
         </LabelText>
         {!disabled && <ChevronDownIcon color="text" width="24px" />}
       </StyledUserMenu>
-      {!disabled && (
+      {!disabled && children && (
         <Menu style={{ ...styles.popper, ...popperStyle }} ref={setTooltipRef} {...attributes.popper} $isOpen={isOpen}>
           <Box onClick={() => setIsOpen(false)}>{children?.({ isOpen })}</Box>
         </Menu>

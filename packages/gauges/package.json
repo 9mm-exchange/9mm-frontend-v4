@@ -1,6 +1,6 @@
 {
   "name": "@pancakeswap/gauges",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "sideEffects": false,
   "scripts": {
     "dev": "tsup --watch",

@@ -65,6 +65,7 @@ export type PickConfig = {
   poolId: `0x{string}`
   token0: Token
   token1: Token
+  url: string
 }
 
 export type PicksConfig = {

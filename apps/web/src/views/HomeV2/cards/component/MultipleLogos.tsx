@@ -44,7 +44,6 @@ const ImageContainerExpandable = styled.div<{
   width: ${isActive ? size * 2 : size}px;
   height: ${size}px;
   transition: all 0.3s;
-  will-change: opacity;
   &:not(:first-child) {
     margin-left: ${gap}px;
   }

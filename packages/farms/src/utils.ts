@@ -114,5 +114,5 @@ const formatV3UniversalFarmToSerializedFarm = (farm: UniversalFarmConfigV3): Leg
 }
 
 export const getFarmConfigKey = (farm: Pick<UniversalFarmConfig, 'chainId' | 'lpAddress'>) => {
-  return `${farm.chainId}:${farm.lpAddress.toLowerCase()}`
+  return `${farm.chainId}:${farm.lpAddress?.toLowerCase()}`
 }

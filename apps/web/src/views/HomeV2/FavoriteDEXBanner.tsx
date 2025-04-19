@@ -59,9 +59,6 @@ export const FavoriteDEXBanner: React.FC<FavoriteDEXBannerProps> = ({ chains }) 
     <Wrapper
       isMobile={isMobile}
       isTablet={isTablet}
-      style={{
-        willChange: 'transform, opacity',
-      }}
       initial={{ opacity: 0, scale: 0.3, y: 50 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.8, y: 50 }}
@@ -82,7 +79,6 @@ export const FavoriteDEXBanner: React.FC<FavoriteDEXBannerProps> = ({ chains }) 
         style={{
           position: 'relative',
           height: isMobile ? '10px' : '56px',
-          overflow: 'hidden',
         }}
       >
         <Box style={{ position: isMobile ? 'static' : 'absolute', marginTop: '0px' }}>

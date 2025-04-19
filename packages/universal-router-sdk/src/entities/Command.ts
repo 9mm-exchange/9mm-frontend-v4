@@ -1,6 +1,7 @@
 import { RoutePlanner } from '../utils/routerCommands'
+import { PaymentOptions } from './types'
 
-export type TradeConfig = {
+export type TradeConfig = PaymentOptions & {
   allowRevert: boolean
 }
 
@@ -13,5 +14,5 @@ export enum RouterTradeType {
 // interface for entities that can be encoded as a Universal Router command
 export interface Command {
   tradeType: RouterTradeType
-  encode(planner: RoutePlanner, config: TradeConfig): void
+  encode(planner: RoutePlanner, config: PaymentOptions): void
 }

@@ -594,87 +594,6 @@ export const idoConfigDict: Record<string, IDOConfig> = {
       },
     ],
   },
-  // remove after testing
-  pumptest: {
-    id: 'pump',
-    projectUrl: 'https://pumpbtc.xyz/',
-    icon: '/images/ido/pump.svg',
-    chainId: ChainId.BSC,
-    bannerUrl: `${ASSET_CDN}/web/ido/purgent-banner.png`,
-    contractAddress: '0x006b9c659fd1cD0D001A2B28a642BCfF5079C4FF',
-    tgeTitle: <Trans>Purgent's Token Generation Event</Trans>,
-    tgeSubtitle: <Trans>Exclusively via Binance Keyless Wallet</Trans>,
-    description: (
-      <>
-        <Trans>
-          PumpBTC is building an modular, multi-chain, AI-driven staking and liquidity operating system that seamlessly
-          integrates with DeFi to help Bitcoin holders maximize returns.
-        </Trans>
-        <br />
-        <br />
-        <Trans>Website</Trans>:{' '}
-        <a href="https://mainnet.pumpbtc.xyz/" target="_blank" rel="noreferrer noopener">
-          https://mainnet.pumpbtc.xyz/
-        </a>
-        <br />
-        X:{' '}
-        <a href="https://x.com/Pumpbtcxyz" target="_blank" rel="noreferrer noopener">
-          https://x.com/Pumpbtcxyz
-        </a>
-        <br />
-      </>
-    ),
-    faqs: [
-      {
-        title: <Trans>1. When can I claim my tokens?</Trans>,
-        description: (
-          <>
-            <Trans>
-              You can claim your tokens immediately once the TGE ends by clicking the Claim button. Alternatively, you
-              can return to the TGE page at any time afterward to claim your tokens—there is no fixed claim period.
-            </Trans>
-            <Trans>On the TGE page, you will also find key details, including:</Trans>
-            <ul>
-              <li>
-                <Trans>The number of tokens available for claiming</Trans>
-              </li>
-              <li>
-                <Trans>The TGE duration</Trans>
-              </li>
-              <li>
-                <Trans>The total amount of BNB subscribed</Trans>
-              </li>
-              <li>
-                <Trans>The total amount of refunded BNB (if applicable)</Trans>
-              </li>
-              <li>
-                <Trans>The TGE status (e.g., oversubscribed or not)</Trans>
-              </li>
-            </ul>
-          </>
-        ),
-      },
-      {
-        title: <Trans>2. How many tokens will I receive?</Trans>,
-        description: (
-          <Trans>
-            During the TGE, users can subscribe up to a maximum of 3 BNB. The final token allocation is determined based
-            on the proportion of BNB a user contributed relative to the total BNB subscribed by all participants at the
-            time the sale ends.
-          </Trans>
-        ),
-      },
-      {
-        title: <Trans>3. Will I receive a refund if the pool is oversubscribed?</Trans>,
-        description: (
-          <Trans>
-            Yes. If the TGE is oversubscribed, any excess BNB that was not used to purchase tokens will be automatically
-            refunded to your wallet when you claim your tokens.
-          </Trans>
-        ),
-      },
-    ],
-  },
   mindnetwork: {
     id: 'mindnetwork',
     projectUrl: 'https://www.mindnetwork.xyz/',
@@ -810,6 +729,141 @@ export const idoConfigDict: Record<string, IDOConfig> = {
               </ol>
             </ul>
           </Box>
+        ),
+      },
+    ],
+  },
+  lorenzoprotocol: {
+    id: 'lorenzoprotocol',
+    projectUrl: 'https://lorenzo-protocol.xyz/',
+    icon: '/images/ido/lorenzo.svg',
+    chainId: ChainId.BSC,
+    bannerUrl: `${ASSET_CDN}/web/ido/lorenzo-banner.svg`,
+    contractAddress: '0x8f62d34113A1dE746eAac3b1F2D4CEeC9d393027',
+    tgeTitle: `Lorenzo's Token Generation Event`,
+    tgeSubtitle: 'Exclusively via Binance Keyless Wallet',
+    description: (
+      <>
+        <Trans>
+          Lorenzo Protocol is described as an institutional-grade on-chain asset management platform that structures and
+          deploys yield-optimized fund vaults, effectively channeling on-chain liquidity into the most competitive yield
+          opportunities.
+        </Trans>
+        <br />
+        <br />
+        Website: &nbsp;
+        <a href="https://lorenzo-protocol.xyz/" target="_blank" rel="noreferrer noopener">
+          https://lorenzo-protocol.xyz/
+        </a>
+        <br />
+        <br />
+        X: &nbsp;
+        <a href="https://x.com/LorenzoProtocol" target="_blank" rel="noreferrer noopener">
+          https://x.com/LorenzoProtocol
+        </a>
+      </>
+    ),
+    faqs: [
+      {
+        title: '1: Which participants are eligible to take part in this event?',
+        description: (
+          <>
+            Participant Eligibility: To qualify, participants must have purchased Binance Alpha tokens through Binance
+            Wallet (Keyless) or Spot/Funding accounts on Binance Exchange within the 30-day period preceding the TGE
+            start date.
+            <ul>
+              <li>Valid Purchase Period: March 19, 2025, 00:00:00 to April 17, 2025, 23:59:59 (UTC)</li>
+              {/* <li>How to check eligibility: Visit the TGE event page.</li> */}
+
+              <li> Examples: </li>
+              <br />
+              <ol style={{ listStyle: 'decimal', listStylePosition: 'inside', marginLeft: '1.4rem' }}>
+                <li>
+                  User A purchased Binance Alpha tokens through Binance Wallet (Keyless) on April 5, 2025. He/She is
+                  eligible.
+                </li>
+                <br />
+                <li>
+                  User B purchased Binance Alpha tokens through Spot/Funding accounts on Binance Exchange on April 7,
+                  2025. He/She is eligible.
+                </li>
+                <br />
+                <li>
+                  User C purchased Binance Alpha tokens via Binance Wallet (Keyless) on March 2, 2025, which is before
+                  the snapshot period. He/She is not eligible.
+                </li>
+                <br />
+                <li>
+                  User D purchased “X” token via Binance Wallet (Keyless) on April 5, 2025, but “X” token was officially
+                  listed on Binance Alpha on April 7. He/She is not eligible.
+                </li>
+              </ol>
+              <br />
+              <li>Important Notes:</li>
+              <br />
+              <ol style={{ listStyle: 'decimal', listStylePosition: 'inside', marginLeft: '1.4rem' }}>
+                <li>
+                  Binance reserves the right to modify event rules and criteria at any time without prior notice. All
+                  rule interpretations are solely at Binance’s discretion. Participants are strongly advised to verify
+                  the latest rules via official channels before participating.
+                </li>
+                <br />
+                <li>
+                  Alpha token purchases are only considered valid after the token is officially listed on Binance, and
+                  users can verify their detailed purchase records in their Binance Wallet (Keyless) or Spot/Funding
+                  accounts on the Binance Exchange.
+                </li>
+              </ol>
+            </ul>
+          </>
+        ),
+      },
+      {
+        title: '2: When can I claim my tokens?',
+        description: (
+          <>
+            <Trans>
+              You can claim your tokens immediately once the TGE ends by clicking the Claim button. Alternatively, you
+              can return to the TGE page at any time afterward to claim your tokens—there is no fixed claim period.
+            </Trans>
+            <Trans>On the TGE page, you will also find key details, including:</Trans>
+            <ul>
+              <li>
+                <Trans>The number of tokens available for claiming</Trans>
+              </li>
+              <li>
+                <Trans>The TGE duration</Trans>
+              </li>
+              <li>
+                <Trans>The total amount of BNB subscribed</Trans>
+              </li>
+              <li>
+                <Trans>The total amount of refunded BNB (if applicable)</Trans>
+              </li>
+              <li>
+                <Trans>The TGE status (e.g., oversubscribed or not)</Trans>
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        title: '3. How many tokens will I receive?',
+        description: (
+          <>
+            During the TGE, users can subscribe up to a maximum of 3 BNB. The final token allocation is determined based
+            on the proportion of BNB a user contributed relative to the total BNB subscribed by all participants at the
+            time the sale ends.
+          </>
+        ),
+      },
+      {
+        title: '4. Will I receive a refund if the pool is oversubscribed?',
+        description: (
+          <>
+            Yes. If the TGE is oversubscribed, any excess BNB that was not used to purchase tokens will be automatically
+            refunded to your wallet when you claim your tokens.
+          </>
         ),
       },
     ],

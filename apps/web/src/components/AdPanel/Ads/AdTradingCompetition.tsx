@@ -8,19 +8,18 @@ import { AdCard } from '../Card'
 import { AdPlayerProps } from '../types'
 import { getImageUrl } from '../utils'
 
-const tradingCompetitionConfig = {
-  merl: {
-    imgUrl: 'merl_competition',
-    swapUrl:
-      'https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0xa0c56a8c0692bD10B3fA8f8bA79Cf5332B7107F9&utm_source=Website&utm_medium=banner&utm_campaign=MERL&utm_id=TradingCompetition',
-    learnMoreUrl:
-      'https://blog.pancakeswap.finance/articles/pancake-swap-x-merl-trading-competition-50-000-in-rewards?utm_source=Website&utm_medium=banner&utm_campaign=MERL&utm_id=TradingCompetition',
-    reward: '50,000',
-    unit: '$',
-  },
-}
+const tradingCompetitionConfig: {
+  [key: string]: {
+    imgUrl: string
+    swapUrl: string
+    learnMoreUrl: string
+    reward: string
+    unit: string
+    endTimestamp: number
+  }
+} = {}
 
-export const AdTradingCompetition = (props: AdPlayerProps & { token: keyof typeof tradingCompetitionConfig }) => {
+export const AdTradingCompetition = (props: AdPlayerProps & { token: string }) => {
   const { t } = useTranslation()
   const { isMobile } = useMatchBreakpoints()
   const { token, ...rest } = props
@@ -45,14 +44,17 @@ export const AdTradingCompetition = (props: AdPlayerProps & { token: keyof typeo
 }
 
 export const useTradingCompetitionAds = () => {
-  return useMemo(
-    () =>
-      Object.keys(tradingCompetitionConfig)
-        .reverse()
-        .map((token) => ({
-          id: `ad-${token}-tc`,
-          component: <AdTradingCompetition key={token} token={token as keyof typeof tradingCompetitionConfig} />,
-        })),
-    [],
-  )
+  return useMemo(() => {
+    const currentTime = Math.floor(Date.now() / 1000)
+    return Object.keys(tradingCompetitionConfig)
+      .filter((token) => {
+        const { endTimestamp } = tradingCompetitionConfig[token]
+        return currentTime <= endTimestamp
+      })
+      .reverse()
+      .map((token) => ({
+        id: `ad-${token}-tc`,
+        component: <AdTradingCompetition key={token} token={token} />,
+      }))
+  }, [])
 }

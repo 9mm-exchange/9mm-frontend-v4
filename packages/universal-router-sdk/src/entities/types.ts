@@ -17,7 +17,14 @@ export type FlatFeeOptions = {
   recipient: Address
 }
 
+export type PaymentOptions = {
+  /**
+   * Whether the payer of the trade is the user. Defaults to true.
+   */
+  payerIsUser?: boolean
+}
+
 export type PancakeSwapOptions = Omit<SwapOptions, 'inputTokenPermit'> & {
   inputTokenPermit?: Permit2Signature
   flatFee?: FlatFeeOptions
-}
+} & PaymentOptions

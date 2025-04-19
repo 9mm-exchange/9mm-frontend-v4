@@ -2,10 +2,11 @@ import { useTranslation } from '@pancakeswap/localization'
 import { Box, LinkExternal, Text, useTooltip } from '@pancakeswap/uikit'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { formatAmount } from '@pancakeswap/utils/formatInfoNumbers'
+import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 import BigNumber from 'bignumber.js'
 import { getChainId } from 'config/chains'
 import { ASSET_CDN } from 'config/constants/endpoints'
-import { atom, useAtomValue } from 'jotai'
+import { atom } from 'jotai'
 import { atomFamily } from 'jotai/utils'
 import { useEffect, useMemo } from 'react'
 import { usePoolApr, usePoolInfo } from 'state/farmsV4/hooks'
@@ -15,12 +16,11 @@ import styled from 'styled-components'
 import { useMyPositions } from 'views/PoolDetail/components/MyPositionsContext'
 import { getPoolDetailPageLink } from 'views/universalFarms/components'
 import { sumApr } from 'views/universalFarms/utils/sumApr'
-import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
+import { AdTag } from '../AdTag'
 import { BodyText } from '../BodyText'
 import { AdCard } from '../Card'
 import { PickBaseCoin } from '../PickBaseCoin'
 import { PickConfig } from '../types'
-import { AdTag } from '../AdTag'
 
 const usePicksData = (poolId: `0x{string}`, chain: string) => {
   const chainId = getChainId(chain)!
@@ -82,7 +82,6 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
   const { poolId, chain, token0, token1 } = config
   const { t } = useTranslation()
   const data = usePicksData(poolId, chain)
-  const link = useAtomValue(poolLinkAtom(data?.pool))
   const { tooltip, targetRef, tooltipVisible } = useTooltip(<AdPicksTooltip />)
   const chainId = getChainId(chain)
   if (!data) {
@@ -136,7 +135,7 @@ export const AdPicks = ({ config, index }: { config: PickConfig; index: number }
             marginTop: '14.5px',
           }}
         >
-          <NextLinkFromReactRouter to={link}>
+          <NextLinkFromReactRouter to={config.url}>
             <Text color="primary60">
               {token0.symbol}/{token1.symbol}
             </Text>

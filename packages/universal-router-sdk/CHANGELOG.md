@@ -1,5 +1,24 @@
 # @pancakeswap/universal-router-sdk
 
+## 1.3.1
+
+### Patch Changes
+
+- Updated dependencies [9fa225f]
+  - @pancakeswap/smart-router@7.1.2
+
+## 1.3.0
+
+### Minor Changes
+
+- 5bcf3e0: Add payerIsUser option to erc20 swap calldata encoding
+
+## 1.2.0
+
+### Minor Changes
+
+- 5d6c6e0: Add payerIsUser option
+
 ## 1.1.1
 
 ### Patch Changes

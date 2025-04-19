@@ -1,5 +1,11 @@
 # @pancakeswap/tokens
 
+## 0.7.1
+
+### Patch Changes
+
+- 9fa225f: Add whitelist bases in router for susde-usde, olm-ora, ora-brm
+
 ## 0.7.0
 
 ### Minor Changes

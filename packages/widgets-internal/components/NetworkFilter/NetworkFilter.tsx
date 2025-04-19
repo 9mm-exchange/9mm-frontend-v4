@@ -1,6 +1,13 @@
-import { MultiSelect, IMultiSelectChangeEvent, IMultiSelectProps } from "@pancakeswap/uikit";
+import { Trans } from "@pancakeswap/localization";
+import {
+  Button,
+  IMultiSelectChangeEvent,
+  IMultiSelectProps,
+  MultiSelect,
+  useMatchBreakpoints,
+} from "@pancakeswap/uikit";
 import { useCallback, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export interface INetworkProps {
   data: IMultiSelectProps<number>["options"];
@@ -43,8 +50,62 @@ const Container = styled.div<{ $isShow: boolean }>`
  `}
 `;
 
+const ItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const StyledButton = styled(Button)`
+  position: absolute;
+  right: 50px;
+
+  height: 27px;
+  background-color: ${({ theme }) => theme.colors.input};
+  color: ${({ theme }) => theme.colors.text};
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+`;
+
+const sharedStyle = css`
+  ${StyledButton} {
+    opacity: 1;
+  }
+`;
+
+const StyledContainer = styled(Container)<{ $activeIndex?: number }>`
+  li.p-multiselect-item {
+    padding: 8px 16px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    /* desktop hover effect */
+    > span {
+      width: 100%;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.secondary20};
+        ${sharedStyle}
+      }
+    }
+    ${({ $activeIndex, theme }) =>
+      typeof $activeIndex === "number" &&
+      `&:nth-child(${$activeIndex + 1}) {
+      ${sharedStyle}
+      background-color: ${theme.colors.secondary20};
+    }`}
+  }
+`;
+
 export const NetworkFilter: React.FC<INetworkProps> = ({ data, value, onChange }: INetworkProps) => {
   const [isShow, setIsShow] = useState(false);
+  const [mobileActiveValue, setMobileActiveValue] = useState<number>(-1);
+  const { isMobile } = useMatchBreakpoints();
+
+  const activeIndex =
+    isMobile && mobileActiveValue !== -1 && data ? data.findIndex((opt) => opt.value === mobileActiveValue) : undefined;
 
   const handleSelectChange = useCallback(
     (e: IMultiSelectChangeEvent<number>) => {
@@ -55,8 +116,52 @@ export const NetworkFilter: React.FC<INetworkProps> = ({ data, value, onChange }
     [onChange, data]
   );
 
+  const handleOnlyClick = useCallback(
+    (networkValue: number, e: React.MouseEvent) => {
+      e.stopPropagation();
+      onChange([networkValue], {
+        value: [networkValue],
+        originalEvent: e,
+        stopPropagation: e.stopPropagation,
+        preventDefault: e.preventDefault,
+      });
+    },
+    [onChange]
+  );
+
+  const customItemTemplate = useCallback(
+    (option: { label: string; value: number; icon?: React.ReactNode | string }) => {
+      const onTouchStart = isMobile
+        ? () => {
+            setMobileActiveValue(option.value);
+          }
+        : undefined;
+      return (
+        <ItemContainer onTouchStart={onTouchStart}>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {option.icon && (
+              <span style={{ marginRight: "8px" }}>
+                {typeof option.icon === "string" ? (
+                  <img src={option.icon} alt={option.label} width="24" />
+                ) : (
+                  option.icon
+                )}
+              </span>
+            )}
+            <span>{option.label}</span>
+          </div>
+
+          <StyledButton scale="xs" onClick={(e: React.MouseEvent) => handleOnlyClick(option.value, e)}>
+            <Trans>Only</Trans>
+          </StyledButton>
+        </ItemContainer>
+      );
+    },
+    [handleOnlyClick, isMobile, mobileActiveValue]
+  );
+
   return (
-    <Container $isShow={isShow}>
+    <StyledContainer $isShow={isShow} $activeIndex={activeIndex}>
       <MultiSelect
         style={{
           backgroundColor: "var(--colors-input)",
@@ -72,7 +177,8 @@ export const NetworkFilter: React.FC<INetworkProps> = ({ data, value, onChange }
         onShow={() => setIsShow(true)}
         onHide={() => setIsShow(false)}
         onChange={handleSelectChange}
+        itemTemplate={customItemTemplate}
       />
-    </Container>
+    </StyledContainer>
   );
 };

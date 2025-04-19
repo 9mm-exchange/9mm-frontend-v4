@@ -1,6 +1,6 @@
 {
   "name": "solana-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,8 @@
     "format:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },
   "dependencies": {
+    "@datadog/browser-logs": "^5.8.0",
+    "@datadog/browser-rum": "^5.8.0",
     "@jup-ag/react-hook": "6.2.0",
     "@jup-ag/terminal": "^4.0.1",
     "@jup-ag/wallet-adapter": "0.2.0",

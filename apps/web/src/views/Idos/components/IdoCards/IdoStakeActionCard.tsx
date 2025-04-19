@@ -73,7 +73,7 @@ export const IdoStakeActionCard: React.FC<{
                 {account && !isPendingVerify ? (
                   status === 'coming_soon' ? (
                     verifyStatus === VerifyStatus.eligible ? (
-                      <PreSaleEligibleCard />
+                      <PreSaleEligibleCard projectId={id} />
                     ) : verifyStatus === VerifyStatus.restricted ? (
                       <ComplianceCard />
                     ) : verifyStatus === VerifyStatus.snapshotNotPass ? (

@@ -10,7 +10,7 @@ import groupBy from 'lodash/groupBy'
 import keyBy from 'lodash/keyBy'
 import { useEffect, useMemo, useState } from 'react'
 import { publicClient } from 'utils/viem'
-import { zeroAddress } from 'viem'
+import { isAddress, zeroAddress } from 'viem'
 import { Address } from 'viem/accounts'
 
 import { PoolInfo, StablePoolInfo, V2PoolInfo } from '../type'
@@ -79,7 +79,7 @@ export const useV3PoolsLength = (chainIds: number[]) => {
       const results = await Promise.all(
         chainIds.map(async (chainId) => {
           const masterChefAddress = masterChefV3Addresses[chainId]
-          if (!masterChefAddress) {
+          if (!isAddress(masterChefAddress)) {
             return { chainId, length: 0 }
           }
           const client = publicClient({ chainId })

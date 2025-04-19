@@ -17,7 +17,7 @@ export abstract class PancakeSwapUniversalRouter {
    */
   public static swapERC20CallParameters(
     trade: Omit<SmartRouterTrade<TradeType>, 'gasEstimate'>,
-    options: PancakeSwapOptions,
+    { payerIsUser = true, ...options }: PancakeSwapOptions,
   ): MethodParameters {
     // TODO: use permit if signature included in swapOptions
     const planner = new RoutePlanner()
@@ -25,18 +25,21 @@ export abstract class PancakeSwapUniversalRouter {
     const tradeCommand: PancakeSwapTrade = new PancakeSwapTrade(trade, options)
 
     const inputCurrency = tradeCommand.trade.inputAmount.currency
-    invariant(!(inputCurrency.isNative && !!options.inputTokenPermit), 'NATIVE_INPUT_PERMIT')
+    if (payerIsUser) {
+      invariant(!(inputCurrency.isNative && !!options.inputTokenPermit), 'NATIVE_INPUT_PERMIT')
 
-    if (options.inputTokenPermit && typeof options.inputTokenPermit === 'object') {
-      encodePermit(planner, options.inputTokenPermit)
+      if (options.inputTokenPermit && typeof options.inputTokenPermit === 'object') {
+        encodePermit(planner, options.inputTokenPermit)
+      }
     }
-
-    const nativeCurrencyValue = inputCurrency.isNative
-      ? SmartRouter.maximumAmountIn(tradeCommand.trade, options.slippageTolerance, tradeCommand.trade.inputAmount)
-          .quotient
+    const nativeCurrencyValue = payerIsUser
+      ? inputCurrency.isNative
+        ? SmartRouter.maximumAmountIn(tradeCommand.trade, options.slippageTolerance, tradeCommand.trade.inputAmount)
+            .quotient
+        : 0n
       : 0n
 
-    tradeCommand.encode(planner)
+    tradeCommand.encode(planner, { payerIsUser })
     return PancakeSwapUniversalRouter.encodePlan(planner, nativeCurrencyValue, {
       deadline: options.deadlineOrPreviousBlockhash
         ? BigInt(options.deadlineOrPreviousBlockhash.toString())

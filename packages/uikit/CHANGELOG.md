@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.67.5
+
+### Patch Changes
+
+- 3d600bd: update color tokens
+
 ## 0.67.4
 
 ### Patch Changes

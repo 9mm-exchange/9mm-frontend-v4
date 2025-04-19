@@ -265,7 +265,17 @@ const CurrencyInputPanelSimplify = memo(function CurrencyInputPanel({
     if (isInputFocus) {
       onUserInput(value ?? '')
     }
-  }, [value, defaultValue, isInputFocus])
+  }, [value, defaultValue, isInputFocus, onUserInput])
+
+  const handlePercentInput = useCallback(
+    (percent: number) => {
+      if (onPercentInput) {
+        setIsInputFocus(false)
+        onPercentInput(percent)
+      }
+    },
+    [onPercentInput],
+  )
 
   const handleUserInput = useCallback((val: string) => {
     setValue(val)
@@ -322,7 +332,7 @@ const CurrencyInputPanelSimplify = memo(function CurrencyInputPanel({
                       onMax={onMax}
                     />
                   ) : (
-                    <SwapUIV2.AssetSettingButtonList onPercentInput={onPercentInput} />
+                    <SwapUIV2.AssetSettingButtonList onPercentInput={handlePercentInput} />
                   )
                 ) : null}
               </LazyAnimatePresence>

@@ -2,12 +2,13 @@ import '@pancakeswap/jupiter-terminal/global.css'
 import '@pancakeswap/jupiter-terminal/index.css'
 
 import { useUnifiedWalletContext, useWallet } from '@jup-ag/wallet-adapter'
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import { TerminalCard, TerminalWrapper } from 'components/SwapForm'
 import { ExchangeLayout } from 'components/Layout/ExchangeLayout'
 import { init, syncProps } from '@pancakeswap/jupiter-terminal'
-import { logGTMSwapTxSentEvent, logGTMWalletConnectedEvent } from 'utils/curstomGTMEventTracking'
+import { logGTMSwapTXSuccessEvent, logGTMWalletConnectedEvent } from 'utils/curstomGTMEventTracking'
 import { SOLANA_ENDPOINT } from 'config/endpoint'
+import { logDDSwapTXSuccessEvent, logDDWalletConnectedEvent } from 'utils/datadog'
 
 const TARGET_ELE_ID = 'integrated-terminal'
 
@@ -17,9 +18,26 @@ const JupiterTerminal = () => {
 
   useEffect(() => {
     if (passthroughWalletContextState.wallet?.adapter.connected) {
-      logGTMWalletConnectedEvent(passthroughWalletContextState.wallet?.adapter.name)
+      const walletName = passthroughWalletContextState.wallet?.adapter.name
+      logGTMWalletConnectedEvent(walletName)
+      logDDWalletConnectedEvent(walletName)
     }
   }, [passthroughWalletContextState.wallet?.adapter.connected, passthroughWalletContextState.wallet?.adapter.name])
+
+  const logSwapSucc = useCallback(
+    ({ txid }: { txid: string }) => {
+      const info = {
+        txId: txid,
+        from: passthroughWalletContextState.wallet?.adapter.publicKey?.toBase58(),
+        chain: 'solana',
+      }
+      // GTM
+      logGTMSwapTXSuccessEvent(info)
+      // DD
+      logDDSwapTXSuccessEvent(info)
+    },
+    [passthroughWalletContextState.wallet?.adapter.publicKey],
+  )
 
   useEffect(() => {
     init({
@@ -33,11 +51,11 @@ const JupiterTerminal = () => {
       },
       enableWalletPassthrough: true,
       onRequestConnectWallet: () => setShowModal(true),
-      onSuccess() {
-        logGTMSwapTxSentEvent()
+      onSuccess(result) {
+        logSwapSucc(result)
       },
     })
-  }, [setShowModal])
+  }, [setShowModal, logSwapSucc])
 
   // Do not pass the passthroughWalletContextState into init.
   // Otherwise, the entire widget will refresh when the theme switches.

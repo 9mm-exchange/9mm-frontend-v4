@@ -1,5 +1,15 @@
 # @pancakeswap/smart-router
 
+## 7.1.2
+
+### Patch Changes
+
+- 9fa225f: Add whitelist bases in router for susde-usde, olm-ora, ora-brm
+- Updated dependencies [9fa225f]
+  - @pancakeswap/tokens@0.7.1
+  - @pancakeswap/gauges@2.0.7
+  - @pancakeswap/stable-swap-sdk@2.0.2
+
 ## 7.1.1
 
 ### Patch Changes
