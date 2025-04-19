@@ -9,6 +9,7 @@ import {
   lineaTokens,
   opBnbTokens,
   polygonZkEvmTokens,
+  pulseTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
 } from '@pancakeswap/tokens'
@@ -24,6 +25,9 @@ export type PriceHelper = {
 export const priceHelperTokens = {
   [ChainId.ETHEREUM]: {
     list: [ethereumTokens.weth, ethereumTokens.usdc, ethereumTokens.usdt],
+  },
+  [ChainId.PULSECHAIN]: {
+    list: [pulseTokens.weth, pulseTokens.usdc, pulseTokens.usdt, pulseTokens.dai],
   },
   [ChainId.BSC]: {
     list: [
@@ -67,6 +71,7 @@ export const priceHelperTokens = {
 // for testing purposes
 export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> = {
   [ChainId.ETHEREUM]: {},
+  [ChainId.PULSECHAIN]: {},
   [ChainId.BSC]: {},
   [ChainId.BSC_TESTNET]: {
     [bscTestnetTokens.mockA.address]: '10',
