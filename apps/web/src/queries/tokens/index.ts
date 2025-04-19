@@ -109,12 +109,18 @@ export async function fetchTopTokens(
     const { data: ethPrices } = await fetchEthPrices(dataClient, blocks)
 
     // 7. Fetch Token Data
-    const [data, data24, data48, dataWeek] = await Promise.all([
-      dataClient.request<TokenDataResponse>(fetchTokensBulk(undefined, tokenAddresses)),
-      dataClient.request<TokenDataResponse>(fetchTokensBulk(block24?.number, tokenAddresses)),
-      dataClient.request<TokenDataResponse>(fetchTokensBulk(block48?.number, tokenAddresses)),
-      dataClient.request<TokenDataResponse>(fetchTokensBulk(blockWeek?.number, tokenAddresses)),
-    ])
+
+    const data = await dataClient.request<TokenDataResponse>(fetchTokensBulk(undefined, tokenAddresses))
+    const data24 = await dataClient.request<TokenDataResponse>(fetchTokensBulk(block24?.number, tokenAddresses))
+    const data48 = await dataClient.request<TokenDataResponse>(fetchTokensBulk(block48?.number, tokenAddresses))
+    const dataWeek = await dataClient.request<TokenDataResponse>(fetchTokensBulk(blockWeek?.number, tokenAddresses))
+
+    // const [data, data24, data48, dataWeek] = await Promise.all([
+    //   dataClient.request<TokenDataResponse>(fetchTokensBulk(undefined, tokenAddresses)),
+    //   dataClient.request<TokenDataResponse>(fetchTokensBulk(block24?.number, tokenAddresses)),
+    //   dataClient.request<TokenDataResponse>(fetchTokensBulk(block48?.number, tokenAddresses)),
+    //   dataClient.request<TokenDataResponse>(fetchTokensBulk(blockWeek?.number, tokenAddresses)),
+    // ])
 
     if (!ethPrices) {
       return { error: false, data: undefined }

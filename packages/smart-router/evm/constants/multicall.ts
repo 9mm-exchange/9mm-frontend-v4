@@ -18,6 +18,7 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
   [ChainId.BSC_TESTNET]: DEFAULT,
   [ChainId.BSC]: DEFAULT,
   [ChainId.ETHEREUM]: DEFAULT,
+  [ChainId.PULSECHAIN]: DEFAULT,
   [ChainId.GOERLI]: DEFAULT,
   [ChainId.ARBITRUM_ONE]: DEFAULT,
   [ChainId.ARBITRUM_GOERLI]: DEFAULT,

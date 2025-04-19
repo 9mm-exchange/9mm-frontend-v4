@@ -58,6 +58,7 @@ export function homePageChainsInfo() {
   const evms = [
     ChainId.BSC,
     ChainId.ETHEREUM,
+    ChainId.PULSECHAIN,
     ChainId.BASE,
     ChainId.ARBITRUM_ONE,
     ChainId.ZKSYNC,

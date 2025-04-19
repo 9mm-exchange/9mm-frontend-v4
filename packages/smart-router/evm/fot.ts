@@ -5,6 +5,7 @@ import { feeOnTransferDetectorAbi } from './abis/FeeOnTransferDetector'
 
 export const feeOnTransferDetectorAddresses = {
   [ChainId.ETHEREUM]: '0xe9200516a475b9e6FD4D1c452858097F345A6760',
+  [ChainId.PULSECHAIN]: '0xe9200516a475b9e6FD4D1c452858097F345A6760',
   [ChainId.SEPOLIA]: '0xD8b14F915b1b4b1c4EE4bF8321Bea018E72E5cf3',
   [ChainId.BSC]: '0x003BD52f589F23346E03fA431209C29cD599d693',
   [ChainId.BSC_TESTNET]: '0xE83BD854c1fBf54424b4d914163BF855aB1131Aa',

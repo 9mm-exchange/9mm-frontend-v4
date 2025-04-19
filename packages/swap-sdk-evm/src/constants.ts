@@ -15,6 +15,14 @@ export const WETH9 = {
     'Wrapped Ether',
     'https://weth.io',
   ),
+  [ChainId.PULSECHAIN]: new ERC20Token(
+    ChainId.PULSECHAIN,
+    '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
+    18,
+    'WPLS',
+    'Wrapped Pulse',
+    'https://weth.io',
+  ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
     '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
@@ -222,6 +230,7 @@ export const WBNB = {
 
 export const WNATIVE = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
+  [ChainId.PULSECHAIN]: WETH9[ChainId.PULSECHAIN],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
@@ -252,8 +261,15 @@ const BNB = {
   decimals: 18,
 } as const
 
+const PLS = {
+  name: 'Pulsechain Chain Native Token',
+  symbol: 'PLS',
+  decimals: 18,
+} as const
+
 export const NATIVE = {
   [ChainId.ETHEREUM]: ETHER,
+  [ChainId.PULSECHAIN]: PLS,
   [ChainId.GOERLI]: { name: 'Goerli Ether', symbol: 'GOR', decimals: 18 },
   [ChainId.BSC]: BNB,
   [ChainId.BSC_TESTNET]: {

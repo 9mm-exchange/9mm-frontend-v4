@@ -30,6 +30,8 @@ const chainNameForQuery = (chain: string) => {
       return 'linea'
     case 'base':
       return 'base'
+    case 'pulse':
+      return 'pulse'
     case 'opbnb':
       return 'opbnb'
     default:

@@ -18,6 +18,7 @@ import {
   opBnbTokens,
   polygonZkEvmTestnetTokens,
   polygonZkEvmTokens,
+  pulseTokens,
   scrollSepoliaTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
@@ -25,6 +26,7 @@ import {
 
 export const usdGasTokensByChain = {
   [ChainId.ETHEREUM]: [ethereumTokens.usdt],
+  [ChainId.PULSECHAIN]: [pulseTokens.dai],
   [ChainId.GOERLI]: [goerliTestnetTokens.usdc],
   [ChainId.BSC]: [bscTokens.usdt],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.usdt],

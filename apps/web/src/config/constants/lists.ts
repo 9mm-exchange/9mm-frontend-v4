@@ -4,6 +4,8 @@ export const PANCAKE_EXTENDED = 'https://tokens.pancakeswap.finance/pancakeswap-
 
 const COINGECKO = 'https://tokens.pancakeswap.finance/coingecko.json'
 export const PANCAKE_ETH_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-eth-default.json'
+export const PANCAKE_PULSE_DEFAULT =
+  'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/9mm-tokenlist.json'
 export const PANCAKE_ZKSYNC_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json'
 export const PANCAKE_POLYGON_ZKEVM_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-polygon-zkevm-default.json'
 export const PANCAKE_ARB_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-arbitrum-default.json'
@@ -12,13 +14,18 @@ export const PANCAKE_BASE_DEFAULT = 'https://tokens.pancakeswap.finance/pancakes
 export const PANCAKE_OPBNB_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-opbnb-default.json'
 
 export const PANCAKE_ETH_MM = 'https://tokens.pancakeswap.finance/pancakeswap-eth-mm.json'
+export const PITEAS_PULSE_MM =
+  'https://raw.githubusercontent.com/piteasio/app-tokens/refs/heads/main/piteas-tokenlist.json'
 export const PANCAKE_BSC_MM = 'https://tokens.pancakeswap.finance/pancakeswap-bnb-mm.json'
 export const PANCAKE_ARB_MM = 'https://tokens.pancakeswap.finance/pancakeswap-arb-mm.json'
 export const PANCAKE_MONAD_TESTNET_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-monad-testnet-default.json'
 
 const COINGECKO_ETH = 'https://tokens.coingecko.com/uniswap/all.json'
+const COINGECKO_PULSE = 'https://tokens.coingecko.com/pulsechain/all.json'
+
 // export const CMC = 'https://tokens.pancakeswap.finance/cmc.json' // not updated for a while
 
+const PULSE_URLS = [PANCAKE_PULSE_DEFAULT, PITEAS_PULSE_MM, COINGECKO_PULSE]
 const ETH_URLS = [PANCAKE_ETH_DEFAULT, PANCAKE_ETH_MM, COINGECKO_ETH]
 const BSC_URLS = [PANCAKE_EXTENDED, COINGECKO, PANCAKE_BSC_MM]
 const POLYGON_ZKEVM_URLS = [
@@ -51,6 +58,7 @@ export const WARNING_LIST_URLS: string[] = []
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   ...BSC_URLS,
   ...ETH_URLS,
+  ...PULSE_URLS,
   ...ZKSYNC_URLS,
   ...LINEA_URLS,
   ...POLYGON_ZKEVM_URLS,
@@ -86,6 +94,7 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
 export const MULTI_CHAIN_LIST_URLS: { [chainId: number]: string[] } = {
   [ChainId.BSC]: BSC_URLS,
   [ChainId.ETHEREUM]: ETH_URLS,
+  [ChainId.PULSECHAIN]: PULSE_URLS,
   [ChainId.ZKSYNC]: ZKSYNC_URLS,
   [ChainId.POLYGON_ZKEVM]: POLYGON_ZKEVM_URLS,
   [ChainId.ARBITRUM_ONE]: ARBITRUM_URLS,

@@ -20,6 +20,7 @@ import {
   opBnbTokens,
   polygonZkEvmTestnetTokens,
   polygonZkEvmTokens,
+  pulseTokens,
   scrollSepoliaTokens,
   sepoliaTokens,
   zkSyncTestnetTokens,
@@ -36,6 +37,7 @@ export {
 
 export const CHAIN_REFRESH_TIME = {
   [ChainId.ETHEREUM]: 12_000,
+  [ChainId.PULSECHAIN]: 12_000,
   [ChainId.GOERLI]: 12_000,
   [ChainId.BSC]: 6_000,
   [ChainId.BSC_TESTNET]: 6_000,
@@ -61,6 +63,15 @@ export const CHAIN_REFRESH_TIME = {
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], WBTC_ETH],
+  [ChainId.PULSECHAIN]: [
+    pulseTokens.ninemm,
+    pulseTokens.pussy,
+    pulseTokens.dwb,
+    pulseTokens.hex,
+    pulseTokens.dai,
+    pulseTokens.usdc,
+    pulseTokens.usdt,
+  ],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.usdt, bscTokens.cake, bscTokens.btcb],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
@@ -79,7 +90,15 @@ export const SUGGESTED_BASES: ChainTokenList = {
     opBnbTestnetTokens.usdc,
     opBnbTestnetTokens.weth,
   ],
-  [ChainId.BASE]: [baseTokens.usdc, baseTokens.weth],
+  [ChainId.BASE]: [
+    baseTokens.nineMM,
+    baseTokens.pussy,
+    baseTokens.wXCH,
+    baseTokens.cbBTC,
+    baseTokens.usdc,
+    baseTokens.dai,
+    baseTokens.usdt,
+  ],
   [ChainId.BASE_TESTNET]: [baseTestnetTokens.usdc, baseTestnetTokens.weth],
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
   [ChainId.SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
@@ -91,6 +110,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
+  [ChainId.PULSECHAIN]: [pulseTokens.dai, WNATIVE[ChainId.PULSECHAIN]],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.wbnb, bscTokens.dai, bscTokens.busd, bscTokens.usdt, bscTokens.cake],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
@@ -119,6 +139,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     [WBTC_ETH, WNATIVE[ChainId.ETHEREUM]],
     [WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM]],
   ],
+  [ChainId.PULSECHAIN]: [[WNATIVE[ChainId.PULSECHAIN], pulseTokens.ninemm]],
   [ChainId.BSC]: [
     [bscTokens.cake, bscTokens.wbnb],
     [bscTokens.busd, bscTokens.usdt],
@@ -136,7 +157,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.LINEA_TESTNET]: [[lineaTestnetTokens.usdc, lineaTestnetTokens.weth]],
   [ChainId.OPBNB]: [[opBnbTokens.usdt, opBnbTokens.wbnb]],
   [ChainId.OPBNB_TESTNET]: [[opBnbTestnetTokens.usdt, opBnbTestnetTokens.wbnb]],
-  [ChainId.BASE]: [[baseTokens.usdc, baseTokens.weth]],
+  [ChainId.BASE]: [[WNATIVE[ChainId.BASE], baseTokens.nineMM]],
   [ChainId.BASE_TESTNET]: [[baseTestnetTokens.usdc, baseTestnetTokens.weth]],
   [ChainId.SCROLL_SEPOLIA]: [[scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth]],
 }

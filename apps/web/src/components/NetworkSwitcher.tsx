@@ -150,6 +150,7 @@ const WrongNetworkSelect = ({ switchNetwork, chainId }) => {
 
 const SHORT_SYMBOL = {
   [ChainId.ETHEREUM]: 'ETH',
+  [ChainId.PULSECHAIN]: 'PLS',
   [ChainId.BSC]: 'BNB',
   [ChainId.BSC_TESTNET]: 'tBNB',
   [ChainId.GOERLI]: 'GOR',

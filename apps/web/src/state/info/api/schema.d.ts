@@ -932,7 +932,17 @@ export interface components {
      * @description Chain name
      * @enum {string}
      */
-    ChainName: 'bsc' | 'bsc-testnet' | 'ethereum' | 'base' | 'opbnb' | 'zksync' | 'polygon-zkevm' | 'linea' | 'arbitrum'
+    ChainName:
+      | 'bsc'
+      | 'pulse'
+      | 'bsc-testnet'
+      | 'ethereum'
+      | 'base'
+      | 'opbnb'
+      | 'zksync'
+      | 'polygon-zkevm'
+      | 'linea'
+      | 'arbitrum'
     /**
      * @description Protocol version
      * @enum {string}
@@ -1766,6 +1776,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3833,6 +3844,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'

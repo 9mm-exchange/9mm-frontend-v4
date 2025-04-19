@@ -1,11 +1,6 @@
-import { useAtom } from 'jotai'
-import flatMap from 'lodash/flatMap'
-import uniqWith from 'lodash/uniqWith'
-import { useMemo } from 'react'
-import { selectorByUrlsAtom } from 'state/lists/hooks'
-import { SUGGESTED_BASES } from 'config/constants/exchange'
 import { ChainId, ERC20Token, Native } from '@pancakeswap/sdk'
 import type { TokenInfo } from '@pancakeswap/token-lists'
+import { SUGGESTED_BASES } from 'config/constants/exchange'
 import {
   PANCAKE_ARB_DEFAULT,
   PANCAKE_BASE_DEFAULT,
@@ -16,12 +11,20 @@ import {
   PANCAKE_LINEA_DEFAULT,
   PANCAKE_OPBNB_DEFAULT,
   PANCAKE_POLYGON_ZKEVM_DEFAULT,
+  PANCAKE_PULSE_DEFAULT,
   PANCAKE_ZKSYNC_DEFAULT,
+  PITEAS_PULSE_MM,
 } from 'config/constants/lists'
+import { useAtom } from 'jotai'
+import flatMap from 'lodash/flatMap'
+import uniqWith from 'lodash/uniqWith'
+import { useMemo } from 'react'
+import { selectorByUrlsAtom } from 'state/lists/hooks'
 import { useOrderChainIds } from './useMultiChains'
 
 const BSC_URLS = [PANCAKE_EXTENDED, PANCAKE_BSC_MM]
 const ETH_URLS = [PANCAKE_ETH_DEFAULT, PANCAKE_ETH_MM]
+const PULSE_URLS = [PANCAKE_PULSE_DEFAULT, PITEAS_PULSE_MM]
 const ZKSYNC_URLS = [PANCAKE_ZKSYNC_DEFAULT]
 const POLYGON_ZKEVM_URLS = [PANCAKE_POLYGON_ZKEVM_DEFAULT]
 const ARBITRUM_URLS = [PANCAKE_ARB_DEFAULT]
@@ -32,6 +35,7 @@ const OPBNB_URLS = [PANCAKE_OPBNB_DEFAULT]
 export const MULTI_CHAIN_LIST_URLS: { [chainId: number]: string[] } = {
   [ChainId.BSC]: BSC_URLS,
   [ChainId.ETHEREUM]: ETH_URLS,
+  [ChainId.PULSECHAIN]: PULSE_URLS,
   [ChainId.ZKSYNC]: ZKSYNC_URLS,
   [ChainId.POLYGON_ZKEVM]: POLYGON_ZKEVM_URLS,
   [ChainId.ARBITRUM_ONE]: ARBITRUM_URLS,

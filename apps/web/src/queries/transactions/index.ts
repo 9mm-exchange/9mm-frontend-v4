@@ -1,72 +1,113 @@
 import { V3_SUBGRAPHS } from '@pancakeswap/chains'
 import { gql, GraphQLClient } from 'graphql-request'
 
-const GLOBAL_TRANSACTIONS = gql`
-  query transactions {
-    transactions(first: 1000, orderBy: timestamp, orderDirection: desc) {
+const createTransactionsQuery = (address?: string) => gql`
+  query transactions($tokenAddress: String) {
+    mints(
+      first: 100, 
+      orderBy: timestamp, 
+      orderDirection: desc
+      ${
+        address
+          ? `, where: { 
+        or: [
+          { token0: $tokenAddress },
+          { token1: $tokenAddress }
+        ]
+      }`
+          : ''
+      }
+    ) {
       id
+      token0 {
+        id
+        symbol
+        name
+        decimals
+      }
+      token1 {
+        id
+        symbol
+        name
+        decimals
+      }
+      owner
+      sender
+      origin
+      amount0
+      amount1
+      amountUSD
       timestamp
-      mints {
-        id
-        token0 {
-          id
-          symbol
-          name
-          decimals
-        }
-        token1 {
-          id
-          symbol
-          name
-          decimals
-        }
-        owner
-        sender
-        origin
-        amount0
-        amount1
-        amountUSD
+    }
+    swaps(
+      first: 100, 
+      orderBy: timestamp, 
+      orderDirection: desc
+      ${
+        address
+          ? `, where: { 
+        or: [
+          { token0: $tokenAddress },
+          { token1: $tokenAddress }
+        ]
+      }`
+          : ''
       }
-      swaps {
+    ) {
+      id
+      token0 {
         id
-        token0 {
-          id
-          symbol
-          name
-          decimals
-        }
-        token1 {
-          id
-          symbol
-          name
-          decimals
-        }
-        origin
-        recipient
-        amount0
-        amount1
-        amountUSD
+        symbol
+        name
+        decimals
       }
-      burns {
+      token1 {
         id
-        token0 {
-          id
-          symbol
-          name
-          decimals
-        }
-        token1 {
-          id
-          symbol
-          name
-          decimals
-        }
-        owner
-        origin
-        amount0
-        amount1
-        amountUSD
+        symbol
+        name
+        decimals
       }
+      origin
+      recipient
+      amount0
+      amount1
+      amountUSD
+      timestamp
+    }
+    burns(
+      first: 100, 
+      orderBy: timestamp, 
+      orderDirection: desc
+      ${
+        address
+          ? `, where: { 
+        or: [
+          { token0: $tokenAddress },
+          { token1: $tokenAddress }
+        ]
+      }`
+          : ''
+      }
+    ) {
+      id
+      token0 {
+        id
+        symbol
+        name
+        decimals
+      }
+      token1 {
+        id
+        symbol
+        name
+        decimals
+      }
+      owner
+      origin
+      amount0
+      amount1
+      amountUSD
+      timestamp
     }
   }
 `
@@ -99,8 +140,6 @@ interface Result {
 }
 
 interface TransactionEntry {
-  timestamp: string
-  id: string
   mints: {
     id: string
     token0: Token
@@ -110,6 +149,7 @@ interface TransactionEntry {
     amount0: string
     amount1: string
     amountUSD: string
+    timestamp: string
   }[]
   swaps: {
     id: string
@@ -120,6 +160,7 @@ interface TransactionEntry {
     amount0: string
     amount1: string
     amountUSD: string
+    timestamp: string
   }[]
   burns: {
     id: string
@@ -130,11 +171,8 @@ interface TransactionEntry {
     amount0: string
     amount1: string
     amountUSD: string
+    timestamp: string
   }[]
-}
-
-interface TransactionResults {
-  transactions: TransactionEntry[]
 }
 
 export async function fetchTopTransactions(chainId: number, address: string | undefined): Promise<Result> {
@@ -142,12 +180,12 @@ export async function fetchTopTransactions(chainId: number, address: string | un
     const subgraphUrl = V3_SUBGRAPHS[chainId]
     const dataClient = new GraphQLClient(subgraphUrl)
 
-    const data = await dataClient.request<TransactionResults>(GLOBAL_TRANSACTIONS, {
-      client: dataClient,
-      fetchPolicy: 'cache-first',
-    })
+    const query = createTransactionsQuery(address)
+    const variables = address ? { tokenAddress: address.toLowerCase() } : {}
 
-    if (!data?.transactions) {
+    const data = await dataClient.request<TransactionEntry>(query, variables)
+
+    if (!data) {
       console.log('No transactions found.')
       return {
         error: true,
@@ -155,59 +193,50 @@ export async function fetchTopTransactions(chainId: number, address: string | un
       }
     }
 
-    const formatted = data.transactions.flatMap((t) => {
-      const poolId = t.id.split('#')[0]
-
-      const filterByAddress = (entry: { token0: { id: string }; token1: { id: string } }) =>
-        !address || entry.token0.id === address || entry.token1.id === address
-
-      const mintEntries = t.mints.filter(filterByAddress).map((m) => ({
+    const formatted = [
+      ...data.mints.map((m) => ({
         id: m.id,
         type: 'mint' as const,
-        transactionHash: t.id,
-        poolId,
+        transactionHash: m.id.split('#')[0],
+        poolId: m.id.split('#')[1],
         amount0: m.amount0,
         amount1: m.amount1,
         amountUSD: m.amountUSD,
         origin: m.origin,
         recipient: m.owner,
-        timestamp: new Date(parseInt(t.timestamp) * 1000).toISOString(),
+        timestamp: new Date(parseInt(m.timestamp) * 1000).toISOString(),
         token0: m.token0,
         token1: m.token1,
-      }))
-
-      const burnEntries = t.burns.filter(filterByAddress).map((b) => ({
+      })),
+      ...data.burns.map((b) => ({
         id: b.id,
         type: 'burn' as const,
-        transactionHash: t.id,
-        poolId,
+        transactionHash: b.id.split('#')[0],
+        poolId: b.id.split('#')[1],
         amount0: b.amount0,
         amount1: b.amount1,
         amountUSD: b.amountUSD,
         origin: b.origin,
         recipient: b.owner,
-        timestamp: new Date(parseInt(t.timestamp) * 1000).toISOString(),
+        timestamp: new Date(parseInt(b.timestamp) * 1000).toISOString(),
         token0: b.token0,
         token1: b.token1,
-      }))
-
-      const swapEntries = t.swaps.filter(filterByAddress).map((s) => ({
+      })),
+      ...data.swaps.map((s) => ({
         id: s.id,
         type: 'swap' as const,
-        transactionHash: t.id,
-        poolId,
+        transactionHash: s.id.split('#')[0],
+        poolId: s.id.split('#')[1],
         amount0: s.amount0,
         amount1: s.amount1,
         amountUSD: s.amountUSD,
         origin: s.origin,
         recipient: s.recipient,
-        timestamp: new Date(parseInt(t.timestamp) * 1000).toISOString(),
+        timestamp: new Date(parseInt(s.timestamp) * 1000).toISOString(),
         token0: s.token0,
         token1: s.token1,
-      }))
-
-      return [...mintEntries, ...burnEntries, ...swapEntries]
-    })
+      })),
+    ]
 
     return {
       error: false,
@@ -215,7 +244,6 @@ export async function fetchTopTransactions(chainId: number, address: string | un
     }
   } catch (error) {
     console.error('Failed to fetch transactions', error)
-
     return {
       error: true,
       data: undefined,

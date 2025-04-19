@@ -6,6 +6,7 @@ export const AVERAGE_CHAIN_BLOCK_TIMES: Record<ChainId, number> = {
   [ChainId.OPBNB]: 1,
   [ChainId.OPBNB_TESTNET]: 1,
   [ChainId.ETHEREUM]: 12,
+  [ChainId.PULSECHAIN]: 3,
   [ChainId.GOERLI]: 3,
   [ChainId.POLYGON_ZKEVM]: 3,
   [ChainId.POLYGON_ZKEVM_TESTNET]: 3,

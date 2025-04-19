@@ -1,50 +1,138 @@
+import RedisClient from 'lib/redis' // Assuming you have a Redis client utility
 import { NextApiHandler } from 'next'
+import { unstable_cache as unstableCache } from 'next/cache'
 import { fetchPoolFeeChartData } from 'queries/stats/v2/fee'
 import { multiChainId } from 'state/info/constant'
 
+/**
+ * Cache Configuration:
+ * - 5 minutes fresh period (300 seconds)
+ * - 25 minutes stale window (1500 seconds)
+ * - Redis cache as persistent fallback
+ */
+const CACHE_DURATION = 300 // 5 minutes in seconds
+const STALE_WINDOW = 1500 // 25 minutes in seconds (300 * 5)
 const CACHE_HEADERS = {
-  'Cache-Control': 's-maxage=300, max-age=150, stale-while-revalidate=1500',
+  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${STALE_WINDOW}`,
+  'CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
+  'Vercel-CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
 }
+
+/**
+ * Redis-backed data fetcher with fallback caching strategy
+ */
+const getPoolFeeChartDataWithRedis = async (
+  address: string,
+  chainId: number,
+  period?: '1D' | '1W' | '1M' | '6M' | '1Y',
+) => {
+  const cacheKey = `pool-fee-v2:${chainId}:${address.toLowerCase()}:${period || 'default'}`
+
+  try {
+    const result = await RedisClient.getWithFallback(
+      cacheKey,
+      async () => {
+        const freshData = await fetchPoolFeeChartData(address.toLowerCase(), chainId, period)
+
+        if (freshData.error) {
+          throw new Error('Failed to fetch fresh fee data')
+        }
+
+        return freshData
+      },
+      CACHE_DURATION,
+    )
+
+    return result.data
+  } catch (error) {
+    console.error('Redis cache operation failed:', error)
+    return { data: null, error: 'Failed to fetch data with cache fallback' }
+  }
+}
+
+/**
+ * Multi-layer cached data fetcher
+ */
+const cachedFetchPoolFeeChartData = unstableCache(
+  getPoolFeeChartDataWithRedis,
+  ['pool-fee-chart-v2'], // Different cache key prefix from v1
+  {
+    revalidate: CACHE_DURATION,
+    tags: ['pool-fee-v2'], // Separate tags from v1
+  },
+)
 
 const handler: NextApiHandler = async (req, res) => {
   try {
     const { chainName, address, period } = req.query
 
-    // Validate required parameters
+    // ----------------------------
+    // Input Validation
+    // ----------------------------
     if (!chainName || !address) {
-      return res.status(400).json({ error: 'Missing required parameters' })
+      return res.status(400).json({
+        error: 'Missing required parameters: chainName and address are required',
+      })
     }
 
-    // Get and validate chain ID
     const chainId = multiChainId[(chainName as string).toUpperCase()]
     if (!chainId) {
-      return res.status(400).json({ error: 'Invalid chain name' })
+      return res.status(400).json({
+        error: 'Invalid chain name',
+        supportedChains: Object.keys(multiChainId),
+      })
     }
 
-    // Validate address format
     if (typeof address !== 'string' || !address.match(/^0x[a-fA-F0-9]{40}$/)) {
-      return res.status(400).json({ error: 'Invalid pool address format' })
+      return res.status(400).json({
+        error: 'Invalid pool address format',
+        expectedFormat: '0x followed by 40 hexadecimal characters',
+      })
     }
 
-    // Fetch pool data
-    const feesData = await fetchPoolFeeChartData(
-      address.toLowerCase(),
+    const validPeriods = ['1D', '1W', '1M', '6M', '1Y', undefined]
+    if (period && !validPeriods.includes(period as string)) {
+      return res.status(400).json({
+        error: 'Invalid period parameter',
+        validPeriods: validPeriods.filter((p) => p !== undefined),
+      })
+    }
+
+    // ----------------------------
+    // Data Fetching with Caching
+    // ----------------------------
+    const feeData = await cachedFetchPoolFeeChartData(
+      address as string,
       chainId,
       period as '1D' | '1W' | '1M' | '6M' | '1Y' | undefined,
     )
-    if (feesData.error || !feesData.data) {
-      return res.status(404).json({ name: 'Error', message: 'no result' })
+
+    if (feeData.error || !feeData.data) {
+      res.setHeader('Cache-Control', 'no-store')
+      return res.status(404).json({
+        error: 'Fee data not found',
+        details: feeData.error || 'No data available for this pool',
+      })
     }
 
-    // Return successful response
-    res.setHeader('Cache-Control', CACHE_HEADERS['Cache-Control'])
-    return res.status(200).json(feesData.data)
+    // ----------------------------
+    // Response Preparation
+    // ----------------------------
+    Object.entries(CACHE_HEADERS).forEach(([key, value]) => {
+      res.setHeader(key, value)
+    })
+
+    return res.status(200).json(feeData.data)
   } catch (error) {
-    console.error('API Error:', error)
+    console.error('API Route Error:', error)
+    res.setHeader('Cache-Control', 'no-store, max-age=0')
+
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
+
     return res.status(500).json({
       error: 'Internal Server Error',
       details: errorMessage,
+      documentation: 'https://docs.your-api.com/errors/pool-fee-data',
     })
   }
 }

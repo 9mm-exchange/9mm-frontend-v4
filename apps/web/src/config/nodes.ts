@@ -43,6 +43,12 @@ export const SERVER_NODES = {
     'https://eth.llamarpc.com',
     'https://cloudflare-eth.com',
   ],
+  [ChainId.PULSECHAIN]: [
+    getNodeRealUrl(ChainId.PULSECHAIN, process.env.SERVER_NODE_REAL_API_PULSE) || '',
+    'https://pulsechain-rpc.publicnode.com',
+    'https://rpc-pulsechain.g4mm4.io',
+    'https://rpc.pulsechain.com',
+  ],
   [ChainId.GOERLI]: [
     getNodeRealUrl(ChainId.GOERLI, process.env.SERVER_NODE_REAL_API_GOERLI) || '',
     'https://eth-goerli.public.blastapi.io',
@@ -113,6 +119,14 @@ export const PUBLIC_NODES: Record<ChainId, string[] | readonly string[]> = {
     'https://eth.llamarpc.com',
     'https://cloudflare-eth.com',
   ].filter(Boolean),
+  [ChainId.PULSECHAIN]: [
+    getNodeRealUrl(ChainId.PULSECHAIN, process.env.NEXT_PUBLIC_NODE_REAL_API_PULSE) || '',
+    process.env.NEXT_PUBLIC_NODIES_PULSE || '',
+    'https://pulsechain-rpc.publicnode.com',
+    'https://rpc-pulsechain.g4mm4.io',
+    'https://rpc.pulsechain.com',
+  ].filter(Boolean),
+
   [ChainId.GOERLI]: [
     getNodeRealUrl(ChainId.GOERLI, process.env.NEXT_PUBLIC_NODE_REAL_API_GOERLI) || '',
     'https://eth-goerli.public.blastapi.io',

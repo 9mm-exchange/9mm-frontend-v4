@@ -4,6 +4,7 @@ export const SUPPORTED_CHAIN_IDS = [
   ChainId.BSC,
   ChainId.BSC_TESTNET,
   ChainId.ETHEREUM,
+  ChainId.PULSECHAIN,
   ChainId.ARBITRUM_ONE,
   ChainId.ARBITRUM_GOERLI,
   ChainId.ZKSYNC,

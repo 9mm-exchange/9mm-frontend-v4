@@ -10,6 +10,7 @@ import { tradingRewardZkSyncV3Pair } from './edgeCasesFarms/zkSyncFarm'
 
 export const tradingRewardPairConfigChainMap: Record<FarmV3SupportedChainId, ComputedFarmConfigV3[]> = {
   [ChainId.ETHEREUM]: [],
+  [ChainId.PULSECHAIN]: [],
   [ChainId.BSC]: [...tradingRewardBscV3Pair],
   [ChainId.BSC_TESTNET]: [],
   [ChainId.POLYGON_ZKEVM]: [...tradingRewardZkEvmV3Pair],

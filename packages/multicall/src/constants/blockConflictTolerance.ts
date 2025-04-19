@@ -5,6 +5,7 @@ export const DEFAULT_BLOCK_CONFLICT_TOLERANCE = 0
 export const BLOCK_CONFLICT_TOLERANCE: { [key in ChainId]?: number } = {
   [ChainId.BSC]: 3,
   [ChainId.ETHEREUM]: 1,
+  [ChainId.PULSECHAIN]: 1,
   [ChainId.ARBITRUM_ONE]: 5,
   [ChainId.POLYGON_ZKEVM]: 1,
   [ChainId.ZKSYNC]: 3,

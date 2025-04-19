@@ -828,6 +828,8 @@ export const useChainNameByQuery = (): MultiChainName => {
     switch (query?.chainName) {
       case 'eth':
         return 'ETH'
+      case 'pulse':
+        return 'PULSE'
       case 'polygon-zkevm':
         return 'POLYGON_ZKEVM'
       case 'zksync':

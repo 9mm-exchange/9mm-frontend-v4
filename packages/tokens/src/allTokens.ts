@@ -17,6 +17,7 @@ import { opBnbTokens } from './constants/opBNB'
 import { opBnbTestnetTokens } from './constants/opBnbTestnet'
 import { polygonZkEvmTokens } from './constants/polygonZkEVM'
 import { polygonZkEvmTestnetTokens } from './constants/polygonZkEVMTestnet'
+import { pulseTokens } from './constants/pulse'
 import { scrollSepoliaTokens } from './constants/scrollSepolia'
 import { sepoliaTokens } from './constants/sepolia'
 import { zksyncTokens } from './constants/zkSync'
@@ -27,6 +28,7 @@ export const allTokens = {
   [ChainId.BSC]: bscTokens,
   [ChainId.BSC_TESTNET]: bscTestnetTokens,
   [ChainId.ETHEREUM]: ethereumTokens,
+  [ChainId.PULSECHAIN]: pulseTokens,
   [ChainId.ARBITRUM_ONE]: arbitrumTokens,
   [ChainId.POLYGON_ZKEVM]: polygonZkEvmTokens,
   [ChainId.POLYGON_ZKEVM_TESTNET]: polygonZkEvmTestnetTokens,

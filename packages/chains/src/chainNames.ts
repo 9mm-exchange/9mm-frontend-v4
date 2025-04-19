@@ -2,6 +2,7 @@ import { ChainId } from './chainId'
 
 export const chainNames: Record<ChainId, string> = {
   [ChainId.ETHEREUM]: 'eth',
+  [ChainId.PULSECHAIN]: 'pulse',
   [ChainId.GOERLI]: 'goerli',
   [ChainId.BSC]: 'bsc',
   [ChainId.BSC_TESTNET]: 'bscTestnet',
@@ -26,6 +27,7 @@ export const chainNames: Record<ChainId, string> = {
 
 export const chainNamesInKebabCase = {
   [ChainId.ETHEREUM]: 'ethereum',
+  [ChainId.PULSECHAIN]: 'pulse',
   [ChainId.GOERLI]: 'goerli',
   [ChainId.BSC]: 'bsc',
   [ChainId.BSC_TESTNET]: 'bsc-testnet',
@@ -50,6 +52,7 @@ export const chainNamesInKebabCase = {
 
 export const mainnetChainNamesInKebabCase = {
   [ChainId.ETHEREUM]: 'ethereum',
+  [ChainId.PULSECHAIN]: 'pulse',
   [ChainId.GOERLI]: 'ethereum',
   [ChainId.BSC]: 'bsc',
   [ChainId.BSC_TESTNET]: 'bsc',
@@ -82,6 +85,7 @@ export const chainNameToChainId = Object.entries(chainNames).reduce((acc, [chain
 export const defiLlamaChainNames: Record<ChainId, string> = {
   [ChainId.BSC]: 'bsc',
   [ChainId.ETHEREUM]: 'ethereum',
+  [ChainId.PULSECHAIN]: 'pulse',
   [ChainId.GOERLI]: '',
   [ChainId.BSC_TESTNET]: '',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',

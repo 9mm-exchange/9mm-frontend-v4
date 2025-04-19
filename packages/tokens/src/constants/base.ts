@@ -199,4 +199,7 @@ export const baseTokens = {
     'EURC',
     'https://www.circle.com/en/',
   ),
+  nineMM: new ERC20Token(ChainId.BASE, '0xe290816384416fb1dB9225e176b716346dB9f9fE', 18, '9MM', '9mm Dex Token', ''),
+  pussy: new ERC20Token(ChainId.BASE, '0x195f4682237D52292a293f2D33E94d911Bc1F85E', 18, 'PUSSY', 'PUSSY', ''),
+  wXCH: new ERC20Token(ChainId.BASE, '0x36be1d329444aeF5D28df3662Ec5B4F965Cd93E9', 18, 'wXCH', 'wXCH', ''),
 }

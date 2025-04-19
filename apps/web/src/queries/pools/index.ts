@@ -165,7 +165,7 @@ const TOKEN_TOP_POOLS = gql`
       first: 50
       orderBy: totalValueLockedUSD
       orderDirection: desc
-      where: { or: [{ token0_: { id: $address } }, { token1_: { id: $address } }] }
+      where: { or: [{ token0: $address }, { token1: $address }] }
     ) {
       id
     }
@@ -290,6 +290,50 @@ export async function fetchTopPoolAddresses(
   }
 }
 
+export async function getPoolsDataByAddresses(
+  chainId: number,
+  poolAddresses?: string[],
+): Promise<{ error: boolean; data: PoolData[] | undefined }> {
+  try {
+    const subgraphUrl = V3_SUBGRAPHS[chainId]
+    if (!subgraphUrl) throw new Error(`No subgraph URL for chain ${chainId}`)
+
+    const client = new GraphQLClient(subgraphUrl)
+    const [t24, t48, t7d] = getDeltaTimestamps()
+    const blocks = await getBlocksByTimestamp([t24, t48, t7d], chainId)
+    const [block24, block48, blockWeek] = blocks ?? []
+
+    if (!poolAddresses?.length) return { error: true, data: undefined }
+
+    const [currentData, data24, data48, dataWeek] = await Promise.all([
+      fetchWithFallback<PoolsDataResponse>(client, POOLS_BULK(undefined, poolAddresses)),
+      fetchWithFallback<PoolsDataResponse>(client, POOLS_BULK(block24?.number, poolAddresses)),
+      fetchWithFallback<PoolsDataResponse>(client, POOLS_BULK(block48?.number, poolAddresses)),
+      fetchWithFallback<PoolsDataResponse>(client, POOLS_BULK(blockWeek?.number, poolAddresses)),
+    ])
+
+    const ethPriceUSD = parseSafeFloat(currentData?.bundles?.[0]?.ethPriceUSD)
+    const poolsMap = currentData?.pools?.reduce((acc, pool) => ({ ...acc, [pool.id]: pool }), {}) ?? {}
+    const pools24Map = data24?.pools?.reduce((acc, pool) => ({ ...acc, [pool.id]: pool }), {}) ?? {}
+    const pools48Map = data48?.pools?.reduce((acc, pool) => ({ ...acc, [pool.id]: pool }), {}) ?? {}
+    const poolsWeekMap = dataWeek?.pools?.reduce((acc, pool) => ({ ...acc, [pool.id]: pool }), {}) ?? {}
+
+    const formattedPools = poolAddresses
+      .map((address) => {
+        const current = poolsMap[address]
+        if (!current) return null
+
+        return formatPoolData(current, ethPriceUSD, pools24Map[address], pools48Map[address], poolsWeekMap[address])
+      })
+      .filter((pool): pool is PoolData => pool !== null)
+
+    return { error: false, data: formattedPools }
+  } catch (error) {
+    console.error('Error fetching pools data:', error)
+    return { error: true, data: undefined }
+  }
+}
+
 export async function getPoolsData(
   chainId: number,
   tokenAddress?: string,
@@ -304,6 +348,7 @@ export async function getPoolsData(
     const [block24, block48, blockWeek] = blocks ?? []
 
     const { addresses: poolAddresses } = await fetchTopPoolAddresses(client, chainId, tokenAddress)
+
     if (!poolAddresses?.length) return { error: true, data: undefined }
 
     const [currentData, data24, data48, dataWeek] = await Promise.all([

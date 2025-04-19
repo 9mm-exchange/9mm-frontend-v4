@@ -46,6 +46,14 @@ export const USDC_ETH = new ERC20Token(
   'https://www.centre.io/usdc',
 )
 
+export const USDC_PULSE = new ERC20Token(
+  ChainId.PULSECHAIN,
+  '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+  6,
+  'USDC',
+  'USD Coin',
+)
+
 export const USDC_GOERLI = new ERC20Token(
   ChainId.GOERLI,
   '0x07865c6E87B9F70255377e024ace6630C1Eaa37F',
@@ -66,6 +74,15 @@ export const USDT_BSC = new ERC20Token(
 export const USDT_ETH = new ERC20Token(
   ChainId.ETHEREUM,
   '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+  6,
+  'USDT',
+  'Tether USD',
+  'https://tether.to/',
+)
+
+export const USDT_PULSE = new ERC20Token(
+  ChainId.PULSECHAIN,
+  '0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f',
   6,
   'USDT',
   'Tether USD',
@@ -140,6 +157,22 @@ export const CAKE = {
     'PancakeSwap Token',
     'https://pancakeswap.finance/',
   ),
+  [ChainId.PULSECHAIN]: new ERC20Token(
+    ChainId.PULSECHAIN,
+    '0x7b39712Ef45F7dcED2bBDF11F3D5046bA61dA719',
+    18,
+    '9MM',
+    '9mm Dex Token',
+    '',
+  ),
+  [ChainId.BASE]: new ERC20Token(
+    ChainId.BASE,
+    '0xe290816384416fb1dB9225e176b716346dB9f9fE',
+    18,
+    '9MM',
+    '9mm Dex Token',
+    '',
+  ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
     '0xc2C3eAbE0368a2Ea97f485b03D1098cdD7d0c081',
@@ -206,14 +239,6 @@ export const CAKE = {
     'PancakeSwap Token',
     'https://pancakeswap.finance/',
   ),
-  [ChainId.BASE]: new ERC20Token(
-    ChainId.BASE,
-    '0x3055913c90Fcc1A6CE9a358911721eEb942013A1',
-    18,
-    'CAKE',
-    'PancakeSwap Token',
-    'https://pancakeswap.finance/',
-  ),
   [ChainId.BASE_TESTNET]: new ERC20Token(
     ChainId.BASE_TESTNET,
     '0x052a99849Ef2e13a5CB28275862991671D4b6fF5',
@@ -252,6 +277,7 @@ export const USDC = {
   [ChainId.BSC]: USDC_BSC,
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
+  [ChainId.PULSECHAIN]: USDC_PULSE,
   [ChainId.GOERLI]: USDC_GOERLI,
   [ChainId.ZKSYNC]: new ERC20Token(
     ChainId.ZKSYNC,
@@ -378,6 +404,7 @@ export const USDC = {
 export const USDT = {
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
+  [ChainId.PULSECHAIN]: USDT_PULSE,
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
     '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
@@ -485,6 +512,14 @@ export const DAI = {
     'Dai Stablecoin',
     'https://www.makerdao.com/',
   ),
+  [ChainId.PULSECHAIN]: new ERC20Token(
+    ChainId.PULSECHAIN,
+    '0xefD766cCb38EaF1dfd701853BFCe31359239F305',
+    18,
+    'DAI',
+    'Dai Stablecoin',
+    'https://www.makerdao.com/',
+  ),
   [ChainId.POLYGON_ZKEVM]: new ERC20Token(
     ChainId.POLYGON_ZKEVM,
     '0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4',
@@ -522,6 +557,7 @@ export const WBTC_ETH = new ERC20Token(
 
 export const STABLE_COIN = {
   [ChainId.ETHEREUM]: USDT[ChainId.ETHEREUM],
+  [ChainId.PULSECHAIN]: DAI[ChainId.PULSECHAIN],
   [ChainId.GOERLI]: USDC[ChainId.GOERLI],
   [ChainId.BSC]: USDT[ChainId.BSC],
   [ChainId.BSC_TESTNET]: BUSD[ChainId.BSC_TESTNET],

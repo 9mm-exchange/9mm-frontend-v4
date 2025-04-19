@@ -19,6 +19,7 @@ import {
   opBNBTestnet,
   polygonZkEvm,
   polygonZkEvmTestnet,
+  pulsechain,
   scrollSepolia,
   sepolia,
   zkSync,
@@ -95,4 +96,5 @@ export const CHAINS: [Chain, ...Chain[]] = [
   opBNBTestnet,
   scrollSepolia,
   monadTestnet,
+  pulsechain,
 ]

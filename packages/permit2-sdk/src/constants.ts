@@ -4,6 +4,8 @@ import { Address } from 'viem'
 // @fixme convert to ChainId after all chains are updated
 const PERMIT2_ADDRESSES: Record<ChainId, Address> = {
   [ChainId.ETHEREUM]: '0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768',
+  [ChainId.PULSECHAIN]: '0x97D143Ef1223e90Ce50b5910eA5aACABFe4e1152',
+
   [ChainId.GOERLI]: '0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768',
   [ChainId.SEPOLIA]: '0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768',
 
