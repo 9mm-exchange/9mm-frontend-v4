@@ -1195,6 +1195,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1329,6 +1330,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1365,6 +1367,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1401,6 +1404,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1465,6 +1469,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1505,6 +1510,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1549,6 +1555,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1591,6 +1598,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1632,6 +1640,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1673,6 +1682,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1735,6 +1745,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1810,6 +1821,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1866,6 +1878,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1928,6 +1941,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2039,6 +2053,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2080,6 +2095,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2116,6 +2132,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2155,6 +2172,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2194,6 +2212,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2235,6 +2254,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2298,6 +2318,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2331,6 +2352,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2394,6 +2416,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2425,6 +2448,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2456,6 +2480,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2487,6 +2512,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3386,9 +3412,21 @@ export interface operations {
         protocols: ('v2' | 'v3' | 'v4bin' | 'v4cl' | 'stable') | ('v2' | 'v3' | 'v4bin' | 'v4cl' | 'stable')[]
         /** @description Array of chain names */
         chains:
-          | ('bsc' | 'bsc-testnet' | 'ethereum' | 'base' | 'opbnb' | 'zksync' | 'polygon-zkevm' | 'linea' | 'arbitrum')
           | (
               | 'bsc'
+              | 'pulse'
+              | 'bsc-testnet'
+              | 'ethereum'
+              | 'base'
+              | 'opbnb'
+              | 'zksync'
+              | 'polygon-zkevm'
+              | 'linea'
+              | 'arbitrum'
+            )
+          | (
+              | 'bsc'
+              | 'pulse'
               | 'bsc-testnet'
               | 'ethereum'
               | 'base'
@@ -3469,9 +3507,21 @@ export interface operations {
         protocols: ('v2' | 'v3' | 'v4bin' | 'v4cl' | 'stable') | ('v2' | 'v3' | 'v4bin' | 'v4cl' | 'stable')[]
         /** @description Array of chain names */
         chains:
-          | ('bsc' | 'bsc-testnet' | 'ethereum' | 'base' | 'opbnb' | 'zksync' | 'polygon-zkevm' | 'linea' | 'arbitrum')
           | (
               | 'bsc'
+              | 'pulse'
+              | 'bsc-testnet'
+              | 'ethereum'
+              | 'base'
+              | 'opbnb'
+              | 'zksync'
+              | 'polygon-zkevm'
+              | 'linea'
+              | 'arbitrum'
+            )
+          | (
+              | 'bsc'
+              | 'pulse'
               | 'bsc-testnet'
               | 'ethereum'
               | 'base'
@@ -3535,6 +3585,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3629,6 +3680,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3781,6 +3833,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3940,6 +3993,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4140,6 +4194,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4179,6 +4234,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4217,6 +4273,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4282,6 +4339,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4353,6 +4411,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4397,6 +4456,7 @@ export interface operations {
         /** @description Chain name */
         chainName:
           | 'bsc'
+          | 'pulse'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
