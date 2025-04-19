@@ -4,9 +4,6 @@
 node_modules
 /.pnp
 .pnp.js
-.env
-.env.development
-.env.production
 
 # testing
 /coverage
@@ -34,6 +31,9 @@ storybook-static
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+.env.development
+.env.production
 
 # debug
 *.log
