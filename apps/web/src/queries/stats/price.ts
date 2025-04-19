@@ -103,7 +103,7 @@ export async function fetchTokenPriceChartData(
   }
 
   try {
-    const blocks = await getBlocksByTimestamp(timestamps, chainId, 'asc', 500)
+    const blocks = await getBlocksByTimestamp(timestamps, chainId, 'asc')
     const blocksLength = blocks?.length ?? 0
 
     if (blocks && blocksLength > 0 && chainId === 56) {
