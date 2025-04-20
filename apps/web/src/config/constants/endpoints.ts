@@ -45,7 +45,6 @@ export const CELER_API = 'https://api.celerscan.com/scan'
 export const V2_SUBGRAPH_URLS = {
   ...V2_SUBGRAPHS,
   [ChainId.POLYGON_ZKEVM]: `${THE_GRAPH_PROXY_API}/exchange-v2-polygon-zkevm`,
-  [ChainId.BASE]: `${THE_GRAPH_PROXY_API}/exchange-v2-base`,
   [ChainId.ETHEREUM]: `${THE_GRAPH_PROXY_API}/exchange-v2-eth`,
   [ChainId.BSC]: `${THE_GRAPH_PROXY_API}/exchange-v2-bsc`,
   [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-v2-arb`,
@@ -57,12 +56,11 @@ export const INFO_CLIENT_ETH = V2_SUBGRAPH_URLS[ChainId.ETHEREUM]
 
 export const BLOCKS_CLIENT_WITH_CHAIN = BLOCKS_SUBGRAPH_URLS
 
-export const ASSET_CDN = process.env.NEXT_PUBLIC_ASSET_CDN || 'https://assets.pancakeswap.finance'
+export const ASSET_CDN = process.env.NEXT_PUBLIC_ASSET_CDN || 'https://tokens.9mm.pro'
 
 export const V3_SUBGRAPH_URLS = {
   ...V3_SUBGRAPHS,
   [ChainId.POLYGON_ZKEVM]: `${THE_GRAPH_PROXY_API}/exchange-v3-polygon-zkevm`,
-  [ChainId.BASE]: `${THE_GRAPH_PROXY_API}/exchange-v3-base`,
   [ChainId.ETHEREUM]: `${THE_GRAPH_PROXY_API}/exchange-v3-eth`,
   [ChainId.BSC]: `${THE_GRAPH_PROXY_API}/exchange-v3-bsc`,
   [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-v3-arb`,

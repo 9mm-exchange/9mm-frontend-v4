@@ -91,20 +91,14 @@ export const getOverviewData = async (
 
     const result: OverviewData = {
       totalFeeUSD: current.totalFeesUSD,
-      totalFeeUSD24h: (parseFloat(current.totalFeesUSD) - parseFloat(historical24.totalFeesUSD)).toString(),
-      totalFeeUSD48h: (parseFloat(current.totalFeesUSD) - parseFloat(historical48.totalFeesUSD)).toString(),
-      totalFeeUSD30d: (parseFloat(current.totalFeesUSD) - parseFloat(historical30d.totalFeesUSD)).toString(),
+      totalFeeUSD24h: parseFloat(historical24.totalFeesUSD).toString(),
+      totalFeeUSD48h: parseFloat(historical48.totalFeesUSD).toString(),
+      totalFeeUSD30d: parseFloat(historical30d.totalFeesUSD).toString(),
 
       totalProtocolFeeUSD: current.totalProtocolFeesUSD,
-      totalProtocolFeeUSD24h: (
-        parseFloat(current.totalProtocolFeesUSD) - parseFloat(historical24.totalProtocolFeesUSD)
-      ).toString(),
-      totalProtocolFeeUSD48h: (
-        parseFloat(current.totalProtocolFeesUSD) - parseFloat(historical48.totalProtocolFeesUSD)
-      ).toString(),
-      totalProtocolFeeUSD30d: (
-        parseFloat(current.totalProtocolFeesUSD) - parseFloat(historical30d.totalProtocolFeesUSD)
-      ).toString(),
+      totalProtocolFeeUSD24h: parseFloat(historical24.totalProtocolFeesUSD).toString(),
+      totalProtocolFeeUSD48h: parseFloat(historical48.totalProtocolFeesUSD).toString(),
+      totalProtocolFeeUSD30d: parseFloat(historical30d.totalProtocolFeesUSD).toString(),
 
       tvlUSD: current.totalValueLockedUSD,
       tvlUSD24h: historical24.totalValueLockedUSD,

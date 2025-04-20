@@ -1,13 +1,13 @@
-import { useTheme } from '@pancakeswap/hooks'
-import { AtomBox, AutoColumn, AutoRow, Heading, LinkExternal, Text } from '@pancakeswap/uikit'
-import { Chart } from '@pancakeswap/widgets-internal'
-import { format } from 'd3'
-import { useTranslation } from '@pancakeswap/localization'
 import { ChainId } from '@pancakeswap/chains'
+import { useTheme } from '@pancakeswap/hooks'
+import { useTranslation } from '@pancakeswap/localization'
 import { bscTokens, ethereumTokens } from '@pancakeswap/tokens'
+import { AtomBox, AutoColumn, AutoRow, Heading, LinkExternal, Text } from '@pancakeswap/uikit'
 import { FeeAmount } from '@pancakeswap/v3-sdk'
+import { Chart } from '@pancakeswap/widgets-internal'
 import { LightCard } from 'components/Card'
 import { Bound } from 'config/constants/types'
+import { format } from 'd3'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { PoolState } from 'hooks/v3/types'
 import { tryParsePrice, tryParseTick } from 'hooks/v3/utils'
@@ -52,6 +52,7 @@ const distributions = {
   [FeeAmount.LOW]: 20,
   [FeeAmount.MEDIUM]: 40,
   [FeeAmount.HIGH]: 30,
+  [FeeAmount.HIGHEST]: 30,
 }
 
 const poolsByFeeTier = {
@@ -59,6 +60,7 @@ const poolsByFeeTier = {
   [FeeAmount.LOW]: PoolState.EXISTS,
   [FeeAmount.MEDIUM]: PoolState.EXISTS,
   [FeeAmount.HIGH]: PoolState.EXISTS,
+  [FeeAmount.HIGHEST]: PoolState.EXISTS,
 }
 
 export function Step3() {
@@ -207,19 +209,21 @@ export function Step3() {
                 content={
                   <>
                     <SelectContainer>
-                      {[FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH].map((_feeAmount) => {
-                        return (
-                          <FeeOption
-                            largestUsageFeeTier={feeAmount}
-                            feeAmount={_feeAmount}
-                            active={feeAmount_ === _feeAmount}
-                            onClick={() => setFeeAmount(_feeAmount)}
-                            distributions={distributions}
-                            poolState={poolsByFeeTier[_feeAmount]}
-                            key={_feeAmount}
-                          />
-                        )
-                      })}
+                      {[FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH, FeeAmount.HIGHEST].map(
+                        (_feeAmount) => {
+                          return (
+                            <FeeOption
+                              largestUsageFeeTier={feeAmount}
+                              feeAmount={_feeAmount}
+                              active={feeAmount_ === _feeAmount}
+                              onClick={() => setFeeAmount(_feeAmount)}
+                              distributions={distributions}
+                              poolState={poolsByFeeTier[_feeAmount]}
+                              key={_feeAmount}
+                            />
+                          )
+                        },
+                      )}
                     </SelectContainer>
                   </>
                 }

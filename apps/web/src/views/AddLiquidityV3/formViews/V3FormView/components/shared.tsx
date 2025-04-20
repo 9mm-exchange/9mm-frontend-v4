@@ -1,7 +1,7 @@
 import { ChainId } from '@pancakeswap/chains'
 import { FeeAmount } from '@pancakeswap/v3-sdk'
-import { styled } from 'styled-components'
 import type { ReactNode } from 'react'
+import { styled } from 'styled-components'
 import { CHAIN_IDS } from 'utils/wagmi'
 
 export const FEE_AMOUNT_DETAIL: Record<
@@ -26,6 +26,11 @@ export const FEE_AMOUNT_DETAIL: Record<
   [FeeAmount.HIGH]: {
     label: '1',
     description: 'Best for exotic pairs.',
+    supportedChains: CHAIN_IDS,
+  },
+  [FeeAmount.HIGHEST]: {
+    label: '2',
+    description: 'Best for extra exotic pairs.',
     supportedChains: CHAIN_IDS,
   },
 }

@@ -1,6 +1,9 @@
 import { ChainId, chainNames } from '@pancakeswap/chains'
 import { GAUGES_SUPPORTED_CHAIN_IDS, GAUGE_TYPE_NAMES, Gauge, GaugeType } from '@pancakeswap/gauges'
+import { useDebounce } from '@pancakeswap/hooks'
+import { PCSDuoTokenVaultConfig, fetchPositionManager } from '@pancakeswap/position-managers'
 import { FeeAmount } from '@pancakeswap/v3-sdk'
+import fromPairs from 'lodash/fromPairs'
 import {
   parseAsArrayOf,
   parseAsNumberLiteral,
@@ -10,9 +13,6 @@ import {
   useQueryStates,
 } from 'nuqs'
 import { useCallback, useEffect, useState } from 'react'
-import { useDebounce } from '@pancakeswap/hooks'
-import { fetchPositionManager, PCSDuoTokenVaultConfig } from '@pancakeswap/position-managers'
-import fromPairs from 'lodash/fromPairs'
 import { Filter, FilterValue, Gauges, OptionsType, SortOptions } from '../components/GaugesFilter'
 import { getPositionManagerName } from '../utils'
 
@@ -83,7 +83,13 @@ const useGaugesFilterQueryState = () => {
         parseAsNumberLiteral<(typeof GAUGES_SUPPORTED_CHAIN_IDS)[number]>(GAUGES_SUPPORTED_CHAIN_IDS),
       ).withDefault([]),
       byFeeTier: parseAsArrayOf(
-        parseAsNumberLiteral<FeeAmount>([FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH, FeeAmount.LOWEST]),
+        parseAsNumberLiteral<FeeAmount>([
+          FeeAmount.LOW,
+          FeeAmount.MEDIUM,
+          FeeAmount.HIGH,
+          FeeAmount.HIGHEST,
+          FeeAmount.LOWEST,
+        ]),
       ).withDefault([]),
       byType: parseAsArrayOf(parseAsStringLiteral<Gauges>([Gauges.Regular, Gauges.Boosted, Gauges.Capped])).withDefault(
         [],

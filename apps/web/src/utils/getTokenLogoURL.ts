@@ -7,20 +7,22 @@ import { isAddress } from 'viem'
 const mapping = {
   [ChainId.BSC]: 'smartchain',
   [ChainId.ETHEREUM]: 'ethereum',
-  [ChainId.PULSECHAIN]: 'pulse',
+  [ChainId.PULSECHAIN]: 'token-logo',
   [ChainId.POLYGON_ZKEVM]: 'polygonzkevm',
   [ChainId.ZKSYNC]: 'zksync',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',
   [ChainId.LINEA]: 'linea',
+  [ChainId.BASE]: 'base-logos',
 }
 
 const getTokenLogoURL = memoize(
   (token?: Token) => {
     if (token && mapping[token.chainId] && isAddress(token.address)) {
-      return `https://assets-cdn.trustwallet.com/blockchains/${mapping[token.chainId]}/assets/${safeGetAddress(
-        token.address,
-      )}/logo.png`
+      return `https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/${
+        mapping[token.chainId]
+      }/${safeGetAddress(token.address)}.png`
     }
+
     return null
   },
   (t) => `${t?.chainId}#${t?.address}`,
@@ -29,9 +31,9 @@ const getTokenLogoURL = memoize(
 export const getTokenLogoURLByAddress = memoize(
   (address?: string, chainId?: number) => {
     if (address && chainId && mapping[chainId] && isAddress(address)) {
-      return `https://assets-cdn.trustwallet.com/blockchains/${mapping[chainId]}/assets/${safeGetAddress(
-        address,
-      )}/logo.png`
+      return `https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/${
+        mapping[chainId]
+      }/assets/${safeGetAddress(address)}/logo.png`
     }
     return null
   },

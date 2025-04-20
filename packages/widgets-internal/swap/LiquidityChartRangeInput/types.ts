@@ -106,4 +106,10 @@ export const ZOOM_LEVELS: Record<FeeAmount, ZoomLevels> = {
     min: 0.00001,
     max: 20,
   },
+  [FeeAmount.HIGHEST]: {
+    initialMin: 0.5,
+    initialMax: 2,
+    min: 0.00001,
+    max: 20,
+  },
 };

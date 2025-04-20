@@ -83,6 +83,21 @@ export const QUICK_ACTION_CONFIGS: Record<FeeAmount, { [percentage: number]: Zoo
     },
     50: ZOOM_LEVELS[FeeAmount.HIGH],
   },
+  [FeeAmount.HIGHEST]: {
+    10: {
+      initialMin: 0.9,
+      initialMax: 1.1,
+      min: 0.00001,
+      max: 1.5,
+    },
+    20: {
+      initialMin: 0.8,
+      initialMax: 1.25,
+      min: 0.00001,
+      max: 20,
+    },
+    50: ZOOM_LEVELS[FeeAmount.HIGHEST],
+  },
 }
 
 export type HandleFeePoolSelectFn = (arg: HandleFeePoolSelectArgs) => void

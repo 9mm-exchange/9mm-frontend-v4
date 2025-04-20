@@ -93,7 +93,9 @@ const getV3PoolMeta = memoize(
 
 const getV3PoolMetas = memoize(
   (pair: [Currency, Currency]) =>
-    [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH].map((fee) => getV3PoolMeta([...pair, fee])),
+    [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH, FeeAmount.HIGHEST].map((fee) =>
+      getV3PoolMeta([...pair, fee]),
+    ),
   ([currencyA, currencyB]) => {
     if (currencyA.wrapped.equals(currencyB.wrapped)) {
       return [currencyA.chainId, currencyA.wrapped.address].join('_')

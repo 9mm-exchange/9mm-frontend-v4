@@ -11,7 +11,8 @@ const mapping: { [key: number]: string } = {
   [ChainId.POLYGON_ZKEVM]: "polygonzkevm",
   [ChainId.ARBITRUM_ONE]: "arbitrum",
   [ChainId.ZKSYNC]: "zksync",
-  [ChainId.BASE]: "base",
+  [ChainId.BASE]: "base-logos",
+  [ChainId.PULSECHAIN]: "token-logo",
   [ChainId.LINEA]: "linea",
   [ChainId.OPBNB]: "opbnb",
 };
@@ -19,9 +20,9 @@ const mapping: { [key: number]: string } = {
 export const getTokenLogoURL = memoize(
   (token?: Token) => {
     if (token && mapping[token.chainId]) {
-      return `https://assets-cdn.trustwallet.com/blockchains/${mapping[token.chainId]}/assets/${getAddress(
+      return `https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/${mapping[token.chainId]}/${getAddress(
         token.address
-      )}/logo.png`;
+      )}.png`;
     }
     return null;
   },
@@ -31,9 +32,9 @@ export const getTokenLogoURL = memoize(
 export const getTokenLogoURLByAddress = memoize(
   (address?: string, chainId?: number) => {
     if (address && chainId && mapping[chainId]) {
-      return `https://assets-cdn.trustwallet.com/blockchains/${mapping[chainId]}/assets/${getAddress(
-        address
-      )}/logo.png`;
+      return `https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/${
+        mapping[chainId]
+      }/${getAddress(address)}.png`;
     }
     return null;
   },

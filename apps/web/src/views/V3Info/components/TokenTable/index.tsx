@@ -1,3 +1,4 @@
+import { useTranslation } from '@pancakeswap/localization'
 import {
   ArrowBackIcon,
   ArrowForwardIcon,
@@ -9,8 +10,6 @@ import {
   useMatchBreakpoints,
 } from '@pancakeswap/uikit'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
-
-import { useTranslation } from '@pancakeswap/localization'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useTheme from 'hooks/useTheme'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
@@ -18,6 +17,7 @@ import { multiChainId } from 'state/info/constant'
 import { useChainNameByQuery, useMultiChainPath } from 'state/info/hooks'
 import { TokenDataForView } from 'state/info/types'
 import { styled } from 'styled-components'
+import { formatAmount } from 'utils/formatInfoNumbers'
 import { getTokenNameAlias, getTokenSymbolAlias } from 'utils/getTokenAlias'
 import { CurrencyLogo } from 'views/Info/components/CurrencyLogo'
 import { Arrow, Break, ClickableColumnHeader, PageButtons, TableWrapper } from 'views/Info/components/InfoTables/shared'
@@ -111,7 +111,7 @@ const DataRow = ({
             </RowFixed>
           </Text>
         </Flex>
-        <Text fontWeight={400}>{formatDollarAmount(tokenData.priceUSD)}</Text>
+        <Text fontWeight={400}>${formatAmount(tokenData.priceUSD, { notation: 'standard' })}</Text>
         <Text fontWeight={400}>
           <Percent value={tokenData.priceUSDChange} fontWeight={400} />
         </Text>

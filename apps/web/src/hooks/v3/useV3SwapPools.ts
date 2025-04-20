@@ -1,5 +1,5 @@
 import { Currency, Token } from '@pancakeswap/sdk'
-import { FeeAmount, Pool } from '@pancakeswap/v3-sdk'
+import { FeeAmount } from '@pancakeswap/v3-sdk'
 import { useAllCurrencyCombinations } from 'hooks/Trades'
 import { useMemo } from 'react'
 import { PoolState } from './types'
@@ -28,6 +28,7 @@ export function useV3SwapPools(
           [tokenA, tokenB, FeeAmount.LOW],
           [tokenA, tokenB, FeeAmount.MEDIUM],
           [tokenA, tokenB, FeeAmount.HIGH],
+          [tokenA, tokenB, FeeAmount.HIGHEST],
         ])
       }, []),
     [allCurrencyCombinations],

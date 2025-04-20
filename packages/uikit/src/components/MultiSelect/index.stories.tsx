@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import { MultiSelect } from "./index";
-import { Column } from "../Column";
 import { Flex } from "../Box";
+import { Column } from "../Column";
+import { MultiSelect } from "./index";
 
 export default {
   title: "Components/MultiSelect",
@@ -12,11 +12,12 @@ export default {
 const chains = [
   { label: "BNB", value: "BNB", icon: "https://assets.pancakeswap.finance/web/chains/56.png" },
   { label: "Ethereum", value: "Ethereum", icon: "https://assets.pancakeswap.finance/web/chains/1.png" },
+  { label: "Pulsechain", value: "Pulsechain", icon: "https://tokens.9mm.pro/web/chains/1.png" },
   { label: "Polygon zkEVM", value: "Polygon zkEVM", icon: "https://assets.pancakeswap.finance/web/chains/1101.png" },
   { label: "zkSync Era", value: "zkSync Era", icon: "https://assets.pancakeswap.finance/web/chains/324.png" },
   { label: "Arbitrum One", value: "Arbitrum One", icon: "https://assets.pancakeswap.finance/web/chains/42161.png" },
   { label: "Linea", value: "Linea", icon: "https://assets.pancakeswap.finance/web/chains/59144.png" },
-  { label: "Base", value: "Base", icon: "https://assets.pancakeswap.finance/web/chains/8453.png" },
+  { label: "Base", value: "Base", icon: "https://tokens.9mm.pro/web/chains/8453.png" },
   { label: "opBNB", value: "opbnb", icon: "https://assets.pancakeswap.finance/web/chains/204.png" },
   { label: "Aptos", value: "Aptos", icon: "https://aptos.pancakeswap.finance/images/apt.png" },
 ];

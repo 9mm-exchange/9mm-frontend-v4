@@ -1,5 +1,5 @@
 import { Token } from '@pancakeswap/swap-sdk-core'
-import { DEPLOYER_ADDRESSES, FeeAmount, Pool, computePoolAddress } from '@pancakeswap/v3-sdk'
+import { DEPLOYER_ADDRESSES, FeeAmount, computePoolAddress } from '@pancakeswap/v3-sdk'
 import { v3PoolStateABI } from 'config/abi/v3PoolState'
 import { publicClient } from 'utils/viem'
 import { Address } from 'viem'
@@ -35,7 +35,7 @@ export async function getPoolsWithLiquidityByFeeTiers(
   tokenA: Token,
   tokenB: Token,
   chainId: number,
-  feeTiers: FeeAmount[] = [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH],
+  feeTiers: FeeAmount[] = [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH, FeeAmount.HIGHEST],
 ): Promise<Address[]> {
   try {
     const deployerAddress = DEPLOYER_ADDRESSES[chainId]

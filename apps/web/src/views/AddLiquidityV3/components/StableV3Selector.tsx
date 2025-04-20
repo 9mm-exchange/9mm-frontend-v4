@@ -42,6 +42,7 @@ export function StableV3Selector({
         [currencyA, currencyB, FeeAmount.LOW],
         [currencyA, currencyB, FeeAmount.MEDIUM],
         [currencyA, currencyB, FeeAmount.HIGH],
+        [currencyA, currencyB, FeeAmount.HIGHEST],
       ],
       [currencyA, currencyB],
     ),
@@ -62,6 +63,7 @@ export function StableV3Selector({
           [FeeAmount.LOW]: PoolState.NOT_EXISTS,
           [FeeAmount.MEDIUM]: PoolState.NOT_EXISTS,
           [FeeAmount.HIGH]: PoolState.NOT_EXISTS,
+          [FeeAmount.HIGHEST]: PoolState.NOT_EXISTS,
         } as Record<FeeAmount, PoolState>,
       ),
     [pools],
@@ -125,22 +127,24 @@ export function StableV3Selector({
           </EvenWidthAutoRow>
           {selectorType === SELECTOR_TYPE.V3 && (
             <SelectContainer>
-              {[FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH].map((_feeAmount) => {
-                const { supportedChains } = FEE_AMOUNT_DETAIL[_feeAmount]
-                if (chainId && supportedChains.includes(chainId)) {
-                  return (
-                    <FeeOption
-                      feeAmount={_feeAmount}
-                      active={feeAmount === _feeAmount}
-                      onClick={() => handleFeePoolSelect({ type: SELECTOR_TYPE.V3, feeAmount: _feeAmount })}
-                      distributions={distributions}
-                      poolState={poolsByFeeTier[_feeAmount]}
-                      key={_feeAmount}
-                    />
-                  )
-                }
-                return null
-              })}
+              {[FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH, FeeAmount.HIGHEST].map(
+                (_feeAmount) => {
+                  const { supportedChains } = FEE_AMOUNT_DETAIL[_feeAmount]
+                  if (chainId && supportedChains.includes(chainId)) {
+                    return (
+                      <FeeOption
+                        feeAmount={_feeAmount}
+                        active={feeAmount === _feeAmount}
+                        onClick={() => handleFeePoolSelect({ type: SELECTOR_TYPE.V3, feeAmount: _feeAmount })}
+                        distributions={distributions}
+                        poolState={poolsByFeeTier[_feeAmount]}
+                        key={_feeAmount}
+                      />
+                    )
+                  }
+                  return null
+                },
+              )}
             </SelectContainer>
           )}
           <Message variant="warning">

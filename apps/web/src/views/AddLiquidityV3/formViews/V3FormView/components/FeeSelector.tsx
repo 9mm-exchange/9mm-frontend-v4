@@ -16,7 +16,7 @@ import { FeeOption } from './FeeOption'
 import { FeeTierPercentageBadge } from './FeeTierPercentageBadge'
 import { FEE_AMOUNT_DETAIL, SelectContainer } from './shared'
 
-const FEE_TIERS = [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH]
+const FEE_TIERS = [FeeAmount.LOWEST, FeeAmount.LOW, FeeAmount.MEDIUM, FeeAmount.HIGH, FeeAmount.HIGHEST]
 
 export default function FeeSelector({
   feeAmount,
@@ -63,6 +63,7 @@ export default function FeeSelector({
         [currencyA, currencyB, FeeAmount.LOW],
         [currencyA, currencyB, FeeAmount.MEDIUM],
         [currencyA, currencyB, FeeAmount.HIGH],
+        [currencyA, currencyB, FeeAmount.HIGHEST],
       ],
       [currencyA, currencyB],
     ),
@@ -85,6 +86,7 @@ export default function FeeSelector({
           [FeeAmount.LOW]: PoolState.NOT_EXISTS,
           [FeeAmount.MEDIUM]: PoolState.NOT_EXISTS,
           [FeeAmount.HIGH]: PoolState.NOT_EXISTS,
+          [FeeAmount.HIGHEST]: PoolState.NOT_EXISTS,
         },
       ),
     [pools],

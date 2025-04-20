@@ -1,4 +1,5 @@
 import { BIG_ONE, BIG_ZERO } from '@pancakeswap/utils/bigNumber'
+import { formatPercent } from '@pancakeswap/utils/formatFractions'
 import { encodeSqrtRatioX96, FeeAmount, FeeCalculator, isPoolTickInRange, parseProtocolFees } from '@pancakeswap/v3-sdk'
 import { useAmountsByUsdValue, useRoi } from '@pancakeswap/widgets-internal/roi'
 import BigNumber from 'bignumber.js'
@@ -13,7 +14,6 @@ import { useV3FormState } from 'views/AddLiquidityV3/formViews/V3FormView/form/r
 import { useLmPoolLiquidity } from 'views/Farms/hooks/useLmPoolLiquidity'
 import { useMyPositions } from 'views/PoolDetail/components/MyPositionsContext'
 import { useEstimateUserMultiplier } from 'views/universalFarms/hooks/useEstimateUserMultiplier'
-import { formatPercent } from '@pancakeswap/utils/formatFractions'
 import { PoolAprButton } from './PoolAprButton'
 
 const V3_LP_FEE_RATE = {
@@ -21,6 +21,7 @@ const V3_LP_FEE_RATE = {
   [FeeAmount.LOW]: 0.66,
   [FeeAmount.MEDIUM]: 0.68,
   [FeeAmount.HIGH]: 0.68,
+  [FeeAmount.HIGHEST]: 0.68,
 }
 
 type PoolPositionAprButtonProps<TPosition> = {

@@ -17,7 +17,7 @@ export const OPTIONS = {
   [OptionsType.ByFeeTier]: {
     key: OptionsType.ByFeeTier,
     title: <Trans>Filter By Fee Tier</Trans>,
-    options: [FeeAmount.HIGH, FeeAmount.MEDIUM, FeeAmount.LOW, FeeAmount.LOWEST],
+    options: [FeeAmount.HIGHEST, FeeAmount.HIGH, FeeAmount.MEDIUM, FeeAmount.LOW, FeeAmount.LOWEST],
   },
   [OptionsType.ByType]: {
     key: OptionsType.ByType,

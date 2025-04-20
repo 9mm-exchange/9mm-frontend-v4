@@ -37,6 +37,7 @@ export const formatAmount = (
     tokenPrecision,
     isInteger,
   } = options || { notation: amount && amount >= 10000 ? 'compact' : 'standard' }
+
   if (amount === 0) {
     if (isInteger) {
       return '0'
@@ -45,24 +46,31 @@ export const formatAmount = (
   }
   if (!amount) return '-'
   if (!Number.isFinite(amount)) return '∞'
-  if (displayThreshold && amount < displayThreshold) {
+
+  // Create a new variable instead of reassigning the parameter
+  let processedAmount = amount
+  if (Math.abs(amount - 1) < 1e-10) {
+    processedAmount = 1
+  }
+
+  if (displayThreshold && processedAmount < displayThreshold) {
     return `<${displayThreshold}`
   }
-  if (amount < 1 && !tokenPrecision) {
-    return getFirstThreeNonZeroDecimals(amount)
+  if (processedAmount < 1 && !tokenPrecision) {
+    return getFirstThreeNonZeroDecimals(processedAmount)
   }
 
   let precision = options?.precision ?? 2
   if (tokenPrecision && !options?.precision) {
-    precision = amount < 1 || tokenPrecision === 'enhanced' ? 3 : 2
+    precision = processedAmount < 1 || tokenPrecision === 'enhanced' ? 3 : 2
   }
 
-  const amountWithPrecision = parseFloat(amount?.toFixed(precision))
+  const amountWithPrecision = parseFloat(processedAmount?.toFixed(precision))
 
   return Intl.NumberFormat('en-US', {
     notation,
-    minimumFractionDigits: isInteger && amount < 1000 ? 0 : precision,
-    maximumFractionDigits: isInteger && amount < 1000 ? 0 : precision,
+    minimumFractionDigits: isInteger && processedAmount < 1000 ? 0 : precision,
+    maximumFractionDigits: isInteger && processedAmount < 1000 ? 0 : precision,
     useGrouping: amountWithPrecision < GROUPING_FALSE_LARGER_THAN_THIS,
   }).format(amountWithPrecision)
 }
