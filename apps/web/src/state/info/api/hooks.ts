@@ -20,10 +20,12 @@ export const useExplorerChainNameByQuery = (): components['schemas']['ChainName'
         return 'base'
       case 'pulse':
         return 'pulse'
+      case 'sonic':
+        return 'sonic'
       case 'opbnb':
         return 'opbnb'
       default:
-        return 'bsc'
+        return 'pulse'
     }
   }, [query])
 

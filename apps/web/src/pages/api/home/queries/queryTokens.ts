@@ -73,7 +73,7 @@ async function getTokenPrices(chainId: ChainId, addresses: `0x${string}`[]) {
 export async function queryTokens() {
   const [prices, tokenMap] = await Promise.all([
     getTokenPrices(
-      ChainId.BSC,
+      ChainId.PULSECHAIN,
       tokens.map((x) => x.id),
     ),
     queryTokenList(),

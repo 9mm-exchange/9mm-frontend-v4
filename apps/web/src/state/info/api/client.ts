@@ -91,6 +91,7 @@ export const chainIdToExplorerInfoChainName = {
   [ChainId.BSC]: 'bsc',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.PULSECHAIN]: 'pulse',
+  [ChainId.SONIC]: 'sonic',
   [ChainId.POLYGON_ZKEVM]: 'polygon-zkevm',
   [ChainId.ZKSYNC]: 'zksync',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',

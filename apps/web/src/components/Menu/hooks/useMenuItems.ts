@@ -75,7 +75,7 @@ export const useMenuItems = ({ onClick }: UseMenuItemsParams = {}): ConfigMenuIt
       }
 
       if (item.href === '/info/v3') {
-        const href = `${item.href}${multiChainPaths[chainId || ChainId.BSC] ?? ''}`
+        const href = `${item.href}${multiChainPaths[chainId || ChainId.PULSECHAIN] ?? ''}`
         return { ...item, href, onClick: onClickEvent }
       }
 

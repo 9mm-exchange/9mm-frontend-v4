@@ -49,6 +49,12 @@ export const SERVER_NODES = {
     'https://rpc-pulsechain.g4mm4.io',
     'https://rpc.pulsechain.com',
   ],
+  [ChainId.SONIC]: [
+    getNodeRealUrl(ChainId.SONIC, process.env.SERVER_NODE_REAL_API_PULSE) || '',
+    'https://sonic-rpc.publicnode.com',
+    'https://sonic.drpc.org',
+    'https://rpc.soniclabs.com',
+  ],
   [ChainId.GOERLI]: [
     getNodeRealUrl(ChainId.GOERLI, process.env.SERVER_NODE_REAL_API_GOERLI) || '',
     'https://eth-goerli.public.blastapi.io',
@@ -125,6 +131,14 @@ export const PUBLIC_NODES: Record<ChainId, string[] | readonly string[]> = {
     'https://pulsechain-rpc.publicnode.com',
     'https://rpc-pulsechain.g4mm4.io',
     'https://rpc.pulsechain.com',
+  ].filter(Boolean),
+
+  [ChainId.SONIC]: [
+    getNodeRealUrl(ChainId.SONIC, process.env.NEXT_PUBLIC_NODE_REAL_API_SONIC) || '',
+    process.env.NEXT_PUBLIC_NODIES_SONIC || '',
+    'https://sonic-rpc.publicnode.com',
+    'https://sonic.drpc.org',
+    'https://rpc.soniclabs.com',
   ].filter(Boolean),
 
   [ChainId.GOERLI]: [

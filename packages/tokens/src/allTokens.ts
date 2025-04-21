@@ -20,6 +20,7 @@ import { polygonZkEvmTestnetTokens } from './constants/polygonZkEVMTestnet'
 import { pulseTokens } from './constants/pulse'
 import { scrollSepoliaTokens } from './constants/scrollSepolia'
 import { sepoliaTokens } from './constants/sepolia'
+import { sonicTokens } from './constants/sonic'
 import { zksyncTokens } from './constants/zkSync'
 import { zkSyncTestnetTokens } from './constants/zkSyncTestnet'
 
@@ -29,6 +30,7 @@ export const allTokens = {
   [ChainId.BSC_TESTNET]: bscTestnetTokens,
   [ChainId.ETHEREUM]: ethereumTokens,
   [ChainId.PULSECHAIN]: pulseTokens,
+  [ChainId.SONIC]: sonicTokens,
   [ChainId.ARBITRUM_ONE]: arbitrumTokens,
   [ChainId.POLYGON_ZKEVM]: polygonZkEvmTokens,
   [ChainId.POLYGON_ZKEVM_TESTNET]: polygonZkEvmTestnetTokens,

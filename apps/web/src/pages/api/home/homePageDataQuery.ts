@@ -56,14 +56,15 @@ export const homePageCurrencies: HomePageCurrency[] = [
 
 export function homePageChainsInfo() {
   const evms = [
-    ChainId.BSC,
-    ChainId.ETHEREUM,
+    // ChainId.BSC,
+    // ChainId.ETHEREUM,
     ChainId.PULSECHAIN,
+    ChainId.SONIC,
     ChainId.BASE,
-    ChainId.ARBITRUM_ONE,
-    ChainId.ZKSYNC,
-    ChainId.LINEA,
-    ChainId.POLYGON_ZKEVM,
+    // ChainId.ARBITRUM_ONE,
+    // ChainId.ZKSYNC,
+    // ChainId.LINEA,
+    // ChainId.POLYGON_ZKEVM,
   ]
 
   const evmChains: HomepageChain[] = evms.map((chainId) => {

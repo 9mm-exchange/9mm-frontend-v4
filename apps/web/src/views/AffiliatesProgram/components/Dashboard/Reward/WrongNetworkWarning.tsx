@@ -1,6 +1,6 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Text, Message, MessageText } from '@pancakeswap/uikit'
 import { ChainId } from '@pancakeswap/chains'
+import { useTranslation } from '@pancakeswap/localization'
+import { Message, MessageText, Text } from '@pancakeswap/uikit'
 import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
 
 const WrongNetworkWarning = () => {
@@ -8,7 +8,7 @@ const WrongNetworkWarning = () => {
   const { switchNetworkAsync, canSwitch } = useSwitchNetwork()
 
   const handleSwitchNetwork = async (): Promise<void> => {
-    await switchNetworkAsync(ChainId.BSC)
+    await switchNetworkAsync(ChainId.PULSECHAIN)
   }
 
   return (

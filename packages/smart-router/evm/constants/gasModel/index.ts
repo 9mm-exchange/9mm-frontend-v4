@@ -20,6 +20,7 @@ import {
   polygonZkEvmTokens,
   pulseTokens,
   scrollSepoliaTokens,
+  sonicTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
 } from '@pancakeswap/tokens'
@@ -27,6 +28,7 @@ import {
 export const usdGasTokensByChain = {
   [ChainId.ETHEREUM]: [ethereumTokens.usdt],
   [ChainId.PULSECHAIN]: [pulseTokens.dai],
+  [ChainId.SONIC]: [sonicTokens.usdc],
   [ChainId.GOERLI]: [goerliTestnetTokens.usdc],
   [ChainId.BSC]: [bscTokens.usdt],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.usdt],

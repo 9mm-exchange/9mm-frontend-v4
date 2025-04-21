@@ -32,10 +32,12 @@ const chainNameForQuery = (chain: string) => {
       return 'base'
     case 'pulse':
       return 'pulse'
+    case 'sonic':
+      return 'sonic'
     case 'opbnb':
       return 'opbnb'
     default:
-      return 'bsc'
+      return 'pulse'
   }
 }
 
@@ -51,9 +53,9 @@ async function _loadData(chain?: string, address?: string, type?: SupportedType)
   switch (type) {
     case 'stableSwap':
     case 'swap': {
-      const chainId = getChainIdByChainName(chain) || ChainId.BSC
+      const chainId = getChainIdByChainName(chain) || ChainId.PULSECHAIN
       const query: V2TokenDataQuery = {
-        chainName: queryChainName as 'bsc' | 'ethereum' | 'arbitrum',
+        chainName: queryChainName as 'pulse' | 'ethereum' | 'arbitrum',
         chainId: parseInt(chainId as any as string),
         address,
         type,

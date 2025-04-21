@@ -21,6 +21,7 @@ const SwapWarningTokens = <WarningTokenList>{
     alETH,
   },
   [ChainId.PULSECHAIN]: {},
+  [ChainId.SONIC]: {},
   [ChainId.BSC]: {
     safemoon,
     bondly,

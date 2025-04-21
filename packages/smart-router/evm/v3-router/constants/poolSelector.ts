@@ -45,6 +45,14 @@ export const V3_DEFAULT_POOL_SELECTOR_CONFIG: PoolSelectorConfigChainMap = {
     topNWithEachBaseToken: 3,
     topNWithBaseToken: 4,
   },
+  [ChainId.SONIC]: {
+    topN: 2,
+    topNDirectSwaps: 2,
+    topNTokenInOut: 2,
+    topNSecondHop: 1,
+    topNWithEachBaseToken: 3,
+    topNWithBaseToken: 4,
+  },
   [ChainId.GOERLI]: {
     topN: 2,
     topNDirectSwaps: 2,
@@ -81,6 +89,14 @@ export const V2_DEFAULT_POOL_SELECTOR_CONFIG: PoolSelectorConfigChainMap = {
     topNWithBaseToken: 3,
   },
   [ChainId.PULSECHAIN]: {
+    topN: 3,
+    topNDirectSwaps: 2,
+    topNTokenInOut: 2,
+    topNSecondHop: 1,
+    topNWithEachBaseToken: 3,
+    topNWithBaseToken: 3,
+  },
+  [ChainId.SONIC]: {
     topN: 3,
     topNDirectSwaps: 2,
     topNTokenInOut: 2,

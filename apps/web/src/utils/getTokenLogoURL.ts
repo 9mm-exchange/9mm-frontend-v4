@@ -8,6 +8,7 @@ const mapping = {
   [ChainId.BSC]: 'smartchain',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.PULSECHAIN]: 'token-logo',
+  [ChainId.SONIC]: 'sonic-logos',
   [ChainId.POLYGON_ZKEVM]: 'polygonzkevm',
   [ChainId.ZKSYNC]: 'zksync',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',

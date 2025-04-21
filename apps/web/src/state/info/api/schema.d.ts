@@ -935,6 +935,7 @@ export interface components {
     ChainName:
       | 'bsc'
       | 'pulse'
+      | 'sonic'
       | 'bsc-testnet'
       | 'ethereum'
       | 'base'
@@ -1196,6 +1197,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1331,6 +1333,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1368,6 +1371,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1405,6 +1409,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1470,6 +1475,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1511,6 +1517,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1556,6 +1563,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1599,6 +1607,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1641,6 +1650,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1683,6 +1693,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1746,6 +1757,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1788,6 +1800,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1822,6 +1835,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1879,6 +1893,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -1942,6 +1957,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2054,6 +2070,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2096,6 +2113,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2133,6 +2151,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2173,6 +2192,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2213,6 +2233,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2255,6 +2276,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2319,6 +2341,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2353,6 +2376,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2417,6 +2441,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2449,6 +2474,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2481,6 +2507,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -2513,6 +2540,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3415,6 +3443,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
               | 'base'
@@ -3427,6 +3456,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
               | 'base'
@@ -3510,6 +3540,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
               | 'base'
@@ -3522,6 +3553,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
               | 'base'
@@ -3586,6 +3618,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3681,6 +3714,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3834,6 +3868,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3898,6 +3933,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -3994,6 +4030,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4195,6 +4232,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4235,6 +4273,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4274,6 +4313,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4340,6 +4380,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4412,6 +4453,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'
@@ -4457,6 +4499,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
           | 'base'

@@ -187,7 +187,7 @@ export const CrossChainVeCakeModal: React.FC<{
   const handleSwitchNetwork = useCallback(async () => {
     try {
       setIsSwitching(true)
-      await switchNetworkAsync(ChainId.BSC)
+      await switchNetworkAsync(ChainId.PULSECHAIN)
     } catch (e) {
       console.error(e)
     } finally {

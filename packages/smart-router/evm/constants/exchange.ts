@@ -33,6 +33,7 @@ import { ChainMap, ChainTokenList } from '../types'
 export const SMART_ROUTER_ADDRESSES = {
   [ChainId.ETHEREUM]: '0x13f4EA83D0bd40E75C8222255bc855a974568Dd4',
   [ChainId.PULSECHAIN]: '0xa9444246d80d6E3496C9242395213B4f22226a59',
+  [ChainId.SONIC]: '0x32de6892a8269b40E726e32e580b96B2fEa44D81',
   [ChainId.GOERLI]: '0x9a489505a00cE272eAa5e07Dba6491314CaE3796',
   [ChainId.BSC]: '0x13f4EA83D0bd40E75C8222255bc855a974568Dd4',
   [ChainId.BSC_TESTNET]: '0x9a489505a00cE272eAa5e07Dba6491314CaE3796',
@@ -58,6 +59,7 @@ export const SMART_ROUTER_ADDRESSES = {
 export const V2_ROUTER_ADDRESS: ChainMap<string> = {
   [ChainId.ETHEREUM]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.PULSECHAIN]: '0xcC73b59F8D7b7c532703bDfea2808a28a488cF47',
+  [ChainId.SONIC]: '0x46636339CC36978B3ac480FBaEd6389589A95eB1',
   [ChainId.GOERLI]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.BSC]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
   [ChainId.BSC_TESTNET]: '0xD99D1c33F9fC3444f8101754aBC46c52416550D1',
@@ -83,6 +85,7 @@ export const V2_ROUTER_ADDRESS: ChainMap<string> = {
 export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
   [ChainId.ETHEREUM]: '',
   [ChainId.PULSECHAIN]: '',
+  [ChainId.SONIC]: '',
   [ChainId.GOERLI]: '',
   [ChainId.BSC]: '0xa680d27f63Fa5E213C502d1B3Ca1EB6a3C1b31D6',
   [ChainId.BSC_TESTNET]: '0xaE6C14AAA753B3FCaB96149e1E10Bc4EDF39F546',
@@ -114,6 +117,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDC[ChainId.PULSECHAIN],
     USDT[ChainId.PULSECHAIN],
   ],
+  [ChainId.SONIC]: [WNATIVE[ChainId.SONIC], USDC[ChainId.SONIC], USDT[ChainId.SONIC]],
   [ChainId.GOERLI]: [WNATIVE[ChainId.GOERLI], USDC[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [
     bscTokens.wbnb,
@@ -205,6 +209,7 @@ export const ADDITIONAL_BASES: {
     [baseTokens.usdbc.address]: [baseTokens.axlusdc],
   },
   [ChainId.PULSECHAIN]: {},
+  [ChainId.SONIC]: {},
   [ChainId.ARBITRUM_ONE]: {
     [arbitrumTokens.mpendle.address]: [arbitrumTokens.pendle],
     [arbitrumTokens.pendle.address]: [arbitrumTokens.mpendle],

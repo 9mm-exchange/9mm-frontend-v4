@@ -3,6 +3,7 @@ import { ChainId } from './chainId'
 export const chainNames: Record<ChainId, string> = {
   [ChainId.ETHEREUM]: 'eth',
   [ChainId.PULSECHAIN]: 'pulse',
+  [ChainId.SONIC]: 'sonic',
   [ChainId.GOERLI]: 'goerli',
   [ChainId.BSC]: 'bsc',
   [ChainId.BSC_TESTNET]: 'bscTestnet',
@@ -28,6 +29,7 @@ export const chainNames: Record<ChainId, string> = {
 export const chainNamesInKebabCase = {
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.PULSECHAIN]: 'pulse',
+  [ChainId.SONIC]: 'sonic',
   [ChainId.GOERLI]: 'goerli',
   [ChainId.BSC]: 'bsc',
   [ChainId.BSC_TESTNET]: 'bsc-testnet',
@@ -53,6 +55,7 @@ export const chainNamesInKebabCase = {
 export const mainnetChainNamesInKebabCase = {
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.PULSECHAIN]: 'pulse',
+  [ChainId.SONIC]: 'sonic',
   [ChainId.GOERLI]: 'ethereum',
   [ChainId.BSC]: 'bsc',
   [ChainId.BSC_TESTNET]: 'bsc',
@@ -86,6 +89,7 @@ export const defiLlamaChainNames: Record<ChainId, string> = {
   [ChainId.BSC]: 'bsc',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.PULSECHAIN]: 'pulse',
+  [ChainId.SONIC]: 'sonic',
   [ChainId.GOERLI]: '',
   [ChainId.BSC_TESTNET]: '',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',

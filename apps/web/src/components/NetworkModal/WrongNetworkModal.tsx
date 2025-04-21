@@ -2,17 +2,17 @@ import { ChainId } from '@pancakeswap/chains'
 import { useTranslation } from '@pancakeswap/localization'
 import { ArrowForwardIcon, Button, FlexGap, Grid, Message, MessageText, Modal, Text } from '@pancakeswap/uikit'
 import { ChainLogo } from 'components/Logo/ChainLogo'
+import { CHAIN_QUERY_NAME } from 'config/chains'
+import { queryChainIdAtom } from 'hooks/useActiveChainId'
 import useAuth from 'hooks/useAuth'
 import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
+import { useAtom } from 'jotai'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { Chain } from 'viem'
-import { useAccount } from 'wagmi'
-import * as allChains from 'viem/chains'
 import { useCallback } from 'react'
-import { queryChainIdAtom } from 'hooks/useActiveChainId'
-import { useAtom } from 'jotai'
-import { CHAIN_QUERY_NAME } from 'config/chains'
+import { Chain } from 'viem'
+import * as allChains from 'viem/chains'
+import { useAccount } from 'wagmi'
 import Dots from '../Loader/Dots'
 
 const getChain = (chainId: number | undefined) => {
@@ -27,7 +27,7 @@ export function WrongNetworkModal({ currentChain, onDismiss }: { currentChain: C
   const { logout } = useAuth()
   const { isConnected, chain, chainId: walletChainId } = useAccount()
   const [, setQueryChainId] = useAtom(queryChainIdAtom)
-  const chainId = currentChain.id || ChainId.BSC
+  const chainId = currentChain.id || ChainId.PULSECHAIN
   const { t } = useTranslation()
   const router = useRouter()
 

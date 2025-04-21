@@ -830,6 +830,8 @@ export const useChainNameByQuery = (): MultiChainName => {
         return 'ETH'
       case 'pulse':
         return 'PULSE'
+      case 'sonic':
+        return 'SONIC'
       case 'polygon-zkevm':
         return 'POLYGON_ZKEVM'
       case 'zksync':
@@ -843,7 +845,7 @@ export const useChainNameByQuery = (): MultiChainName => {
       case 'opbnb':
         return 'OPBNB'
       default:
-        return 'BSC'
+        return 'PULSE'
     }
   }, [query])
   return chainName

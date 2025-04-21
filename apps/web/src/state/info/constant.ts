@@ -5,9 +5,19 @@ import { ChainId, isTestnetChainId } from '@pancakeswap/chains'
 import { STABLE_SUPPORTED_CHAIN_IDS } from '@pancakeswap/stable-swap-sdk'
 import { BSC_TOKEN_WHITELIST, ETH_TOKEN_BLACKLIST, ETH_TOKEN_WHITELIST, TOKEN_BLACKLIST } from 'config/constants/info'
 import mapValues from 'lodash/mapValues'
-import { arbitrum, base, bsc, linea, mainnet, opBNB, polygonZkEvm, pulsechain, zkSync } from 'wagmi/chains'
+import { arbitrum, base, bsc, linea, mainnet, opBNB, polygonZkEvm, pulsechain, sonic, zkSync } from 'wagmi/chains'
 
-export type MultiChainName = 'BSC' | 'ETH' | 'PULSE' | 'POLYGON_ZKEVM' | 'ZKSYNC' | 'ARB' | 'LINEA' | 'BASE' | 'OPBNB'
+export type MultiChainName =
+  | 'BSC'
+  | 'ETH'
+  | 'PULSE'
+  | 'SONIC'
+  | 'POLYGON_ZKEVM'
+  | 'ZKSYNC'
+  | 'ARB'
+  | 'LINEA'
+  | 'BASE'
+  | 'OPBNB'
 
 export type MultiChainNameExtend = MultiChainName | 'BSC_TESTNET' | 'ZKSYNC_TESTNET'
 
@@ -15,6 +25,7 @@ export const multiChainName: Record<number | string, MultiChainNameExtend> = {
   [ChainId.BSC]: 'BSC',
   [ChainId.ETHEREUM]: 'ETH',
   [ChainId.PULSECHAIN]: 'PULSE',
+  [ChainId.SONIC]: 'SONIC',
   [ChainId.BSC_TESTNET]: 'BSC_TESTNET',
   [ChainId.POLYGON_ZKEVM]: 'POLYGON_ZKEVM',
   [ChainId.ZKSYNC]: 'ZKSYNC',
@@ -31,6 +42,7 @@ export const multiChainShortName: Record<number, string> = {
 export const multiChainQueryMainToken: Record<MultiChainName, string> = {
   BSC: 'BNB',
   ETH: 'ETH',
+  SONIC: 'ETH',
   PULSE: 'ETH',
   POLYGON_ZKEVM: 'ETH',
   ZKSYNC: 'ETH',
@@ -44,6 +56,7 @@ export const multiChainId: Record<MultiChainName, ChainId> = {
   BSC: ChainId.BSC,
   ETH: ChainId.ETHEREUM,
   PULSE: ChainId.PULSECHAIN,
+  SONIC: ChainId.SONIC,
   POLYGON_ZKEVM: ChainId.POLYGON_ZKEVM,
   ZKSYNC: ChainId.ZKSYNC,
   ARB: ChainId.ARBITRUM_ONE,
@@ -56,6 +69,7 @@ export const multiChainPaths = {
   [ChainId.BSC]: '',
   [ChainId.ETHEREUM]: '/eth',
   [ChainId.PULSECHAIN]: '/pulse',
+  [ChainId.SONIC]: '/sonic',
   [ChainId.POLYGON_ZKEVM]: '/polygon-zkevm',
   [ChainId.ZKSYNC]: '/zksync',
   [ChainId.ARBITRUM_ONE]: '/arb',
@@ -87,6 +101,7 @@ export const STABLESWAP_SUBGRAPHS_START_BLOCK = {
 export const multiChainScan: Record<MultiChainName, string> = {
   BSC: bsc.blockExplorers.default.name,
   PULSE: pulsechain.blockExplorers.default.name,
+  SONIC: sonic.blockExplorers.default.name,
   ETH: mainnet.blockExplorers.default.name,
   POLYGON_ZKEVM: polygonZkEvm.blockExplorers.default.name,
   ZKSYNC: zkSync.blockExplorers.default.name,
@@ -109,6 +124,7 @@ export const multiChainTokenBlackList: Record<MultiChainName, string[]> = mapVal
     BSC: TOKEN_BLACKLIST,
     ETH: ETH_TOKEN_BLACKLIST,
     PULSE: ['0x'],
+    SONIC: ['0x'],
     POLYGON_ZKEVM: ['0x'],
     ZKSYNC: ['0x'],
     ARB: ['0x'],
@@ -124,6 +140,7 @@ export const multiChainTokenWhiteList: Record<MultiChainName, string[]> = mapVal
     BSC: BSC_TOKEN_WHITELIST,
     ETH: ETH_TOKEN_WHITELIST,
     PULSE: [],
+    SONIC: [],
     POLYGON_ZKEVM: [],
     ZKSYNC: [],
     ARB: [],

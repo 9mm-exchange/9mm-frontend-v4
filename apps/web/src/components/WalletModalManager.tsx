@@ -20,7 +20,7 @@ const WalletModalManager: React.FC<{ isOpen: boolean; onDismiss?: () => void }> 
 
   const docLink = useMemo(() => getDocLink(code), [code])
 
-  const wallets = useMemo(() => createWallets(chainId || ChainId.BSC, connectAsync), [chainId, connectAsync])
+  const wallets = useMemo(() => createWallets(chainId || ChainId.PULSECHAIN, connectAsync), [chainId, connectAsync])
 
   return (
     <WalletModalV2

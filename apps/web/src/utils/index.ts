@@ -4,7 +4,7 @@ import { TokenAddressMap } from '@pancakeswap/token-lists'
 import memoize from 'lodash/memoize'
 import { multiChainScanName } from 'state/info/constant'
 import { Address } from 'viem'
-import { bsc } from 'wagmi/chains'
+import { pulsechain } from 'wagmi/chains'
 import { checksumAddress } from './checksumAddress'
 import { chains } from './wagmi'
 
@@ -35,9 +35,9 @@ export function getBlockExploreLink(
   type: 'transaction' | 'token' | 'address' | 'block' | 'countdown',
   chainIdOverride?: number,
 ): string {
-  const chainId = chainIdOverride || ChainId.BSC
+  const chainId = chainIdOverride || ChainId.PULSECHAIN
   const chain = chains.find((c) => c.id === chainId)
-  if (!chain || !data) return bsc.blockExplorers.default.url
+  if (!chain || !data) return pulsechain.blockExplorers.default.url
   switch (type) {
     case 'transaction': {
       return `${chain?.blockExplorers?.default.url}/tx/${data}`
@@ -58,15 +58,17 @@ export function getBlockExploreLink(
 }
 
 export function getBlockExploreName(chainIdOverride?: number) {
-  const chainId = chainIdOverride || ChainId.BSC
+  const chainId = chainIdOverride || ChainId.PULSECHAIN
   const chain = chains.find((c) => c.id === chainId)
 
-  return multiChainScanName[chain?.id || -1] || chain?.blockExplorers?.default.name || bsc.blockExplorers.default.name
+  return (
+    multiChainScanName[chain?.id || -1] || chain?.blockExplorers?.default.name || pulsechain.blockExplorers.default.name
+  )
 }
 
 export function getBscScanLinkForNft(collectionAddress: string | undefined, tokenId?: string): string {
   if (!collectionAddress) return ''
-  return `${bsc.blockExplorers.default.url}/token/${collectionAddress}?a=${tokenId}`
+  return `${pulsechain.blockExplorers.default.url}/token/${collectionAddress}?a=${tokenId}`
 }
 
 // add 10%

@@ -120,7 +120,7 @@ import {
 export const getContract = <TAbi extends Abi | readonly unknown[], TWalletClient extends WalletClient>({
   abi,
   address,
-  chainId = ChainId.BSC,
+  chainId = ChainId.PULSECHAIN,
   publicClient,
   signer,
 }: {

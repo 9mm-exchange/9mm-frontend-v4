@@ -10,6 +10,7 @@ import {
   opBnbTokens,
   polygonZkEvmTokens,
   pulseTokens,
+  sonicTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
 } from '@pancakeswap/tokens'
@@ -28,6 +29,9 @@ export const priceHelperTokens = {
   },
   [ChainId.PULSECHAIN]: {
     list: [pulseTokens.weth, pulseTokens.usdc, pulseTokens.usdt, pulseTokens.dai],
+  },
+  [ChainId.SONIC]: {
+    list: [sonicTokens.weth, sonicTokens.usdc, sonicTokens.usdt],
   },
   [ChainId.BSC]: {
     list: [
@@ -72,6 +76,7 @@ export const priceHelperTokens = {
 export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> = {
   [ChainId.ETHEREUM]: {},
   [ChainId.PULSECHAIN]: {},
+  [ChainId.SONIC]: {},
   [ChainId.BSC]: {},
   [ChainId.BSC_TESTNET]: {
     [bscTestnetTokens.mockA.address]: '10',

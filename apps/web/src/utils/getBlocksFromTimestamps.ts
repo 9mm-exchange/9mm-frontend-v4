@@ -12,7 +12,7 @@ import { Block } from 'state/info/types'
 export const getBlocksFromTimestamps = async (
   timestamps: number[],
   sortDirection: 'asc' | 'desc' | undefined = 'desc',
-  chainName: MultiChainNameExtend | undefined = 'BSC',
+  chainName: MultiChainNameExtend | undefined = 'PULSE',
 ): Promise<Block[]> => {
   if (timestamps?.length === 0) {
     return []

@@ -5,6 +5,7 @@ const SUPPORTED_ONRAMP_TOKENS = {
   [ChainId.BSC]: ['BNB', 'CAKE', 'USDT', 'USDC'],
   [ChainId.ETHEREUM]: ['ETH', 'USDT', 'USDC', 'DAI', 'WBTC'],
   [ChainId.PULSECHAIN]: ['PLS', 'USDT', 'USDC', 'DAI', 'WBTC'],
+  [ChainId.SONIC]: ['S', 'USDT', 'USDC'],
   [ChainId.POLYGON_ZKEVM]: ['ETH'],
   [ChainId.ZKSYNC]: ['ETH'],
   [ChainId.ARBITRUM_ONE]: ['ETH', 'USDC'],

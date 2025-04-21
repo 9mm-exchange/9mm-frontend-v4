@@ -23,6 +23,7 @@ import {
   pulseTokens,
   scrollSepoliaTokens,
   sepoliaTokens,
+  sonicTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
 } from '@pancakeswap/tokens'
@@ -38,6 +39,7 @@ export {
 export const CHAIN_REFRESH_TIME = {
   [ChainId.ETHEREUM]: 12_000,
   [ChainId.PULSECHAIN]: 12_000,
+  [ChainId.SONIC]: 12_000,
   [ChainId.GOERLI]: 12_000,
   [ChainId.BSC]: 6_000,
   [ChainId.BSC_TESTNET]: 6_000,
@@ -72,6 +74,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
     pulseTokens.usdc,
     pulseTokens.usdt,
   ],
+  [ChainId.SONIC]: [sonicTokens.nineMM, sonicTokens.pussy, sonicTokens.usdc, sonicTokens.usdt, sonicTokens.weth],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.usdt, bscTokens.cake, bscTokens.btcb],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
@@ -111,6 +114,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.PULSECHAIN]: [pulseTokens.dai, WNATIVE[ChainId.PULSECHAIN]],
+  [ChainId.SONIC]: [sonicTokens.usdc, WNATIVE[ChainId.SONIC]],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.wbnb, bscTokens.dai, bscTokens.busd, bscTokens.usdt, bscTokens.cake],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
@@ -140,6 +144,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     [WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM]],
   ],
   [ChainId.PULSECHAIN]: [[WNATIVE[ChainId.PULSECHAIN], pulseTokens.ninemm]],
+  [ChainId.SONIC]: [[WNATIVE[ChainId.SONIC], sonicTokens.nineMM]],
   [ChainId.BSC]: [
     [bscTokens.cake, bscTokens.wbnb],
     [bscTokens.busd, bscTokens.usdt],

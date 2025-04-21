@@ -23,6 +23,14 @@ export const WETH9 = {
     'Wrapped Pulse',
     'https://weth.io',
   ),
+  [ChainId.SONIC]: new ERC20Token(
+    ChainId.SONIC,
+    '0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38',
+    18,
+    'WS',
+    'Wrapped Sonic',
+    'https://weth.io',
+  ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
     '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
@@ -231,6 +239,7 @@ export const WBNB = {
 export const WNATIVE = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.PULSECHAIN]: WETH9[ChainId.PULSECHAIN],
+  [ChainId.SONIC]: WETH9[ChainId.SONIC],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
@@ -267,9 +276,16 @@ const PLS = {
   decimals: 18,
 } as const
 
+const S = {
+  name: 'Sonic Chain Native Token',
+  symbol: 'S',
+  decimals: 18,
+} as const
+
 export const NATIVE = {
   [ChainId.ETHEREUM]: ETHER,
   [ChainId.PULSECHAIN]: PLS,
+  [ChainId.SONIC]: S,
   [ChainId.GOERLI]: { name: 'Goerli Ether', symbol: 'GOR', decimals: 18 },
   [ChainId.BSC]: BNB,
   [ChainId.BSC_TESTNET]: {

@@ -15,6 +15,7 @@ import { NetworkSwitcherModal, networkSwitcherModalAtom } from './NetworkSwitche
 const SHORT_SYMBOL = {
   [ChainId.ETHEREUM]: 'ETH',
   [ChainId.PULSECHAIN]: 'PLS',
+  [ChainId.SONIC]: 'S',
   [ChainId.BSC]: 'BNB',
   [ChainId.BSC_TESTNET]: 'tBNB',
   [ChainId.GOERLI]: 'GOR',

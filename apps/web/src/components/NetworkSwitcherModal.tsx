@@ -33,18 +33,18 @@ import { useAccount } from 'wagmi'
 import { ChainLogo } from './Logo/ChainLogo'
 
 const NON_EVM_CHAINS = [
-  {
-    id: 1,
-    name: 'Aptos',
-    link: 'https://aptos.pancakeswap.finance/swap',
-    image: 'https://aptos.pancakeswap.finance/images/apt.png',
-  },
-  {
-    id: 2,
-    name: 'Solana',
-    link: process.env.SOLANA_SWAP_PAGE ?? 'https://solana.pancakeswap.finance/swap',
-    image: 'https://tokens.pancakeswap.finance/images/symbol/sol.png',
-  },
+  // {
+  //   id: 1,
+  //   name: 'Aptos',
+  //   link: 'https://aptos.pancakeswap.finance/swap',
+  //   image: 'https://aptos.pancakeswap.finance/images/apt.png',
+  // },
+  // {
+  //   id: 2,
+  //   name: 'Solana',
+  //   link: process.env.SOLANA_SWAP_PAGE ?? 'https://solana.pancakeswap.finance/swap',
+  //   image: 'https://tokens.pancakeswap.finance/images/symbol/sol.png',
+  // },
 ]
 
 export const networkSwitcherModalAtom = atom(false)
@@ -142,9 +142,9 @@ const WrongNetworkSelect = ({ switchNetwork, chainId, onDismiss }: WrongNetworkS
     },
   )
   const { chain } = useAccount()
-  const localChainId = useLocalNetworkChain() || ChainId.BSC
+  const localChainId = useLocalNetworkChain() || ChainId.PULSECHAIN
 
-  const localChainName = evmChains.find((c) => c.id === localChainId)?.name ?? 'BSC'
+  const localChainName = evmChains.find((c) => c.id === localChainId)?.name ?? 'PULSECHAIN'
 
   const [ref1, isHover] = useHover<HTMLButtonElement>()
 

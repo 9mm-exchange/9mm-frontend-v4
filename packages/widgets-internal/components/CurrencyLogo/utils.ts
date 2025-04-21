@@ -13,6 +13,7 @@ const mapping: { [key: number]: string } = {
   [ChainId.ZKSYNC]: "zksync",
   [ChainId.BASE]: "base-logos",
   [ChainId.PULSECHAIN]: "token-logo",
+  [ChainId.SONIC]: "sonic-logos",
   [ChainId.LINEA]: "linea",
   [ChainId.OPBNB]: "opbnb",
 };

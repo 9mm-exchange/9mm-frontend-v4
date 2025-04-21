@@ -21,6 +21,7 @@ export const tokenImageChainNameMapping = {
   [ChainId.BSC]: '',
   [ChainId.ETHEREUM]: 'eth/',
   [ChainId.PULSECHAIN]: 'pulse/',
+  [ChainId.SONIC]: 'sonic/',
   [ChainId.POLYGON_ZKEVM]: 'polygon-zkevm/',
   [ChainId.ZKSYNC]: 'zksync/',
   [ChainId.ARBITRUM_ONE]: 'arbitrum/',
@@ -35,7 +36,7 @@ export const getImageUrlFromToken = (token: Currency) => {
   return token
     ? token.isNative && token.chainId !== ChainId.BSC
       ? `${ASSET_CDN}/web/native/${token.chainId}.png`
-      : `https://tokens.pancakeswap.finance/images/${tokenImageChainNameMapping[token.chainId]}${address}.png`
+      : `https://tokens.9mm.pro/${tokenImageChainNameMapping[token.chainId]}${address}.png`
     : ''
 }
 
