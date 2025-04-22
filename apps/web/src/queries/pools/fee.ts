@@ -1,5 +1,5 @@
 import { Token } from '@pancakeswap/swap-sdk-core'
-import { DEPLOYER_ADDRESSES, FeeAmount, computePoolAddress } from '@pancakeswap/v3-sdk'
+import { computePoolAddress, DEPLOYER_ADDRESSES, FeeAmount, Pool } from '@pancakeswap/v3-sdk'
 import { v3PoolStateABI } from 'config/abi/v3PoolState'
 import { publicClient } from 'utils/viem'
 import { Address } from 'viem'
