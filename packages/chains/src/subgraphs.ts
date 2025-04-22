@@ -78,7 +78,7 @@ export function getBlocksSubgraphs({ noderealApiKey }: SubgraphParams) {
   return {
     [ChainId.BSC]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks',
     [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
-    [ChainId.PULSECHAIN]: 'https://graph.pulsechain.com/subgraphs/name/pulsechain/blocks',
+    [ChainId.PULSECHAIN]: 'https://graph.9mm.pro/subgraphs/name/block-client',
     [ChainId.SONIC]:
       'https://gateway.thegraph.com/api/2e49631ace452362bcf744c2c94ca145/subgraphs/id/JCDpWYWQrdeehm9dPthvU3QUgNE6VfqTmFYeumXNemDE',
     [ChainId.POLYGON_ZKEVM]: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',
