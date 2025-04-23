@@ -1,0 +1,26 @@
+{
+  "name": "@kyberswap/pancake-liquidity-widgets",
+  "version": "1.0.6",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/liquidity-widget.js",
+      "require": "./dist/liquidity-widget.cjs"
+    },
+    "./dist/style.css": "./dist/liquidity-widget.css"
+  },
+  "main": "./dist/liquidity-widget.cjs",
+  "module": "./dist/liquidity-widget.js",
+  "types": "./dist/liquidity-widget.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepublishOnly": "tsc && tsup",
+    "type-check": "tsc --noEmit"
+  }
+}

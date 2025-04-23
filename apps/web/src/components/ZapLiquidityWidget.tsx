@@ -12,19 +12,19 @@ import {
   useToast,
 } from '@pancakeswap/uikit'
 import { Pool } from '@pancakeswap/v3-sdk'
+import CurrencySearchModal from 'components/SearchModal/CurrencySearchModal'
+import { CommonBasesType } from 'components/SearchModal/types'
 import { ToastDescriptionWithTx } from 'components/Toast'
+import WalletModalManager from 'components/WalletModalManager'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
+import { useMasterchefV3 } from 'hooks/useContract'
 import dynamic from 'next/dynamic'
 import { useCallback, useMemo, useState } from 'react'
 import { useTransactionAdder } from 'state/transactions/hooks'
 import { useTheme } from 'styled-components'
+import { isAddressEqual } from 'utils'
 import { getAddress } from 'viem'
 import { useWalletClient } from 'wagmi'
-import CurrencySearchModal from 'components/SearchModal/CurrencySearchModal'
-import { CommonBasesType } from 'components/SearchModal/types'
-import { isAddressEqual } from 'utils'
-import WalletModalManager from 'components/WalletModalManager'
-import { useMasterchefV3 } from 'hooks/useContract'
 
 interface ZapLiquidityProps {
   tickLower?: number
@@ -223,7 +223,7 @@ export const ZapLiquidityWidget: React.FC<ZapLiquidityProps> = ({
         <ModalContainer style={{ maxHeight: '90vh', overflow: 'auto' }}>
           <LiquidityWidget
             theme={isDark ? 'dark' : 'light'}
-            feeAddress="0xB82bb6Ce9A249076Ca7135470e7CA634806De168"
+            feeAddress="0x67EC4f2B206C35F5A18E63Df6b9CA8bd75136106"
             feePcm={0}
             walletClient={walletClient}
             account={account ?? undefined}
@@ -243,7 +243,7 @@ export const ZapLiquidityWidget: React.FC<ZapLiquidityProps> = ({
             onAmountChange={handleAmountChange}
             onDismiss={handleOnDismiss}
             onTxSubmit={handleTransaction}
-            source="pancakeswap"
+            source="9mm"
           />
         </ModalContainer>
       </ModalV2>
