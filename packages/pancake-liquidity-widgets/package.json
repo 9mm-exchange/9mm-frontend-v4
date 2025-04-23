@@ -5,16 +5,16 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/liquidity-widget.js",
-      "require": "./dist/liquidity-widget.cjs"
+      "import": "./code/liquidity-widget.js",
+      "require": "./code/liquidity-widget.cjs"
     },
-    "./dist/style.css": "./dist/liquidity-widget.css"
+    "./code/style.css": "./code/liquidity-widget.css"
   },
-  "main": "./dist/liquidity-widget.cjs",
-  "module": "./dist/liquidity-widget.js",
-  "types": "./dist/liquidity-widget.d.ts",
+  "main": "./code/liquidity-widget.cjs",
+  "module": "./code/liquidity-widget.js",
+  "types": "./code/liquidity-widget.d.ts",
   "files": [
-    "dist"
+    "code"
   ],
   "scripts": {
     "build": "tsup",
