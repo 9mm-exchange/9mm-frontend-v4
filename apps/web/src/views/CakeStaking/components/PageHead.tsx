@@ -30,7 +30,7 @@ export const PageHead = () => {
             <Heading />
             <Description />
             <NextLinkFromReactRouter
-              to="/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"
+              to="/swap?chain=pulse&inputCurrency=PLS&outputCurrency=0x7b39712Ef45F7dcED2bBDF11F3D5046bA61dA719"
               prefetch={false}
               style={{ width: 'fit-content' }}
             >

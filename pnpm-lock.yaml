@@ -3115,6 +3115,9 @@ importers:
       '@pancakeswap/chains':
         specifier: workspace:*
         version: link:../chains
+      '@pancakeswap/tokens':
+        specifier: workspace:*
+        version: link:../tokens
       '@pancakeswap/utils':
         specifier: workspace:*
         version: link:../utils

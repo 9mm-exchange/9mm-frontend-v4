@@ -1,8 +1,8 @@
-import { styled } from 'styled-components'
-import { useState } from 'react'
-import { Flex, Box, Text, Link, TelegramIcon, DiscordIcon, ChevronUpIcon } from '@pancakeswap/uikit'
-import { Trans, useTranslation } from '@pancakeswap/localization'
 import { GameType } from '@pancakeswap/games'
+import { Trans, useTranslation } from '@pancakeswap/localization'
+import { Box, ChevronUpIcon, DiscordIcon, Flex, Link, TelegramIcon, Text } from '@pancakeswap/uikit'
+import { useState } from 'react'
+import { styled } from 'styled-components'
 
 const StyledQuickAccess = styled(Box)<{ isOpen?: boolean }>`
   position: ${({ isOpen }) => (isOpen ? 'static' : 'absolute')};
@@ -32,7 +32,7 @@ const LIST = [
   },
   {
     title: <Trans>Swap Token</Trans>,
-    url: 'https://pancakeswap.finance/swap',
+    url: 'https://dex.9mm.pro/swap',
   },
 ]
 

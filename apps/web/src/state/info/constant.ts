@@ -78,6 +78,19 @@ export const multiChainPaths = {
   [ChainId.OPBNB]: '/opbnb',
 }
 
+export const multiChainPriceAPIPaths = {
+  [ChainId.BSC]: '',
+  [ChainId.ETHEREUM]: '/eth',
+  [ChainId.PULSECHAIN]: '/pulsechain',
+  [ChainId.SONIC]: '/sonic',
+  [ChainId.POLYGON_ZKEVM]: '/polygon-zkevm',
+  [ChainId.ZKSYNC]: '/zksync',
+  [ChainId.ARBITRUM_ONE]: '/arb',
+  [ChainId.LINEA]: '/linea',
+  [ChainId.BASE]: '/basechain',
+  [ChainId.OPBNB]: '/opbnb',
+}
+
 export const multiChainQueryStableClient = STABLE_SUPPORTED_CHAIN_IDS.reduce((acc, chainId) => {
   if (isTestnetChainId(chainId)) return acc
   return { ...acc, [multiChainName[chainId]]: infoStableSwapClients[chainId] }

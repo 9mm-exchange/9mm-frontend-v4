@@ -8,16 +8,20 @@
 9. Add Sonic Chain [Done]
 10. Default Everything to Pulsechain [Done]
 11. Allow only supported chains [Done]
-
 12. Deploy Permit2 & Universal Router on Pulsechain & Sonic [Done]
 
+To DO
+
+14. Show 9mm price and Logo
 
 13. APR Issue fix for v2 & v3
-14. Show 9mm price and Logo
+
 15. Implement KyberZap sonic & base
 16. Work on UI Customizations
+17. SEO & Meta
+18. Hide features not in use
 
-16. Implement Stable swaps
-17. Implement Syrup Pools
-18. Implement Farming
+19. Implement Stable swaps
+20. Implement Syrup Pools
+21. Implement Farming
 

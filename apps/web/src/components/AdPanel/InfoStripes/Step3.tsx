@@ -25,7 +25,7 @@ export const Step3 = () => {
         verticalAlign="baseline"
         showExternalIcon
         fontSize={['12px', '12px', '14px']}
-        href="https://pancakeswap.finance/swap?utm_source=Website&utm_medium=homepage&utm_campaign=PCSX&utm_id=PCSX"
+        href="https://dex.9mm.pro/swap?utm_source=Website&utm_medium=homepage&utm_campaign=PCSX&utm_id=PCSX"
       >
         {t('Swap Now')}
         <ArrowForwardIcon

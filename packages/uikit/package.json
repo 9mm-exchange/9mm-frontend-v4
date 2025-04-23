@@ -58,6 +58,7 @@
     "@pancakeswap/chains": "workspace:*",
     "@pancakeswap/hooks": "workspace:*",
     "@pancakeswap/utils": "workspace:*",
+    "@pancakeswap/tokens": "workspace:*",
     "@storybook/addon-a11y": "^7.0.7",
     "@storybook/addon-actions": "^7.0.7",
     "@storybook/addon-essentials": "^7.0.7",

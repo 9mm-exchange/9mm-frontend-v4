@@ -824,8 +824,10 @@ export const useGetChainName = () => {
 
 export const useChainNameByQuery = (): MultiChainName => {
   const { query } = useRouter()
+
   const chainName = useMemo(() => {
-    switch (query?.chainName) {
+    const chainParam = (query?.chainName || query?.chain || '').toString().toLowerCase()
+    switch (chainParam) {
       case 'eth':
         return 'ETH'
       case 'pulse':
