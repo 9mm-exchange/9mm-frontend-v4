@@ -45,7 +45,7 @@ export const getUsername = async (address: string): Promise<string> => {
 
 export const getProfile = async (address: string): Promise<GetProfileResponse | null> => {
   try {
-    const client = publicClient({ chainId: ChainId.BSC })
+    const client = publicClient({ chainId: ChainId.PULSECHAIN })
 
     const profileCallsResult = await client.multicall({
       contracts: [

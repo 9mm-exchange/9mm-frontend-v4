@@ -1,9 +1,9 @@
-import { Box, Text, Button, Link, Message, MessageText } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import Image from 'next/image'
-import useAccountActiveChain from 'hooks/useAccountActiveChain'
 import { ChainId } from '@pancakeswap/chains'
+import { useTranslation } from '@pancakeswap/localization'
+import { Box, Button, Link, Message, MessageText, Text } from '@pancakeswap/uikit'
 import { CHAIN_QUERY_NAME } from 'config/chains'
+import useAccountActiveChain from 'hooks/useAccountActiveChain'
+import Image from 'next/image'
 
 const NoProfile = () => {
   const { t } = useTranslation()

@@ -11,7 +11,7 @@ export const PancakeSwapXTag = ({ logoWidth, fontSize, ...props }: PancakeSwapXT
       <Flex>
         <LogoIcon width={logoWidth} />
         <Text ml="6px" color="white" fontSize={fontSize} bold>
-          PancakeSwap X
+          9mmSwap X
         </Text>
       </Flex>
     </Tag>

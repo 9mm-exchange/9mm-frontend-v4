@@ -93,7 +93,7 @@ export const MOONPAY_API_KEY = process.env.NEXT_PUBLIC_MOONPAY_LIVE_KEY || 'pk_t
 
 export const TRANSAK_API_KEY = process.env.NEXT_PUBLIC_TRANSAK_LIVE_KEY || 'bf960e79-6d98-4fd0-823d-8409d290c346'
 
-export const WALLET_API = 'https://wallet-api.pancakeswap.com'
+export const WALLET_API = 'https://wallet-api.9mm.pro'
 
 export const BINANCE_DATA_API = 'https://data-api.binance.vision/api'
 

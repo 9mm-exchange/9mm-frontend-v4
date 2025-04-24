@@ -91,7 +91,7 @@ export const XRoutesBreakdown = memo(function XRoutesBreakdown({ wrapperStyle }:
         <Box>
           <span style={{ display: 'flex', alignItems: 'center' }}>
             <Text color="primary" fontSize="14px">
-              PancakeSwap X
+              9mmSwap X
             </Text>
           </span>
         </Box>

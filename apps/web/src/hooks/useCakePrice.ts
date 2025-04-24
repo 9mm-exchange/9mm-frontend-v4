@@ -10,6 +10,7 @@ import { multiChainId, multiChainPriceAPIPaths } from 'state/info/constant'
 import { useChainNameByQuery } from 'state/info/hooks'
 import { publicClient } from 'utils/wagmi'
 import { formatUnits } from 'viem'
+import { useAccount } from 'wagmi'
 
 // for migration to bignumber.js to avoid breaking changes
 // export const useCakePrice = ({ enabled = true } = {}) => {
@@ -34,8 +35,9 @@ export const getCakePriceFromOracle = async () => {
 }
 
 export const useCakePrice = ({ enabled = true } = {}) => {
+  const { chainId } = useAccount()
   const chainName = useChainNameByQuery()
-  const _chainId = multiChainId[chainName!] || ChainId.PULSECHAIN
+  const _chainId = chainId || multiChainId[chainName!] || ChainId.PULSECHAIN
   const fetchPrice = () => fetchCakePrice(_chainId)
 
   const { data } = useQuery<BigNumber, Error>({
@@ -56,7 +58,7 @@ const fetchCakePrice = async (_chainId: number): Promise<BigNumber> => {
 
     // First try to fetch from 9mm API
     try {
-      const apiUrl = `https://price-api.9mm.pro/api/price/${multiChainPriceAPIPaths[chainId]}/?address=${_cake.address}`
+      const apiUrl = `https://price-api.9mm.pro/api/price${multiChainPriceAPIPaths[chainId]}/?address=${_cake.address}`
       const apiResponse = await fetch(apiUrl)
       const apiData = await apiResponse.json()
 

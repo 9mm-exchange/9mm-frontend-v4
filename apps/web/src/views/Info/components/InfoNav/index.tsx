@@ -25,7 +25,7 @@ import { useChainIdByQuery, useChainNameByQuery, useMultiChainPath } from 'state
 import { styled } from 'styled-components'
 import { chains } from 'utils/wagmi'
 import Search from 'views/Info/components/InfoSearch'
-import { arbitrum, base, bsc, linea, mainnet, opBNB, polygonZkEvm, pulsechain, sonic, zkSync } from 'wagmi/chains'
+import { base, pulsechain, sonic } from 'wagmi/chains'
 
 const NavWrapper = styled(Flex)`
   background: ${({ theme }) => theme.colors.gradientCardHeader};
@@ -97,7 +97,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   )
 }
 
-const targetChains = [mainnet, pulsechain, sonic, bsc, polygonZkEvm, zkSync, arbitrum, linea, base, opBNB]
+const targetChains = [pulsechain, base, sonic]
 
 export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex }) => {
   const { t } = useTranslation()

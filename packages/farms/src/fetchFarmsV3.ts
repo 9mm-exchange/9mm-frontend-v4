@@ -1,11 +1,11 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId, V3_SUBGRAPHS } from '@pancakeswap/chains'
 import { Currency, ERC20Token } from '@pancakeswap/sdk'
 import { CAKE } from '@pancakeswap/tokens'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { tickToPrice } from '@pancakeswap/v3-sdk'
 import BN from 'bignumber.js'
 import chunk from 'lodash/chunk'
-import { Address, PublicClient, formatUnits, getAddress } from 'viem'
+import { Address, PublicClient, getAddress } from 'viem'
 
 import { getCurrencyListUsdPrice } from '@pancakeswap/price-api-sdk'
 import { DEFAULT_COMMON_PRICE, PriceHelper } from '../constants/common'
@@ -22,6 +22,78 @@ const chainlinkAbi = [
     type: 'function',
   },
 ] as const
+
+export const multiChainPriceAPIPaths = {
+  [ChainId.BSC]: '',
+  [ChainId.ETHEREUM]: '/eth',
+  [ChainId.PULSECHAIN]: '/pulsechain',
+  [ChainId.SONIC]: '/sonic',
+  [ChainId.POLYGON_ZKEVM]: '/polygon-zkevm',
+  [ChainId.ZKSYNC]: '/zksync',
+  [ChainId.ARBITRUM_ONE]: '/arb',
+  [ChainId.LINEA]: '/linea',
+  [ChainId.BASE]: '/basechain',
+  [ChainId.OPBNB]: '/opbnb',
+}
+
+const fetchCakePrice = async (_chainId: number): Promise<string> => {
+  try {
+    const chainId = _chainId as keyof typeof V3_SUBGRAPHS
+    // @ts-ignore
+    const _cake = CAKE[chainId]
+    // First try to fetch from 9mm API
+    try {
+      // @ts-ignore
+      const apiUrl = `https://price-api.9mm.pro/api/price${multiChainPriceAPIPaths[chainId]}/?address=${_cake.address}`
+      const apiResponse = await fetch(apiUrl)
+      const apiData = await apiResponse.json()
+
+      if (apiData?.price) {
+        return apiData.price.toString()
+      }
+    } catch (apiError) {
+      console.log('9mm API fetch failed, falling back to subgraph')
+    }
+
+    // If 9mm API fails, try subgraph
+    // Check if subgraph URL or CAKE token exists for the provided chainId
+    if (!V3_SUBGRAPHS[chainId] || !_cake) {
+      return '0'
+    }
+
+    const url = V3_SUBGRAPHS[chainId] as string
+    const tokenIds = [_cake.address.toLowerCase()].join(',')
+
+    // Define the GraphQL query with the dynamic list of token IDs
+    const query = `
+    {
+      tokens(where: { id_in: ["${tokenIds}"] }) {
+        id,
+        derivedUSD
+      }
+    }
+    `
+
+    // Make the POST request to the subgraph
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    })
+
+    const data = await response.json()
+
+    // Assuming the API returns a price in a field like data.tokens[0].derivedUSD
+    const derivedUSD = data?.data?.tokens?.[0]?.derivedUSD
+
+    return derivedUSD ? derivedUSD.toString() : '0'
+  } catch (error) {
+    console.error('Error fetching the price:', error)
+    return '0' // Return a default value in case of error
+  }
+}
 
 export async function farmV3FetchFarms({
   farms,
@@ -40,13 +112,7 @@ export async function farmV3FetchFarms({
 }) {
   const [poolInfos, cakePrice, v3PoolData] = await Promise.all([
     fetchPoolInfos(farms, chainId, provider, masterChefAddress),
-    provider({ chainId: ChainId.BSC })
-      .readContract({
-        abi: chainlinkAbi,
-        address: '0xB6064eD41d4f67e353768aA239cA86f4F73665a1',
-        functionName: 'latestAnswer',
-      })
-      .then((res) => formatUnits(res, 8)),
+    fetchCakePrice(chainId),
     fetchV3Pools(farms, chainId, provider),
   ])
 
@@ -377,7 +443,7 @@ async function fetchLmPools(
       rewardGrowthGlobalX128: string
     }
   > = {}
-
+  // @ts-ignore
   for (const [index, res] of chunked.entries()) {
     lmPools[lmPoolAddresses[index]] = {
       liquidity: res?.[0]?.result?.toString() ?? '0',

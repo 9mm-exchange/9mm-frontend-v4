@@ -1,8 +1,8 @@
-import { useAccount } from 'wagmi'
-import { Flex, Text, Heading } from '@pancakeswap/uikit'
-import { styled } from 'styled-components'
 import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Heading, Text } from '@pancakeswap/uikit'
 import Link from 'next/link'
+import { styled } from 'styled-components'
+import { useAccount } from 'wagmi'
 import HowToCard from './HowToCard'
 
 const StyledLink = styled(Link)`
@@ -23,9 +23,9 @@ const HowToJoin = () => {
         <Text fontSize="14px" color="textSubtle">
           {t('Set up your')}{' '}
           {account ? (
-            <StyledLink href={`/profile/${account.toLowerCase()}`}>{t('Pancake Profile')}</StyledLink>
+            <StyledLink href={`/profile/${account.toLowerCase()}`}>{t('9mm Profile')}</StyledLink>
           ) : (
-            t('Pancake Profile')
+            t('9mm Profile')
           )}
           {', '}
           {t('then register for the competition by clicking “I WANT TO BATTLE” button above.')}

@@ -17,6 +17,7 @@ import {
 } from '@pancakeswap/uikit'
 import { useUserSlippagePercent } from '@pancakeswap/utils/user'
 import { FeeAmount, Pool, Position, priceToClosestTick, TickMath } from '@pancakeswap/v3-sdk'
+import { useReadContract } from '@pancakeswap/wagmi'
 import { LiquidityChartRangeInput } from '@pancakeswap/widgets-internal'
 import { GreyCard } from 'components/Card'
 import { CommitButton } from 'components/CommitButton'
@@ -38,7 +39,6 @@ import { calculateGasMargin } from 'utils'
 import { formatCurrencyAmount } from 'utils/formatCurrencyAmount'
 import { unwrappedToken } from 'utils/wrappedCurrency'
 import { useDensityChartData } from 'views/AddLiquidityV3/hooks/useDensityChartData'
-import { useReadContract } from '@pancakeswap/wagmi'
 // import { splitSignature } from 'utils/splitSignature'
 import { Address, encodeFunctionData, Hex } from 'viem'
 // import { isUserRejected } from 'utils/sentry'
@@ -616,7 +616,7 @@ function V2PairMigrate({
               <Message variant="warning">
                 <MessageText>
                   {t(
-                    'You are the first liquidity provider for this PancakeSwap V3 pool. Your liquidity will migrate at the current V2 price.',
+                    'You are the first liquidity provider for this 9mmSwap V3 pool. Your liquidity will migrate at the current V2 price.',
                   )}
                   <MessageText>
                     {t('Your transaction cost will be much higher as it includes the gas to create the pool.')}
@@ -675,7 +675,7 @@ function V2PairMigrate({
                 </RowBetween>
               </AutoColumn>
               <Text fontSize={14} style={{ marginTop: 8, fontWeight: 400 }}>
-                {t('You should only deposit liquidity into PancakeSwap V3 at a price you believe is correct.')} <br />
+                {t('You should only deposit liquidity into 9mmSwap V3 at a price you believe is correct.')} <br />
                 {t(
                   'If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so.',
                 )}

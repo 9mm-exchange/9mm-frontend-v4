@@ -52,16 +52,18 @@ export function PageNetworkSupportModal() {
         )}
         <Text small>
           {t(
-            'Our Limit, Trading Competition, Lottery and NFTs features are currently available only on BNB Chain! Come over and join the community in the fun!',
+            'Our Limit, Trading Competition, Lottery and NFTs features are currently available only on Pulsechain Chain! Come over and join the community in the fun!',
           )}
         </Text>
         {canSwitch ? (
           <Button
             variant={foundChain && lastValidPath ? 'secondary' : 'primary'}
             isLoading={isLoading}
-            onClick={() => (isWrongNetwork ? switchNetworkLocal(ChainId.BSC) : switchNetworkAsync(ChainId.BSC))}
+            onClick={() =>
+              isWrongNetwork ? switchNetworkLocal(ChainId.PULSECHAIN) : switchNetworkAsync(ChainId.PULSECHAIN)
+            }
           >
-            {t('Switch to %chain%', { chain: 'BNB Chain' })}
+            {t('Switch to %chain%', { chain: 'PulseChain' })}
           </Button>
         ) : (
           <Message variant="danger">

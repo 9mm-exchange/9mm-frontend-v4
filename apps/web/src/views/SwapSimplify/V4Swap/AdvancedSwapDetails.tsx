@@ -211,7 +211,7 @@ export const TradeSummary = memo(function TradeSummary({
                     <Text bold display="inline-block">
                       {t('X')}
                     </Text>
-                    : {t('No fee when trade is going through PancakeSwap X. Subject to change in the future.')}
+                    : {t('No fee when trade is going through 9mmSwap X. Subject to change in the future.')}
                   </Text>
                 </>
               }

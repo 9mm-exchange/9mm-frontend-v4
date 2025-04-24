@@ -57,7 +57,7 @@ export const Header = memo(function Header() {
             {t('Position Manager')}
           </Heading>
           <Heading scale={isMobile ? 'md' : 'lg'} color={isMobile ? 'secondary' : 'text'}>
-            {t('Automate your PancakeSwap V3 liquidity')}
+            {t('Automate your 9mmSwap V3 liquidity')}
           </Heading>
           {!isMobile && (
             <LinkExternal
