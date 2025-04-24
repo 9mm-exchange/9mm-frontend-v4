@@ -2402,8 +2402,6 @@ importers:
         specifier: 'catalog:'
         version: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
 
-  packages/pancake-liquidity-widgets: {}
-
   packages/pcsx-sdk:
     dependencies:
       '@pancakeswap/chains':
@@ -7095,26 +7093,26 @@ packages:
   '@orbs-network/twap@1.24.1':
     resolution: {integrity: sha512-YLB1vWCEux5Lc1p5VBf31hIaHVQWk3lKOqvIxZzyMy2Z62yqw5qQUVz9BHT08zrUiEXG+qA4h8um993qlUrG6g==}
 
-  '@pancakeswap/chains@0.4.6':
-    resolution: {integrity: sha512-2uflmzHY+rno4+wTQL0ae4c4tbA/r5aGxWg9dNI/A4mS2jx/0lVbELwpSYughK2zcb6MbDbXkAZuLaNKhZe/Yg==}
+  '@pancakeswap/chains@0.5.0':
+    resolution: {integrity: sha512-rYcjAzKgJPXiTqCygtx0f0hOPwfIdZyqPWCjb9gJQy/E8kSckH538JAzunM8gGdjRE8V5ngmDdYtJ/SBTynhsA==}
     engines: {node: '>=10'}
 
-  '@pancakeswap/sdk@5.8.8':
-    resolution: {integrity: sha512-uqqBy2o0c02W5i5lGyoUJL/Jyv/fY6bzBx1GauMlMZdwHEWWc1dk5Nu70Z92SlcAhGnliKJ1N4HEBI/NcJE0jg==}
+  '@pancakeswap/sdk@5.8.11':
+    resolution: {integrity: sha512-jFTcuj3JMGrDXIEkT56bNZXsTCCpkdEeD+LqxI1c/ti2Df9MEj+/mZigorYQJmzreIPvpc/dK13VJudUzyABZg==}
     engines: {node: '>=10'}
 
-  '@pancakeswap/swap-sdk-core@1.2.0':
-    resolution: {integrity: sha512-GYgfG6O3229D7M2tcDtbo1Az7BQRmyQPRApWQrScRfoAQEjNV6X9LNO3dqWDFwq+APmgi9YBbzuECE3MZJgK9w==}
+  '@pancakeswap/swap-sdk-core@1.3.0':
+    resolution: {integrity: sha512-nkeDs3GyNfvRGsTbTAO30yl6ccOTr5WQERsKAaxKTe1fbGvpDRFLo3nlR1ZddRCj+RYZSS+B4Sll4A39k7nFDQ==}
     engines: {node: '>=10'}
 
-  '@pancakeswap/swap-sdk-evm@1.0.5':
-    resolution: {integrity: sha512-vPNKcsbK1qCVCxFJWSHm7Cyy4do8J90PftfbFP9C5+2a3SnFpbEkXD0cuIXrPG+rDuMD/kVp3gVDZPNXA+Tdmw==}
+  '@pancakeswap/swap-sdk-evm@1.1.0':
+    resolution: {integrity: sha512-i244QLWASmf846ZCLlsF6W02ouej6GMO/uYLYi84CF4cQi6nyMNowcvH1WAklLD42UUjDUWBhmMmWfmi5+KX/Q==}
 
-  '@pancakeswap/v2-sdk@1.0.5':
-    resolution: {integrity: sha512-zVKG859rARPjMQFj0tsoFj3pED50Y4BpcMgGBjq4/gz4w7UIx/g0Jzv8m8fmPPoumXKxOSF0fTaXMyBec6F3cQ==}
+  '@pancakeswap/v2-sdk@1.1.0':
+    resolution: {integrity: sha512-mieJiI5led2X44/VrfVhsaYa6otbzzbBtef2MFZc8t9lKgtBv5KVDn9SACBdYUuizONWddaadG8PkUl04rQkIw==}
 
-  '@pancakeswap/v3-sdk@3.8.11':
-    resolution: {integrity: sha512-jDn0DGbVy3yGQ2URfqBc3WWFDuNSc0X31G654Ezp8smZ4gK81T67GzQcRzn63N3k89tpjywzBNg06xWFIRNmxw==}
+  '@pancakeswap/v3-sdk@3.9.0':
+    resolution: {integrity: sha512-mU6tywKKMNi6tHmjKob/aSxQ/zGyi14RiIGAqa62RM2yzgI4rV8WErluGCeqJtld3vtVmk4vtHIJhInlZyBiRw==}
     engines: {node: '>=10'}
 
   '@panva/hkdf@1.2.1':
@@ -24731,9 +24729,9 @@ snapshots:
 
   '@kyberswap/pancake-liquidity-widgets@1.0.6(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.23.2(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
     dependencies:
-      '@pancakeswap/sdk': 5.8.8(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
-      '@pancakeswap/swap-sdk-core': 1.2.0
-      '@pancakeswap/v3-sdk': 3.8.11(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@pancakeswap/sdk': 5.8.11(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@pancakeswap/swap-sdk-core': 1.3.0
+      '@pancakeswap/v3-sdk': 3.9.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@popperjs/core': 2.11.8
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -26120,14 +26118,14 @@ snapshots:
       - web3-core
       - web3-eth-contract
 
-  '@pancakeswap/chains@0.4.6': {}
+  '@pancakeswap/chains@0.5.0': {}
 
-  '@pancakeswap/sdk@5.8.8(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
+  '@pancakeswap/sdk@5.8.11(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
     dependencies:
-      '@pancakeswap/chains': 0.4.6
-      '@pancakeswap/swap-sdk-core': 1.2.0
-      '@pancakeswap/swap-sdk-evm': 1.0.5(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
-      '@pancakeswap/v2-sdk': 1.0.5(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@pancakeswap/chains': 0.5.0
+      '@pancakeswap/swap-sdk-core': 1.3.0
+      '@pancakeswap/swap-sdk-evm': 1.1.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@pancakeswap/v2-sdk': 1.1.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       big.js: 5.2.2
       decimal.js-light: 2.5.1
       tiny-invariant: 1.3.3
@@ -26140,7 +26138,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@pancakeswap/swap-sdk-core@1.2.0':
+  '@pancakeswap/swap-sdk-core@1.3.0':
     dependencies:
       big.js: 5.2.2
       decimal.js-light: 2.5.1
@@ -26148,10 +26146,10 @@ snapshots:
       tiny-warning: 1.0.3
       toformat: 2.0.0
 
-  '@pancakeswap/swap-sdk-evm@1.0.5(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
+  '@pancakeswap/swap-sdk-evm@1.1.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
     dependencies:
-      '@pancakeswap/chains': 0.4.6
-      '@pancakeswap/swap-sdk-core': 1.2.0
+      '@pancakeswap/chains': 0.5.0
+      '@pancakeswap/swap-sdk-core': 1.3.0
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
       viem: 2.23.2(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
@@ -26161,11 +26159,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@pancakeswap/v2-sdk@1.0.5(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
+  '@pancakeswap/v2-sdk@1.1.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
     dependencies:
-      '@pancakeswap/chains': 0.4.6
-      '@pancakeswap/swap-sdk-core': 1.2.0
-      '@pancakeswap/swap-sdk-evm': 1.0.5(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@pancakeswap/chains': 0.5.0
+      '@pancakeswap/swap-sdk-core': 1.3.0
+      '@pancakeswap/swap-sdk-evm': 1.1.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       tiny-invariant: 1.3.3
       viem: 2.23.2(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
     transitivePeerDependencies:
@@ -26174,11 +26172,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@pancakeswap/v3-sdk@3.8.11(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
+  '@pancakeswap/v3-sdk@3.9.0(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
     dependencies:
-      '@pancakeswap/chains': 0.4.6
-      '@pancakeswap/sdk': 5.8.8(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
-      '@pancakeswap/swap-sdk-core': 1.2.0
+      '@pancakeswap/chains': 0.5.0
+      '@pancakeswap/sdk': 5.8.11(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@pancakeswap/swap-sdk-core': 1.3.0
       big.js: 5.2.2
       decimal.js-light: 2.5.1
       tiny-invariant: 1.3.3

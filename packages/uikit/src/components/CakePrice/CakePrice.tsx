@@ -34,7 +34,10 @@ const CakePrice: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   return cakePriceUsd ? (
     <PriceLink
-      href={`https://dex.9mm.pro/swap?outputCurrency=${CAKE[chainId].address}&chainId=${chainId}`}
+      href={`https://dex.9mm.pro/swap?outputCurrency=${
+        // @ts-ignore - chainId is guaranteed to be a valid key
+        CAKE[chainId].address
+      }&chainId=${chainId}`}
       target="_blank"
     >
       <LogoRound width="24px" mr="8px" />

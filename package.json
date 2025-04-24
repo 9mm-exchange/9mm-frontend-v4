@@ -45,7 +45,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm i --lockfile-only",
     "release-packages": "turbo run build --filter=./packages/* && changeset version && changeset publish",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "replace:widget": "rm -rf apps/web/node_modules/@kyberswap/pancake-liquidity-widgets/dist/* && cp -r _packages/9mm-liquidity-widget/* apps/web/node_modules/@kyberswap/pancake-liquidity-widgets/dist/"
   },
   "engines": {
     "node": ">=18.20.0"
