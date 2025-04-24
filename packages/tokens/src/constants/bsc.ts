@@ -3365,7 +3365,7 @@ export const bscTokens = {
     'MyShell Token',
     'https://myshell.ai/',
   ),
-  susde: new ERC20Token(ChainId.BSC, '0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2', 18, 'Staked', 'sUSDe', ''),
+  susde: new ERC20Token(ChainId.BSC, '0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2', 18, 'sUSDe', 'Staked USDe', ''),
   usde: new ERC20Token(ChainId.BSC, '0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34', 18, 'USDe', 'USDe', ''),
   ora: new ERC20Token(ChainId.BSC, '0x333333C465a19C85f85c6CfbED7B16b0B26E3333', 18, 'ORA', ''),
   olm: new ERC20Token(ChainId.BSC, '0x972C42a6350B2f82CC532148eEc8862843De94c2', 18, 'OLM', ''),

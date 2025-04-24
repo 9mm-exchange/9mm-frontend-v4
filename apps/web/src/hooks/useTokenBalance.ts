@@ -7,6 +7,7 @@ import { useMemo } from 'react'
 import { getVeCakeAddress } from 'utils/addressHelpers'
 import { Address, erc20Abi } from 'viem'
 import { useAccount } from 'wagmi'
+import useAccountActiveChain from './useAccountActiveChain'
 import { useActiveChainId } from './useActiveChainId'
 
 const useTokenBalance = (tokenAddress: Address, forceBSC?: boolean, targetChainId?: ChainId) => {
@@ -14,9 +15,7 @@ const useTokenBalance = (tokenAddress: Address, forceBSC?: boolean, targetChainI
 }
 
 export const useTokenBalanceByChain = (tokenAddress: Address, chainIdOverride?: ChainId) => {
-  const { address: account } = useAccount()
-  const { chainId } = useActiveChainId()
-
+  const { account, chainId } = useAccountActiveChain()
   const { data, status, refetch, ...rest } = useReadContract({
     chainId: chainIdOverride || chainId,
     abi: erc20Abi,

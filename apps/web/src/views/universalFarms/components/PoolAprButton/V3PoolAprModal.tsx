@@ -34,11 +34,15 @@ export const V3PoolAprModal: React.FC<V3PoolAprModalProps> = ({ modal, ...props 
 const AprModal: React.FC<V3PoolAprModalProps> = ({ modal, poolInfo, userPosition, cakeApr }) => {
   const { t } = useTranslation()
   const cakePrice = useCakePrice()
+
   const { position } = useExtraV3PositionInfo(userPosition)
+
   const { data: token0PriceUsd } = useCurrencyUsdPrice(poolInfo.token0, { enabled: !!poolInfo.token0 })
   const { data: token1PriceUsd } = useCurrencyUsdPrice(poolInfo.token1, { enabled: !!poolInfo.token1 })
+
   const formState = useV3FormState()
   const [priceTimeWindow, setPriceTimeWindow] = useState(PairDataTimeWindowEnum.DAY)
+
   const { pool, price, currencyBalances } = useV3DerivedInfo(
     poolInfo?.token0 ?? undefined,
     poolInfo?.token1 ?? undefined,
@@ -47,6 +51,7 @@ const AprModal: React.FC<V3PoolAprModalProps> = ({ modal, poolInfo, userPosition
     position,
     formState,
   )
+
   const sqrtRatioX96 = useMemo(() => price && encodeSqrtRatioX96(price.numerator, price.denominator), [price])
   const tickCurrent = useMemo(
     () => (sqrtRatioX96 ? TickMath.getTickAtSqrtRatio(sqrtRatioX96) : undefined),

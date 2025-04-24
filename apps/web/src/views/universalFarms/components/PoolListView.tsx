@@ -1,10 +1,12 @@
-import { BottomDrawer, Button, ChevronRightIcon, Column, MoreIcon } from '@pancakeswap/uikit'
+import { BottomDrawer, Button, ChevronRightIcon, Column, FlexGap, MoreIcon } from '@pancakeswap/uikit'
 import { TokenOverview } from '@pancakeswap/widgets-internal'
 import { TokenPairImage } from 'components/TokenImage'
 import { memo, ReactNode, useCallback, useState } from 'react'
 import { PoolInfo } from 'state/farmsV4/state/type'
 import styled from 'styled-components'
 import { getChainFullName } from '../utils'
+import { RewardStatusDisplay } from './FarmStatusDisplay'
+import { checkHasReward } from './FarmStatusDisplay/hooks'
 import { PoolGlobalAprButton } from './PoolAprButton'
 import { ActionItems } from './PoolListItemAction'
 import { useColumnMobileConfig } from './useColumnConfig'
@@ -37,35 +39,41 @@ export const ListView: React.FC<IPoolListViewProps> = ({ data, onRowClick }) => 
 
   return (
     <ListContainer>
-      {data.map((item) => (
-        <ListItemContainer key={`${item.chainId}-${item.lpAddress}`} onClick={() => onRowClick?.(item)}>
-          <Column gap="12px">
-            <TokenOverview
-              isReady
-              token={item.token0}
-              quoteToken={item.token1}
-              width="48px"
-              getChainName={getChainFullName}
-              icon={
-                <TokenPairImage
-                  width={44}
-                  height={44}
-                  variant="inverted"
-                  primaryToken={item.token0}
-                  secondaryToken={item.token1}
-                />
-              }
-            />
-            <PoolGlobalAprButton pool={item} />
-          </Column>
+      {data.map((item) => {
+        const hasRewards = checkHasReward(item.chainId, item.lpAddress)
+        return (
+          <ListItemContainer key={`${item.chainId}-${item.lpAddress}`} onClick={() => onRowClick?.(item)}>
+            <Column gap="12px">
+              <TokenOverview
+                isReady
+                token={item.token0}
+                quoteToken={item.token1}
+                width="48px"
+                getChainName={getChainFullName}
+                icon={
+                  <TokenPairImage
+                    width={44}
+                    height={44}
+                    variant="inverted"
+                    primaryToken={item.token0}
+                    secondaryToken={item.token1}
+                  />
+                }
+              />
+              <FlexGap gap="4px">
+                <PoolGlobalAprButton pool={item} />
+                {hasRewards && <RewardStatusDisplay />}
+              </FlexGap>
+            </Column>
 
-          <Column>
-            <Button scale="xs" variant="text" onClick={() => setOpenItem(item)}>
-              <MoreIcon />
-            </Button>
-          </Column>
-        </ListItemContainer>
-      ))}
+            <Column>
+              <Button scale="xs" variant="text" onClick={() => setOpenItem(item)}>
+                <MoreIcon />
+              </Button>
+            </Column>
+          </ListItemContainer>
+        )
+      })}
 
       <BottomDrawer
         drawerContainerStyle={{ height: 'auto' }}

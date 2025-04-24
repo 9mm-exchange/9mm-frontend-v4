@@ -3,7 +3,9 @@ import { AVERAGE_CHAIN_BLOCK_TIMES } from '@pancakeswap/chains'
 import { useFetchBlockData } from '@pancakeswap/wagmi'
 import { BSC_BLOCK_TIME } from 'config'
 import { CHAINS } from 'config/chains'
-import first from 'lodash/first'
+import { PUBLIC_NODES } from 'config/nodes'
+import { useW3WConfig } from 'contexts/W3WConfigContext'
+import memoize from 'lodash/memoize'
 import { useCallback } from 'react'
 import { RetryableError, retry } from 'state/multicall/retry'
 import {
@@ -16,14 +18,11 @@ import {
   TransactionReceiptNotFoundError,
   WaitForTransactionReceiptTimeoutError,
   createPublicClient,
-  http,
   custom,
   fallback,
+  http,
 } from 'viem'
 import { usePublicClient } from 'wagmi'
-import { useW3WConfig } from 'contexts/W3WConfigContext'
-import { PUBLIC_NODES } from 'config/nodes'
-import memoize from 'lodash/memoize'
 import { useActiveChainId } from './useActiveChainId'
 
 export const getViemClientsPublicNodes = memoize((w3WConfig = false) => {
@@ -35,13 +34,7 @@ export const getViemClientsPublicNodes = memoize((w3WConfig = false) => {
         transport:
           w3WConfig && typeof window !== 'undefined' && window.ethereum
             ? custom(window.ethereum as any)
-            : fallback(
-                [
-                  http(first(cur.rpcUrls.default.http), { timeout: 15_000 }), // Primary transport
-                  ...PUBLIC_NODES[cur.id].map((url) => http(url, { timeout: 15_000 })),
-                ],
-                { rank: false },
-              ),
+            : fallback([...PUBLIC_NODES[cur.id].map((url) => http(url, { timeout: 15_000 }))], { rank: false }),
         batch: {
           multicall: {
             batchSize: 1024 * 200,
@@ -106,11 +99,13 @@ export function usePublicNodeWaitForTransaction() {
           throw error
         }
       }
+      const bufferedAvgBlockTime =
+        (selectedChain ? AVERAGE_CHAIN_BLOCK_TIMES[selectedChain] : BSC_BLOCK_TIME) * 1000 + 1000
       return retry(getTransaction, {
         n: 10,
-        minWait: 5000,
-        maxWait: 10000,
-        delay: (selectedChain ? AVERAGE_CHAIN_BLOCK_TIMES[selectedChain] : BSC_BLOCK_TIME) * 1000 + 1000,
+        minWait: bufferedAvgBlockTime,
+        maxWait: bufferedAvgBlockTime * 1.1,
+        delay: bufferedAvgBlockTime,
       }).promise as Promise<TransactionReceipt>
     },
     [chainId, provider, refetchBlockData, w3WConfig],

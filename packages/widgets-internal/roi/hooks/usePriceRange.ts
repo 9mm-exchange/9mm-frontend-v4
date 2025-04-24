@@ -199,16 +199,30 @@ export function usePriceRange({
 
   useEffect(() => setPriceUpper(initialPriceUpper), [initialPriceUpper]);
 
-  return {
-    ticksAtLimit,
-    tickUpper,
-    tickLower,
-    priceLower: fullRange ? priceLimits[Bound.LOWER] : priceLower,
-    priceUpper: fullRange ? priceLimits[Bound.UPPER] : priceUpper,
-    onRightRangeInput,
-    onLeftRangeInput,
-    onBothRangeInput,
-    toggleFullRange,
-    fullRange,
-  };
+  return useMemo(
+    () => ({
+      ticksAtLimit,
+      tickUpper,
+      tickLower,
+      priceLower: fullRange ? priceLimits[Bound.LOWER] : priceLower,
+      priceUpper: fullRange ? priceLimits[Bound.UPPER] : priceUpper,
+      onRightRangeInput,
+      onLeftRangeInput,
+      onBothRangeInput,
+      toggleFullRange,
+      fullRange,
+    }),
+    [
+      ticksAtLimit,
+      tickUpper,
+      tickLower,
+      priceLower,
+      priceUpper,
+      fullRange,
+      onRightRangeInput,
+      onLeftRangeInput,
+      onBothRangeInput,
+      toggleFullRange,
+    ]
+  );
 }

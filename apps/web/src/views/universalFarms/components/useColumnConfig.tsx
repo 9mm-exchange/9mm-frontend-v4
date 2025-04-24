@@ -6,6 +6,8 @@ import { TokenPairImage } from 'components/TokenImage'
 import { useMemo } from 'react'
 import type { PoolInfo } from 'state/farmsV4/state/type'
 import { getChainFullName } from '../utils'
+import { RewardStatusDisplay } from './FarmStatusDisplay'
+import { checkHasReward } from './FarmStatusDisplay/hooks'
 import { PoolGlobalAprButton } from './PoolAprButton'
 import { PoolListItemAction } from './PoolListItemAction'
 
@@ -87,24 +89,31 @@ export const useColumnConfig = (): ITableViewProps<PoolInfo>['columns'] => {
         dataIndex: null,
         key: 'name',
         minWidth: '210px',
-        render: (_, item) => (
-          <TokenOverview
-            isReady
-            token={item.token0}
-            quoteToken={item.token1}
-            width="48px"
-            getChainName={getChainFullName}
-            icon={
-              <TokenPairImage
-                width={44}
-                height={44}
-                variant="inverted"
-                primaryToken={item.token0}
-                secondaryToken={item.token1}
+        render: (_, item) => {
+          const showReward = checkHasReward(item.chainId, item.lpAddress)
+
+          return (
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <TokenOverview
+                isReady
+                token={item.token0}
+                quoteToken={item.token1}
+                width="48px"
+                getChainName={getChainFullName}
+                icon={
+                  <TokenPairImage
+                    width={44}
+                    height={44}
+                    variant="inverted"
+                    primaryToken={item.token0}
+                    secondaryToken={item.token1}
+                  />
+                }
               />
-            }
-          />
-        ),
+              {showReward && <RewardStatusDisplay />}
+            </div>
+          )
+        },
       },
       {
         ...feeTierConf,

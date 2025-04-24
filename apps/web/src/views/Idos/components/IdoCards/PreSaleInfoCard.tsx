@@ -1,6 +1,7 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { CheckmarkCircleIcon, ChevronRightIcon, CloseCircleIcon, Flex, FlexGap, Text } from '@pancakeswap/uikit'
-import { useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
+import semver from 'semver'
 import { styled } from 'styled-components'
 import { getSnapshotDeepLink } from 'views/Idos/helpers/getSnapshotLink'
 
@@ -43,6 +44,29 @@ export const PreSaleInfoCard: React.FC = () => {
   )
 }
 
+declare global {
+  interface Window {
+    bnVersion?: `${number}.${number}.${number}`
+  }
+}
+
+const isDeprecatedVersion = () => {
+  if (typeof window === 'undefined') return true
+
+  const version = window.bnVersion as `${number}.${number}.${number}`
+
+  if (!version) return true
+  const isAndroid = navigator.userAgent.match(/Android/i)
+  const lowestVersionForAndroid = '2.98.2'
+  const lowestVersionForIOS = '2.98.3'
+
+  if (semver.valid(version)) {
+    return isAndroid ? semver.lt(version, lowestVersionForAndroid) : semver.lt(version, lowestVersionForIOS)
+  }
+
+  return true
+}
+
 export const PreSaleEligibleCard: React.FC<{ projectId: string | undefined }> = ({ projectId }) => {
   const { t } = useTranslation()
   const link = useMemo(() => {
@@ -57,12 +81,16 @@ export const PreSaleEligibleCard: React.FC<{ projectId: string | undefined }> = 
         </FlexGap>
         <FlexGap flexDirection="column">
           <Text>{t('You are eligible to join this sale when TGE goes live!')}</Text>
-          <Flex onClick={() => window.open(link)}>
-            <Text color="positive60" bold>
-              {t('View details')}
-            </Text>
-            <ChevronRightIcon color="positive60" width="24px" ml="2px" />
-          </Flex>
+          {isDeprecatedVersion() ? (
+            <Text>{t('Please update to the latest APP version')}</Text>
+          ) : (
+            <Flex onClick={() => window.open(link)}>
+              <Text color="positive60" bold>
+                {t('View details')}
+              </Text>
+              <ChevronRightIcon color="positive60" width="24px" ml="2px" />
+            </Flex>
+          )}
         </FlexGap>
       </FlexGap>
     </CardWrapper>
@@ -84,7 +112,10 @@ export const ComplianceCard: React.FC = () => {
   )
 }
 
-export const SnapshotNotPassCard: React.FC<{ projectId: string | undefined }> = ({ projectId }) => {
+export const SnapshotNotPassCard: React.FC<{
+  projectId: string | undefined
+  ineligibleContent?: ReactNode
+}> = ({ projectId, ineligibleContent }) => {
   const { t } = useTranslation()
   const link = useMemo(() => {
     return getSnapshotDeepLink(projectId ?? '')
@@ -96,14 +127,19 @@ export const SnapshotNotPassCard: React.FC<{ projectId: string | undefined }> = 
         {t(`You're not eligible to participate this TGE`)}
       </Text>
       <Text color="textSubtle">
-        {t(
-          `Unfortunately you do not meet the participation requirements this time. To qualify, participants must have purchased Binance Alpha tokens via Binance Wallet (Keyless) or through Spot/Funding accounts on Binance Exchange within the 30-day period preceding the TGE start date.`,
-        )}
+        {ineligibleContent ??
+          t(
+            `Unfortunately you do not meet the participation requirements this time. To qualify, participants must have purchased Binance Alpha tokens via Binance Wallet (Keyless) or through Spot/Funding accounts on Binance Exchange within the 30-day period preceding the TGE start date.`,
+          )}
       </Text>
-      <Flex onClick={() => window.open(link)}>
-        <Text color="failure">{t('View details')}</Text>
-        <ChevronRightIcon color="failure" width="24px" ml="2px" />
-      </Flex>
+      {isDeprecatedVersion() ? (
+        <Text>{t('Please update to the latest APP version')}</Text>
+      ) : (
+        <Flex onClick={() => window.open(link)}>
+          <Text color="failure">{t('View details')}</Text>
+          <ChevronRightIcon color="failure" width="24px" ml="2px" />
+        </Flex>
+      )}
     </ErrorCardWrapper>
   )
 }

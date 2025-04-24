@@ -7,8 +7,8 @@ import { MouseEvent, useCallback, useMemo } from 'react'
 import { useFarmFromPid, useFarmUser } from 'state/farms/hooks'
 
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
-import { useAccount } from 'wagmi'
 import { V2FarmWithoutStakedValue, V3FarmWithoutStakedValue } from 'state/farms/types'
+import { useAccount } from 'wagmi'
 
 export interface ApyButtonProps {
   variant: 'text' | 'text-and-button'

@@ -1,9 +1,9 @@
 import { ONE_WEEK_DEFAULT } from '@pancakeswap/pools'
 import { useQuery } from '@tanstack/react-query'
 import BigNumber from 'bignumber.js'
-import { publicClient } from 'utils/wagmi'
 import { WEEK } from 'config/constants/veCake'
-import { useAccount } from 'wagmi'
+import useAccountActiveChain from 'hooks/useAccountActiveChain'
+import { publicClient } from 'utils/wagmi'
 import {
   useRevenueSharingCakePoolContract,
   useRevenueSharingPoolGatewayContract,
@@ -31,11 +31,11 @@ const initialData: RevenueSharingPool = {
 export const useRevenueSharingProxy = (
   contract: ReturnType<typeof useRevenueSharingCakePoolContract | typeof useRevenueSharingVeCakeContract>,
 ) => {
-  const { address: account } = useAccount()
+  const { account } = useAccountActiveChain()
   const currentBlockTimestamp = useCurrentBlockTimestamp()
   const gatewayContract = useRevenueSharingPoolGatewayContract()
 
-  const { data } = useQuery({
+  const { data, refetch } = useQuery({
     queryKey: ['/revenue-sharing-pool-for-cake', contract.address, contract.chain?.id, account],
     queryFn: async () => {
       if (!account || !currentBlockTimestamp) return undefined
@@ -74,14 +74,17 @@ export const useRevenueSharingProxy = (
           availableClaim: claimResult.result.toString(),
         }
       } catch (error) {
-        console.error('[ERROR] Fetching Revenue Sharing Pool', error)
+        console.warn('[ERROR] Fetching Revenue Sharing Pool', error)
         throw error
       }
     },
     enabled: Boolean(account && currentBlockTimestamp),
   })
 
-  return data ?? initialData
+  return {
+    data: data ?? initialData,
+    refetch,
+  }
 }
 
 export const useRevenueSharingCakePool = () => {

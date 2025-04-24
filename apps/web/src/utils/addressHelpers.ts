@@ -14,6 +14,7 @@ export type Addresses = {
 }
 
 export const getAddressFromMap = (address: Addresses, chainId?: number): `0x${string}` => {
+  // @ts-expect-error - chainId is dynamically checked
   return chainId && address[chainId] ? address[chainId] : address[ChainId.PULSECHAIN]
 }
 
@@ -214,4 +215,8 @@ export const getRevenueSharingVeCakeAddressNoFallback = (chainId?: number) => {
 
 export const getRevenueSharingPoolGatewayAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.revenueSharingPoolGateway, chainId)
+}
+
+export const getCakePoolAddress = (chainId?: number) => {
+  return getAddressFromMap(addresses.cakeVault, chainId)
 }

@@ -191,6 +191,7 @@ export function RoiCalculator({
     priceRange?.tickUpper,
     tickCurrent
   );
+
   const { amountA, amountB } = useAmountsByUsdValue({
     usdValue,
     currencyA,

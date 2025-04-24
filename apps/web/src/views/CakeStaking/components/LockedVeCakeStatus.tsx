@@ -299,7 +299,7 @@ export const CakeLocked: React.FC<{ lockedAmount: bigint }> = ({ lockedAmount })
 
   return (
     <>
-      <Balance value={formattedCake} decimals={2} fontWeight={600} fontSize={20} />
+      <Balance value={formattedCake} decimals={2} fontWeight={600} fontSize={20} unit="CAKE" />
       <Balance prefix="~" value={cakeUsdValue} decimals={2} unit="USD" fontSize={12} />
     </>
   )

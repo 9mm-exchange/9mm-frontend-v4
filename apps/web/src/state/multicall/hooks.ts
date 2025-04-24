@@ -1,3 +1,4 @@
+import { useReadContracts } from '@pancakeswap/wagmi'
 import { useQueryClient } from '@tanstack/react-query'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useAtom } from 'jotai'
@@ -224,11 +225,52 @@ export type MultipleSameDataCallParameters<
 > = {
   addresses: (Address | undefined)[]
   abi: TAbi
-  // FIXME: wagmiv2
-  functionName: any
+  functionName?: string | undefined
   options?: ListenerOptionsWithGas
-} & any
+  args?: readonly unknown[] | undefined
+}
 // GetFunctionArgs<TAbi, TFunctionName>
+
+export type MultipleSameDataCallParametersWagmi<TAbi extends Abi | readonly unknown[] = Abi> = {
+  addresses: (Address | undefined)[]
+  abi: TAbi
+  functionName?: string | undefined
+  options?: {
+    enabled?: boolean
+    watch?: boolean
+  }
+  chainId?: number
+  args?: readonly unknown[] | undefined
+}
+
+export function useMultipleContractSingleDataWagmi({
+  abi,
+  addresses,
+  chainId,
+  functionName,
+  args,
+  options,
+}: MultipleSameDataCallParametersWagmi) {
+  const contracts = useMemo(() => {
+    return addresses.map((address) => ({
+      abi,
+      address,
+      functionName,
+      args,
+      chainId,
+    }))
+  }, [abi, functionName, args, addresses, chainId])
+
+  return useReadContracts({
+    // 2048 is the maximum batch size for wagmi.
+    // If not set, it will send large calldata in one request,
+    // it will also cause the request to fail.
+    batchSize: 2048,
+    contracts,
+    watch: options?.watch,
+    query: { enabled: options?.enabled },
+  })
+}
 
 export function useMultipleContractSingleData<TAbi extends Abi | readonly unknown[], TFunctionName extends string>({
   abi,

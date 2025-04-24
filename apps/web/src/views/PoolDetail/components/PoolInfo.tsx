@@ -8,6 +8,7 @@ import { useChainIdByQuery, useChainNameByQuery } from 'state/info/hooks'
 import styled from 'styled-components'
 import { multiChainNameConverter } from 'utils/chainNameConverter'
 import { PoolGlobalAprButton } from 'views/universalFarms/components/PoolAprButton'
+
 import { useConnect } from 'wagmi'
 import { usePoolInfoByQuery } from '../hooks/usePoolInfo'
 import { MyPositions } from './MyPositions'

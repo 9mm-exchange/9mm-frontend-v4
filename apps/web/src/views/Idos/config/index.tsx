@@ -17,6 +17,7 @@ export type IDOConfig = {
   tgeTitle: ReactNode
   tgeSubtitle: ReactNode
   description: ReactNode
+  ineligibleContent?: ReactNode
   contractAddress: Address
   faqs?: IDOFAQs
 }
@@ -813,6 +814,145 @@ export const idoConfigDict: Record<string, IDOConfig> = {
                   users can verify their detailed purchase records in their Binance Wallet (Keyless) or Spot/Funding
                   accounts on the Binance Exchange.
                 </li>
+              </ol>
+            </ul>
+          </>
+        ),
+      },
+      {
+        title: '2: When can I claim my tokens?',
+        description: (
+          <>
+            <Trans>
+              You can claim your tokens immediately once the TGE ends by clicking the Claim button. Alternatively, you
+              can return to the TGE page at any time afterward to claim your tokens—there is no fixed claim period.
+            </Trans>
+            <Trans>On the TGE page, you will also find key details, including:</Trans>
+            <ul>
+              <li>
+                <Trans>The number of tokens available for claiming</Trans>
+              </li>
+              <li>
+                <Trans>The TGE duration</Trans>
+              </li>
+              <li>
+                <Trans>The total amount of BNB subscribed</Trans>
+              </li>
+              <li>
+                <Trans>The total amount of refunded BNB (if applicable)</Trans>
+              </li>
+              <li>
+                <Trans>The TGE status (e.g., oversubscribed or not)</Trans>
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        title: '3. How many tokens will I receive?',
+        description: (
+          <>
+            During the TGE, users can subscribe up to a maximum of 3 BNB. The final token allocation is determined based
+            on the proportion of BNB a user contributed relative to the total BNB subscribed by all participants at the
+            time the sale ends.
+          </>
+        ),
+      },
+      {
+        title: '4. Will I receive a refund if the pool is oversubscribed?',
+        description: (
+          <>
+            Yes. If the TGE is oversubscribed, any excess BNB that was not used to purchase tokens will be automatically
+            refunded to your wallet when you claim your tokens.
+          </>
+        ),
+      },
+    ],
+  },
+  hyperlane_0421: {
+    id: 'hyperlane_0421',
+    projectUrl: 'https://hyperlane.xyz/',
+    icon: '/images/ido/hyper.svg',
+    chainId: ChainId.BSC,
+    bannerUrl: `${ASSET_CDN}/web/ido/hyperlane-banner.svg`,
+    contractAddress: '0x445162BC2B73EC0631486F70A4a716e7ea2d9A4e',
+    tgeTitle: `Hyperlane's Token Generation Event`,
+    tgeSubtitle: 'Exclusively via Binance Keyless Wallet',
+    ineligibleContent: (
+      <>
+        Unfortunately you do not meet the participation requirements this time. Participants must have purchased at
+        least $20 worth of Binance Alpha tokens via Binance Wallet (Keyless) or through Spot/Funding accounts on Binance
+        Exchange from March 22, 2025, 00:00:00 to April 20, 2025, 23:59:59 (UTC).
+      </>
+    ),
+    description: (
+      <>
+        Hyperlane is a permissionless interoperability protocol for cross-chain communication across different
+        blockchain environments. It enables message passing and asset transfers across different chains without relying
+        on centralized intermediaries or requiring any permissions.
+        <br />
+        <br />
+        Website: &nbsp;
+        <a href="https://hyperlane.xyz/" target="_blank" rel="noreferrer noopener">
+          https://hyperlane.xyz/
+        </a>
+        <br />
+        <br />
+        X: &nbsp;
+        <a href="https://x.com/Hyperlane" target="_blank" rel="noreferrer noopener">
+          https://x.com/Hyperlane
+        </a>
+      </>
+    ),
+    faqs: [
+      {
+        title: '1: Which participants are eligible to take part in this event?',
+        description: (
+          <>
+            Participant Eligibility: To qualify, participants must have purchased at least $20 worth of Binance Alpha
+            tokens via Binance Wallet (Keyless) or through Spot/Funding accounts on Binance Exchange from March 22,
+            2025, 00:00:00 to April 20, 2025, 23:59:59 (UTC).
+            <ul>
+              <li>
+                Alpha token purchases are only considered valid after the token is officially listed on Binance, and
+                users can verify their detailed purchase records in their Binance Wallet (Keyless) or Spot/Funding
+                accounts on the Binance Exchange.
+              </li>
+              {/* <li>How to check eligibility: Visit the TGE event page.</li> */}
+
+              <li> Examples: </li>
+              <br />
+              <ol style={{ listStyle: 'decimal', listStylePosition: 'inside', marginLeft: '1.4rem' }}>
+                <li>
+                  User A Purchased $20 worth of Binance Alpha tokens via Binance Wallet (Keyless) on April 5, 2025.
+                  He/She is eligible.
+                </li>
+                <br />
+                <li>
+                  User B purchased $10 through Binance Spot/Funding Account and $10 via Binance Wallet (Keyless) on
+                  April 7, 2025, and is eligible.
+                </li>
+                <br />
+                <li>
+                  User C purchased Binance Alpha tokens via Binance Wallet (Keyless) on March 13, 2025, which is before
+                  the snapshot period. He/She is not eligible.
+                </li>
+                <br />
+                <li>
+                  User D purchased “X” token via Binance Wallet (Keyless) on April 5, 2025, but “X” token was officially
+                  listed on Binance Alpha on April 7. He/She is not eligible.
+                </li>
+              </ol>
+              <br />
+              <li>Important Notes:</li>
+              <br />
+              <ol style={{ listStyle: 'decimal', listStylePosition: 'inside', marginLeft: '1.4rem' }}>
+                <li>
+                  Binance reserves the right to modify event rules and criteria at any time without prior notice. All
+                  rule interpretations are solely at Binance’s discretion. Participants are strongly advised to verify
+                  the latest rules via official channels before participating.
+                </li>
+                <br />
               </ol>
             </ul>
           </>

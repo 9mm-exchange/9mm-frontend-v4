@@ -1,6 +1,6 @@
 import { QueryClient, useQuery, useQueryClient } from '@tanstack/react-query'
-import { useBlock, useWatchBlocks, useBlockNumber as useWagmiBlockNumber, usePublicClient } from 'wagmi'
 import { useCallback, useEffect } from 'react'
+import { useBlock, usePublicClient, useBlockNumber as useWagmiBlockNumber, useWatchBlocks } from 'wagmi'
 
 type Params = {
   chainId?: number

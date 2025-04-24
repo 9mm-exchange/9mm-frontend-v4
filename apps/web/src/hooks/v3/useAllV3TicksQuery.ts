@@ -21,8 +21,11 @@ export default function useAllV3TicksQuery(
   activeTick: number | undefined,
   interval: number,
   enabled = true,
+  poolChainId?: number,
 ) {
-  const { chainId } = useActiveChainId()
+  const { chainId: activeChainId } = useActiveChainId()
+
+  const chainId = poolChainId ?? activeChainId
   const { data, isLoading, error } = useQuery({
     queryKey: [`useAllV3TicksQuery-${poolAddress}-${chainId}`],
     queryFn: async ({ signal }) => {

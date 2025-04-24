@@ -95,9 +95,9 @@ const config: (
           supportChainIds: POSITION_MANAGERS_SUPPORTED_CHAINS,
         },
         {
-          label: t('CAKE Staking'),
-          href: '/cake-staking',
-          supportChainIds: SUPPORT_CAKE_STAKING,
+          label: t('veCake Redeem'),
+          href: '/cake-staking/redeem',
+          supportChainIds: POOL_SUPPORTED_CHAINS,
         },
         {
           label: t('Syrup Pools'),
@@ -121,8 +121,9 @@ const config: (
           label: t('Staking'),
           items: [
             {
-              label: t('CAKE Staking'),
-              href: '/cake-staking',
+              label: t('veCake Redeem'),
+              href: '/cake-staking/redeem',
+              supportChainIds: POOL_SUPPORTED_CHAINS,
             },
             {
               label: t('Syrup Pools'),
