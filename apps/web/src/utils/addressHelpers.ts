@@ -14,7 +14,7 @@ export type Addresses = {
 }
 
 export const getAddressFromMap = (address: Addresses, chainId?: number): `0x${string}` => {
-  // @ts-expect-error - chainId is dynamically checked
+  // @ts-ignore - chainId is dynamically checked
   return chainId && address[chainId] ? address[chainId] : address[ChainId.PULSECHAIN]
 }
 
