@@ -28,6 +28,8 @@ export enum OnRampChainId {
   LINEA = 59144,
   LINEA_TESTNET = 59140,
   BASE = 8453,
+  SONIC = 146,
+  PULSECHAIN = 369,
   BASE_TESTNET = 84531,
   BASE_SEPOLIA = 84532,
   SEPOLIA = 11155111,
@@ -91,6 +93,10 @@ export const getNetworkDisplay = (chainId: number | undefined): string => {
       return 'base'
     case OnRampChainId.BTC:
       return 'bitcoin'
+    case OnRampChainId.PULSECHAIN:
+      return 'pulsechain'
+    case OnRampChainId.SONIC:
+      return 'sonic'
     default:
       return ''
   }
@@ -114,6 +120,10 @@ export const getNetworkFullName = (chainId: number | undefined): string => {
       return 'Base Mainnet'
     case OnRampChainId.BTC:
       return 'Bitcoin Network'
+    case OnRampChainId.SONIC:
+      return 'Sonic Chain'
+    case OnRampChainId.PULSECHAIN:
+      return 'PulseChain'
     default:
       return ''
   }
