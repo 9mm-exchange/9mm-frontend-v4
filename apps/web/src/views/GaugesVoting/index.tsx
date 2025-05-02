@@ -105,7 +105,7 @@ const GaugesVoting = () => {
                       external
                       showExternalIcon
                       color="textSubtle"
-                      href="https://docs.pancakeswap.finance/products/vecake"
+                      href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake"
                     >
                       {t('Learn More')}
                     </InlineLink>

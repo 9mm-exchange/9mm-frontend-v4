@@ -1,13 +1,13 @@
-import { Card, CardBody, Text, Flex, BlockIcon, LinkExternal } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
-import { NodeRound } from 'state/types'
 import { BetPosition } from '@pancakeswap/prediction'
+import { BlockIcon, Card, CardBody, Flex, LinkExternal, Text } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
-import ReclaimPositionButton from '../ReclaimPositionButton'
+import { NodeRound } from 'state/types'
 import useIsRefundable from '../../hooks/useIsRefundable'
+import ReclaimPositionButton from '../ReclaimPositionButton'
 import { RoundResultBox } from '../RoundResult'
-import MultiplierArrow from './MultiplierArrow'
 import CardHeader, { getBorderBackground } from './CardHeader'
+import MultiplierArrow from './MultiplierArrow'
 
 interface CanceledRoundCardProps {
   round: NodeRound
@@ -39,7 +39,7 @@ const CanceledRoundCard: React.FC<React.PropsWithChildren<CanceledRoundCardProps
               {t('Round Cancelled')}
             </Text>
             {isRefundable && <ReclaimPositionButton epoch={epoch} onSuccess={handleSuccess} width="100%" my="8px" />}
-            <LinkExternal href="https://docs.pancakeswap.finance/products/prediction" external>
+            <LinkExternal href="https://9mm-pro.gitbook.io/9mm-pro/products/prediction" external>
               {t('Learn More')}
             </LinkExternal>
           </Flex>

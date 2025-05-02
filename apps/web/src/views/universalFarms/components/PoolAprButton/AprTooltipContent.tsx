@@ -103,7 +103,7 @@ export const AprTooltipContent: React.FC<PropsWithChildren<AprTooltipContentProp
                 {t('and for longer durations.')}{' '}
                 <LinkExternal
                   style={{ display: 'inline-block' }}
-                  href="https://docs.pancakeswap.finance/products/yield-farming/bcake/how-to-use-the-new-bcake"
+                  href="https://9mm-pro.gitbook.io/9mm-pro/products/yield-farming/bcake/how-to-use-the-new-bcake"
                 >
                   {t('More info')}
                 </LinkExternal>

@@ -99,7 +99,7 @@ const CakeStaking = () => {
                 width="100%"
                 onClick={() => {
                   window.open(
-                    'https://docs.pancakeswap.finance/products/vecake/bridge-your-vecake',
+                    'https://9mm-pro.gitbook.io/9mm-pro/products/vecake/bridge-your-vecake',
                     '_blank',
                     'noopener noreferrer',
                   )

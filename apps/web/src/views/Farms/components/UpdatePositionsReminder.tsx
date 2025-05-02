@@ -225,7 +225,7 @@ export function UpdatePositionsReminder_() {
           )}
           <LinkExternal
             m="auto"
-            href="https://docs.pancakeswap.finance/products/yield-farming/faq#why-am-i-seeing-an-update-positions-pop-up"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/yield-farming/faq#why-am-i-seeing-an-update-positions-pop-up"
           >
             <Trans>Learn More</Trans>
           </LinkExternal>

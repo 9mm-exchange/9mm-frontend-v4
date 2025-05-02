@@ -108,7 +108,7 @@ export default function V2FormView({
                 )}
               </MessageText>
               <LinkExternal
-                href="https://docs.pancakeswap.finance/products/pancakeswap-exchange/faq#why-cant-i-add-liquidity-to-a-pair-i-just-created"
+                href="https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange/faq#why-cant-i-add-liquidity-to-a-pair-i-just-created"
                 mt="0.25rem"
               >
                 {t('Learn more how to fix')}

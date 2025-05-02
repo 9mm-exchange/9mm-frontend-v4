@@ -1,11 +1,11 @@
-import { Flex, Box, Text, Button, LogoRoundIcon, Checkbox, Link } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
-import { useRouter } from 'next/router'
-import { useState, useMemo } from 'react'
+import { Box, Button, Checkbox, Flex, Link, LogoRoundIcon, Text } from '@pancakeswap/uikit'
 import BigNumber from 'bignumber.js'
-import { useAccount } from 'wagmi'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import { useRouter } from 'next/router'
+import { useMemo, useState } from 'react'
 import useUserExist from 'views/AffiliatesProgram/hooks/useUserExist'
+import { useAccount } from 'wagmi'
 
 interface WelcomePageProps {
   isLoading: boolean
@@ -81,7 +81,7 @@ const WelcomePage: React.FC<React.PropsWithChildren<WelcomePageProps>> = ({ isLo
             <Text fontSize="14px" ml="8px">
               {t('*I have read the')}
               <Text display="inline-block" as="span" ml="4px">
-                <Link external href="https://docs.pancakeswap.finance/affiliate-program/terms-and-conditions">
+                <Link external href="https://9mm-pro.gitbook.io/9mm-pro/affiliate-program/terms-and-conditions">
                   {t('terms and conditions')}
                 </Link>
               </Text>

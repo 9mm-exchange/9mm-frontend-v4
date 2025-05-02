@@ -22,7 +22,7 @@ export const swapFAQConfig: FAQConfig = (t) => ({
   subtitle: t('Need Help?'),
   imageUrl: getImageUrl('faq_bunny'),
   alt: 'FAQ bunny',
-  docsUrl: 'https://docs.pancakeswap.finance/products/pancakeswap-exchange',
+  docsUrl: 'https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange',
   data: [
     {
       title: t('How to Swap?'),
@@ -87,7 +87,7 @@ export const swapFAQConfig: FAQConfig = (t) => ({
           <FlexGap gap="5px" flexGrow={0}>
             {t('For more details,')}{' '}
             <Link
-              href="https://docs.pancakeswap.finance/products/pancakeswap-exchange/faq"
+              href="https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange/faq"
               style={{ textDecoration: 'underline' }}
             >
               {t('read here.')}

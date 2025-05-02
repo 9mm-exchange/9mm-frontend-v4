@@ -1,13 +1,13 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Currency, CurrencyAmount } from '@pancakeswap/swap-sdk-core'
 import { Link, useToast } from '@pancakeswap/uikit'
+import { useReadContract } from '@pancakeswap/wagmi'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import useAccountActiveChain from 'hooks/useAccountActiveChain'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { useFixedStakingContract } from 'hooks/useContract'
 import { createElement, useCallback, useMemo } from 'react'
-import { useReadContract } from '@pancakeswap/wagmi'
 
 import { getBep20Contract } from 'utils/contractHelpers'
 
@@ -33,7 +33,7 @@ export function useHandleWithdrawSubmission({
         {t('Please come back to check later at a certain amount of time')}
         <Link
           external
-          href="https://docs.pancakeswap.finance/products/simple-staking/faq#what-happens-in-the-withdrawal-process-when-withdrawal-approval-is-pending"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/simple-staking/faq#what-happens-in-the-withdrawal-process-when-withdrawal-approval-is-pending"
         >
           {t('Learn more')}
         </Link>

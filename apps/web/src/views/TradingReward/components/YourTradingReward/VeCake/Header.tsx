@@ -12,7 +12,7 @@ export const Header = () => {
       </Text>
       <Link
         external
-        href="https://docs.pancakeswap.finance/products/trading-reward/faq#what-is-vecake-at-snapshot-time"
+        href="https://9mm-pro.gitbook.io/9mm-pro/products/trading-reward/faq#what-is-vecake-at-snapshot-time"
       >
         {t('Learn More')}
       </Link>

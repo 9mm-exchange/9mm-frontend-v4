@@ -50,7 +50,7 @@ const NonAffiliateModal = () => {
                 <Text display="inline-block" as="span" ml="4px">
                   <Link
                     external
-                    href="https://docs.pancakeswap.finance/ecosystem-and-partnerships/affiliate-program/terms-and-conditions"
+                    href="https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/affiliate-program/terms-and-conditions"
                   >
                     {t('terms and conditions')}
                   </Link>

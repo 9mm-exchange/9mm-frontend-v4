@@ -85,7 +85,11 @@ const RevenueSharing: React.FunctionComponent<React.PropsWithChildren<RevenueSha
           </Message>
         )}
         <ClaimButton availableClaim={availableClaim} onDismiss={onDismiss} />
-        <LinkExternal external m="8px auto auto auto" href="https://docs.pancakeswap.finance/products/revenue-sharing">
+        <LinkExternal
+          external
+          m="8px auto auto auto"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/revenue-sharing"
+        >
           {t('Learn More')}
         </LinkExternal>
       </Box>

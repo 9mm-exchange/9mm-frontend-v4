@@ -43,7 +43,7 @@ export const NewCakeStakingCard: React.FC = () => {
     <AtomBox display="flex" alignItems="center">
       <Link
         external
-        href="https://docs.pancakeswap.finance/products/vecake/how-to-get-vecake"
+        href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/how-to-get-vecake"
         style={{ textDecoration: 'none' }}
       >
         <SpeechBubbleBox display="flex">
@@ -71,7 +71,7 @@ export const HeadBunny = () => {
     return (
       <Link
         external
-        href="https://docs.pancakeswap.finance/products/vecake/how-to-get-vecake"
+        href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/how-to-get-vecake"
         style={{ textDecoration: 'none' }}
       >
         <Button variant="subtle" endIcon={<HelpIcon color="white" width="24px" />} mt="1em">

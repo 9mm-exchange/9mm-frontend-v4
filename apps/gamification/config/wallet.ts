@@ -1,11 +1,11 @@
 import { isCyberWallet } from '@cyberlab/cyber-app-sdk'
 import { WalletConfigV2 } from '@pancakeswap/ui-wallets'
 import { WalletFilledIcon } from '@pancakeswap/uikit'
+import safeGetWindow from '@pancakeswap/utils/safeGetWindow'
 import { getTrustWalletProvider } from '@pancakeswap/wagmi/connectors/trustWallet'
 import type { ExtendEthereum } from 'global'
 import { Config } from 'wagmi'
 import { ConnectMutateAsync } from 'wagmi/query'
-import safeGetWindow from '@pancakeswap/utils/safeGetWindow'
 import { chains, createWagmiConfig, walletConnectNoQrCodeConnector } from '../utils/wagmi'
 import { ASSET_CDN } from './constants/endpoints'
 
@@ -305,5 +305,5 @@ const docLangCodeMapping: Record<string, string> = {
 
 export const getDocLink = (code: string) =>
   docLangCodeMapping[code]
-    ? `https://docs.pancakeswap.finance/v/${docLangCodeMapping[code]}/get-started/wallet-guide`
-    : `https://docs.pancakeswap.finance/get-started/wallet-guide`
+    ? `https://9mm-pro.gitbook.io/9mm-pro/v/${docLangCodeMapping[code]}/get-started/wallet-guide`
+    : `https://9mm-pro.gitbook.io/9mm-pro/get-started/wallet-guide`

@@ -36,7 +36,7 @@ import { StyledLockedCard } from './styled'
 dayjs.extend(relativeTime)
 
 const LearnMore: React.FC<{ href?: string }> = ({
-  href = 'https://docs.pancakeswap.finance/products/vecake/migrate-from-cake-pool#10ffc408-be58-4fa8-af56-be9f74d03f42',
+  href = 'https://9mm-pro.gitbook.io/9mm-pro/products/vecake/migrate-from-cake-pool#10ffc408-be58-4fa8-af56-be9f74d03f42',
 }) => {
   const { t } = useTranslation()
   return (
@@ -229,7 +229,7 @@ const MigratePosition = () => {
           <Message variant="primary" icon={<InfoFilledIcon color="secondary" />}>
             <AutoColumn gap="8px">
               <Text as="p">{t('Adding CAKE or extending CAKE will be applying to your native position.')}</Text>
-              <LearnMore href="https://docs.pancakeswap.finance/products/vecake/faq#52f27118-bbf3-448b-9ffe-e9e1a9dd97ef" />
+              <LearnMore href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/faq#52f27118-bbf3-448b-9ffe-e9e1a9dd97ef" />
             </AutoColumn>
           </Message>
         ) : (

@@ -123,7 +123,7 @@ export const Banner = () => {
             <Link external href="https://forms.gle/WXDhmbfRhQtz4eSt7">
               <Button>{t('Start Building')}</Button>
             </Link>
-            <Link external href="https://docs.pancakeswap.finance/products/gaming-platform">
+            <Link external href="https://9mm-pro.gitbook.io/9mm-pro/products/gaming-platform">
               <Button ml="12px" variant="secondary">
                 {`${t('Learn More')}`}
               </Button>

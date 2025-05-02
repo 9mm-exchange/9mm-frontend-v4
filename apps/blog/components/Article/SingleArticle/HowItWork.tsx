@@ -1,6 +1,6 @@
-import { styled } from 'styled-components'
-import { Box, Text, Flex, Card, Button, ArrowForwardIcon, Link } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { ArrowForwardIcon, Box, Button, Card, Flex, Link, Text } from '@pancakeswap/uikit'
+import { styled } from 'styled-components'
 
 const StyledImage = styled('div')`
   position: absolute;
@@ -35,13 +35,14 @@ const HowItWork = () => {
               {t('How does it work?')}
             </Text>
             <Text bold fontSize={['24px', '24px', '40px']} m={['16px 0']} lineHeight="110%">
-              {t('Learn basics of PancakeSwap')}
+              {t('Learn basics of 9mm')}
             </Text>
             <Text fontSize={['14px', '14px', '16px']} color="textSubtle">
               {t('Trade tokens, earn rewards and play to win!')}
             </Text>
           </Flex>
-          <Link external href="https://docs.pancakeswap.finance/get-started">
+
+          <Link external href="https://9mm-pro.gitbook.io/9mm-pro/get-started">
             <Button endIcon={<ArrowForwardIcon color="currentColor" />}>{t('Learn how')}</Button>
           </Link>
         </Box>

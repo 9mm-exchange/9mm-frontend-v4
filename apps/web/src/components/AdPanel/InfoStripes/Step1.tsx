@@ -28,7 +28,7 @@ export const Step1 = () => {
         external
         display="inline !important"
         fontSize={['12px', '12px', '14px']}
-        href="https://docs.pancakeswap.finance/token-distribution"
+        href="https://9mm-pro.gitbook.io/9mm-pro/token-distribution"
       >
         {t('Learn More')}
       </Link>

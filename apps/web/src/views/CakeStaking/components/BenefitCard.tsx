@@ -83,7 +83,7 @@ export const BENEFITS: Record<BenefitCardType, BenefitItem> = {
       <Trans>Boost your earnings in fixed staking.</Trans>,
       <Trans>More to come...</Trans>,
     ],
-    link: 'https://docs.pancakeswap.finance/products',
+    link: 'https://9mm-pro.gitbook.io/9mm-pro/products',
     key: 'benefit-more',
   },
 }

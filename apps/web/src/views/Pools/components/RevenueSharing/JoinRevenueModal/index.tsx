@@ -1,16 +1,16 @@
+import { Box, Card, Flex, LinkExternal, Modal, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Pool } from '@pancakeswap/widgets-internal'
 import { useMemo } from 'react'
 import { styled } from 'styled-components'
-import { Modal, Text, Card, Flex, Box, LinkExternal, useMatchBreakpoints } from '@pancakeswap/uikit'
-import { Pool } from '@pancakeswap/widgets-internal'
 
-import Image from 'next/image'
-import useTheme from 'hooks/useTheme'
-import { Token } from '@pancakeswap/sdk'
 import { useTranslation } from '@pancakeswap/localization'
-import JoinButton from 'views/Pools/components/RevenueSharing/JoinRevenueModal/JoinButton'
-import { useVaultPoolByKey, usePoolsWithVault } from 'state/pools/hooks'
-import { VaultKey, DeserializedLockedCakeVault } from 'state/types'
+import { Token } from '@pancakeswap/sdk'
+import useTheme from 'hooks/useTheme'
+import Image from 'next/image'
+import { usePoolsWithVault, useVaultPoolByKey } from 'state/pools/hooks'
+import { DeserializedLockedCakeVault, VaultKey } from 'state/types'
 import LockedStaking from 'views/Pools/components/LockedPool/LockedStaking'
+import JoinButton from 'views/Pools/components/RevenueSharing/JoinRevenueModal/JoinButton'
 
 interface JoinRevenueModalProps {
   refresh?: () => void
@@ -114,7 +114,7 @@ const JoinRevenueModal: React.FunctionComponent<React.PropsWithChildren<JoinReve
           </Text>
           <InlineLink
             fontSize={12}
-            href="https://docs.pancakeswap.finance/products/revenue-sharing/faq#cae64522-4729-43a2-8fa8-6bbd2567dcea"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/revenue-sharing/faq#cae64522-4729-43a2-8fa8-6bbd2567dcea"
             external
           >
             {t('Learn More')}

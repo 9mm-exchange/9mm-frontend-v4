@@ -37,7 +37,7 @@ const IfoContainer: React.FC<React.PropsWithChildren<TypeProps>> = ({
       </SectionBackground>
       {faq}
       <LinkExternal
-        href="https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos"
+        href="https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos"
         mx="auto"
         mt="16px"
       >

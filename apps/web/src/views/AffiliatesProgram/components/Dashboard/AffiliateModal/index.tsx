@@ -67,7 +67,7 @@ const AffiliateModal = () => {
               <Text fontSize="14px" ml="8px">
                 {t('I have read and agree to the updated')}
                 <Text display="inline-block" as="span" ml="4px">
-                  <Link external href="https://docs.pancakeswap.finance/affiliate-program/terms-and-conditions">
+                  <Link external href="https://9mm-pro.gitbook.io/9mm-pro/affiliate-program/terms-and-conditions">
                     {t('terms and conditions')}
                   </Link>
                 </Text>

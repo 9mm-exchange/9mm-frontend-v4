@@ -46,7 +46,7 @@ export const buyCryptoFAQConfig: FAQConfig = (t) => ({
   subtitle: t('Need Help?'),
   imageUrl: getImageUrl('faq_buy_crypto'),
   alt: 'Buy crypto FAQ',
-  docsUrl: 'https://docs.pancakeswap.finance/products/buy-crypto',
+  docsUrl: 'https://9mm-pro.gitbook.io/9mm-pro/products/buy-crypto',
   data: [
     {
       title: t("Why can't I see my bitcoin purchase"),
@@ -67,7 +67,7 @@ export const buyCryptoFAQConfig: FAQConfig = (t) => ({
           )}{' '}
           <LinkExternal
             style={{ display: 'inline-flex' }}
-            href="https://docs.pancakeswap.finance/products/buy-crypto"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/buy-crypto"
             showExternalIcon={false}
           >
             {t('documentation')}
@@ -83,7 +83,7 @@ export const buyCryptoFAQConfig: FAQConfig = (t) => ({
           {t('Please refer to our documentation')}{' '}
           <LinkExternal
             style={{ display: 'inline-flex' }}
-            href="https://docs.pancakeswap.finance/products/buy-crypto"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/buy-crypto"
             showExternalIcon={false}
           >
             {t('here.')}

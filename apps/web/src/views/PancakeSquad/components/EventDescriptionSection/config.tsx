@@ -1,5 +1,5 @@
-import { Text } from '@pancakeswap/uikit'
 import { ContextApi } from '@pancakeswap/localization'
+import { Text } from '@pancakeswap/uikit'
 import Link from 'next/link'
 
 type EventDescriptionType = {
@@ -35,7 +35,7 @@ const eventDescriptionConfigBuilder = ({ t }: EventDescriptionType) => ({
     },
   ],
   primaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https://9mm-pro.gitbook.io/9mm-pro/',
     text: t('View Documentation'),
     external: true,
     isDisplayed: false,

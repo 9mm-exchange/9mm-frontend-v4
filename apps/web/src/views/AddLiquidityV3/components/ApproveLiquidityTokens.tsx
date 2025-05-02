@@ -4,8 +4,8 @@ import { ethereumTokens } from '@pancakeswap/tokens'
 import { Button, Dots, Link, Message, MessageText, RowBetween } from '@pancakeswap/uikit'
 import { ApprovalState } from 'hooks/useApproveCallback'
 import { useMemo } from 'react'
-import { CurrencyField as Field } from 'utils/types'
 import { styled } from 'styled-components'
+import { CurrencyField as Field } from 'utils/types'
 import { Address } from 'viem'
 
 const InlineLink = styled(Link)`
@@ -76,7 +76,7 @@ export default function ApproveLiquidityTokens({
               <InlineLink
                 external
                 fontSize={14}
-                href="https://docs.pancakeswap.finance/products/pancakeswap-exchange/faq#why-do-i-need-to-reset-approval-on-usdt-before-enabling-approving"
+                href="https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange/faq#why-do-i-need-to-reset-approval-on-usdt-before-enabling-approving"
               >
                 {' '}
                 {t('Learn More')}

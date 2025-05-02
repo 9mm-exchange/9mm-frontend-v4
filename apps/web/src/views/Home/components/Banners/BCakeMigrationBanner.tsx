@@ -40,7 +40,7 @@ const StyledButtonLinkAction = styled(ButtonLinkAction)`
 `
 
 const migrationLink = '/migration/bcake'
-const learnMoreLink = 'https://docs.pancakeswap.finance/products/yield-farming/bcake/migration-guide'
+const learnMoreLink = 'https://9mm-pro.gitbook.io/9mm-pro/products/yield-farming/bcake/migration-guide'
 
 export const BCakeMigrationBanner = () => {
   const { chainId } = useActiveWeb3React()

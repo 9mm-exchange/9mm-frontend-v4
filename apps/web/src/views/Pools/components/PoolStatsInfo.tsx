@@ -132,7 +132,7 @@ const PoolStatsInfo: React.FC<React.PropsWithChildren<ExpandedFooterProps>> = ({
       )}
       {vaultKey && (
         <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
-          <LinkExternal href="https://docs.pancakeswap.finance/products/vecake/how-to-get-vecake" bold={false} small>
+          <LinkExternal href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/how-to-get-vecake" bold={false} small>
             {t('View Tutorial')}
           </LinkExternal>
         </Flex>

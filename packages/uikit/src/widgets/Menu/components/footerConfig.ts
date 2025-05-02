@@ -32,7 +32,7 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("CAKE Incentives"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/syrup-pools-and-farms",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/business-partnerships/syrup-pools-and-farms",
       },
       {
         label: t("Staking Pools"),
@@ -40,11 +40,11 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Token Launches"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos",
       },
       {
         label: t("Brand Assets"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/brand",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/brand",
       },
     ],
   },
@@ -53,7 +53,7 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Contributing"),
-        href: "https://docs.pancakeswap.finance/developers/contributing",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/developers/contributing",
       },
       {
         label: t("Github"),
@@ -61,7 +61,7 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Bug Bounty"),
-        href: "https://docs.pancakeswap.finance/developers/bug-bounty",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/developers/bug-bounty",
       },
       {
         label: t("V4"),
@@ -74,23 +74,23 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Get Help"),
-        href: "https://docs.pancakeswap.finance/contact-us/customer-support",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/contact-us/customer-support",
       },
       {
         label: t("Troubleshooting"),
-        href: "https://docs.pancakeswap.finance/readme/help/troubleshooting",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/readme/help/troubleshooting",
       },
       {
         label: t("Documentation"),
-        href: "https://docs.pancakeswap.finance/",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/",
       },
       {
         label: t("Audits"),
-        href: "https://docs.pancakeswap.finance/readme/audits",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/readme/audits",
       },
       {
         label: t("Legacy products"),
-        href: "https://docs.pancakeswap.finance/products/legacy-products",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/products/legacy-products",
       },
     ],
   },
@@ -99,7 +99,7 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Tokenomics"),
-        href: "https://docs.pancakeswap.finance/governance-and-tokenomics/cake-tokenomics",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/governance-and-tokenomics/cake-tokenomics",
       },
       {
         label: t("CAKE Emission Projection"),
@@ -111,7 +111,7 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Careers"),
-        href: "https://docs.pancakeswap.finance/team/become-a-chef",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/team/become-a-chef",
       },
       {
         label: t("Terms Of Service"),

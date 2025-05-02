@@ -66,7 +66,7 @@ const Heading = () => {
       {isMobile ? (
         <PinnedFAQButton
           faqConfig={faqConfig}
-          docLink="https://docs.pancakeswap.finance/products/vecake/what-is-vecake"
+          docLink="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/what-is-vecake"
         />
       ) : null}
     </Flex>

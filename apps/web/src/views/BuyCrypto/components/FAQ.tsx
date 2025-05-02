@@ -58,7 +58,7 @@ const config = (t) => [
         )}{' '}
         <LinkExternal
           style={{ display: 'inline-flex' }}
-          href="https://docs.pancakeswap.finance/products/buy-crypto"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/buy-crypto"
           showExternalIcon={false}
         >
           {t('documentation')}
@@ -74,7 +74,7 @@ const config = (t) => [
         {t('Please refer to our documentation')}{' '}
         <LinkExternal
           style={{ display: 'inline-flex' }}
-          href="https://docs.pancakeswap.finance/products/buy-crypto"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/buy-crypto"
           showExternalIcon={false}
         >
           {t('here.')}

@@ -41,7 +41,7 @@ const Congratulations = () => {
             {t('Try out our Perpetuals Platform')}
           </Button>
         </Link>
-        <Link external href="https://docs.pancakeswap.finance/affiliate-program" width="100% !important">
+        <Link external href="https://9mm-pro.gitbook.io/9mm-pro/affiliate-program" width="100% !important">
           <Button width="100%" variant="secondary">
             {t('Learn More')}
           </Button>

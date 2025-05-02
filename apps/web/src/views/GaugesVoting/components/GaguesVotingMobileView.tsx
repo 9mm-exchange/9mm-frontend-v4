@@ -46,7 +46,7 @@ const GaugesVotingMobileView = () => {
         <Text lineHeight="110%" bold color="secondary" fontSize="32px">
           {t('Gauges Voting')}
         </Text>
-        <PinnedFAQButton docLink=" https://docs.pancakeswap.finance/products/vecake" faqConfig={faqConfig} />
+        <PinnedFAQButton docLink=" https://9mm-pro.gitbook.io/9mm-pro/products/vecake" faqConfig={faqConfig} />
       </Flex>
 
       <Box px="40px">

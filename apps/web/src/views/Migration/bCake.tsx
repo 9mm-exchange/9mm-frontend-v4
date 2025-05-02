@@ -104,7 +104,7 @@ const MigrationPage: React.FC<React.PropsWithChildren> = () => {
               {t('Migrate your farms and position manager staking to the new staking contract.')}
             </Text>
             <AutoColumn gap="4px" pt="4px">
-              <Link href="https://docs.pancakeswap.finance/code/v3-migration/how-to-migrate" external>
+              <Link href="https://9mm-pro.gitbook.io/9mm-pro/code/v3-migration/how-to-migrate" external>
                 <Button p="0" variant="text" scale="sm">
                   <Text color="primary" bold fontSize="16px" mr="4px">
                     {t('Learn more')}

@@ -25,7 +25,7 @@ const faqConfig: FaqConfig[] = [
           veCAKE, obtained by staking CAKE, is key to PancakeSwap&apos;s governance, allowing you to vote on governance
           proposals and the allocation of CAKE emissions in liquidity pools.
         </Trans>
-        <InlineLink ml="4px" external href="https://docs.pancakeswap.finance/products/vecake/what-is-vecake">
+        <InlineLink ml="4px" external href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/what-is-vecake">
           <Trans>Learn more here</Trans>
         </InlineLink>
       </>,
@@ -42,7 +42,7 @@ const faqConfig: FaqConfig[] = [
         <li>
           <>
             <Trans>Earn voting incentives (</Trans>
-            <InlineLink external href="https://docs.pancakeswap.finance/products/vecake/bribes-vote-incentives">
+            <InlineLink external href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/bribes-vote-incentives">
               <Trans>BRIBES</Trans>
             </InlineLink>
             <Trans>) from external bribing markets</Trans>

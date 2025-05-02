@@ -146,7 +146,7 @@ export const RedeemFaqs = () => (
             marginTop: '10px',
           }}
           external
-          href="https://docs.pancakeswap.finance/protocol/cake-tokenomics"
+          href="https://9mm-pro.gitbook.io/9mm-pro/protocol/cake-tokenomics"
         >
           <Trans>CAKE Tokenomics 3.0 Docs</Trans>
         </Link>
@@ -164,7 +164,7 @@ export const RedeemFaqs = () => (
             marginTop: '10px',
           }}
           external
-          href="https://docs.pancakeswap.finance/welcome-to-pancakeswap/vecake-sunset"
+          href="https://9mm-pro.gitbook.io/9mm-pro/welcome-to-pancakeswap/vecake-sunset"
         >
           <Trans>Product Doc: veCAKE Redemption Guide</Trans>
         </Link>

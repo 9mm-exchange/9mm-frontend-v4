@@ -1,8 +1,8 @@
-import { styled } from 'styled-components'
-import { Box, Flex, Text, Card, LinkExternal } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
-import Image from 'next/image'
+import { Box, Card, Flex, LinkExternal, Text } from '@pancakeswap/uikit'
 import Trans from 'components/Trans'
+import Image from 'next/image'
+import { styled } from 'styled-components'
 
 const stepList = [
   {
@@ -97,7 +97,7 @@ const HowToEarn = () => {
       </Box>
       <LinkExternal
         external
-        href="https://docs.pancakeswap.finance/products/trading-reward/how-to-participate"
+        href="https://9mm-pro.gitbook.io/9mm-pro/products/trading-reward/how-to-participate"
         margin={['auto', 'auto', 'auto', '42px auto 0 auto']}
       >
         {t('Learn More')}

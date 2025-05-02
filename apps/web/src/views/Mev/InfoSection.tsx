@@ -84,7 +84,7 @@ export const InfoSection: React.FC<{ walletCount: number }> = ({ walletCount }) 
             <Button
               onClick={() => {
                 window.open(
-                  'https://docs.pancakeswap.finance/products/pancakeswap-private-rpc/faq',
+                  'https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-private-rpc/faq',
                   '_blank',
                   'noopener noreferrer',
                 )

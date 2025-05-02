@@ -1,15 +1,15 @@
-import { useCallback, memo, useMemo } from 'react'
-import { Trade, Currency, TradeType, CurrencyAmount } from '@pancakeswap/aptos-swap-sdk'
+import { Currency, CurrencyAmount, Trade, TradeType } from '@pancakeswap/aptos-swap-sdk'
 import { InjectedModalProps, LinkExternal, Text } from '@pancakeswap/uikit'
-import { TransactionErrorContent, ConfirmationPendingContent } from '@pancakeswap/widgets-internal'
+import { ConfirmationPendingContent, TransactionErrorContent } from '@pancakeswap/widgets-internal'
+import { memo, useCallback, useMemo } from 'react'
 
-import { TransactionSubmittedContent } from 'components/TransactionConfirmationModal'
-import { Field } from 'state/swap'
 import { useTranslation } from '@pancakeswap/localization'
+import { TransactionSubmittedContent } from 'components/TransactionConfirmationModal'
 import { useActiveChainId } from 'hooks/useNetwork'
-import TransactionConfirmSwapContent from './TransactionConfirmSwapContent'
-import ConfirmSwapModalContainer from './ConfirmSwapModalContainer'
+import { Field } from 'state/swap'
 import formatAmountDisplay from '../../utils/formatAmountDisplay'
+import ConfirmSwapModalContainer from './ConfirmSwapModalContainer'
+import TransactionConfirmSwapContent from './TransactionConfirmSwapContent'
 
 const PancakeRouterSlippageErrorMsg =
   'This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.'
@@ -38,7 +38,7 @@ const SwapTransactionErrorContent = ({ onDismiss, message, openSettingModal }) =
             </Text>
           </Text>
           <LinkExternal
-            href="https://docs.pancakeswap.finance/products/pancakeswap-exchange/trade-guide"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange/trade-guide"
             style={{ width: '100%', justifyContent: 'center' }}
           >
             {t('What are the potential issues with the token?')}

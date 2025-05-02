@@ -21,7 +21,7 @@ export function DisclaimerCheckBox({
             display: 'inline',
             fontSize: '14px',
           }}
-          href="https://docs.pancakeswap.finance/products/simple-staking/terms-and-conditions"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/simple-staking/terms-and-conditions"
           external
         >
           the Terms & Conditions.

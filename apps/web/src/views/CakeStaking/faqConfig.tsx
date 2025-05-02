@@ -43,7 +43,7 @@ const faqConfig: { title: ReactNode; description: ReactNode[] }[] = [
         <li>
           <strong>Revenue sharing</strong>: <Trans>Earn a share of platform revenue.</Trans>{' '}
           <InlineLink
-            href="https://docs.pancakeswap.finance/products/vecake/earn-cake-weekly"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/earn-cake-weekly"
             target="_blank"
             rel="noreferrer"
           >
@@ -66,7 +66,7 @@ const faqConfig: { title: ReactNode; description: ReactNode[] }[] = [
           <strong>IFO participation</strong>:{' '}
           <Trans>Gain exclusive access to Initial Farm Offerings (IFOs) with higher allocation limits.</Trans>{' '}
           <InlineLink
-            href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering"
+            href="https://9mm-pro.gitbook.io/9mm-pro/products/ifo-initial-farm-offering"
             target="_blank"
             rel="noreferrer"
           >
@@ -107,7 +107,7 @@ const faqConfig: { title: ReactNode; description: ReactNode[] }[] = [
         </strong>
         <Trans>, users can influence CAKE emissions and liquidity across various chains. </Trans>
         <InlineLink
-          href="https://docs.pancakeswap.finance/products/vecake/bridge-your-vecake"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/bridge-your-vecake"
           target="_blank"
           rel="noreferrer"
         >

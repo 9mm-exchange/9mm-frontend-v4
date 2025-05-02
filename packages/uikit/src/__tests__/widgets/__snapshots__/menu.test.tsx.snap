@@ -2323,7 +2323,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/contact-us"
+              href="https://9mm-pro.gitbook.io/9mm-pro/contact-us"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2351,7 +2351,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/contact-us/telegram"
+              href="https://9mm-pro.gitbook.io/9mm-pro/contact-us/telegram"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2365,7 +2365,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/tokenomics/cake"
+              href="https://9mm-pro.gitbook.io/9mm-pro/tokenomics/cake"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2411,7 +2411,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="Support https://docs.pancakeswap.finance/contact-us/customer-support"
+              href="Support https://9mm-pro.gitbook.io/9mm-pro/contact-us/customer-support"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2425,7 +2425,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/help/troubleshooting"
+              href="https://9mm-pro.gitbook.io/9mm-pro/help/troubleshooting"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2439,7 +2439,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/get-started"
+              href="https://9mm-pro.gitbook.io/9mm-pro/get-started"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2476,7 +2476,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance"
+              href="https://9mm-pro.gitbook.io/9mm-pro"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2504,7 +2504,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited"
+              href="https://9mm-pro.gitbook.io/9mm-pro/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"
@@ -2518,7 +2518,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/hiring/become-a-chef"
+              href="https://9mm-pro.gitbook.io/9mm-pro/hiring/become-a-chef"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"

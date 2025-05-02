@@ -1,8 +1,8 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Link, StyledLink } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
-import { memo } from 'react'
 import NextLink from 'next/link'
+import { memo } from 'react'
 
 export const LearnMoreLink: React.FC<{ withArrow?: boolean }> = ({ withArrow }) => {
   const { t } = useTranslation()
@@ -16,7 +16,7 @@ export const LearnMoreLink: React.FC<{ withArrow?: boolean }> = ({ withArrow }) 
         fontSize: 14,
         marginLeft: 3,
       }}
-      href="https://docs.pancakeswap.finance/products/vecake/migrate-from-cake-pool"
+      href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/migrate-from-cake-pool"
       external
     >
       {t('Learn more')}

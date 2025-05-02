@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Text, Link, Flex, InfoFilledIcon } from '@pancakeswap/uikit'
+import { Flex, InfoFilledIcon, Link, Text } from '@pancakeswap/uikit'
 import floor from 'lodash/floor'
 
 export default function WithdrawalMessage({ lockPeriod }: { lockPeriod: number }) {
@@ -26,7 +26,7 @@ export default function WithdrawalMessage({ lockPeriod }: { lockPeriod: number }
             display: 'inline',
             fontSize: '14px',
           }}
-          href="https://docs.pancakeswap.finance/products/simple-staking#when-can-i-claim-my-rewards"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/simple-staking#when-can-i-claim-my-rewards"
           external
         >
           {t('Click here for more information')}

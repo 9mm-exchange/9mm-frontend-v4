@@ -1,8 +1,8 @@
-import { styled } from 'styled-components'
-import { Flex, Text, TooltipText, useTooltip, Box, Link, BalanceWithLoading } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
-import { useIfoCredit, useIfoCeiling } from 'state/pools/hooks'
+import { BalanceWithLoading, Box, Flex, Link, Text, TooltipText, useTooltip } from '@pancakeswap/uikit'
 import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
+import { useIfoCeiling, useIfoCredit } from 'state/pools/hooks'
+import { styled } from 'styled-components'
 import { getICakeWeekDisplay } from 'views/Pools/helpers'
 
 const InlineLink = styled(Link)`
@@ -25,7 +25,7 @@ const IfoCakeRow: React.FC<React.PropsWithChildren> = () => {
           },
         )}
       </Text>
-      <InlineLink external href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering/icake">
+      <InlineLink external href="https://9mm-pro.gitbook.io/9mm-pro/products/ifo-initial-farm-offering/icake">
         {t('Learn more about iCAKE')}
       </InlineLink>
     </Box>,

@@ -80,7 +80,7 @@ export const ApproveStepFlow: React.FC<React.PropsWithChildren<ApproveStepFlowPr
             <StyledLinkExternal
               external
               margin="16px auto auto auto"
-              href="https://docs.pancakeswap.finance/products/pancakeswap-exchange/faq#why-do-i-need-to-reset-approval-on-usdt-before-enabling-approving"
+              href="https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange/faq#why-do-i-need-to-reset-approval-on-usdt-before-enabling-approving"
             >
               <Text color="primary">{t('Why resetting approval')}</Text>
             </StyledLinkExternal>
@@ -89,7 +89,7 @@ export const ApproveStepFlow: React.FC<React.PropsWithChildren<ApproveStepFlowPr
             <StyledLinkExternal
               external
               margin="16px auto auto auto"
-              href="https://docs.pancakeswap.finance/~/changes/d1gFBwxReM0gH1aeMo0G/readme/help/what-is-an-approval-transaction"
+              href="https://9mm-pro.gitbook.io/9mm-pro/~/changes/d1gFBwxReM0gH1aeMo0G/readme/help/what-is-an-approval-transaction"
             >
               <Text color="primary">{t('Why')}</Text>
               <Text m="0 2px" color="primary" style={{ borderBottom: '1px dashed' }} ref={targetRef}>

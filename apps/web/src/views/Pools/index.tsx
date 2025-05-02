@@ -165,7 +165,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
             </Text>
             {isMobile ? (
               <PinnedFAQButton
-                docLink="https://docs.pancakeswap.finance/products/syrup-pool/syrup-pool-guide"
+                docLink="https://9mm-pro.gitbook.io/9mm-pro/products/syrup-pool/syrup-pool-guide"
                 faqConfig={faqConfig}
               />
             ) : null}

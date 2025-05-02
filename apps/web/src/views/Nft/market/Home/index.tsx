@@ -114,7 +114,7 @@ const Home = () => {
       <Gradient p="64px 0">
         <SectionsWithFoldableText header={t('FAQs')} config={config(t)} m="auto" />
         <LinkExternal
-          href="https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/nft-market-applications"
+          href="https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/business-partnerships/nft-market-applications"
           mx="auto"
           mt="16px"
         >

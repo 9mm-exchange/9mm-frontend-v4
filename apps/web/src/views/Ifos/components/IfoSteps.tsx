@@ -132,7 +132,7 @@ const Step1 = ({
           fontWeight={700}
           color="textSubtle"
           small
-          href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering/icake#how-is-icake-calculated"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/ifo-initial-farm-offering/icake#how-is-icake-calculated"
         >
           {t('How is the number of iCAKE calculated?')}
         </Link>

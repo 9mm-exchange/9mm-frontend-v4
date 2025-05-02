@@ -7,7 +7,7 @@ import { BodyText } from '../BodyText'
 import { AdPlayerProps } from '../types'
 import { getImageUrl } from '../utils'
 
-const actionLink = 'https://docs.pancakeswap.finance/products/vecake'
+const actionLink = 'https://9mm-pro.gitbook.io/9mm-pro/products/vecake'
 
 export const AdCakeStaking = (props: AdPlayerProps) => {
   const { t } = useTranslation()

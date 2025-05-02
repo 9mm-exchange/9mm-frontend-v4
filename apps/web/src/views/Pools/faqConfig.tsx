@@ -103,7 +103,7 @@ const faqConfig: FaqConfig[] = [
         <InlineLink
           target="_blank"
           rel="noreferrer"
-          href="https://docs.pancakeswap.finance/products/vecake/migrate-from-cake-pool"
+          href="https://9mm-pro.gitbook.io/9mm-pro/products/vecake/migrate-from-cake-pool"
         >
           <Trans>Learn how to migrate here</Trans>
         </InlineLink>
