@@ -80,7 +80,7 @@ export const Campaign: React.FC<CampaignProps> = ({ showStatus }) => {
             </Flex>
           </Flex>
           <Text bold fontSize={['20px']} lineHeight={['24px']}>
-            Swap and Share $10,000 on Ethereum PancakeSwap
+            Swap and Share $10,000 on Ethereum 9mm
           </Text>
           <Card isActive style={{ width: 'fit-content', padding: '2px', marginTop: '16px' }}>
             <Flex padding="8px">

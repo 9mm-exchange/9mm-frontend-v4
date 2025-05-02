@@ -8,26 +8,26 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Contact",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/contact-us",
+        href: "https://t.me/ninemmpro",
       },
       {
         label: "Blog",
-        href: "https://blog.pancakeswap.finance/",
+        href: "#",
       },
       {
         label: "Community",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/contact-us/telegram",
+        href: "https://t.me/ninemmpro",
       },
       {
-        label: "CAKE",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/tokenomics/cake",
+        label: "9mm",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/overview/9mm-tokenomics",
       },
       {
         label: "—",
       },
       {
         label: "Online Store",
-        href: "https://pancakeswap.creator-spring.com/",
+        href: "https://pulsicanstore.com/collections/9mm-pro/",
         isHighlighted: true,
       },
     ],
@@ -37,15 +37,15 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Customer",
-        href: "Support https://9mm-pro.gitbook.io/9mm-pro/contact-us/customer-support",
+        href: "https://t.me/ninemmpro",
       },
       {
         label: "Troubleshooting",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/help/troubleshooting",
+        href: "https://t.me/ninemmpro",
       },
       {
         label: "Guides",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/get-started",
+        href: "https://9mm-pro.gitbook.io/9mm-pro",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Github",
-        href: "https://github.com/pancakeswap",
+        href: "https://9mm-pro.gitbook.io/9mm-pro",
       },
       {
         label: "Documentation",
@@ -62,15 +62,15 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: "Bug Bounty",
-        href: "https://app.gitbook.com/@pancakeswap-1/s/pancakeswap/code/bug-bounty",
+        href: "https://9mm-pro.gitbook.io/9mm-pro",
       },
       {
         label: "Audits",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/audits",
       },
       {
         label: "Careers",
-        href: "https://9mm-pro.gitbook.io/9mm-pro/hiring/become-a-chef",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/conclusion/join-the-community",
       },
     ],
   },
@@ -80,102 +80,37 @@ export const socials = [
   {
     label: "Twitter",
     icon: TwitterIcon,
-    href: "https://twitter.com/pancakeswap",
+    href: "https://x.com/9mm_pro",
   },
   {
     label: "Telegram",
     icon: TelegramIcon,
-    items: [
-      {
-        label: "English",
-        href: "https://t.me/pancakeswap",
-      },
-      {
-        label: "Bahasa Indonesia",
-        href: "https://t.me/pancakeswapIndonesia",
-      },
-      {
-        label: "中文",
-        href: "https://t.me/pancakeswap_CN",
-      },
-      {
-        label: "Tiếng Việt",
-        href: "https://t.me/PancakeSwapVN",
-      },
-      {
-        label: "Italiano",
-        href: "https://t.me/pancakeswap_Ita",
-      },
-      {
-        label: "русский",
-        href: "https://t.me/pancakeswap_ru",
-      },
-      {
-        label: "Türkiye",
-        href: "https://t.me/pancakeswapturkiye",
-      },
-      {
-        label: "Português",
-        href: "https://t.me/pancakeswapPortuguese",
-      },
-      {
-        label: "Español",
-        href: "https://t.me/pancakeswapES",
-      },
-      {
-        label: "日本語",
-        href: "https://t.me/pancakeswapJP",
-      },
-      {
-        label: "Français",
-        href: "https://t.me/pancakeswapFR",
-      },
-      {
-        label: "Deutsch",
-        href: "https://t.me/pancakeswap_DE",
-      },
-      {
-        label: "Filipino",
-        href: "https://t.me/pancakeswap_PH",
-      },
-      {
-        label: "ქართული ენა",
-        href: "https://t.me/pancakeswapGeorgia",
-      },
-      {
-        label: "हिन्दी",
-        href: "https://t.me/pancakeswap_INDIA",
-      },
-      {
-        label: "Announcements",
-        href: "https://t.me/PancakeSwapAnn",
-      },
-    ],
+    href: "https://t.me/ninemmpro",
   },
   {
     label: "Reddit",
     icon: RedditIcon,
-    href: "https://reddit.com/r/pancakeswap",
+    href: "#",
   },
   {
     label: "Instagram",
     icon: InstagramIcon,
-    href: "https://instagram.com/pancakeswap_official",
+    href: "#",
   },
   {
     label: "Github",
     icon: GithubIcon,
-    href: "https://github.com/pancakeswap/",
+    href: "https://github.com/orgs/9mm-exchange",
   },
   {
     label: "Discord",
     icon: DiscordIcon,
-    href: "https://discord.gg/pancakeswap",
+    href: "#",
   },
   {
     label: "Youtube",
     icon: YoutubeIcon,
-    href: "https://www.youtube.com/@pancakeswap_official",
+    href: "#",
   },
 ];
 

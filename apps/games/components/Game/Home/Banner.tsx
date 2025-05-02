@@ -31,7 +31,7 @@ export const Banner = () => {
           {isDesktop ? t('9mm Swap Gaming Marketplace') : t('Gaming Marketplace')}
         </Text>
         <Text bold lineHeight="110%" fontSize={['16px', '16px', '16px', '16px', '24px']}>
-          {t('Play, Build and Connect on PancakeSwap')}
+          {t('Play, Build and Connect on 9mm Swap')}
         </Text>
         <Flex mt="16px">
           <StyledLinkExternal href="https://forms.gle/WXDhmbfRhQtz4eSt7" showExternalIcon={false}>

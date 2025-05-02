@@ -1,8 +1,8 @@
 {
-  "short_name": "PancakeSwap",
-  "name": "PancakeSwap",
-  "description": "Farm CAKE with Pancake LP Tokens",
-  "homepage_url": "https://pancakeswap.finance",
+  "short_name": "9mm Swap",
+  "name": "9mm Swap",
+  "description": "Trade, earn, and own crypto on the all-in-one multichain DEX",
+  "homepage_url": "https://dex.9mm.pro",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1FC7D4",
@@ -20,5 +20,5 @@
       "sizes": "256x256"
     }
   ],
-  "iconPath": "/images/cake.svg"
+  "iconPath": "/logo.png"
 }

@@ -61,7 +61,7 @@ export const AptosYieldFarmingBanner = () => {
           <BannerTitle variant="purple">
             {isMobile || isTablet
               ? t('Earn Cake and APT with up to 50% apr on 15+ Pools')
-              : t('Earn Dual Incentives with Yield Farming on Aptos PancakeSwap')}
+              : t('Earn Dual Incentives with Yield Farming on Aptos 9mm Swap')}
           </BannerTitle>
         }
         actions={startTradeAction}

@@ -11,19 +11,19 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Earn"),
-        href: "https://pancakeswap.finance/liquidity/pools",
+        href: "https://dex.9mm.pro/liquidity",
       },
       {
-        label: t("Play"),
-        href: "https://pancakeswap.finance/prediction",
+        label: t("Info & Analytics"),
+        href: "https://dex.9mm.pro/info/v3",
       },
       {
-        label: t("veCAKE"),
-        href: "https://pancakeswap.finance/cake-staking",
+        label: t("Revenue Sharing"),
+        href: "https://9mm-pro.gitbook.io/9mm-pro/overview/revenue-sharing-model",
       },
       {
         label: t("Merchandise"),
-        href: "https://merch.pancakeswap.finance/",
+        href: "https://pulsicanstore.com/collections/9mm-pro/",
       },
     ],
   },
@@ -31,20 +31,20 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     label: "Business",
     items: [
       {
-        label: t("CAKE Incentives"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/business-partnerships/syrup-pools-and-farms",
+        label: t("9mm Incentives"),
+        href: "https://9mm-pro.gitbook.io/9mm-pro/overview/revenue-sharing-model",
       },
       {
-        label: t("Staking Pools"),
-        href: "https://pancakeswap.finance/pools",
+        label: t("Dex Aggregator"),
+        href: "https://9x.9mm.pro",
       },
       {
-        label: t("Token Launches"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos",
+        label: t("OTC Market"),
+        href: "otc.9mm.pro",
       },
       {
-        label: t("Brand Assets"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/ecosystem-and-partnerships/brand",
+        label: t("Explorer"),
+        href: "https://scan.9mm.pro",
       },
     ],
   },
@@ -53,19 +53,19 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Contributing"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/developers/contributing",
+        href: "https://9mm-pro.gitbook.io/",
       },
       {
         label: t("Github"),
-        href: "https://github.com/pancakeswap",
+        href: "https://github.com/9mm-exchange",
       },
       {
         label: t("Bug Bounty"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/developers/bug-bounty",
+        href: "https://9mm-pro.gitbook.io/",
       },
       {
-        label: t("V4"),
-        href: "https://pancakeswap.finance/v4",
+        label: t("V4 (soon)"),
+        href: "#",
       },
     ],
   },
@@ -74,11 +74,11 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Get Help"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/contact-us/customer-support",
+        href: "https://t.me/ninemmpro",
       },
       {
         label: t("Troubleshooting"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/readme/help/troubleshooting",
+        href: "https://t.me/ninemmpro",
       },
       {
         label: t("Documentation"),
@@ -86,11 +86,11 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("Audits"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/readme/audits",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/audits",
       },
       {
         label: t("Legacy products"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/products/legacy-products",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/overview/key-features-of-the-9mm-dex",
       },
     ],
   },
@@ -99,23 +99,23 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Tokenomics"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/governance-and-tokenomics/cake-tokenomics",
+        href: "https://9mm-pro.gitbook.io/9mm-pro/overview/9mm-tokenomics",
       },
       {
-        label: t("CAKE Emission Projection"),
-        href: "https://analytics.pancakeswap.finance/",
+        label: t("9mm Emission"),
+        href: "#",
       },
       {
         label: t("Blog"),
-        href: "https://blog.pancakeswap.finance/",
+        href: "#",
       },
       {
         label: t("Careers"),
-        href: "https://9mm-pro.gitbook.io/9mm-pro/team/become-a-chef",
+        href: "#",
       },
       {
         label: t("Terms Of Service"),
-        href: "https://pancakeswap.finance/terms-of-service",
+        href: "https://dex.9mm.pro/terms-of-service",
       },
     ],
   },

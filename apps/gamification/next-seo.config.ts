@@ -1,17 +1,17 @@
 import { DefaultSeoProps } from 'next-seo'
 
 export const SEO: DefaultSeoProps = {
-  titleTemplate: '%s | PancakeSwap',
-  defaultTitle: 'Game | PancakeSwap',
-  description: 'Play different games on PancakeSwap, using CAKE and 9mm Swap NFTs',
+  titleTemplate: '%s | 9mm Swap',
+  defaultTitle: 'Game | 9mm Swap',
+  description: 'Play different games on 9mm, using 9mm and  NFTs',
   twitter: {
     cardType: 'summary_large_image',
-    handle: '@PancakeSwap',
-    site: '@PancakeSwap',
+    handle: '@9mm_pro',
+    site: '@9mm_pro',
   },
   openGraph: {
     title: '🥞 9mm Swap - A next evolution DeFi exchange on BNB Smart Chain (BSC)',
-    description: 'Play different games on PancakeSwap, using CAKE and 9mm Swap NFTs',
-    images: [{ url: 'https://assets.pancakeswap.finance/web/og/v2/hero.jpg' }],
+    description: 'Play different games on 9mm Swap, using 9mm and  NFTs',
+    images: [{ url: 'https://tokens.9mm.pro/web/og/swap.jpg' }],
   },
 }

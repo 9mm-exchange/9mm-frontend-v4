@@ -39,8 +39,8 @@ const TermsOfService = () => {
         <Text as="span">
           These Terms of Service (the “Agreement”) explains the terms and conditions by which you may access and use
         </Text>
-        <Link m="0 4px" display="inline !important" href="https://pancakeswap.finance">
-          https://pancakeswap.finance
+        <Link m="0 4px" display="inline !important" href="https://9mm.pro">
+          https://9mm.pro
         </Link>
         <Text as="span">
           and any subdomains associated with the Website. You must read this Agreement carefully as it governs your use
@@ -59,8 +59,8 @@ const TermsOfService = () => {
       <Text as="h3">Introduction</Text>
       <Text as="p">
         The Website provides access to (a) a decentralized protocol on various public blockchains, including but not
-        limited to BNB Chain, Aptos and Ethereum, that allow users to trade certain compatible digital assets (“the 9mm
-        Swap protocol” or the “Protocol”), among other services. The Website is one, but not the exclusive, means of
+        limited to Pulsechain Chain, Sonic and Base, that allow users to trade certain compatible digital assets (“the
+        9mm Swap protocol” or the “Protocol”), among other services. The Website is one, but not the exclusive, means of
         accessing the Protocol.
       </Text>
       <Text as="p">
@@ -79,8 +79,8 @@ const TermsOfService = () => {
           material modifications, we will notify you by updating the date at the top of the Agreement and by maintaining
           a current version of the Agreement at
         </Text>
-        <Link m="0 4px" display="inline !important" href="https://pancakeswap.finance/terms-of-service">
-          https://pancakeswap.finance/terms-of-service.
+        <Link m="0 4px" display="inline !important" href="https://dex.9mm.pro/terms-of-service">
+          https://dex.9mm.pro/terms-of-service.
         </Link>
         <Text as="span">
           All modifications will be effective when they are posted, and your continued accessing or use of the Website
@@ -96,13 +96,13 @@ const TermsOfService = () => {
       <Text as="p">
         The Website is distinct from the Protocol and is one, but not the exclusive, means of accessing the Protocol.
         The Protocol itself has three versions, designated as v1, v2, and v3, each of which comprises open-source or
-        source-available self-executing smart contracts that are deployed on various public blockchains, such as BNB
-        Chain, Aptos and Ethereum. 9mm Swap does not control or operate any version of the Protocol on any blockchain
+        source-available self-executing smart contracts that are deployed on various public blockchains, such as
+        PulseChain, Base and Sonic. 9mm Swap does not control or operate any version of the Protocol on any blockchain
         network. By using the Website, you understand that you are not buying or selling digital assets from us and that
         we do not operate any liquidity pools on the Protocol or control trade execution on the Protocol. When traders
         pay fees for trades, those fees accrue to liquidity providers for the Protocol. As a general matter, the 9mm
         Swap team is not a liquidity provider into Protocol liquidity pools and liquidity providers are independent
-        third parties. The Protocol was initially deployed on the BNB Chain blockchain, and has since been deployed on
+        third parties. The Protocol was initially deployed on the PulseChain blockchain, and has since been deployed on
         several other blockchain networks.
       </Text>
 
@@ -291,7 +291,7 @@ const TermsOfService = () => {
         to understand the inherent risks associated with using cryptographic and blockchain-based systems, and that you
         have a working knowledge of the usage and intricacies of digital assets such as ether (ETH), so-called
         stablecoins, and other digital tokens such as those following the Ethereum Token Standard (ERC-20), or standards
-        of any other digital tokens which are transacted on PancakeSwap.
+        of any other digital tokens which are transacted on 9mm Swap.
       </Text>
       <Text as="p">
         In particular, you understand that the markets for these digital assets are nascent and highly volatile due to
@@ -400,10 +400,10 @@ const TermsOfService = () => {
       <Text as="h3">Dispute Resolution</Text>
       <Text as="p">
         We will use our best efforts to resolve any potential disputes through informal, good faith negotiations. If a
-        potential dispute arises, you must contact us by sending an email to info@pancakeswap.come so that we can
-        attempt to resolve it without resorting to formal dispute resolution. If we aren't able to reach an informal
-        resolution within sixty days of your email, then you and we both agree to resolve the potential dispute
-        according to the process set forth below.
+        potential dispute arises, you must contact us by sending an email to admin@9mm.pro so that we can attempt to
+        resolve it without resorting to formal dispute resolution. If we aren't able to reach an informal resolution
+        within sixty days of your email, then you and we both agree to resolve the potential dispute according to the
+        process set forth below.
       </Text>
       <Text as="p">
         Any claim or controversy arising out of or relating to the Website, this Agreement, or any other acts or
@@ -446,7 +446,7 @@ const TermsOfService = () => {
       <Text as="h3">Gas Fees</Text>
       <Text as="p">
         Blockchain transactions require the payment of transaction fees to the appropriate network (“Gas Fees”). Except
-        as otherwise expressly set forth in the terms of another offer by PancakeSwap, you will be solely responsible to
+        as otherwise expressly set forth in the terms of another offer by 9mm Swap, you will be solely responsible to
         pay the Gas Fees for any transaction that you initiate.
       </Text>
     </Container>

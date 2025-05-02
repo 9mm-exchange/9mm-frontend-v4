@@ -105,7 +105,7 @@ export const Banner = () => {
                   {t('with')}
                 </Text>
                 <Text bold fontSize="40px" as="span" ml="4px" lineHeight="110%">
-                  {t('PancakeSwap')}
+                  {t('9mm Swap')}
                 </Text>
               </Flex>
             )}

@@ -27,7 +27,7 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
       },
       {
         label: t('Merchandise'),
-        href: 'https://merch.pancakeswap.finance/',
+        href: 'https://pulsicanstore.com/collections/9mm-pro/',
       },
     ],
   },
