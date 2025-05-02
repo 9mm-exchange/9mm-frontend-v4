@@ -1,12 +1,12 @@
+import { useTranslation } from '@pancakeswap/localization'
 import { AutoRenewIcon, Button, Flex, Heading, Modal, Text, useToast } from '@pancakeswap/uikit'
 import { ToastDescriptionWithTx } from 'components/Toast'
-import { useTranslation } from '@pancakeswap/localization'
+import { ASSET_CDN } from 'config/constants/endpoints'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { useTradingCompetitionContractMoD } from 'hooks/useContract'
 import Image from 'next/image'
 import { styled } from 'styled-components'
-import { ASSET_CDN } from 'config/constants/endpoints'
 
 import { modPrizes } from '../../../../config/constants/trading-competition/prizes'
 import { getRewardGroupAchievements, useModCompetitionRewards } from '../../helpers'
@@ -97,7 +97,7 @@ const ClaimModal: React.FC<React.PropsWithChildren<CompetitionProps>> = ({
             <ImageWrapper>
               <Image src={MoDAllBunnies} alt="achievement-claim-pcs" width={128} height={95} />
             </ImageWrapper>
-            <Text mt="8px">{t('PancakeSwap NFT')}</Text>
+            <Text mt="8px">{t('9mm Swap NFT')}</Text>
             <Text color="textSubtle" mt="8px" fontSize="12px" textAlign="center">
               {t(
                 'Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.',

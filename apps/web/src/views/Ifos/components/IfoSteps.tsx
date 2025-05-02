@@ -334,8 +334,8 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
             </Heading>
             <Text color="textSubtle" small mb="16px">
               {isCrossChainIfo
-                ? t('You’ll need an active PancakeSwap Profile to take part in the IFO’s Public Sale!')
-                : t('You’ll need an active PancakeSwap Profile to take part in an IFO!')}
+                ? t('You’ll need an active 9mm Swap Profile to take part in the IFO’s Public Sale!')
+                : t('You’ll need an active 9mm Swap Profile to take part in an IFO!')}
             </Text>
             {renderAccountStatus()}
           </CardBody>

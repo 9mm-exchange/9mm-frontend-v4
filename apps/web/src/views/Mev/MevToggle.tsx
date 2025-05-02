@@ -48,7 +48,7 @@ export const MevToggle: React.FC = () => {
   const { isOpen, onOpen, onDismiss } = useModalV2()
   const { theme } = useTheme()
   const { tooltip, tooltipVisible, targetRef } = useTooltip(
-    t('PancakeSwap MEV Guard protects you from frontrunning and sandwich attacks when Swapping.'),
+    t('9mm Swap MEV Guard protects you from frontrunning and sandwich attacks when Swapping.'),
     {
       placement: 'auto',
       trigger: 'hover',
@@ -118,7 +118,7 @@ export const MevModal: React.FC<{ isOpen: boolean; onSuccess?: () => void } & In
               <Box width="100%">
                 <Text width="100%">{t('Add automatically on BNB Smart Chain:')}</Text>
                 <Text bold width="100%">
-                  {t('PancakeSwap MEV Guard')}
+                  {t('9mm Swap MEV Guard')}
                 </Text>
               </Box>
               <ModalImg src={getImageUrl('swap-toggle-modal.png')} alt="swap-toggle-modal" />

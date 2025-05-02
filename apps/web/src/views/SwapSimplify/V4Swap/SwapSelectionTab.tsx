@@ -114,7 +114,7 @@ export const SwapSelection = ({
       style: {
         cursor: isTSwapSupported ? 'pointer' : 'not-allowed',
         pointerEvents: isTSwapSupported ? 'auto' : 'none',
-        color: !isTSwapSupported ? 'rgba(0, 0, 0, 0.15)' : undefined,
+        color: !isTSwapSupported ? '#fafafa99' : undefined,
         userSelect: 'none',
       } as React.CSSProperties,
     }

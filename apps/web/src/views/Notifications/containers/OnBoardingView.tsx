@@ -29,9 +29,7 @@ const OnBoardingSteps = [
     key: 'step-2',
     title: <Trans>Enable Notifications From PancakeSwap</Trans>,
     icon: '/images/notifications/welcome-notification-bell.png',
-    description: (
-      <Trans>Subscribe to stay informed on the latest news and updates that PancakeSwap has to offer.</Trans>
-    ),
+    description: <Trans>Subscribe to stay informed on the latest news and updates that 9mm Swap has to offer.</Trans>,
   },
   {
     key: 'step-3',

@@ -38,7 +38,7 @@ export const ManualConfigModal: React.FC = () => {
       <FlexGap gap="24px" flexDirection="column" alignItems="center">
         <Text textAlign="center">
           <Text as="span" bold pr="4px">
-            {t('PancakeSwap MEV Guard')}
+            {t('9mm Swap MEV Guard')}
           </Text>
           {t('requires a manual configuration for your wallet. Choose your wallet to view a detailed guide:')}
         </Text>

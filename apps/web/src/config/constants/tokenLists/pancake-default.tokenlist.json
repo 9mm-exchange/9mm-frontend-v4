@@ -1,5 +1,5 @@
 {
-  "name": "PancakeSwap Default List",
+  "name": "9mm Swap Default List",
   "timestamp": "2022-01-26T11:45:09Z",
   "version": {
     "major": 4,
@@ -67,7 +67,7 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
       "chainId": 56,
@@ -75,7 +75,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0xFa60D973F7642B748046464e165A65B7323b0DEE",
       "chainId": 97,
@@ -83,7 +83,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
       "chainId": 1,
@@ -91,7 +91,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0xc2C3eAbE0368a2Ea97f485b03D1098cdD7d0c081",
       "chainId": 5,
@@ -99,7 +99,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0xFf2FA31273c1aedB67017B52C625633d2F021f67",
       "chainId": 280,
@@ -107,7 +107,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x0D1E753a25eBda689453309112904807625bEFBe",
       "chainId": 1101,
@@ -115,7 +115,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x3A287a06c66f9E95a56327185cA2BDF5f031cEcD",
       "chainId": 324,
@@ -123,7 +123,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x1b896893dfc86bb67Cf57767298b9073D2c1bA2c",
       "chainId": 42161,
@@ -131,7 +131,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x2B3C5df29F73dbF028BA82C33e0A5A6e5800F75e",
       "chainId": 1442,
@@ -139,7 +139,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x0D1E753a25eBda689453309112904807625bEFBe",
       "chainId": 59144,
@@ -147,7 +147,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x62FF25CFD64E55673168c3656f4902bD7Aa5F0f4",
       "chainId": 421613,
@@ -155,7 +155,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x3055913c90Fcc1A6CE9a358911721eEb942013A1",
       "chainId": 8453,
@@ -163,7 +163,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE2",
       "address": "0x8d008B313C1d6C7fE2982F62d32Da7507cF43551",
       "chainId": 97,
@@ -171,7 +171,7 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE3",
       "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
       "chainId": 97,
@@ -523,7 +523,7 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0xa11B290B038C35711eB309268a2460754f730921",
       "chainId": 5611,
@@ -539,7 +539,7 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "address": "0x2779106e4F4A8A28d77A24c18283651a2AE22D1C",
       "chainId": 204,

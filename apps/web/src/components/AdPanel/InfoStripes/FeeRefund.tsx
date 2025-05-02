@@ -40,7 +40,7 @@ export const FeeRefund: ICampaignBanner = () => {
   return (
     <Flex mr={['6px']} alignItems="center" flexWrap="wrap">
       <Text bold as="span" color="white" fontSize={['12px', '12px', '14px']}>
-        {t('Match your Uni volume on PancakeSwap to get a refund of up to')}
+        {t('Match your Uni volume on 9mm Swap to get a refund of up to')}
       </Text>
       <Text bold as="span" color="warning" fontSize={['12px', '12px', '14px']}>
         {t('$8M USD')}

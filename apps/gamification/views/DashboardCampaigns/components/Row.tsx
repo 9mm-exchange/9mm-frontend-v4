@@ -98,7 +98,7 @@ export const Row: React.FC<RowProps> = ({ statusButtonIndex, expanded, toggleExp
               WebkitBoxOrient: 'vertical',
             }}
           >
-            PancakeSwap Multichain Celebration - zkSync Era 123 123123 12312
+            9mm Swap Multichain Celebration - zkSync Era 123 123123 12312
           </Text>
         </Flex>
       </StyledCell>

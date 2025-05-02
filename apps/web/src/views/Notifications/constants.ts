@@ -70,7 +70,7 @@ export const PancakeNotifications: {
   },
   onBoardingNotification: (t): pushNotification => {
     return {
-      title: t('Welcome to PancakeSwap Notifications'),
+      title: t('Welcome to 9mm Swap Notifications'),
       body: t(
         'You are now susbscribed and will receive alerts and updates on PCS features. If you dont want to receive notifications you can unsubscribe at any time.',
       ),

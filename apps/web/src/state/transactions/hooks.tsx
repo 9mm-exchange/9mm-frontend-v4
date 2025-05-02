@@ -1,4 +1,7 @@
 import { Order } from '@gelatonetwork/limit-orders-lib'
+import { useTranslation } from '@pancakeswap/localization'
+import { Token } from '@pancakeswap/swap-sdk-core'
+import { FeeAmount } from '@pancakeswap/v3-sdk'
 import isEmpty from 'lodash/isEmpty'
 import keyBy from 'lodash/keyBy'
 import mapValues from 'lodash/mapValues'
@@ -8,20 +11,17 @@ import pickBy from 'lodash/pickBy'
 import { useCallback, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { AppState, useAppDispatch } from 'state'
-import { useAccount } from 'wagmi'
 import { Hash } from 'viem'
-import { Token } from '@pancakeswap/swap-sdk-core'
-import { FeeAmount } from '@pancakeswap/v3-sdk'
-import { useTranslation } from '@pancakeswap/localization'
+import { useAccount } from 'wagmi'
 
 import { useActiveChainId } from 'hooks/useActiveChainId'
 
 import useAccountActiveChain from 'hooks/useAccountActiveChain'
 import { useSafeTxHashTransformer } from 'hooks/useSafeTxHashTransformer'
 import {
-  FarmTransactionStatus,
   CrossChainFarmStepType,
   CrossChainFarmTransactionType,
+  FarmTransactionStatus,
   TransactionType,
   addTransaction,
 } from './actions'
@@ -283,13 +283,13 @@ export function useReadableTransactionType(type?: TransactionType) {
   const { t } = useTranslation()
   return useMemo(() => {
     if (type === undefined) {
-      return t('PancakeSwap AMM')
+      return t('9mm Swap AMM')
     }
     switch (type) {
       case 'approve':
         return t('Token Approval')
       case 'swap':
-        return t('PancakeSwap AMM')
+        return t('9mm Swap AMM')
       case 'wrap':
         return t('Wrap Native Token')
       case 'add-liquidity':

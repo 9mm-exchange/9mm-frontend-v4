@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Text, Link } from '@pancakeswap/uikit'
+import { Box, Link, Text } from '@pancakeswap/uikit'
 
 const XCADWarning = () => {
   const { t } = useTranslation()
@@ -11,7 +11,7 @@ const XCADWarning = () => {
         {t('XCAD is now using a new bridge provider and has migrated to a new XCAD token on BSC.')}
         <br />
         {t(
-          'You can obtain the new token either by swapping your old tokens on PancakeSwap or bridging them to ETH and back to BSC using the new bridge provider.',
+          'You can obtain the new token either by swapping your old tokens on 9mm Swap or bridging them to ETH and back to BSC using the new bridge provider.',
         )}
         <br />
         {t('For more info, click')}{' '}

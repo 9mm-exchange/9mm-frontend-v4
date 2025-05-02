@@ -19,7 +19,7 @@ export function AffiliateExpiredModal() {
     <DisclaimerModal
       bodyMaxWidth={['100%', '100%', '100%', '640px']}
       bodyMaxHeight="80vh"
-      modalHeader={t('PancakeSwap Affiliate Program')}
+      modalHeader={t('9mm Swap Affiliate Program')}
       header={
         <>
           <Text bold fontSize="1.25rem">

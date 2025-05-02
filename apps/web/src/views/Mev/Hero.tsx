@@ -305,7 +305,7 @@ export const useMevConfig = (walletType: WalletType) => {
       },
       [WalletType.mevOnlyManualConfig]: {
         title: t('Setup Required!'),
-        desc: t('Your wallet requires manual setup to enable PancakeSwap MEV Guard'),
+        desc: t('Your wallet requires manual setup to enable 9mm Swap MEV Guard'),
         btnText: t('See the guides'),
         onClick: () => {
           const element = document.getElementById(INFO_SECTION_ID)
@@ -316,12 +316,12 @@ export const useMevConfig = (walletType: WalletType) => {
       },
       [WalletType.nativeSupportCustomRPC]: {
         title: t('In one click'),
-        desc: t('Add automatically on BNB Smart Chain: PancakeSwap MEV Guard '),
+        desc: t('Add automatically on BNB Smart Chain: 9mm Swap MEV Guard '),
         btnText: t('Add to wallet'),
       },
       [WalletType.mevNotSupported]: {
         title: t('Can’t Enable MEV Guard!'),
-        desc: t('Your wallet provider doesn’t support PancakeSwap MEV Guard'),
+        desc: t('Your wallet provider doesn’t support 9mm Swap MEV Guard'),
         btnText: t('See the wallets supported'),
       },
     }),
@@ -354,7 +354,7 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                 color="secondary"
                 bold
               >
-                {t('PancakeSwap MEV GUARD')}
+                {t('9mm Swap MEV GUARD')}
               </Text>
               <Text fontSize={isMobile ? '24px' : '32px'} lineHeight={isMobile ? '36px' : '38px'} bold>
                 {t('Safeguard your swap against frontrunning and sandwich attacks!')}
@@ -405,9 +405,9 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           </Text>
                           <Text>
                             {isMEVEnabled
-                              ? t('Added automatically on BNB Smart Chain: PancakeSwap MEV Guard')
+                              ? t('Added automatically on BNB Smart Chain: 9mm Swap MEV Guard')
                               : !account
-                              ? t('Add automatically on BNB Smart Chain: PancakeSwap MEV Guard')
+                              ? t('Add automatically on BNB Smart Chain: 9mm Swap MEV Guard')
                               : mevConfig.desc}
                           </Text>
                         </Box>
@@ -431,9 +431,9 @@ export const Hero: React.FC<{ txCount: number }> = ({ txCount }) => {
                           </Text>
                           <Text>
                             {isMEVEnabled
-                              ? t('Added automatically on BNB Smart Chain: PancakeSwap MEV Guard')
+                              ? t('Added automatically on BNB Smart Chain: 9mm Swap MEV Guard')
                               : !account
-                              ? t('Add automatically on BNB Smart Chain: PancakeSwap MEV Guard')
+                              ? t('Add automatically on BNB Smart Chain: 9mm Swap MEV Guard')
                               : mevConfig.desc}
                           </Text>
                         </Box>

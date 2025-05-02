@@ -1,7 +1,7 @@
-import { styled } from 'styled-components'
-import { Box, Flex, Text, Heading, Link, Image, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { Box, Flex, Heading, Image, Link, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
+import { styled } from 'styled-components'
 import { BallWithNumber, MatchExampleA, MatchExampleB, PoolAllocationChart } from '../svgs'
 
 const Divider = styled.div`
@@ -353,7 +353,7 @@ const HowToPlay: React.FC<React.PropsWithChildren> = () => {
           <Text>
             {t('Check our in-depth guide on')}{' '}
             <InlineLink external href="https://docs.pancakeswap.finance/products/lottery/lottery-guide">
-              {t('how to play the PancakeSwap lottery!')}
+              {t('how to play the 9mm Swap lottery!')}
             </InlineLink>
           </Text>
         </Flex>

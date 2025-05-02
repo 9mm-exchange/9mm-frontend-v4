@@ -92,7 +92,7 @@ export const Banner = () => {
           width={['100%', '100%', '100%', '100%', '100%', '100%', '1200px']}
         >
           <Text bold color="secondary" lineHeight="110%" fontSize={['40px']} mb={['8px', '8px', '8px', '8px', '24px']}>
-            {isDesktop ? t('PancakeSwap Gaming Community') : t('Gaming Community')}
+            {isDesktop ? t('9mm Swap Gaming Community') : t('Gaming Community')}
           </Text>
           <Text bold lineHeight="110%" fontSize={['16px', '16px', '16px', '16px', '24px']}>
             {t('Every Game, Every Chain, One Destination')}

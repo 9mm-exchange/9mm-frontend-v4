@@ -58,7 +58,7 @@ const Question = () => {
             </Heading>
           </CardHeader>
           <StyledCardBody>
-            <FoldableText title={t('What is the criteria to become a PancakeSwap affiliate?')} mt="24px">
+            <FoldableText title={t('What is the criteria to become a 9mm Swap affiliate?')} mt="24px">
               <StyledListText color="textSubtle">
                 {t(
                   'At least 10,000 followers across social media platforms such as Twitter, Youtube, Discord, Instagram and Telegram',
@@ -68,7 +68,7 @@ const Question = () => {
                 {t('Proven track record of creating quality content related to crypto and especially DeFi')}
               </StyledListText>
               <StyledListText color="textSubtle">
-                {t('Strong understanding of PancakeSwap and our ecosystem')}
+                {t('Strong understanding of 9mm Swap and our ecosystem')}
               </StyledListText>
             </FoldableText>
             <FoldableText title={t('How do I earn commissions as an affiliate?')} mt="24px">
@@ -79,7 +79,7 @@ const Question = () => {
                 {t('Trading pairs must meet the following eligibility criteria:')}
               </StyledListText>
               <StyledListText ml="16px" color="textSubtle">
-                {t('Pairs must be in the PancakeSwap Token list for the following chains (')}
+                {t('Pairs must be in the 9mm Swap Token list for the following chains (')}
                 <Link
                   external
                   style={{ display: 'inline-block' }}
@@ -162,7 +162,7 @@ const Question = () => {
               </StyledListText>
               <StyledListText color="textSubtle">
                 {t(
-                  'You will be able to redeem your CAKE rewards from the affiliate dashboard page. Once redeemed, PancakeSwap will transfer the commission amount earned to your designated wallet. You will be able to see the details of each payment in your affiliate dashboard, including the amount, date, and status of each payment.',
+                  'You will be able to redeem your CAKE rewards from the affiliate dashboard page. Once redeemed, 9mm Swap will transfer the commission amount earned to your designated wallet. You will be able to see the details of each payment in your affiliate dashboard, including the amount, date, and status of each payment.',
                 )}
               </StyledListText>
             </FoldableText>

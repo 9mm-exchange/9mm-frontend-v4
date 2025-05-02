@@ -43,7 +43,7 @@ const LockedBenefits = () => {
 
   const bCakeTooltipComponent = () => (
     <>
-      <Text>{t('bCAKE allows you to boost your yield in PancakeSwap Farms by up to 2x.')}</Text>
+      <Text>{t('bCAKE allows you to boost your yield in 9mm Swap Farms by up to 2x.')}</Text>
       <NextLinkFromReactRouter to="/liquidity/pools">
         <Text bold color="primary">
           {t('Learn More')}
@@ -55,7 +55,7 @@ const LockedBenefits = () => {
   const vCakeTooltipComponent = () => (
     <>
       <Text>
-        {t('vCAKE boosts your voting power to %totalScore% in the PancakeSwap voting governance.', {
+        {t('vCAKE boosts your voting power to %totalScore% in the 9mm Swap voting governance.', {
           totalScore: cakeBenefits?.vCake?.totalScore,
         })}
       </Text>

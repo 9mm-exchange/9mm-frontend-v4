@@ -53,7 +53,7 @@ const faqs = [
           </li>
           <li>
             <Trans>
-              PancakeSwap cannot process redemptions for externally managed veCAKE — please check directly with those
+              9mm Swap cannot process redemptions for externally managed veCAKE — please check directly with those
               platforms.
             </Trans>
           </li>
@@ -110,7 +110,7 @@ const faqs = [
           </li>
           <li>
             <Trans>
-              The PancakeSwap UI will gradually reflect the retirement of affected products from these changes.
+              The 9mm Swap UI will gradually reflect the retirement of affected products from these changes.
             </Trans>
           </li>
         </ul>

@@ -1,3 +1,3 @@
-# PancakeSwap Aptos Swap SDK
+# 9mm Swap Aptos Swap SDK
 
 You can refer to the Uniswap SDK documentation [uniswap.org](https://docs.uniswap.org/sdk/2.0.0/).

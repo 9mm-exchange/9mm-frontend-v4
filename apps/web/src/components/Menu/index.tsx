@@ -36,7 +36,7 @@ const Menu = (props) => {
   const [perpConfirmed] = useUserNotUsCitizenAcknowledgement(IdType.PERPETUALS)
 
   const [onPerpConfirmModalPresent] = useModal(
-    <USCitizenConfirmModal title={t('PancakeSwap Perpetuals')} id={IdType.PERPETUALS} href={perpUrl} />,
+    <USCitizenConfirmModal title={t('9mm Swap Perpetuals')} id={IdType.PERPETUALS} href={perpUrl} />,
     true,
     false,
     'perpConfirmModal',

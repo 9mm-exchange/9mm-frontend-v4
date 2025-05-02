@@ -1,9 +1,9 @@
-import { Box, Flex, Text, Button, Link } from '@pancakeswap/uikit'
 import { useTheme } from '@pancakeswap/hooks'
-import { styled } from 'styled-components'
 import { useTranslation } from '@pancakeswap/localization'
-import { floatingStarsLeft, floatingStarsRight } from 'views/Lottery/components/Hero'
+import { Box, Button, Flex, Link, Text } from '@pancakeswap/uikit'
 import Image from 'next/image'
+import { styled } from 'styled-components'
+import { floatingStarsLeft, floatingStarsRight } from 'views/Lottery/components/Hero'
 import bunnyImage from '../../../../../public/images/trading-reward/top-traders-banner.png'
 
 const Container = styled(Box)<{ backgroundColor: string }>`
@@ -160,7 +160,7 @@ const TopTradersBanner = () => {
             </Text>
           </Flex>
           <Text bold mb="32px" maxWidth="520px" lineHeight="26.4px" fontSize={['16px', '16px', '16px', '24px']}>
-            {t('Earn CAKE while trading your favorite tokens on PancakeSwap by being the top traders!')}
+            {t('Earn CAKE while trading your favorite tokens on 9mm Swap by being the top traders!')}
           </Text>
           <Flex alignSelf={['center', 'center', 'center', 'auto']}>
             <Link href="/swap?showTradingReward=true" external>

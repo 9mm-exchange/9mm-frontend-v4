@@ -6,7 +6,7 @@ export const CAKE_MAINNET = new ERC20Token(
   '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
   18,
   'CAKE',
-  'PancakeSwap Token',
+  '9mm Swap Token',
   'https://pancakeswap.finance/',
 )
 
@@ -15,7 +15,7 @@ export const CAKE_TESTNET = new ERC20Token(
   '0x8d008B313C1d6C7fE2982F62d32Da7507cF43551',
   18,
   'CAKE',
-  'PancakeSwap Token',
+  '9mm Swap Token',
   'https://pancakeswap.finance/',
 )
 
@@ -171,7 +171,7 @@ export const CAKE = {
     '0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.PULSECHAIN]: new ERC20Token(
@@ -203,7 +203,7 @@ export const CAKE = {
     '0xc2C3eAbE0368a2Ea97f485b03D1098cdD7d0c081',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.BSC]: CAKE_MAINNET,
@@ -213,7 +213,7 @@ export const CAKE = {
     '0x0D1E753a25eBda689453309112904807625bEFBe',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.POLYGON_ZKEVM_TESTNET]: new ERC20Token(
@@ -221,7 +221,7 @@ export const CAKE = {
     '0x2B3C5df29F73dbF028BA82C33e0A5A6e5800F75e',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.ZKSYNC_TESTNET]: new ERC20Token(
@@ -229,7 +229,7 @@ export const CAKE = {
     '0xFf2FA31273c1aedB67017B52C625633d2F021f67',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.ZKSYNC]: new ERC20Token(
@@ -237,7 +237,7 @@ export const CAKE = {
     '0x3A287a06c66f9E95a56327185cA2BDF5f031cEcD',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
@@ -245,7 +245,7 @@ export const CAKE = {
     '0x1b896893dfc86bb67Cf57767298b9073D2c1bA2c',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.ARBITRUM_GOERLI]: new ERC20Token(
@@ -253,7 +253,7 @@ export const CAKE = {
     '0x62FF25CFD64E55673168c3656f4902bD7Aa5F0f4',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.LINEA]: new ERC20Token(
@@ -261,7 +261,7 @@ export const CAKE = {
     '0x0D1E753a25eBda689453309112904807625bEFBe',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.BASE_TESTNET]: new ERC20Token(
@@ -269,7 +269,7 @@ export const CAKE = {
     '0x052a99849Ef2e13a5CB28275862991671D4b6fF5',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.LINEA_TESTNET]: new ERC20Token(
@@ -277,7 +277,7 @@ export const CAKE = {
     '0x2B3C5df29F73dbF028BA82C33e0A5A6e5800F75e',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.OPBNB]: new ERC20Token(
@@ -285,7 +285,7 @@ export const CAKE = {
     '0x2779106e4F4A8A28d77A24c18283651a2AE22D1C',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
   [ChainId.OPBNB_TESTNET]: new ERC20Token(
@@ -293,7 +293,7 @@ export const CAKE = {
     '0xa11B290B038C35711eB309268a2460754f730921',
     18,
     'CAKE',
-    'PancakeSwap Token',
+    '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
 }

@@ -1,5 +1,5 @@
 {
-  "name": "PancakeSwap Default Aptos List",
+  "name": "9mm Swap Default Aptos List",
   "timestamp": "2022-01-26T11:45:09Z",
   "version": {
     "major": 1,
@@ -212,7 +212,7 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
     },
     {
-      "name": "PancakeSwap Token",
+      "name": "9mm Swap Token",
       "symbol": "CAKE",
       "chainId": 1,
       "decimals": 8,

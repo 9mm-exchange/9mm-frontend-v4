@@ -10,7 +10,7 @@ export const predictionFAQConfig: FAQConfig = (t) => ({
     {
       title: t('What is the Prediction Feature?'),
       content: t(
-        'The Prediction feature on PancakeSwap is a price-prediction game where users can guess whether the price of an asset, such as BNB, will be higher or lower after a set period. Correct predictions can earn rewards.',
+        'The Prediction feature on 9mm Swap is a price-prediction game where users can guess whether the price of an asset, such as BNB, will be higher or lower after a set period. Correct predictions can earn rewards.',
       ),
     },
     {

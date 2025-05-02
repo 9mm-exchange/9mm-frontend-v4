@@ -1,8 +1,8 @@
-import { Flex, Text, Heading, PageSection } from '@pancakeswap/uikit'
-import { useTranslation, Trans } from '@pancakeswap/localization'
-import GradientLogo from 'views/Home/components/GradientLogoSvg'
-import { styled } from 'styled-components'
+import { Trans, useTranslation } from '@pancakeswap/localization'
+import { Flex, Heading, PageSection, Text } from '@pancakeswap/uikit'
 import Image from 'next/image'
+import { styled } from 'styled-components'
+import GradientLogo from 'views/Home/components/GradientLogoSvg'
 
 const StyledList = styled(Flex)`
   margin-top: 24px;
@@ -79,7 +79,7 @@ const Benefits = () => {
       <Flex alignItems="center" flexDirection="column" justifyContent="center">
         <GradientLogo height="36px" width="36px" mb="24px" />
         <Heading maxWidth={['700px']} textAlign="center" scale="xl">
-          {t('Unlock the Power of PancakeSwap Affiliate Benefits')}
+          {t('Unlock the Power of 9mm Swap Affiliate Benefits')}
         </Heading>
         <StyledContainer>
           {BenefitsList.map((benefit, index) => (

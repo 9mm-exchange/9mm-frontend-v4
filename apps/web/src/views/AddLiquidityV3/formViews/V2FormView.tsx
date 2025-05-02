@@ -24,9 +24,9 @@ import { CommonBasesType } from 'components/SearchModal/types'
 import { Bound } from 'config/constants/types'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import { CurrencyField as Field } from 'utils/types'
 import { getBlockExploreLink } from 'utils'
 import { logGTMClickAddLiquidityEvent } from 'utils/customGTMEventTracking'
+import { CurrencyField as Field } from 'utils/types'
 import { LP2ChildrenProps } from 'views/AddLiquidity'
 
 import { InfoBox } from '@pancakeswap/widgets-internal'
@@ -104,7 +104,7 @@ export default function V2FormView({
             <Flex flexDirection="column">
               <MessageText>
                 {t(
-                  'Adding liquidity to this V2 pair is currently not available on PancakeSwap UI. Please follow the instructions to resolve it using blockchain explorer.',
+                  'Adding liquidity to this V2 pair is currently not available on 9mm Swap UI. Please follow the instructions to resolve it using blockchain explorer.',
                 )}
               </MessageText>
               <LinkExternal

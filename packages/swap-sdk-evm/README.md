@@ -1,3 +1,3 @@
-# PancakeSwap SDK for EVM based chains
+# 9mm Swap SDK for EVM based chains
 
 An swap SDK for evm based chains.

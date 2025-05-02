@@ -81,7 +81,7 @@ export const TEXT = {
     ],
   },
   v3: {
-    title: <Trans>PancakeSwap v3 Migration</Trans>,
+    title: <Trans>9mm Swap v3 Migration</Trans>,
     steps: [
       {
         title: <Trans>Unstaking from V2 Farms</Trans>,
@@ -115,7 +115,7 @@ export const TEXT = {
     ],
   },
   bCake: {
-    title: <Trans>PancakeSwap bCake Migration</Trans>,
+    title: <Trans>9mm Swap bCake Migration</Trans>,
     steps: [
       {
         title: <Trans>Unstaking LP tokens from the old Farms and Position Managers</Trans>,

@@ -152,7 +152,7 @@ export const idoConfigDict: Record<string, IDOConfig> = {
               </li>
               <li>
                 <b>
-                  <Trans>PancakeSwap users</Trans>
+                  <Trans>9mm Swap users</Trans>
                 </b>{' '}
                 <Trans>
                   from the following nationalities are currently not eligible to participate in this event: Belarus,
@@ -681,7 +681,7 @@ export const idoConfigDict: Record<string, IDOConfig> = {
             Participant Eligibility:
             <br />
             To qualify, participants must maintain a minimum daily asset value of $100 in Binance accounts for 7
-            consecutive days before the TGE start date. Check your eligibility on the PancakeSwap TGE event page.
+            consecutive days before the TGE start date. Check your eligibility on the 9mm Swap TGE event page.
             <br />
             <br />
             <ul style={{ listStyle: 'circle', listStylePosition: 'inside' }}>

@@ -1,8 +1,8 @@
-import { useCallback, useState } from 'react'
-import { Flex, Text, Button, Link, ModalV2 } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { Button, Flex, Link, ModalV2, Text } from '@pancakeswap/uikit'
 import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
-import { useUserNotUsCitizenAcknowledgement, IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
+import { IdType, useUserNotUsCitizenAcknowledgement } from 'hooks/useUserIsUsCitizenAcknowledgement'
+import { useCallback, useState } from 'react'
 
 const Congratulations = () => {
   const { t } = useTranslation()
@@ -13,7 +13,7 @@ const Congratulations = () => {
   return (
     <>
       <ModalV2 style={{ zIndex: 100 }} isOpen={isOpen} onDismiss={handleDismiss}>
-        <USCitizenConfirmModal title={t('PancakeSwap Affiliate Program')} id={IdType.AFFILIATE_PROGRAM} />
+        <USCitizenConfirmModal title={t('9mm Swap Affiliate Program')} id={IdType.AFFILIATE_PROGRAM} />
       </ModalV2>
       <Flex flexDirection="column" padding={['24px', '24px', '24px', '24px', '80px 24px']}>
         <Text lineHeight="110%" maxWidth="190px" fontSize={['24px']} bold m="12px 0">

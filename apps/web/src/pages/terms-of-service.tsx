@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Flex, Link, Text } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
-import { Flex, Text, Link } from '@pancakeswap/uikit'
 
 export const Container = styled(Flex)`
   display: grid;
@@ -33,7 +33,7 @@ export const Container = styled(Flex)`
 const TermsOfService = () => {
   return (
     <Container>
-      <Text as="h1">PancakeSwap Terms of Service</Text>
+      <Text as="h1">9mm Swap Terms of Service</Text>
       <Text as="h3">Last modified: Feb 28, 2023</Text>
       <Text as="p">
         <Text as="span">
@@ -59,9 +59,9 @@ const TermsOfService = () => {
       <Text as="h3">Introduction</Text>
       <Text as="p">
         The Website provides access to (a) a decentralized protocol on various public blockchains, including but not
-        limited to BNB Chain, Aptos and Ethereum, that allow users to trade certain compatible digital assets (“the
-        PancakeSwap protocol” or the “Protocol”), among other services. The Website is one, but not the exclusive, means
-        of accessing the Protocol.
+        limited to BNB Chain, Aptos and Ethereum, that allow users to trade certain compatible digital assets (“the 9mm
+        Swap protocol” or the “Protocol”), among other services. The Website is one, but not the exclusive, means of
+        accessing the Protocol.
       </Text>
       <Text as="p">
         To access the Website, you must use non-custodial wallet software, which allows you to interact with public
@@ -97,13 +97,13 @@ const TermsOfService = () => {
         The Website is distinct from the Protocol and is one, but not the exclusive, means of accessing the Protocol.
         The Protocol itself has three versions, designated as v1, v2, and v3, each of which comprises open-source or
         source-available self-executing smart contracts that are deployed on various public blockchains, such as BNB
-        Chain, Aptos and Ethereum. PancakeSwap does not control or operate any version of the Protocol on any blockchain
+        Chain, Aptos and Ethereum. 9mm Swap does not control or operate any version of the Protocol on any blockchain
         network. By using the Website, you understand that you are not buying or selling digital assets from us and that
         we do not operate any liquidity pools on the Protocol or control trade execution on the Protocol. When traders
-        pay fees for trades, those fees accrue to liquidity providers for the Protocol. As a general matter, the
-        PancakeSwap team is not a liquidity provider into Protocol liquidity pools and liquidity providers are
-        independent third parties. The Protocol was initially deployed on the BNB Chain blockchain, and has since been
-        deployed on several other blockchain networks.
+        pay fees for trades, those fees accrue to liquidity providers for the Protocol. As a general matter, the 9mm
+        Swap team is not a liquidity provider into Protocol liquidity pools and liquidity providers are independent
+        third parties. The Protocol was initially deployed on the BNB Chain blockchain, and has since been deployed on
+        several other blockchain networks.
       </Text>
 
       <Text as="h3">Eligibility</Text>
@@ -127,7 +127,7 @@ const TermsOfService = () => {
 
       <Text as="h3">Intellectual Property Rights</Text>
       <Text as="p">
-        PancakeSwap owns all intellectual property and other rights in the Website and its contents, including (but not
+        9mm Swap owns all intellectual property and other rights in the Website and its contents, including (but not
         limited to) software, text, images, trademarks, service marks, copyrights, patents, designs, and its “look and
         feel.” Unlike the Website, versions 1-3 of the Protocol are comprised entirely of open-source or
         source-available software running on public blockchains.
@@ -242,8 +242,8 @@ const TermsOfService = () => {
       </Text>
       <Text as="p">
         We may provide information about tokens in the Website sourced from third-party data partners through features
-        such as rarity scores, token explorer or token lists (which includes the PancakeSwap default token list and
-        PancakeSwap expanded list hosted at tokenlists.org). We may also provide warning labels for certain tokens. The
+        such as rarity scores, token explorer or token lists (which includes the 9mm Swap default token list and 9mm
+        Swap expanded list hosted at tokenlists.org). We may also provide warning labels for certain tokens. The
         provision of informational materials does not make trades in those tokens solicited; we are not attempting to
         induce you to make any purchase as a result of information provided. All such information provided by the
         Website is for informational purposes only and should not be construed as investment advice or a recommendation
@@ -315,8 +315,8 @@ const TermsOfService = () => {
       </Text>
       <Text as="p">
         Finally, you understand that we do not create, own, or operate cross-chain bridges and we do not make any
-        representation or warranty about the safety or soundness of any cross-chain bridge, including its use for
-        PancakeSwap governance.
+        representation or warranty about the safety or soundness of any cross-chain bridge, including its use for 9mm
+        Swap governance.
       </Text>
       <Text as="p">
         In summary, you acknowledge that we are not responsible for any of these variables or risks, do not own or

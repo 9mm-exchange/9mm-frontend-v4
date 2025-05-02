@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput BNB-v2->USDC-stable->USDT swap 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput BNB-v2->USDC-stable->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -93,7 +93,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mix
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput ETH-v3->USDC-stable->USDT swap 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput ETH-v3->USDC-stable->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -183,7 +183,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mix
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput USDT-stable->USDC-v2->BNB swap 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput USDT-stable->USDC-v2->BNB swap 1`] = `
 [
   {
     "command": "STABLE_SWAP_EXACT_IN",
@@ -276,7 +276,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mix
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput USDT-stable->USDC-v3->BNB swap 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > mixed > should encodes a mixed exactInput USDT-stable->USDC-v3->BNB swap 1`] = `
 [
   {
     "command": "STABLE_SWAP_EXACT_IN",
@@ -366,7 +366,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mix
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > multi-route > should encode a multi-route exactInput v2 USDT-USDC & v3 USDT-USDC & stable USDT-USDC 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > multi-route > should encode a multi-route exactInput v2 USDT-USDC & v3 USDT-USDC & stable USDT-USDC 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -494,7 +494,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > mul
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > should encode a exactInput USDT->USDC->BUSD swap 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > should encode a exactInput USDT->USDC->BUSD swap 1`] = `
 [
   {
     "command": "STABLE_SWAP_EXACT_IN",
@@ -541,7 +541,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > sho
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > should encode a single exactInput USDT->USDC swap 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > should encode a single exactInput USDT->USDC swap 1`] = `
 [
   {
     "command": "STABLE_SWAP_EXACT_IN",
@@ -586,7 +586,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > sho
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > should encode a single exactInput USDT->USDC swap, with fee 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > should encode a single exactInput USDT->USDC swap, with fee 1`] = `
 [
   {
     "command": "STABLE_SWAP_EXACT_IN",
@@ -671,7 +671,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > sho
 ]
 `;
 
-exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > should encode a single exactInput USDT->USDC swap, with permit2 1`] = `
+exports[`9mm Swap StableSwap Through Universal Router, BSC Network Only > should encode a single exactInput USDT->USDC swap, with permit2 1`] = `
 [
   {
     "command": "PERMIT2_PERMIT",
@@ -740,7 +740,7 @@ exports[`PancakeSwap StableSwap Through Universal Router, BSC Network Only > sho
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v2->USDC-v2->USDT swap 1`] = `
+exports[`9mm Swap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v2->USDC-v2->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -794,7 +794,7 @@ exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exa
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v2->USDC-v3->USDT swap 1`] = `
+exports[`9mm Swap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v2->USDC-v3->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -877,7 +877,7 @@ exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exa
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v3->USDC-v2->USDT swap 1`] = `
+exports[`9mm Swap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v3->USDC-v2->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -960,7 +960,7 @@ exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exa
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v3->USDC-v3->USDT swap 1`] = `
+exports[`9mm Swap Universal Router Trade > mixed > should encodes a mixed exactInput ETH-v3->USDC-v3->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1010,7 +1010,7 @@ exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exa
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exactInput USDT-v2->USDC-v3->ETH swap 1`] = `
+exports[`9mm Swap Universal Router Trade > mixed > should encodes a mixed exactInput USDT-v2->USDC-v3->ETH swap 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -1093,7 +1093,7 @@ exports[`PancakeSwap Universal Router Trade > mixed > should encodes a mixed exa
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > multi-route > should encode a split exactInput with 2 routes: v2 ETH-USDC & v3 ETH-USDC 1`] = `
+exports[`9mm Swap Universal Router Trade > multi-route > should encode a split exactInput with 2 routes: v2 ETH-USDC & v3 ETH-USDC 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1176,7 +1176,7 @@ exports[`PancakeSwap Universal Router Trade > multi-route > should encode a spli
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > multi-route > should encode a split exactInput with 3 routes: v2 ETH-USDC & v3 ETH-USDC & v3 ETH-USDC 1`] = `
+exports[`9mm Swap Universal Router Trade > multi-route > should encode a split exactInput with 3 routes: v2 ETH-USDC & v3 ETH-USDC & v3 ETH-USDC 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1309,7 +1309,7 @@ exports[`PancakeSwap Universal Router Trade > multi-route > should encode a spli
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, with fee, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, with fee, with recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1403,7 +1403,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ET
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, with fee, without recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, with fee, without recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1497,7 +1497,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ET
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, without fee, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, without fee, with recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1551,7 +1551,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ET
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, without fee, without recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a exactInput ETH->USDC->USDT Swap, without fee, without recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1605,7 +1605,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a exactInput ET
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, with fee, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, with fee, with recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1698,7 +1698,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, with fee, without recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, with fee, without recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1791,7 +1791,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, without fee, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, without fee, with recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1844,7 +1844,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, without fee, without recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput ETH->USDC Swap, without fee, without recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -1897,7 +1897,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -1950,7 +1950,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap, with fee 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap, with fee 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -2023,7 +2023,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap, with fee, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap, with fee, with recipient 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -2096,7 +2096,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH Swap, with recipient 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -2149,7 +2149,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH swap, with EIP-2098 permit 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH swap, with EIP-2098 permit 1`] = `
 [
   {
     "command": "PERMIT2_PERMIT",
@@ -2226,7 +2226,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH swap, with permit2 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode a single exactInput USDC->ETH swap, with permit2 1`] = `
 [
   {
     "command": "PERMIT2_PERMIT",
@@ -2303,7 +2303,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode exactInput USDT->USDC->ETH swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode exactInput USDT->USDC->ETH swap 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_IN",
@@ -2357,7 +2357,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode exactInput USDT
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput ETH->USDC swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode exactOutput ETH->USDC swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2425,7 +2425,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput ETH
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput ETH->USDC swap, with fee 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode exactOutput ETH->USDC swap, with fee 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2533,7 +2533,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput ETH
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput ETH->USDC swap, with fee, with recipient 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode exactOutput ETH->USDC swap, with fee, with recipient 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2641,7 +2641,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput ETH
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput USDC-ETH swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v2 > should encode exactOutput USDC-ETH swap 1`] = `
 [
   {
     "command": "V2_SWAP_EXACT_OUT",
@@ -2694,7 +2694,7 @@ exports[`PancakeSwap Universal Router Trade > v2 > should encode exactOutput USD
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a exactInput ETH->USDC->USDT swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a exactInput ETH->USDC->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2744,7 +2744,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a exactInput ET
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a exactOutput ETH->USDC->USDT swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a exactOutput ETH->USDC->USDT swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2809,7 +2809,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a exactOutput E
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a exactOutput USDT->USDC->ETH swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a exactOutput USDT->USDC->ETH swap 1`] = `
 [
   {
     "command": "V3_SWAP_EXACT_OUT",
@@ -2859,7 +2859,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a exactOutput U
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactInput ETH->USDC swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactInput ETH->USDC swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2909,7 +2909,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactInput ETH->USDC swap, with a fee 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactInput ETH->USDC swap, with a fee 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -2999,7 +2999,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactInput USDC->ETH swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactInput USDC->ETH swap 1`] = `
 [
   {
     "command": "V3_SWAP_EXACT_IN",
@@ -3049,7 +3049,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactInput USDC->ETH swap, with a fee 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactInput USDC->ETH swap, with a fee 1`] = `
 [
   {
     "command": "V3_SWAP_EXACT_IN",
@@ -3119,7 +3119,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactInput USDC->ETH swap, with permit2 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactInput USDC->ETH swap, with permit2 1`] = `
 [
   {
     "command": "PERMIT2_PERMIT",
@@ -3193,7 +3193,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactI
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactOutput ETH->USDC swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactOutput ETH->USDC swap 1`] = `
 [
   {
     "command": "WRAP_ETH",
@@ -3258,7 +3258,7 @@ exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactO
 ]
 `;
 
-exports[`PancakeSwap Universal Router Trade > v3 > should encode a single exactOutput USDC->ETH swap 1`] = `
+exports[`9mm Swap Universal Router Trade > v3 > should encode a single exactOutput USDC->ETH swap 1`] = `
 [
   {
     "command": "V3_SWAP_EXACT_OUT",

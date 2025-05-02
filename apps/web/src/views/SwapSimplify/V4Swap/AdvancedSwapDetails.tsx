@@ -91,7 +91,7 @@ export const TradeSummary = memo(function TradeSummary({
             <QuestionHelperV2
               text={
                 <>
-                  <Text>{t('Fees saved on PancakeSwap compared to major DEXs charging interface fees')}</Text>
+                  <Text>{t('Fees saved on 9mm Swap compared to major DEXs charging interface fees')}</Text>
                 </>
               }
               placement="top"

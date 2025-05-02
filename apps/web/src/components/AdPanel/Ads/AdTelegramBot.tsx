@@ -14,7 +14,7 @@ export const AdTelegramBot = (props: AdPlayerProps) => {
 
   return (
     <AdCard imageUrl={getImageUrl('prediction_telegram_bot')} {...props}>
-      <BodyText>{t('PancakeSwap Prediction Telegram Bot is now live!')}</BodyText>
+      <BodyText>{t('9mm Swap Prediction Telegram Bot is now live!')}</BodyText>
 
       <AdButton mt="4px" href={actionLink} endIcon={<TelegramIcon color="invertedContrast" />} isExternalLink>
         {t('Play Now')}

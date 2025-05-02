@@ -1,6 +1,6 @@
-# PancakeSwap V4 SDK
+# 9mm Swap V4 SDK
 
-PancakeSwap V4 Official SDK, used for PancakeSwap Interface and interacting with [PancakeSwap V4 smart contracts](https://github.com/pancakeswap/pancake-v4-core).
+9mm Swap V4 Official SDK, used for 9mm Swap Interface and interacting with [9mm Swap V4 smart contracts](https://github.com/pancakeswap/pancake-v4-core).
 
 ## Usage
 

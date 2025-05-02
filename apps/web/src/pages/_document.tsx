@@ -46,6 +46,48 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/logo.png" />
           <link rel="manifest" href="/manifest.json" />
+          <style>{`
+            .background-blobs {
+              position: absolute;
+              inset: 0;
+              z-index: 0;
+              overflow: hidden;
+            }
+
+            .blob {
+              position: absolute;
+              border-radius: 9999px;
+              filter: blur(60px);
+              animation: pulseSlow 4s ease-in-out infinite;
+              opacity: 0.7;
+            }
+
+            .blob1 {
+              top: 25%;
+              left: 25%;
+              width: 16rem;
+              height: 16rem;
+              background-color: #22c55e; /* primary */
+            }
+
+            .blob2 {
+              bottom: 25%;
+              right: 25%;
+              width: 20rem;
+              height: 20rem;
+              background-color: rgba(0, 112, 243, 0.2); /* accent */
+              animation-delay: 1s;
+            }
+
+            @keyframes pulseSlow {
+              0%, 100% {
+                transform: scale(1);
+              }
+              50% {
+                transform: scale(1.1);
+              }
+            }
+          `}</style>
         </Head>
         <body>
           <noscript>
@@ -56,6 +98,10 @@ class MyDocument extends Document {
               style={{ display: 'none', visibility: 'hidden' }}
             />
           </noscript>
+          <div className="background-blobs">
+            <div className="blob blob1" />
+            <div className="blob blob2" />
+          </div>
           <Main />
           <NextScript />
           <div id="portal-root" />

@@ -73,7 +73,7 @@ export const Campaign = () => {
             <Tag variant="textDisabled">{t('Finished')}</Tag> */}
         </Box>
         <StyledHeading m="16px 0" as="h1">
-          PancakeSwap Multichain Celebration - Base
+          9mm Swap Multichain Celebration - Base
         </StyledHeading>
         <Flex mb="32px">
           <CalenderIcon mr="8px" />

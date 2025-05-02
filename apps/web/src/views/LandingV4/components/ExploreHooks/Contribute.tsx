@@ -39,7 +39,7 @@ export const Contribute = () => {
               lineHeight={['28px', '28px', '28px', '28px', '32px']}
               textAlign={['center', 'center', 'center', 'center', 'left']}
             >
-              {t('Contribute to PancakeSwap v4')}
+              {t('Contribute to 9mm Swap v4')}
             </Text>
             <Text lineHeight="24px" textAlign={['center', 'center', 'center', 'center', 'left']} m={['16px 0 32px 0']}>
               {t(`Build Hooks with us and participate in PancakeSwap's 500k USD Developer Program`)}

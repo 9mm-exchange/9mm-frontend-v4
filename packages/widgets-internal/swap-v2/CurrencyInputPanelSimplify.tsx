@@ -41,7 +41,7 @@ export function CurrencyInputPanelSimplify({
         flexDirection="column"
         flexWrap="nowrap"
         position="relative"
-        backgroundColor="backgroundAlt"
+        backgroundColor="transparent"
         zIndex="1"
         ref={wrapperRef}
       >

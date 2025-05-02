@@ -101,7 +101,7 @@ export const Banner = () => {
                 '0 0 24px 0',
               ]}
             >
-              <Tag variant="secondary">{t('PancakeSwap v4')}</Tag>
+              <Tag variant="secondary">{t('9mm Swap v4')}</Tag>
             </Box>
             <Box>
               <Flex justifyContent={['center', 'center', 'center', 'center', 'left']}>
@@ -154,7 +154,7 @@ export const Banner = () => {
               m={['16px 0', '16px 0', '16px 0', '16px 0', '24px 0']}
               textAlign={['center', 'center', 'center', 'center', 'left']}
             >
-              {t('Empower, Build and Innovate with PancakeSwap v4')}
+              {t('Empower, Build and Innovate with 9mm Swap v4')}
             </Text>
             <NextLinkFromReactRouter
               target="_blank"
