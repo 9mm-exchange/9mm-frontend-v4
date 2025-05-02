@@ -10,7 +10,7 @@ export const SEO: DefaultSeoProps = {
     site: '@PancakeSwap',
   },
   openGraph: {
-    title: "🥞 9mm Swap - Everyone's Favorite DEX",
+    title: "9mm Swap - Everyone's Favorite DEX",
     description: 'Trade, earn, and own crypto on the all-in-one multichain DEX',
     images: [{ url: 'https://assets.pancakeswap.finance/web/og/v2/hero.jpg' }],
   },
