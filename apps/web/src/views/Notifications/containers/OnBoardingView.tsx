@@ -17,17 +17,17 @@ import webNotificationCheck from '../../Home/components/Banners/images/web3-noti
 const OnBoardingSteps = [
   {
     key: 'step-1',
-    title: <Trans>Authorize notifications from PancakeSwap</Trans>,
+    title: <Trans>Authorize notifications from 9mm Swap</Trans>,
     icon: webNotificationBunny,
     description: (
       <Trans>
-        Get started with notifications from PancakeSwap. First authorize notifications by signing in your wallet
+        Get started with notifications from 9mm Swap. First authorize notifications by signing in your wallet
       </Trans>
     ),
   },
   {
     key: 'step-2',
-    title: <Trans>Enable Notifications From PancakeSwap</Trans>,
+    title: <Trans>Enable Notifications From 9mm Swap</Trans>,
     icon: '/images/notifications/welcome-notification-bell.png',
     description: <Trans>Subscribe to stay informed on the latest news and updates that 9mm Swap has to offer.</Trans>,
   },

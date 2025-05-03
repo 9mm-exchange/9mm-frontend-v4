@@ -16,7 +16,7 @@ import { ABIParametersType, CommandType, RoutePlanner } from '../../utils/router
 import { Command, RouterTradeType } from '../Command'
 import { PancakeSwapOptions, PaymentOptions } from '../types'
 
-// Wrapper for pancakeswap router-sdk trade entity to encode swaps for Universal Router
+// Wrapper for 9mm Swap router-sdk trade entity to encode swaps for Universal Router
 export class PancakeSwapTrade implements Command {
   readonly tradeType: RouterTradeType = RouterTradeType.PancakeSwapTrade
 
