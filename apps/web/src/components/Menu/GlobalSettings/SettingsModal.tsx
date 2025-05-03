@@ -281,12 +281,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
                   ml="4px"
                 />
               </Flex>
-              <PancakeToggle
-                id="toggle-audio-play"
-                checked={audioPlay}
-                onChange={() => setAudioMode((s) => !s)}
-                scale="md"
-              />
+              <Toggle id="toggle-audio-play" scale="md" checked={audioPlay} onChange={() => setAudioMode((s) => !s)} />
             </Flex>
             <Flex justifyContent="space-between" alignItems="center" mb="24px">
               <Flex alignItems="center">
@@ -297,11 +292,11 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
                   ml="4px"
                 />
               </Flex>
-              <PancakeToggle
+              <Toggle
                 id="toggle-speed-quote"
+                scale="md"
                 checked={speedQuote}
                 onChange={() => setSpeedQuote((s) => !s)}
-                scale="md"
               />
             </Flex>
             <RoutingSettingsButton />
@@ -382,14 +377,7 @@ function RoutingSettings() {
                 When applicable, aggregates liquidity to provide better price, more token options, and gas free swaps.
               </Text>
             </Flex>
-            <PancakeToggle
-              id="stable-swap-toggle"
-              scale="md"
-              checked={xEnable}
-              onChange={() => {
-                setXEnable((s) => !s)
-              }}
-            />
+            <Toggle id="stable-swap-toggle" scale="md" checked={xEnable} onChange={() => setXEnable((s) => !s)} />
           </Flex>
         ) : null}
         <AtomBox>

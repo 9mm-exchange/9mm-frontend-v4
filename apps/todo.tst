@@ -17,15 +17,21 @@ To DO
 Issues
 
 
-1. https://v3dev.9mm.pro/liquidity/pools [create API] , Remove Farms
-2. Bridge Add Comming Soon
-3. Check can we work with notications if doable do , otherwise remove the option
-4. Work on Light mode designs
-5. swap page switch button color
-6. Make switcher to dickbutt
+1. Loader is swiking [Done]
+2. remove buns from switcher [Done]
+3. Make switcher to dickbutt [Done]
+2. Color of 25% , 50% percent
+4. swap page switch button color
+5. https://v3dev.9mm.pro/liquidity/pools [create API] 
+6. APR Issue fix for v2 & v3
 7. Check token serach is why not working
-8. Make a profile
-9. APR Issue fix for v2 & v3
-10. Implement Stable swaps
-11. Implement Syrup Pools
-12. Implement Farming
+8. Homepage apis
+
+
+
+1. Bridge Add Comming Soon
+2. Check can we work with notications if doable do , otherwise remove the option
+3. Make a profile
+4. Implement Stable swaps
+5. Implement Syrup Pools
+6. Implement Farming

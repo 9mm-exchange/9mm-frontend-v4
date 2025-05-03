@@ -1,6 +1,6 @@
 import { ChainId } from '@pancakeswap/chains'
 import { useTranslation } from '@pancakeswap/localization'
-import { Flex, PancakeToggle, PreTitle, QuestionHelper, Text, Toggle } from '@pancakeswap/uikit'
+import { Flex, PreTitle, QuestionHelper, Text, Toggle } from '@pancakeswap/uikit'
 import { useAudioPlay } from '@pancakeswap/utils/user'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { memo } from 'react'
@@ -77,12 +77,7 @@ export const SettingsTab = memo(
                 ml="4px"
               />
             </Flex>
-            <PancakeToggle
-              id="toggle-audio-play"
-              checked={audioPlay}
-              onChange={() => setAudioMode((s) => !s)}
-              scale="md"
-            />
+            <Toggle id="toggle-audio-play" scale="md" checked={audioPlay} onChange={() => setAudioMode((s) => !s)} />
           </Flex>
         </Flex>
         <PrimaryOutlineButton

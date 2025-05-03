@@ -6,7 +6,6 @@ import {
   InjectedModalProps,
   Input,
   Modal,
-  PancakeToggle,
   QuestionHelper,
   Text,
   ThemeSwitcher,
@@ -258,7 +257,7 @@ export const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>
                 ml="4px"
               />
             </Flex>
-            <PancakeToggle checked={audioPlay} onChange={(e) => setAudioPlay(e.target.checked)} scale="md" />
+            <Toggle scale="md" checked={audioPlay} onChange={(e) => setAudioPlay(e.target.checked)} />
           </Flex>
         </Flex>
       </ScrollableContainer>

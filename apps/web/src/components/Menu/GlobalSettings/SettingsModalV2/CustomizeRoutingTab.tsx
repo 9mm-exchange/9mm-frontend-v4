@@ -5,7 +5,6 @@ import {
   Flex,
   Message,
   MessageText,
-  PancakeToggle,
   PreTitle,
   QuestionHelper,
   Text,
@@ -60,14 +59,7 @@ export const CustomizeRoutingTab = memo(() => {
                 )}
               </Text>
             </Flex>
-            <PancakeToggle
-              id="stable-swap-toggle"
-              scale="md"
-              checked={xEnable}
-              onChange={() => {
-                setXEnable((s) => !s)
-              }}
-            />
+            <Toggle id="stable-swap-toggle" scale="md" checked={xEnable} onChange={() => setXEnable((s) => !s)} />
           </Flex>
         ) : null}
         <AtomBox>
