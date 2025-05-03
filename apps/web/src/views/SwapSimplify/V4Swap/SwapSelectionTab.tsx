@@ -4,7 +4,7 @@ import GlobalSettings from 'components/Menu/GlobalSettings'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useRouter } from 'next/router'
 import { useCallback, useMemo } from 'react'
-import { styled } from 'styled-components'
+import { styled, useTheme } from 'styled-components'
 import { SettingsMode } from '../../../components/Menu/GlobalSettings/types'
 import { SwapType } from '../../Swap/types'
 import { isTwapSupported } from '../../Swap/utils'
@@ -106,19 +106,20 @@ export const SwapSelection = ({
   // const toggleChartDisplayed = () => {
   //   setIsChartDisplayed?.((currentIsChartDisplayed) => !currentIsChartDisplayed)
   // }
-
+  const theme = useTheme()
   const tSwapProps = useMemo(() => {
     const isTSwapSupported = isTwapSupported(chainId)
+
     return {
       disabled: !isTSwapSupported,
       style: {
         cursor: isTSwapSupported ? 'pointer' : 'not-allowed',
         pointerEvents: isTSwapSupported ? 'auto' : 'none',
-        color: !isTSwapSupported ? '#fafafa99' : undefined,
+        color: !isTSwapSupported ? theme.colors.textDisabled : undefined,
         userSelect: 'none',
       } as React.CSSProperties,
     }
-  }, [chainId])
+  }, [chainId, theme])
 
   return (
     <SwapSelectionWrapper style={style}>

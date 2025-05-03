@@ -143,5 +143,5 @@ export const getRpcUrls = (env: Omit<Env, 'devnet'>) => (env === WidgetEnvs.main
 export const getBridgeTokens = (env: Omit<Env, 'devnet'>) =>
   env === WidgetEnvs.mainnet ? MAINNET_TOKEN_KEYS : TESTNET_TOKEN_KEYS
 
-export const pcsLogo = 'https://pancakeswap.finance/logo.png'
+export const pcsLogo = 'https://dex.9mm.pro/logo.png'
 export const walletConnectProjectId = 'e542ff314e26ff34de2d4fba98db70bb'
