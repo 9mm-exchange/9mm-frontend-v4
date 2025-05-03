@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react'
-import { styled } from 'styled-components'
-import { Flex, Text } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Text } from '@pancakeswap/uikit'
+import { useRef, useState } from 'react'
+import { styled } from 'styled-components'
 import { Ticket, UpdateTicketAction } from './useTicketsReducer'
 
 const InputsContainer = styled.div<{ focused: boolean; isDuplicate: boolean }>`
@@ -23,7 +23,7 @@ const InputsContainer = styled.div<{ focused: boolean; isDuplicate: boolean }>`
   ${({ focused }) =>
     focused &&
     `
-    border: 1px solid #7645D9;
+    border: 1px solid #22c55e;
     box-shadow: 0px 0px 0px 2px #E4DAF7;
   `}
 `

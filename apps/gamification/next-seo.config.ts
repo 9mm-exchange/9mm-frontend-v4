@@ -12,6 +12,6 @@ export const SEO: DefaultSeoProps = {
   openGraph: {
     title: '🥞 9mm Swap - A next evolution DeFi exchange on BNB Smart Chain (BSC)',
     description: 'Play different games on 9mm Swap, using 9mm and  NFTs',
-    images: [{ url: 'https://tokens.9mm.pro/web/og/swap.jpg' }],
+    images: [{ url: 'https://dex.9mm.pro/og.png' }],
   },
 }

@@ -1,7 +1,9 @@
-import { AdPanel, AdPanelCardProps } from '@pancakeswap/widgets-internal'
+import { useUnifiedWalletContext } from '@jup-ag/wallet-adapter'
 import { ResetCSS, ToastListener, type PancakeTheme } from '@pancakeswap/uikit'
+import { AdPanel, AdPanelCardProps } from '@pancakeswap/widgets-internal'
 import { Menu } from 'components/Menu'
 import { Providers } from 'components/Provider'
+import { adList, commonLayoutWhitelistedPages } from 'config/adBanner/config'
 import type { NextPage } from 'next'
 import { DefaultSeo } from 'next-seo'
 import { SEO } from 'next-seo.config'
@@ -9,8 +11,6 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
 import { Fragment, useEffect, useMemo } from 'react'
-import { adList, commonLayoutWhitelistedPages } from 'config/adBanner/config'
-import { useUnifiedWalletContext } from '@jup-ag/wallet-adapter'
 import { createGlobalStyle } from 'styled-components'
 
 declare module 'styled-components' {
@@ -37,7 +37,7 @@ function MyApp(props: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, viewport-fit=cover"
         />
-        <meta name="theme-color" content="#1FC7D4" />
+        <meta name="theme-color" content="#22c55e" />
       </Head>
       {process.env.NEXT_PUBLIC_GTM_ID ? (
         <Script

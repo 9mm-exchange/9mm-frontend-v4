@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import Input from "../../components/Input/Input";
-import Toggle from "../../components/Toggle/Toggle";
-import Text from "../../components/Text/Text";
-import HelpIcon from "../../components/Svg/Icons/Help";
-import useTooltip from "./useTooltip";
 import BalanceInput from "../../components/BalanceInput/BalanceInput";
+import Input from "../../components/Input/Input";
+import HelpIcon from "../../components/Svg/Icons/Help";
+import Text from "../../components/Text/Text";
+import Toggle from "../../components/Toggle/Toggle";
+import useTooltip from "./useTooltip";
 
 const GridCell = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const GridCell = styled.div`
 `;
 
 const ReferenceElement = styled.div`
-  background-color: #1fc7d4;
+  background-color: #22c55e;
   width: 160px;
   height: 160px;
   border-radius: 8px;

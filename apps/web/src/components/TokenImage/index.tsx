@@ -20,13 +20,13 @@ interface TokenPairImageProps extends Omit<UIKitTokenPairImageProps, 'primarySrc
 export const tokenImageChainNameMapping = {
   [ChainId.BSC]: '',
   [ChainId.ETHEREUM]: 'eth/',
-  [ChainId.PULSECHAIN]: 'pulse/',
-  [ChainId.SONIC]: 'sonic/',
+  [ChainId.PULSECHAIN]: 'token-logo/',
   [ChainId.POLYGON_ZKEVM]: 'polygon-zkevm/',
   [ChainId.ZKSYNC]: 'zksync/',
   [ChainId.ARBITRUM_ONE]: 'arbitrum/',
   [ChainId.LINEA]: 'linea/',
-  [ChainId.BASE]: 'base/',
+  [ChainId.BASE]: 'base-logos/',
+  [ChainId.SONIC]: 'sonic-logo/',
   [ChainId.OPBNB]: 'opbnb/',
 }
 

@@ -11,7 +11,7 @@ import { useEpochVotePower } from '../hooks/useEpochVotePower'
 
 const StyledBox = styled(Box)<{ $isMobile?: boolean }>`
   border-radius: 16px;
-  background: linear-gradient(229deg, #1fc7d4 -13.69%, #7645d9 91.33%);
+  background: linear-gradient(229deg, #22c55e -13.69%, #22c55e 91.33%);
   padding: 8px 16px;
   display: inline-flex;
   align-items: center;

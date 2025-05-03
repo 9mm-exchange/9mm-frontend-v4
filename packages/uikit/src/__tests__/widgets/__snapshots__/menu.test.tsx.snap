@@ -1234,7 +1234,7 @@ exports[`renders correctly 1`] = `
                     />
                     <stop
                       offset="1"
-                      stop-color="#1FC7D4"
+                      stop-color="#22c55e"
                     />
                   </lineargradient>
                 </defs>
@@ -3244,7 +3244,7 @@ exports[`renders correctly 1`] = `
                     />
                     <stop
                       offset="1"
-                      stop-color="#1FC7D4"
+                      stop-color="#22c55e"
                     />
                   </lineargradient>
                 </defs>

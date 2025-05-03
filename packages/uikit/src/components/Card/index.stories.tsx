@@ -4,11 +4,11 @@ import { styled, useTheme } from "styled-components";
 import { Meta } from "@storybook/react/types-6-0";
 import Box from "../Box/Box";
 import Heading from "../Heading/Heading";
-import CardRibbon from "./CardRibbon";
-import UIKitCardHeader from "./CardHeader";
+import Card from "./Card";
 import CardBody from "./CardBody";
 import CardFooter from "./CardFooter";
-import Card from "./Card";
+import UIKitCardHeader from "./CardHeader";
+import CardRibbon from "./CardRibbon";
 
 const Row = styled.div`
   margin-bottom: 32px;
@@ -62,7 +62,7 @@ export const CardHeader: React.FC<React.PropsWithChildren> = () => {
   // This is example how to make card header "overlap" the border.
   // Seems to be easiest solution that works on all screens and does not rely on absolute positioning trickery
   const headerHeight = "60px";
-  const customHeadingColor = "#7645D9";
+  const customHeadingColor = "#22c55e";
   const gradientStopPoint = `calc(${headerHeight} + 1px)`;
   const borderBackground = `linear-gradient(${customHeadingColor} ${gradientStopPoint}, ${theme.colors.cardBorder} ${gradientStopPoint})`;
 

@@ -1,9 +1,9 @@
-import { useMemo } from 'react'
 import { SquidWidget } from '@0xsquid/widget'
 import { AppConfig } from '@0xsquid/widget/widget/core/types/config'
 import { Box, PancakeTheme } from '@pancakeswap/uikit'
-import { useTheme } from 'styled-components'
 import PageContainer from 'components/Page'
+import { useMemo } from 'react'
+import { useTheme } from 'styled-components'
 
 const lightStyle = {
   neutralContent: '#7a6eaa',
@@ -14,8 +14,8 @@ const lightStyle = {
   error: '#ed4b9e',
   warning: '#ffb237',
   success: '#31d0aa',
-  primary: '#1fc7d4',
-  secondary: '#1fc7d4',
+  primary: '#22c55e',
+  secondary: '#22c55e',
   secondaryContent: '#280d5f',
   neutral: '#FFFFFF',
   roundedBtn: '26px',
@@ -33,8 +33,8 @@ const darkStyle = {
   error: '#ed4b9e',
   warning: '#ffb237',
   success: '#31d0aa',
-  primary: '#1fc7d4',
-  secondary: '#1fc7d4',
+  primary: '#22c55e',
+  secondary: '#22c55e',
   secondaryContent: '#280d5f',
   neutral: '#26272c',
   roundedBtn: '26px',
@@ -80,7 +80,7 @@ const Axelar = () => {
           .tw-flex ul li > span:first-child,
           .tw-flex ul li > span:first-child a,
           .tw-rounded-t-box.tw-flex.tw-flex-col span.tw-flex.tw-flex-row.tw-items-center:first-child {
-            color: #7645d9 !important;
+            color: #22c55e !important;
             font-weight: 600 !important;
           }
         }

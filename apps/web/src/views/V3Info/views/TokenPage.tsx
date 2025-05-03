@@ -29,6 +29,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { getBlockExploreLink } from 'utils'
 import { formatAmount } from 'utils/formatInfoNumbers'
 
+import { chainNames } from '@pancakeswap/chains'
 import isUndefinedOrNull from '@pancakeswap/utils/isUndefinedOrNull'
 import truncateHash from '@pancakeswap/utils/truncateHash'
 import { useAtomValue } from 'jotai'
@@ -38,11 +39,10 @@ import { ChainLinkSupportChains, multiChainId, multiChainScan } from 'state/info
 import { useChainNameByQuery, useMultiChainPath, useStableSwapPath } from 'state/info/hooks'
 import { PoolDataForView, TokenChartEntry, TokenDataForView, Transaction } from 'state/info/types'
 import { styled } from 'styled-components'
+import { atomWithAsyncRetry } from 'utils/atomWithAsyncRetry'
 import { getTokenNameAlias, getTokenSymbolAlias } from 'utils/getTokenAlias'
 import { CurrencyLogo } from 'views/Info/components/CurrencyLogo'
 import useCMCLink from 'views/Info/hooks/useCMCLink'
-import { chainNames } from '@pancakeswap/chains'
-import { atomWithAsyncRetry } from 'utils/atomWithAsyncRetry'
 import BarChart from '../components/BarChart/alt'
 import { LocalLoader } from '../components/Loader'
 import Percent from '../components/Percent'
@@ -360,7 +360,7 @@ const TokenPage: React.FC<{ address: string; chain?: string }> = ({ address, cha
                   ) : view === ChartView.VOL ? (
                     <BarChart
                       data={formattedVolumeData}
-                      color="#1FC7D4"
+                      color="#22c55e"
                       minHeight={340}
                       value={latestValue}
                       label={valueLabel}

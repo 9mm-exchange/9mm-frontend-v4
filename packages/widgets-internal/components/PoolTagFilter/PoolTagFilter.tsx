@@ -1,9 +1,9 @@
-import React, { useCallback, useState } from "react";
-import { styled } from "styled-components";
-import isEmpty from "lodash/isEmpty";
+import { useTheme } from "@pancakeswap/hooks";
 import { Box, TreeSelect } from "@pancakeswap/uikit";
 import type { TreeNode, TreeSelectChangeEvent, TreeSelectProps } from "@pancakeswap/uikit/components/TreeSelect";
-import { useTheme } from "@pancakeswap/hooks";
+import isEmpty from "lodash/isEmpty";
+import React, { useCallback, useState } from "react";
+import { styled } from "styled-components";
 
 const Container = styled(Box)<{ isShow: boolean }>`
   ${({ isShow, theme }) =>
@@ -12,13 +12,13 @@ const Container = styled(Box)<{ isShow: boolean }>`
   && .p-treeselect {
      border: 1px solid ${theme.colors.secondary};
      border-bottom: 1px solid ${theme.colors.inputSecondary};
-     box-shadow: -2px -2px 2px 2px #7645D933, 2px -2px 2px 2px #7645D933;
+     box-shadow: -2px -2px 2px 2px #22c55e33, 2px -2px 2px 2px #22c55e33;
      border-bottom-left-radius: 0;
      border-bottom-right-radius: 0;
   }
   && .p-treeselect-panel {
     border: 1px solid ${theme.colors.secondary};
-    box-shadow: 2px 2px 2px 2px #7645D933, -2px 2px 2px 2px #7645D933;
+    box-shadow: 2px 2px 2px 2px #22c55e33, -2px 2px 2px 2px #22c55e33;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;

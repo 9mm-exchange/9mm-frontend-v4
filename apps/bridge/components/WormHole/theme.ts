@@ -122,7 +122,7 @@ export const wormHoleDarkTheme = {
     A700: lightenColor('#FFB237', 0.2),
   },
   button: {
-    primary: '#1FC7D4',
+    primary: '#22c55e',
     primaryText: '#27262c',
     disabled: '#3c3742',
     disabledText: '#666171',
@@ -238,7 +238,7 @@ export const wormHoleLightTheme = {
     A700: lightenColor('#FFB237', 0.2),
   },
   button: {
-    primary: '#1FC7D4',
+    primary: '#22c55e',
     primaryText: '#ffffff',
     disabled: '#e9eaeb',
     disabledText: '#edeaf4',

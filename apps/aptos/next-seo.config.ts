@@ -12,6 +12,6 @@ export const SEO: DefaultSeoProps = {
   openGraph: {
     title: "🥞 9mm Swap Aptos - Everyone's Favorite DEX",
     description: 'Trade, earn, and own crypto on the all-in-one multichain DEX',
-    images: [{ url: 'https://tokens.9mm.pro/web/og/swap.jpg' }],
+    images: [{ url: 'https://dex.9mm.pro/og.png' }],
   },
 }

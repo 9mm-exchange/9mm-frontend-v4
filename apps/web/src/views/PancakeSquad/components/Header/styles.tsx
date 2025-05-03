@@ -15,7 +15,7 @@ export const StyledSquadTitle = styled(Text)`
 `
 
 export const StyledSquadEventBorder = styled(Box)`
-  background: linear-gradient(180deg, #53dee9 0%, #7645d9 100%);
+  background: linear-gradient(180deg, #53dee9 0%, #22c55e 100%);
   border-radius: 32px;
 `
 

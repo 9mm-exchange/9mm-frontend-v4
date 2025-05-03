@@ -8,7 +8,7 @@ export const VotingBoxBorder = styled(Box)<{ hasBoosted?: boolean }>`
   border: ${({ hasBoosted }) => (hasBoosted ? '0px' : '1px')};
   border-style: solid;
   border-color: ${({ theme, hasBoosted }) => (hasBoosted ? 'transparent' : theme.colors.cardBorder)};
-  background: ${({ hasBoosted }) => (hasBoosted ? 'linear-gradient(180deg, #53dee9, #7645d9)' : 'transparent')};
+  background: ${({ hasBoosted }) => (hasBoosted ? 'linear-gradient(180deg, #53dee9, #22c55e)' : 'transparent')};
 `
 
 export const VotingBoxCardInner = styled(Box)<{ hasBoosted?: boolean }>`

@@ -12,6 +12,6 @@ export const SEO: DefaultSeoProps = {
   openGraph: {
     title: '9mm Swap - A next evolution DeFi exchange on Pulse Chain and major EVMs',
     description: 'Play different games on 9mm Swap, using 9mm and  NFTs',
-    images: [{ url: 'https://tokens.9mm.pro/web/og/swap.jpg' }],
+    images: [{ url: 'https://dex.9mm.pro/og.png' }],
   },
 }

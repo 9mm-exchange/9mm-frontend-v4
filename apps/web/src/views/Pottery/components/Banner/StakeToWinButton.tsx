@@ -1,6 +1,6 @@
-import { styled, keyframes } from 'styled-components'
-import { Flex, Button, Link } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { Button, Flex, Link } from '@pancakeswap/uikit'
+import { keyframes, styled } from 'styled-components'
 import { TicketCard } from '../../svgs'
 
 const mainTicketAnimation = keyframes`
@@ -38,7 +38,7 @@ const ButtonWrapper = styled(Link)`
 
 const StyledButton = styled(Button)`
   width: 200px;
-  background: linear-gradient(180deg, #7645d9 0%, #452a7a 100%);
+  background: linear-gradient(180deg, #22c55e 0%, #452a7a 100%);
   color: white;
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 240px;

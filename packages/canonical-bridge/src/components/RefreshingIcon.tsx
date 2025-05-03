@@ -6,7 +6,7 @@ export const RefreshingIcon = (props: SvgProps) => {
   const { isGlobalFeeLoading, isRefreshing } = useBridge()
   return (
     <StyledSVG width="32px" height="32px" viewBox="0 0 20 20" fill="none" {...props}>
-      <circle cx="10.12" cy="10.12" r="9.12" fill="#1FC7D4" fill-opacity="0.2" />
+      <circle cx="10.12" cy="10.12" r="9.12" fill="#22c55e" fill-opacity="0.2" />
       <mask
         id="mask0_1009_72807"
         style={{
@@ -26,7 +26,7 @@ export const RefreshingIcon = (props: SvgProps) => {
           cx="10.12"
           cy="10.12"
           r="8.12"
-          stroke="#1FC7D4"
+          stroke="#22c55e"
           stroke-width="2"
           stroke-linecap="round"
           strokeDasharray={54}

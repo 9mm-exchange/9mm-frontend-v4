@@ -1,20 +1,20 @@
-import { useMemo, useState } from 'react'
-import { Flex, Text, Input, Box, Button, ArrowForwardIcon, useMatchBreakpoints, useToast } from '@pancakeswap/uikit'
-import { styled } from 'styled-components'
-import { BIG_ONE_HUNDRED } from '@pancakeswap/utils/bigNumber'
-import { keccak256, encodePacked } from 'viem'
-import { useAccount } from 'wagmi'
-import { useSignMessage } from '@pancakeswap/wagmi'
 import { useTranslation } from '@pancakeswap/localization'
+import { ArrowForwardIcon, Box, Button, Flex, Input, Text, useMatchBreakpoints, useToast } from '@pancakeswap/uikit'
+import { BIG_ONE_HUNDRED } from '@pancakeswap/utils/bigNumber'
+import { useSignMessage } from '@pancakeswap/wagmi'
+import { useMemo, useState } from 'react'
+import { styled } from 'styled-components'
+import { encodePacked, keccak256 } from 'viem'
+import { InfoDetail } from 'views/AffiliatesProgram/hooks/useAuthAffiliate'
 import useDefaultLinkId from 'views/AffiliatesProgram/hooks/useDefaultLinkId'
 import commissionList from 'views/AffiliatesProgram/utils/commisionList'
-import { InfoDetail } from 'views/AffiliatesProgram/hooks/useAuthAffiliate'
+import { useAccount } from 'wagmi'
 
 const Wrapper = styled(Flex)`
   padding: 1px;
   width: 100%;
   margin: 46px auto auto auto;
-  background: linear-gradient(180deg, #53dee9, #7645d9);
+  background: linear-gradient(180deg, #53dee9, #22c55e);
   border-radius: ${({ theme }) => theme.radii.default};
 
   ${({ theme }) => theme.mediaQueries.md} {

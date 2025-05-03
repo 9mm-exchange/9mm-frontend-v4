@@ -1,6 +1,7 @@
 import { Token } from '@pancakeswap/sdk'
 import { TokenLogo } from '@pancakeswap/uikit'
 import { chainName as CHAIN_PATH } from '@pancakeswap/widgets-internal'
+import { tokenImageChainNameMapping } from 'components/TokenImage'
 import { useMemo } from 'react'
 import { multiChainId, MultiChainName } from 'state/info/constant'
 import { styled } from 'styled-components'
@@ -31,11 +32,11 @@ export const CurrencyLogo: React.FC<
   const src = useMemo(() => {
     return getTokenLogoURL(new Token(multiChainId[chainName], address as Address, 18, ''))
   }, [address, chainName])
-
-  const imagePath = chainNameToPath(chainName)
   const checkedsummedAddress = safeGetAddress(address)
   const srcFromPCS = checkedsummedAddress
-    ? `https://tokens.pancakeswap.finance/images/${imagePath}${checkedsummedAddress}.png`
+    ? `https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/${
+        tokenImageChainNameMapping[multiChainId[chainName]]
+      }${checkedsummedAddress}.png`
     : ''
 
   return <StyledLogo size={size} srcs={src ? [srcFromPCS, src] : [srcFromPCS]} alt="token logo" {...rest} />

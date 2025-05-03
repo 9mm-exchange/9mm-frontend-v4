@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "../Link";
+import Text from "../Text/Text";
 import BoxComponent from "./Box";
 import FlexComponent from "./Flex";
 import GridComponent from "./Grid";
-import Text from "../Text/Text";
-import { Link } from "../Link";
 
 export default {
   title: "Components/Primitives",
@@ -49,10 +49,10 @@ export const Grid: React.FC<React.PropsWithChildren> = () => {
       alignContent="center"
       gridTemplateColumns="1fr 1fr"
       gridColumnGap="16px"
-      style={{ backgroundColor: "#7645D9" }}
+      style={{ backgroundColor: "#22c55e" }}
     >
-      <BoxComponent style={{ backgroundColor: "#1fc7d4", width: "300px", height: "300px" }} />
-      <BoxComponent style={{ backgroundColor: "#1fc7d4", width: "300px", height: "300px" }} />
+      <BoxComponent style={{ backgroundColor: "#22c55e", width: "300px", height: "300px" }} />
+      <BoxComponent style={{ backgroundColor: "#22c55e", width: "300px", height: "300px" }} />
     </GridComponent>
   );
 };

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 export const StyledBox = styled(Box)`
   border-radius: 16px;
-  background: linear-gradient(229deg, #1fc7d4 -13.69%, #7645d9 91.33%);
+  background: linear-gradient(229deg, #22c55e -13.69%, #22c55e 91.33%);
   padding-top: 16px;
   padding-bottom: 16px;
   display: flex;

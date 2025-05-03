@@ -36,7 +36,7 @@ export type LineChartProps = {
 
 const LineChart = ({
   data,
-  color = '#1FC7D4',
+  color = '#22c55e',
   setValue,
   setLabel,
   topLeft,

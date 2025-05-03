@@ -20,7 +20,7 @@ const Container = styled(Flex)`
   margin: auto;
   flex-direction: column;
   border-radius: 32px;
-  background: linear-gradient(180deg, #7645d9 0%, #5121b1 100%);
+  background: linear-gradient(180deg, #22c55e 0%, #5121b1 100%);
   z-index: 1;
 
   ${({ theme }) => theme.mediaQueries.xxl} {

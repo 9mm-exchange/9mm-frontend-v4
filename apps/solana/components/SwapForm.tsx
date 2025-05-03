@@ -19,7 +19,7 @@ export const TerminalWrapper = styled.div`
   }
 
   .focus-within\:shadow-swap-input-dark:focus-within {
-    --tw-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.2);
+    --tw-shadow: 0px 0px 0px 1px #22c55e, 0px 0px 0px 4px rgba(34, 197, 94, 0.2);
   }
 
   .text-black {

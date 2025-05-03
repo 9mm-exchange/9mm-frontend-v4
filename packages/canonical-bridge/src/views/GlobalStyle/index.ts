@@ -250,13 +250,13 @@ const GlobalStyle = createGlobalStyle`
         height: 48px;
         border-radius: 16px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-        background: #1FC7D4;
+        background: #22c55e;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 24px;
         &:not(.disabled):hover {
-          background: #1FC7D4;
+          background: #22c55e;
           opacity: 0.65;
         }
       }
@@ -560,7 +560,7 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .bccb-widget-route-wrapper-selected {
-        border: 2px solid #1FC7D4;
+        border: 2px solid #22c55e;
       }
       .bccb-widget-route-wrapper {
         border-color: ${({ theme }) => (theme.isDark ? '#383241' : '#E7E3EB')};
@@ -571,7 +571,7 @@ const GlobalStyle = createGlobalStyle`
           }
         }
         &:not(.route-error):hover {
-          border-color: #1FC7D4;
+          border-color: #22c55e;
         }
       }
       .bccb-widget-route-wrapper,
@@ -691,13 +691,13 @@ const GlobalStyle = createGlobalStyle`
     .bccb-widget-modal-main-button {
       border-radius: 16px;
       border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-      background: #1FC7D4;
+      background: #22c55e;
       font-size: 16px;
       font-weight: 600;
       line-height: 150%; /* 24px */
       color: #FFF;
       &:hover {
-        background: #1FC7D4;
+        background: #22c55e;
         color: #FFF;
         opacity: 0.65;
       }
@@ -705,10 +705,10 @@ const GlobalStyle = createGlobalStyle`
 
     .bccb-widget-modal-second-button {
       border-radius: 16px;
-      border: 2px solid #1FC7D4;
+      border: 2px solid #22c55e;
       color: #02919D;
       &:hover {
-        border: 2px solid #1FC7D4;
+        border: 2px solid #22c55e;
         background: none;
         opacity: 0.65;
         color: #02919D;
@@ -722,12 +722,12 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
       font-weight: 400;
       line-height: 150%; /* 21px */
-      background: #1FC7D4;
+      background: #22c55e;
       padding: 2px 9px;
       height: 25px;
     }
     .bccb-widget-route-name-tag-bestTime {
-      background: ${({ theme }) => (theme.isDark ? '#A881FC' : '#7645D9')};
+      background: ${({ theme }) => (theme.isDark ? '#A881FC' : '#22c55e')};
     }
 
     .bccb-widget-modal-route-content {

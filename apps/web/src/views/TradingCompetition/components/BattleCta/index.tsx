@@ -26,7 +26,7 @@ const StyledCard = styled(Card)`
   display: inline-flex;
   position: relative;
   overflow: visible;
-  background: linear-gradient(180deg, #7645d9 0%, #452a7a 100%);
+  background: linear-gradient(180deg, #22c55e 0%, #452a7a 100%);
 
   > div {
     background: transparent;

@@ -1,10 +1,10 @@
-import React from 'react'
-import { Flex } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { Flex } from '@pancakeswap/uikit'
+import React from 'react'
+import FinishedCompetitionBanner from './components/FinishedCompetitionBanner'
+import SubMenu from './components/SubMenu'
 import FanTokenAllBunnies from './pngs/fan-token-all-bunnies.png'
 import MoboxAllBunnies from './pngs/mobox-all-bunnies.png'
-import SubMenu from './components/SubMenu'
-import FinishedCompetitionBanner from './components/FinishedCompetitionBanner'
 
 const FinishedCompetitions: React.FC<React.PropsWithChildren> = () => {
   const { t } = useTranslation()
@@ -21,7 +21,7 @@ const FinishedCompetitions: React.FC<React.PropsWithChildren> = () => {
         <FinishedCompetitionBanner
           title={t('Binance Fan token Trading Competition')}
           imgSrc={FanTokenAllBunnies}
-          background="linear-gradient(#7645d9 0%, #452a7a 100%)"
+          background="linear-gradient(#22c55e 0%, #452a7a 100%)"
           to="/competition/finished/fantoken"
         />
         <FinishedCompetitionBanner

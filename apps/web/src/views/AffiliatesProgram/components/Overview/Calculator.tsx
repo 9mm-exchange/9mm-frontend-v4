@@ -1,8 +1,8 @@
+import { useTranslation } from '@pancakeswap/localization'
+import { ArrowDownIcon, Balance, Box, Button, Flex, Input, Text } from '@pancakeswap/uikit'
+import BigNumber from 'bignumber.js'
 import { useMemo, useState } from 'react'
 import { styled } from 'styled-components'
-import { Flex, Text, Box, Button, ArrowDownIcon, Input, Balance } from '@pancakeswap/uikit'
-import BigNumber from 'bignumber.js'
-import { useTranslation } from '@pancakeswap/localization'
 
 const CalculatorWrapper = styled(Flex)`
   padding: 24px;
@@ -12,7 +12,7 @@ const CalculatorWrapper = styled(Flex)`
 `
 
 const EarnWrapper = styled(Box)`
-  background: linear-gradient(180deg, #53dee9, #7645d9);
+  background: linear-gradient(180deg, #53dee9, #22c55e);
   padding: 1px;
   width: 100%;
   border-radius: ${({ theme }) => theme.radii.default};

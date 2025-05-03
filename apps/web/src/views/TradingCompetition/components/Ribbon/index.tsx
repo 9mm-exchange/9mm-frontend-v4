@@ -1,15 +1,15 @@
-import { styled } from 'styled-components'
 import { Flex, LaurelLeftIcon, LaurelRightIcon } from '@pancakeswap/uikit'
+import { styled } from 'styled-components'
 import { RibbonProps } from '../../types'
-import {
-  RibbonDownMidExpanding,
-  RibbonUpMidExpanding,
-  RibbonDownRightSide,
-  RibbonUpRightSide,
-  RibbonDownLeftSide,
-  RibbonUpLeftSide,
-} from './RibbonStyles'
 import { Heading2Text, VisuallyHiddenHeading2Text } from '../CompetitionHeadingText'
+import {
+  RibbonDownLeftSide,
+  RibbonDownMidExpanding,
+  RibbonDownRightSide,
+  RibbonUpLeftSide,
+  RibbonUpMidExpanding,
+  RibbonUpRightSide,
+} from './RibbonStyles'
 
 const Wrapper = styled(Flex)<{ ribbonDirection?: 'up' | 'down' }>`
   position: relative;
@@ -23,7 +23,7 @@ const TextWrapper = styled(Flex)`
   align-items: center;
   position: absolute;
   height: 46px;
-  background-color: #7645d9;
+  background-color: #22c55e;
 `
 
 const LaurelWrapper = styled.div<{ dir?: 'left' | 'right' }>`
