@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createElement, memo } from "react";
+import { findMenuItemsStatusColor } from "../../util/findMenuItemsStatusColor";
 import isTouchDevice from "../../util/isTouchDevice";
 import { Flex } from "../Box";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import MenuItem from "../MenuItem/MenuItem";
 import { MenuItemsProps, MenuItemsType } from "./types";
-import { findMenuItemsStatusColor } from "../../util/findMenuItemsStatusColor";
 
 const MenuItems: React.FC<React.PropsWithChildren<MenuItemsProps>> = ({
   items = [] as MenuItemsType[],
@@ -30,15 +30,21 @@ const MenuItems: React.FC<React.PropsWithChildren<MenuItemsProps>> = ({
             activeSubItemChildItem={activeSubItemChildItem}
             isDisabled={disabled}
           >
-            <MenuItem
-              {...linkProps}
-              isActive={isActive}
-              statusColor={statusColor}
-              isDisabled={disabled}
-              onClick={onClick}
-            >
-              {label || (icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" }))}
-            </MenuItem>
+            {label === "9x" || label === "Docs" ? (
+              <MenuItem
+                {...{ target: "_blank", ...linkProps }}
+                isActive={isActive}
+                statusColor={statusColor}
+                isDisabled={disabled}
+              >
+                {label}
+                {icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" })}
+              </MenuItem>
+            ) : (
+              <MenuItem {...linkProps} isActive={isActive} statusColor={statusColor} isDisabled={disabled}>
+                {label || (icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" }))}
+              </MenuItem>
+            )}
           </DropdownMenu>
         );
       })}

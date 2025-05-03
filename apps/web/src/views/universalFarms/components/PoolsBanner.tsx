@@ -100,13 +100,10 @@ export const PoolsBanner = ({ additionLink }: { additionLink?: React.ReactNode }
             {!isMobile && (
               <>
                 <FarmH2 scale="lg" color="text">
-                  {t('Liquidity Pools & Farms')}
+                  {t('Liquidity Pools')}
                 </FarmH2>
                 <Row flexWrap="wrap" gap="16px">
-                  <LinkExternal
-                    href="https://9mm-pro.gitbook.io/9mm-pro/products/yield-farming/how-to-use-farms"
-                    showExternalIcon={false}
-                  >
+                  <LinkExternal href="https://9mm-pro.gitbook.io/9mm-pro/" showExternalIcon={false}>
                     <Button p="0" variant="text">
                       <Text color="primary" bold fontSize="16px" mr="4px">
                         {t('Learn How')}

@@ -40,8 +40,8 @@ const usePageInfo = () => {
     () => ({
       [PAGES_LINK.POOLS]: {
         tabIdx: 0,
-        oldLink: '/farms',
-        oldLinkText: t('Legacy Farm Page'),
+        oldLink: '/liquidity',
+        oldLinkText: t('Legacy Liquidity Page'),
       },
       [PAGES_LINK.POSITIONS]: {
         tabIdx: 1,

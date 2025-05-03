@@ -1,21 +1,18 @@
 import { ContextApi } from '@pancakeswap/localization'
 import { SUPPORTED_CHAIN_IDS as POOL_SUPPORTED_CHAINS } from '@pancakeswap/pools'
-import { SUPPORTED_CHAIN_IDS as POSITION_MANAGERS_SUPPORTED_CHAINS } from '@pancakeswap/position-managers'
-import { SUPPORTED_CHAIN_IDS as PREDICTION_SUPPORTED_CHAINS } from '@pancakeswap/prediction'
 import {
   BridgeIcon,
   DropdownMenuItems,
   DropdownMenuItemType,
   EarnFillIcon,
   EarnIcon,
-  GameIcon,
+  LineGraphIcon,
+  LinkExternal,
   MenuItemsType,
-  MoreIcon,
   SwapFillIcon,
   SwapIcon,
 } from '@pancakeswap/uikit'
-import { SUPPORT_CAKE_STAKING, SUPPORT_FARMS, SUPPORT_ONLY_BSC } from 'config/constants/supportChains'
-import { getPerpetualUrl } from 'utils/getPerpetualUrl'
+import { SUPPORT_FARMS } from 'config/constants/supportChains'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & {
   hideSubNav?: boolean
@@ -61,16 +58,6 @@ const config: (
           href: '/swap',
         },
         {
-          label: t('Perps'),
-          href: getPerpetualUrl({
-            chainId,
-            languageCode,
-            isDark,
-          }),
-          confirmModalId: 'perpConfirmModal',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
           label: t('Buy Crypto'),
           href: '/buy-crypto',
         },
@@ -85,19 +72,9 @@ const config: (
       supportChainIds: SUPPORT_FARMS,
       overrideSubNavItems: [
         {
-          label: t('Farm / Liquidity'),
+          label: t('Liquidity Manager'),
           href: '/liquidity/pools',
           supportChainIds: SUPPORT_FARMS,
-        },
-        {
-          label: t('Position Manager'),
-          href: '/position-managers',
-          supportChainIds: POSITION_MANAGERS_SUPPORTED_CHAINS,
-        },
-        {
-          label: t('veCake Redeem'),
-          href: '/cake-staking/redeem',
-          supportChainIds: POOL_SUPPORTED_CHAINS,
         },
         {
           label: t('Syrup Pools'),
@@ -107,30 +84,16 @@ const config: (
       ].map((item) => addMenuItemSupported(item, chainId)),
       items: [
         {
-          label: t('Farm / Liquidity'),
+          label: t('Manage Liquidity'),
           href: '/liquidity/pools',
           matchHrefs: ['/liquidity/positions', '/farms'],
           supportChainIds: SUPPORT_FARMS,
         },
         {
-          label: t('Position Manager'),
-          href: '/position-managers',
-          supportChainIds: POSITION_MANAGERS_SUPPORTED_CHAINS,
-        },
-        {
-          label: t('Staking'),
-          items: [
-            {
-              label: t('veCake Redeem'),
-              href: '/cake-staking/redeem',
-              supportChainIds: POOL_SUPPORTED_CHAINS,
-            },
-            {
-              label: t('Syrup Pools'),
-              href: '/pools',
-              supportChainIds: POOL_SUPPORTED_CHAINS,
-            },
-          ].map((item) => addMenuItemSupported(item, chainId)),
+          label: t('Syrup Pools'),
+          href: '/pools',
+          matchHrefs: ['/pools'],
+          supportChainIds: POOL_SUPPORTED_CHAINS,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
@@ -140,96 +103,24 @@ const config: (
       icon: BridgeIcon,
       type: DropdownMenuItemType.EXTERNAL_LINK,
       image: '/images/decorations/pe2.png',
-      showItemsOnMobile: false,
     },
     {
-      label: t('Play'),
-      icon: GameIcon,
-      href: '/prediction',
-      overrideSubNavItems: [
-        {
-          label: t('Prediction'),
-          href: '/prediction',
-        },
-        {
-          label: t('Lottery'),
-          href: '/lottery',
-        },
-      ],
-      items: [
-        {
-          label: t('Springboard'),
-          href: 'https://springboard.pancakeswap.finance',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Prediction'),
-          href: '/prediction',
-          image: '/images/decorations/prediction.png',
-          supportChainIds: PREDICTION_SUPPORTED_CHAINS,
-        },
-        {
-          label: t('Lottery'),
-          href: '/lottery',
-          image: '/images/decorations/lottery.png',
-        },
-      ].map((item) => addMenuItemSupported(item, chainId)),
+      label: t('Stats & Graphs'),
+      href: '/info/v3',
+      icon: LineGraphIcon,
+      fillIcon: LineGraphIcon,
     },
     {
-      label: '',
-      href: '/info',
-      icon: MoreIcon,
-      hideSubNav: true,
-      items: [
-        {
-          label: t('Info'),
-          href: '/info/v3',
-        },
-        {
-          label: t('IFO'),
-          href: '/ifo',
-          image: '/images/ifos/ifo-bunny.png',
-          overrideSubNavItems: [
-            {
-              label: t('Latest'),
-              href: '/ifo',
-            },
-            {
-              label: t('Finished'),
-              href: '/ifo/history',
-            },
-          ],
-        },
-        {
-          label: t('Voting'),
-          image: '/images/voting/voting-bunny.png',
-          items: [
-            {
-              label: t('Gauges'),
-              href: '/gauges-voting',
-              supportChainIds: SUPPORT_CAKE_STAKING,
-            },
-            {
-              label: t('Proposals'),
-              href: '/voting',
-              supportChainIds: SUPPORT_ONLY_BSC,
-            },
-          ].map((item) => addMenuItemSupported(item, chainId)),
-        },
-        {
-          type: DropdownMenuItemType.DIVIDER,
-        },
-        {
-          label: t('Blog'),
-          href: 'https://blog.pancakeswap.finance',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Docs'),
-          href: 'https://9mm-pro.gitbook.io/9mm-pro',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-      ].map((item) => addMenuItemSupported(item, chainId)),
+      label: t('9x'),
+      href: 'https://9x.9mm.pro',
+      icon: LinkExternal,
+      fillIcon: LinkExternal,
+    },
+    {
+      label: t('Docs'),
+      href: 'https://9mm-pro.gitbook.io/9mm-pro/',
+      icon: LinkExternal,
+      fillIcon: LinkExternal,
     },
   ].map((item) => addMenuItemSupported(item, chainId))
 

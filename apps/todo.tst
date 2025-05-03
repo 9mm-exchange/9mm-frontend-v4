@@ -14,6 +14,30 @@
 
 To DO
 
+Issues
+
+1. Logo Caching issue and hide mobile logo [Done]
+2. Hide card rotating on swappage [Done]
+3. https://v3dev.9mm.pro/liquidity/pools [create API] , Remove Farms
+4. Hide Position Manager For Now [Done]
+5. vCake Redeem hide for Now [Done]
+6. Bridge Add Comming Soon
+7. Add Info & docs links in menu desktop Only
+8. Loader Change to 9mm Loader
+9. Sounds Change to 9mm Sound
+10. Check can we work with notications if doable do , otherwise remove the option
+11. Work on Light mode designs
+12. Add Base tokens in default
+13. swap page switch button color
+14. Menu background remove transparent background
+15. Make switcher to dickbutt
+16. Change Graph colors to default color
+17. Check token serach is why not working
+18. Change default token image placeholder 
+19. Fix text box focus colors
+20. Make a profile
+
+
 15. created wallet-api  [Done]
 15. APR Issue fix for v2 & v3
 16. Work on UI Customizations

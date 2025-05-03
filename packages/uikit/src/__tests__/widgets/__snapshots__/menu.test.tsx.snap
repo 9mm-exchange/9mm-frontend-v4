@@ -2337,7 +2337,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://blog.pancakeswap.finance/"
+              href="#"
               rel="noreferrer noopener"
               style="text-transform: none;"
               target="_blank"

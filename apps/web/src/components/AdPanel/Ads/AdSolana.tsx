@@ -1,15 +1,14 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Link, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { AdPlayerProps } from '@pancakeswap/widgets-internal'
-import { ASSET_CDN } from 'config/constants/endpoints'
 
 import { BodyText } from '../BodyText'
 import { AdButton } from '../Button'
 import { AdCard } from '../Card'
 
-const learnMoreLink = 'https://blog.pancakeswap.finance/articles/expanding-solana-s-accessibility'
-const actionLink = process.env.SOLANA_SWAP_PAGE ?? 'https://solana.pancakeswap.finance/swap'
-const imgURL = `${ASSET_CDN}/solana/promotions/img_swap.png`
+const learnMoreLink = 'https://9mm-pro.gitbook.io/9mm-pro/overview/key-features-of-the-9mm-dex'
+const actionLink = process.env.SOLANA_SWAP_PAGE ?? 'https://9x.9mm.pro/'
+const imgURL = undefined
 
 export const AdSolana = (props: Omit<AdPlayerProps, 'config'>) => {
   const { t } = useTranslation()
@@ -19,7 +18,7 @@ export const AdSolana = (props: Omit<AdPlayerProps, 'config'>) => {
     <AdCard imageUrl={imgURL} {...props}>
       <BodyText mb="0">
         <Text as="span" color="text" bold fontSize="14px">
-          {t('Swap Solana Tokens on PancakeSwap.')}
+          {t('Swap Tokens on 9x with lowest Slippage.')}
         </Text>
       </BodyText>
 

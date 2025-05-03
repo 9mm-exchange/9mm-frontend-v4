@@ -5,20 +5,19 @@ import { AdButton } from '../Button'
 import { AdCard } from '../Card'
 
 import { AdPlayerProps } from '../types'
-import { getImageUrl } from '../utils'
 
-const actionLink = 'https://springboard.pancakeswap.finance/'
+const actionLink = 'https://otc.9mm.pro/'
 
 export const AdSpringboard = (props: AdPlayerProps) => {
   const { t } = useTranslation()
 
   return (
-    <AdCard imageUrl={getImageUrl('springboard')} {...props}>
+    <AdCard imageUrl={undefined} {...props}>
       <BodyText mb="0">
-        {t('Create & Launch Your Token in minutes, on our ')}
+        {t('Trade Your Token on OTC in minutes, on our ')}
 
         <Text fontSize="inherit" as="span" color="secondary" bold>
-          {t('SpringBoard!!')}
+          {t('OTC Market!!')}
         </Text>
       </BodyText>
       <AdButton mt="16px" href={actionLink} externalIcon isExternalLink>

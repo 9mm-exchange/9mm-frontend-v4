@@ -1,23 +1,20 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { useFourYearTotalVeCakeApr } from 'views/CakeStaking/hooks/useAPR'
 import { AdButton } from '../Button'
 import { AdCard } from '../Card'
 
 import { BodyText } from '../BodyText'
 import { AdPlayerProps } from '../types'
-import { getImageUrl } from '../utils'
 
-const actionLink = 'https://9mm-pro.gitbook.io/9mm-pro/products/vecake'
+const actionLink = 'https://9mm-pro.gitbook.io/9mm-pro/overview/revenue-sharing-model'
 
 export const AdCakeStaking = (props: AdPlayerProps) => {
   const { t } = useTranslation()
-  const { totalApr } = useFourYearTotalVeCakeApr()
 
   return (
-    <AdCard imageUrl={getImageUrl('cake_staking')} {...props}>
+    <AdCard imageUrl={undefined} {...props}>
       <BodyText mb="0">
-        {t('Stake CAKE and Earn up to %apr%% APR !', {
-          apr: totalApr.toFixed(2),
+        {t('Provide LP 9mm/WPLS and Earn up to 40% APR !', {
+          apr: 0,
         })}
       </BodyText>
 
@@ -25,8 +22,8 @@ export const AdCakeStaking = (props: AdPlayerProps) => {
         {t('Learn More')}
       </AdButton>
 
-      <AdButton mt="4px" href="/cake-staking" chevronRightIcon>
-        {t('Stake CAKE')}
+      <AdButton mt="4px" href="/add/0x7b39712Ef45F7dcED2bBDF11F3D5046bA61dA719/PLS/10000" chevronRightIcon>
+        {t('LP 9mm')}
       </AdButton>
     </AdCard>
   )

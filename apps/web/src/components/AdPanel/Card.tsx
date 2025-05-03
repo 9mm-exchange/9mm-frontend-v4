@@ -26,7 +26,7 @@ const BaseCard = styled(Box)<{ $isExpanded?: boolean }>`
 
 const Content = styled(Box)<{ $isExpanded?: boolean }>`
   position: relative;
-  width: 148px;
+  width: 198px;
 
   height: 98%;
 
@@ -160,26 +160,6 @@ export const AdCard = forwardRef<HTMLDivElement, AdCardProps>(
             </StyledIconButton>
           </CloseButtonContainer>
         )}
-        <GraphicsContainer>
-          {imageUrl && (
-            <ImgBox
-              style={{
-                padding: imgPadding,
-              }}
-            >
-              <img
-                ref={imageRef}
-                src={imageUrl}
-                alt={alt || 'Card Image'}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                }}
-              />
-            </ImgBox>
-          )}
-        </GraphicsContainer>
       </BaseCard>
     )
   },

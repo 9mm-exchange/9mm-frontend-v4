@@ -5,22 +5,20 @@ import { AdButton } from '../Button'
 import { AdCard } from '../Card'
 
 import { AdPlayerProps } from '../types'
-import { getImageUrl } from '../utils'
 
-const learnMoreLink =
-  'https://blog.pancakeswap.finance/articles/introducing-pancake-swap-x-zero-fee-and-gasless-swaps-on-ethereum-and-arbitrum?utm_source=Website&utm_medium=homepage&utm_campaign=PCSX&utm_id=PCSX'
-const actionLink = '/swap?utm_source=Website&utm_medium=homepage&utm_campaign=PCSX&utm_id=PCSX'
+const learnMoreLink = 'https://9mm-pro.gitbook.io/9mm-pro/'
+const actionLink = '/swap?utm_source=Website&utm_medium=homepage'
 
 export const AdPCSX = (props: AdPlayerProps) => {
   const { t } = useTranslation()
 
   return (
-    <AdCard imageUrl={getImageUrl('pcsx')} {...props}>
+    <AdCard imageUrl={undefined} {...props}>
       <BodyText mb="0">
         <Text as="span" color="secondary" bold>
-          {t('ZERO')}
+          {t('LOWEST')}
         </Text>{' '}
-        {t('Fee Swaps on Ethereum & Arbitrum')}
+        {t('Fee Swaps on Pulsechain, Sonic & Base')}
       </BodyText>
 
       <AdButton variant="text" href={learnMoreLink} isExternalLink>

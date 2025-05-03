@@ -1,11 +1,11 @@
 import { Colors } from "../../theme";
 import { lightColors } from "../../tokens";
 import { Flex } from "../Box";
-import { CircleOutlineIcon, LogoIcon, CheckmarkCircleFillIcon } from "../Svg";
+import { CheckmarkCircleFillIcon, CircleOutlineIcon, LogoIcon } from "../Svg";
 import { Text } from "../Text";
 import InfoTooltip from "./InfoTooltip";
 import { TimelineContainer, TimelineEvent } from "./styles";
-import { TimelineProps, EventStatus } from "./types";
+import { EventStatus, TimelineProps } from "./types";
 
 type getTextColorProps = {
   eventStatus: EventStatus;

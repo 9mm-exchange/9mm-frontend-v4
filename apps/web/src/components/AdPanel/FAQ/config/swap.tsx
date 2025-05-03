@@ -1,5 +1,4 @@
 import { Box, FlexGap, Link, Text } from '@pancakeswap/uikit'
-import { getImageUrl } from 'components/AdPanel/utils'
 import { styled } from 'styled-components'
 import { FAQConfig } from '../types'
 
@@ -20,9 +19,9 @@ export const StyledFlex = styled(FlexGap)`
 export const swapFAQConfig: FAQConfig = (t) => ({
   title: t('Quick start now on How to Swap!'),
   subtitle: t('Need Help?'),
-  imageUrl: getImageUrl('faq_bunny'),
-  alt: 'FAQ bunny',
-  docsUrl: 'https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange',
+  imageUrl: '',
+  alt: 'FAQ',
+  docsUrl: 'https://9mm-pro.gitbook.io/9mm-pro/',
   data: [
     {
       title: t('How to Swap?'),
@@ -45,13 +44,13 @@ export const swapFAQConfig: FAQConfig = (t) => ({
           <ul style={{ overflow: 'auto' }}>
             <StyledFlex flexWrap="wrap" flexGrow={0}>
               {t('Use the')}
-              <Link m="0 5px" href="https://pancakeswap.finance/buy-crypto" color="primary">
+              <Link m="0 5px" href="https://dex.9mm.pro/buy-crypto" color="primary">
                 {t('Buy Crypto')}
               </Link>
               {t('feature to buy.')}
             </StyledFlex>
             <StyledFlex flexWrap="wrap" flexGrow={0}>
-              <Link m="0 5px" href="https://bridge.pancakeswap.finance">
+              <Link m="0 5px" href="https://dex.9mm.pro/bridge">
                 {t('Bridge your assets')}
               </Link>
               <Text>{t('from other blockchains.')}</Text>
@@ -86,10 +85,7 @@ export const swapFAQConfig: FAQConfig = (t) => ({
 
           <FlexGap gap="5px" flexGrow={0}>
             {t('For more details,')}{' '}
-            <Link
-              href="https://9mm-pro.gitbook.io/9mm-pro/products/pancakeswap-exchange/faq"
-              style={{ textDecoration: 'underline' }}
-            >
+            <Link href="https://9mm-pro.gitbook.io/9mm-pro/" style={{ textDecoration: 'underline' }}>
               {t('read here.')}
             </Link>
           </FlexGap>
