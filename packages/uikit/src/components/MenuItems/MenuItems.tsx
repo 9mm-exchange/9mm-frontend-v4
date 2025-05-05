@@ -37,12 +37,11 @@ const MenuItems: React.FC<React.PropsWithChildren<MenuItemsProps>> = ({
                 statusColor={statusColor}
                 isDisabled={disabled}
               >
-                {label}
-                {icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" })}
+                {label} 1{icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" })}
               </MenuItem>
             ) : (
               <MenuItem {...linkProps} isActive={isActive} statusColor={statusColor} isDisabled={disabled}>
-                {label || (icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" }))}
+                2 {label || (icon && createElement(Icon as any, { color: isActive ? "secondary" : "textSubtle" }))}
               </MenuItem>
             )}
           </DropdownMenu>

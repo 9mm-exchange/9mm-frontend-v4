@@ -34,7 +34,7 @@ export const AssetSettingButtonList: React.FC<{
         return (
           <>
             <Text
-              color="#02919D"
+              color="secondary"
               fontSize={12}
               key={`AssetSettingButtonList${percent}`}
               onClick={(e) => {

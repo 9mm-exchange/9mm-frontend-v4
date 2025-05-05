@@ -17,15 +17,13 @@ To DO
 Issues
 
 
-1. Loader is swiking [Done]
-2. remove buns from switcher [Done]
-3. Make switcher to dickbutt [Done]
-2. Color of 25% , 50% percent
 4. swap page switch button color
 5. https://v3dev.9mm.pro/liquidity/pools [create API] 
 6. APR Issue fix for v2 & v3
 7. Check token serach is why not working
 8. Homepage apis
+9. Few links are not clickable on Mobile [done]
+
 
 
 
