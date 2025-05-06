@@ -14,8 +14,9 @@ import { viemProviders } from './provider'
 
 export const V3_SUBGRAPH_CLIENTS_CHAIN_IDS = [
   ChainId.ETHEREUM,
-  ChainId.GOERLI,
   ChainId.BSC,
+  ChainId.PULSECHAIN,
+  ChainId.SONIC,
   ChainId.POLYGON_ZKEVM,
   ChainId.ZKSYNC,
   ChainId.ARBITRUM_ONE,

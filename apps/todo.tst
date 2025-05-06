@@ -17,12 +17,11 @@ To DO
 Issues
 
 
-4. swap page switch button color
-5. https://v3dev.9mm.pro/liquidity/pools [create API] 
-6. APR Issue fix for v2 & v3
-7. Check token serach is why not working
-8. Homepage apis
-9. Few links are not clickable on Mobile [done]
+1. swap page switch button color
+2. APR Issue fix for v2 & v3
+3. Check token serach is why not working
+4. Homepage apis
+
 
 
 
@@ -34,3 +33,4 @@ Issues
 4. Implement Stable swaps
 5. Implement Syrup Pools
 6. Implement Farming
+7. Only available when farming is active https://v3dev.9mm.pro/liquidity/pools [create API] 

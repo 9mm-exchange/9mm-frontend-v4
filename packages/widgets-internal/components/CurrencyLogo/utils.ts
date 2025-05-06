@@ -51,6 +51,8 @@ export const chainName: { [key: number]: string } = {
   [ChainId.LINEA]: "linea",
   [ChainId.BASE]: "base",
   [ChainId.OPBNB]: "opbnb",
+  [ChainId.PULSECHAIN]: "pulse",
+  [ChainId.SONIC]: "sonic",
   [ChainId.MONAD_TESTNET]: "monad-testnet",
 };
 

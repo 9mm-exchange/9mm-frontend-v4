@@ -36,7 +36,9 @@ export const getImageUrlFromToken = (token: Currency) => {
   return token
     ? token.isNative && token.chainId !== ChainId.BSC
       ? `${ASSET_CDN}/web/native/${token.chainId}.png`
-      : `https://tokens.9mm.pro/${tokenImageChainNameMapping[token.chainId]}${address}.png`
+      : `https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/${
+          tokenImageChainNameMapping[token.chainId]
+        }${address}.png`
     : ''
 }
 

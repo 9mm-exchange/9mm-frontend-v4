@@ -6,6 +6,8 @@ export const supportedChainIdV4 = [
   ChainId.BSC,
   ChainId.ETHEREUM,
   ChainId.BASE,
+  ChainId.SONIC,
+  ChainId.PULSECHAIN,
   ChainId.OPBNB,
   ChainId.ZKSYNC,
   ChainId.POLYGON_ZKEVM,

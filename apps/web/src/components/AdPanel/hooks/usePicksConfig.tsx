@@ -1,5 +1,4 @@
 import { atom, useAtomValue } from 'jotai'
-import { AdPicks } from '../Ads/AdPicks'
 import { AdSlide, PicksConfig } from '../types'
 
 const picksConfigAtom = atom(async () => {
@@ -23,11 +22,13 @@ export const usePicksConfig = () => {
     return []
   }
 
-  const adList: AdSlide[] = picksConfig.configs.map((config, i) => {
-    return {
-      id: `pick-${config.poolId}`,
-      component: <AdPicks config={config} index={i} />,
-    }
-  })
+  // const adList: AdSlide[] = picksConfig.configs.map((config, i) => {
+  //   return {
+  //     id: `pick-${config.poolId}`,
+  //     component: <AdPicks config={config} index={i} />,
+  //   }
+  // })
+
+  const adList: AdSlide[] = []
   return adList
 }

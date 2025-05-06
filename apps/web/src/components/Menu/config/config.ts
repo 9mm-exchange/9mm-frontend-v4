@@ -52,8 +52,8 @@ const config: (
       showItemsOnMobile: false,
     },
     {
-      label: t('Earn'),
-      href: '/liquidity/pools',
+      label: t('Liquidity'),
+      href: '/liquidity',
       icon: EarnIcon,
       fillIcon: EarnFillIcon,
       showItemsOnMobile: false,

@@ -67,7 +67,10 @@ const StakeModalContainer = ({
   )
 
   const tokenImageUrl = useMemo(
-    () => (chainId ? `https://tokens.pancakeswap.finance/images/${tokenImageChainNameMapping[chainId]}` : ''),
+    () =>
+      chainId
+        ? `https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/${tokenImageChainNameMapping[chainId]}`
+        : '',
     [chainId],
   )
 
