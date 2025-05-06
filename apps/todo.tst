@@ -28,6 +28,7 @@ Issues
 
 
 1. Bridge Add Comming Soon
+2. Ramp buy sell
 2. Check can we work with notications if doable do , otherwise remove the option
 3. Make a profile
 4. Implement Stable swaps
