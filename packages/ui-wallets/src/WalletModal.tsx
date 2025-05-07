@@ -5,19 +5,16 @@ import {
   Button,
   Heading,
   Image,
-  LinkExternal,
   ModalV2,
   ModalV2Props,
   ModalWrapper,
   MoreHorizontalIcon,
   SvgProps,
-  Tab,
-  TabMenu,
   Text,
   WarningIcon,
 } from '@pancakeswap/uikit'
 import { atom, useAtom } from 'jotai'
-import { PropsWithChildren, Suspense, lazy, useMemo, useState } from 'react'
+import { PropsWithChildren, lazy, useMemo, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 import {
   desktopWalletSelectionClass,
@@ -81,12 +78,6 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
 
   return (
     <AtomBox position="relative" zIndex="modal" className={modalWrapperClass}>
-      <AtomBox position="absolute" style={{ top: '-50px' }}>
-        <TabMenu activeIndex={index} onItemClick={setIndex} gap="0px" isColorInverse isShowBorderBottom={false}>
-          <Tab>{t('Connect Wallet')}</Tab>
-          <Tab>{t('What’s a Web3 Wallet?')}</Tab>
-        </TabMenu>
-      </AtomBox>
       <AtomBox
         display="flex"
         position="relative"
@@ -100,11 +91,6 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
         width="100%"
       >
         {index === 0 && children}
-        {index === 1 && (
-          <Suspense>
-            <StepIntro docLink={docLink} docText={docText} />
-          </Suspense>
-        )}
       </AtomBox>
     </AtomBox>
   )
@@ -355,35 +341,6 @@ function DesktopModal<T>({
           }}
         />
       </AtomBox>
-      <AtomBox
-        flex={1}
-        mx="24px"
-        display={{
-          xs: 'none',
-          sm: 'flex',
-        }}
-        justifyContent="center"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <AtomBox display="flex" flexDirection="column" alignItems="center" style={{ gap: '24px' }} textAlign="center">
-          {!selected && <Intro docLink={docLink} docText={docText} />}
-          {selected && selected.installed !== false && (
-            <>
-              {typeof selected.icon === 'string' && <Image src={selected.icon} width={108} height={108} />}
-              <Heading as="h1" fontSize="20px" color="secondary">
-                {t('Opening')} {selected.title}
-              </Heading>
-              {error ? (
-                <ErrorContent message={error} onRetry={() => connectToWallet(selected)} />
-              ) : (
-                <Text>{t('Please confirm in %wallet%', { wallet: selected.title })}</Text>
-              )}
-            </>
-          )}
-          {selected && selected.installed === false && <NotInstalled qrCode={qrCode} wallet={selected} />}
-        </AtomBox>
-      </AtomBox>
     </>
   )
 }
@@ -453,84 +410,8 @@ export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
   )
 }
 
-const Intro = ({ docLink, docText }: { docLink: string; docText: string }) => {
-  const { t } = useTranslation()
-  return (
-    <>
-      <Heading as="h1" fontSize="20px" color="secondary">
-        {t('Haven’t got a wallet yet?')}
-      </Heading>
-      <Image src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width={198} height={178} />
-      <Button as={LinkExternal} color="backgroundAlt" variant="subtle" href={docLink}>
-        {docText}
-      </Button>
-    </>
-  )
-}
-
-const NotInstalled = ({ wallet, qrCode }: { wallet: WalletConfigV2; qrCode?: string }) => {
-  const { t } = useTranslation()
-  return (
-    <>
-      <Heading as="h1" fontSize="20px" color="secondary">
-        {t('%wallet% is not installed', { wallet: wallet.title })}
-      </Heading>
-      {qrCode && (
-        <Suspense>
-          <AtomBox overflow="hidden" borderRadius="card" style={{ width: '288px', height: '288px' }}>
-            <Qrcode url={qrCode} image={typeof wallet.icon === 'string' ? wallet.icon : undefined} />
-          </AtomBox>
-        </Suspense>
-      )}
-      {!qrCode && !wallet.isNotExtension && (
-        <Text maxWidth="246px" m="auto">
-          {t('Please install the %wallet% browser extension to connect the %wallet% wallet.', {
-            wallet: wallet.title,
-          })}
-        </Text>
-      )}
-      {wallet.guide && (
-        <Button variant="subtle" as="a" href={getDesktopLink(wallet.guide)} external>
-          {getDesktopText(wallet.guide, t('Setup Guide'))}
-        </Button>
-      )}
-      {wallet.downloadLink && (
-        <Button variant="subtle" as="a" href={getDesktopLink(wallet.downloadLink)} external>
-          {getDesktopText(wallet.downloadLink, t('Install'))}
-        </Button>
-      )}
-    </>
-  )
-}
-
 const ErrorMessage = ({ message }: { message: string }) => (
   <Text bold color="failure">
     <WarningIcon width="16px" color="failure" style={{ verticalAlign: 'middle' }} /> {message}
   </Text>
 )
-
-const ErrorContent = ({ onRetry, message }: { onRetry: () => void; message: string }) => {
-  const { t } = useTranslation()
-  return (
-    <>
-      <ErrorMessage message={message} />
-      <Button variant="subtle" onClick={onRetry}>
-        {t('Retry')}
-      </Button>
-    </>
-  )
-}
-
-const getDesktopLink = (linkDevice: LinkOfDevice) =>
-  typeof linkDevice === 'string'
-    ? linkDevice
-    : typeof linkDevice.desktop === 'string'
-    ? linkDevice.desktop
-    : linkDevice.desktop?.url
-
-const getDesktopText = (linkDevice: LinkOfDevice, fallback: string) =>
-  typeof linkDevice === 'string'
-    ? fallback
-    : typeof linkDevice.desktop === 'string'
-    ? fallback
-    : linkDevice.desktop?.text ?? fallback

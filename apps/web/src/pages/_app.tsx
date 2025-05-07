@@ -25,7 +25,6 @@ import Script from 'next/script'
 import { Fragment } from 'react'
 import { PersistGate } from 'redux-persist/integration/react'
 import 'utils/abortcontroller-polyfill'
-import { V4CakeIcon } from 'views/Home/components/V4CakeIcon'
 
 import { DesktopCard } from 'components/AdPanel/DesktopCard'
 import { MobileCard } from 'components/AdPanel/MobileCard'
@@ -191,7 +190,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <TransactionsDetailModal />
       {isShowScrollToTopButton && <ScrollToTopButtonV2 />}
       {shouldScreenWallet && <Blocklist />}
-      {isShowV4IconButton && <V4CakeIcon />}
       <ZKSyncAirdropModalWithAutoPopup />
       <SimpleStakingSunsetModal />
       <VercelToolbar />

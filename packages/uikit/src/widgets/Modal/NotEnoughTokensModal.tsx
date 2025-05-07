@@ -40,9 +40,6 @@ const NotEnoughTokensModal: React.FC<React.PropsWithChildren<NotEnoughTokensModa
           symbol: tokenSymbol,
         })}
       </Text>
-      <Button mt="24px" as="a" external href={tokenAddress ? `/swap?outputCurrency=${tokenAddress}` : "/swap"}>
-        {t("Buy")} {tokenSymbol}
-      </Button>
       {hideLocateAddress ? null : (
         <StyledLink href="https://yieldwatch.net" external>
           <Button variant="secondary" mt="8px" width="100%">

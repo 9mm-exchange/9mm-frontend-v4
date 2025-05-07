@@ -20,7 +20,6 @@ Issues
 1. swap page switch button color
 2. APR Issue fix for v2 & v3
 3. Check token serach is why not working
-4. Homepage apis
 
 
 

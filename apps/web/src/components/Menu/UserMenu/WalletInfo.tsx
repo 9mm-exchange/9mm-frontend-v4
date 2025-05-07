@@ -25,7 +25,6 @@ import useTokenBalance from 'hooks/useTokenBalance'
 
 import { CAKE } from '@pancakeswap/tokens'
 import { formatBigInt, getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
-import InternalLink from 'components/Links'
 import { useDomainNameForAddress } from 'hooks/useDomain'
 import { useState } from 'react'
 import { isMobile } from 'react-device-detect'
@@ -76,9 +75,6 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
               currency: native?.symbol,
             })}
           </Text>
-          <InternalLink href="/buy-crypto" onClick={() => onDismiss?.()}>
-            <Button height="30px">{t('Buy %currency%', { currency: native?.symbol })}</Button>
-          </InternalLink>
         </FlexGap>
       </Box>
     </>,
@@ -109,13 +105,6 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
                 currency: native.symbol,
               })}
             </Text>
-            <InternalLink href="/buy-crypto" onClick={() => onDismiss?.()}>
-              <Text color="primary">
-                {t('You need %currency% for transaction fees.', {
-                  currency: native.symbol,
-                })}
-              </Text>
-            </InternalLink>
           </Box>
         </Message>
       )}

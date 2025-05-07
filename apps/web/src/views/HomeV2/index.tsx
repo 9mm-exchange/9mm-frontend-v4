@@ -1,26 +1,12 @@
-import {
-  ArrowDownIcon,
-  Box,
-  domAnimation,
-  Flex,
-  LazyAnimatePresence,
-  MotionBox,
-  Skeleton,
-  useMatchBreakpoints,
-} from '@pancakeswap/uikit'
+import { Box, domAnimation, LazyAnimatePresence, MotionBox, Skeleton, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useAtomValue } from 'jotai'
 import { Suspense } from 'react'
 import styled from 'styled-components'
 import SimpleSwapForHomePage from 'views/SwapSimplify/SimpleSwapForHomePage'
 import { homePageDataAtom } from './atom/homePageDataAtom'
-import { BridgeCryptoCard, EarnTradingFeesCard, SwapWithBestPriceCard, VoteForEmissionCard } from './cards'
-import { ScrollDownArrow } from './cards/component/ScrollDownArrow'
-import { FeaturesCard } from './cards/FeaturesCard'
 import { RowLayout } from './component/RowLayout'
 import { ScrollableFullScreen } from './component/ScrollableFullScreen'
 import { FavoriteDEXBanner } from './FavoriteDEXBanner'
-import { snapToNext } from './hook/useScrollToNearestSnap'
-import { PancakeBanner } from './PancakeBanner'
 
 const MobileContainer = styled(Box)`
   scroll-snap-align: start;
@@ -76,13 +62,10 @@ export const HomeV2 = () => {
   )
 }
 const HomeV2Inner = () => {
-  const { tokens, chains, pools, currencies, cakeRelated } = useAtomValue(homePageDataAtom)
-  const cakeToken = tokens.find((x) => x.symbol === 'CAKE')!
+  const { tokens, chains } = useAtomValue(homePageDataAtom)
 
   const { isMobile, isTablet } = useMatchBreakpoints()
   const Container = isTablet || isMobile ? MobileContainer : ScrollableFullScreen
-
-  const showArrow = isMobile || isTablet
 
   return (
     <>
@@ -106,66 +89,7 @@ const HomeV2Inner = () => {
             </MotionBox>
           </LazyAnimatePresence>
         </RowLayout>
-
-        {showArrow && (
-          <Flex
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            style={{ position: 'relative', height: '30px' }}
-            mt="25px"
-            mb="35px"
-          >
-            <ScrollDownArrow
-              id="arrow-abc"
-              isMobile={isMobile}
-              isTablet={isTablet}
-              onClick={() => {
-                snapToNext('down', 'homepage-snap', window.innerHeight * 0.1)
-              }}
-            >
-              {/* <ChevronDownIcon width="32px" color="textSubtle" /> */}
-              <ArrowDownIcon width="24px" color="textSubtle" />
-            </ScrollDownArrow>
-          </Flex>
-        )}
       </Container>
-
-      <RowLayout
-        className="homepage-snap"
-        sidePadding={getSidePadding(isMobile, isTablet)}
-        mt={getMarginTop(isMobile, isTablet, 24)}
-        style={{
-          marginTop: getMarginTop(isMobile, isTablet, 24),
-        }}
-      >
-        <SwapWithBestPriceCard tokens={tokens} />
-        <EarnTradingFeesCard pairs={pools} />
-      </RowLayout>
-
-      <RowLayout
-        sidePadding={getSidePadding(isMobile, isTablet)}
-        mt={getMarginTop(isMobile, isTablet, 24)}
-        style={{
-          marginTop: getMarginTop(isMobile, isTablet, 24),
-        }}
-      >
-        <BridgeCryptoCard chains={chains} currencies={currencies} />
-        <VoteForEmissionCard cakeToken={cakeToken} figures={cakeRelated} />
-      </RowLayout>
-
-      <FeaturesCard />
-
-      <RowLayout
-        className="homepage-snap"
-        fullScreen
-        sidePadding="0px"
-        style={{
-          marginTop: getMarginTopForBanner(isMobile, isTablet),
-        }}
-      >
-        <PancakeBanner />
-      </RowLayout>
     </>
   )
 }

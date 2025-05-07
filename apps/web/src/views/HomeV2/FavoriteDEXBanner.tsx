@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, domAnimation, Flex, LazyAnimatePresence, MotionBox, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Box, Flex, MotionBox, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { HomepageChain } from 'pages/api/home/types'
 import React from 'react'
 import styled from 'styled-components'
@@ -71,7 +71,7 @@ export const FavoriteDEXBanner: React.FC<FavoriteDEXBannerProps> = ({ chains }) 
         {t('Favorite DEX')}
       </HighlightedText>
       <DescriptionText isMobile={isMobile} isTablet={isTablet}>
-        {t('Trade Crypto Instantly Across %count%+ Chains', { count: chains.length })}
+        {t('Trade Crypto Instantly Across %count%+ Chains', { count: 3 })}
       </DescriptionText>
       <Flex
         alignItems="center"

@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Button, Link, Modal, OpenNewIcon, Text } from '@pancakeswap/uikit'
+import { Button, Link, Modal, Text } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 
@@ -36,15 +36,6 @@ const NotEnoughTokensModal: React.FC<React.PropsWithChildren<NotEnoughTokensModa
           symbol: tokenSymbol,
         })}
       </Text>
-      <Button mt="24px" as="a" external href={tokenAddress ? `/swap?outputCurrency=${tokenAddress}` : '/swap'}>
-        {t('Buy')} {tokenSymbol}
-      </Button>
-      <StyledLink href="https://yieldwatch.net" external>
-        <Button variant="secondary" mt="8px" width="100%">
-          {t('Locate Assets')}
-          <OpenNewIcon color="primary" ml="4px" />
-        </Button>
-      </StyledLink>
       <Button variant="text" onClick={onDismiss}>
         {t('Close Window')}
       </Button>

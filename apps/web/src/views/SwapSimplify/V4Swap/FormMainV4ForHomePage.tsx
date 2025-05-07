@@ -18,9 +18,9 @@ import useNativeCurrency from 'hooks/useNativeCurrency'
 import { useAtom } from 'jotai'
 import { useRouter } from 'next/router'
 import { swapReducerAtom } from 'state/swap/reducer'
+import { FlipButton } from 'views/Swap/V3Swap/containers/FlipButton'
 import useWarningImport from '../../Swap/hooks/useWarningImport'
 import { useIsWrapping } from '../../Swap/V3Swap/hooks'
-import { FlipButton } from './FlipButton'
 
 interface Props {
   inputAmount?: CurrencyAmount<Currency>

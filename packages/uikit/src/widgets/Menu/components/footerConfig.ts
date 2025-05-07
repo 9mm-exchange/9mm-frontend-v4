@@ -40,7 +40,7 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
       },
       {
         label: t("OTC Market"),
-        href: "otc.9mm.pro",
+        href: "https://otc.9mm.pro",
       },
       {
         label: t("Explorer"),
