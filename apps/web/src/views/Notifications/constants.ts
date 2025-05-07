@@ -86,7 +86,7 @@ export const PUBLIC_VAPID_KEY = process.env.NEXT_PUBLIC_VAPID_KEY ?? ''
 export const Events: { [event in keyof typeof ResponseEvents]: EventInformation } = {
   [ResponseEvents.NotificationsEnabled]: {
     title: (t) => t('Notifications Enabled'),
-    message: (t) => t('You can now opt-in to pancakeswap web notifications'),
+    message: (t) => t('You can now opt-in to 9mm web notifications'),
   },
   [ResponseEvents.NotificationsEnabledError]: {
     title: (t) => t('Error Enabling Notifications'),

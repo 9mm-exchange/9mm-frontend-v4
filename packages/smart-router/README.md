@@ -1,6 +1,6 @@
-# Pancakeswap Smart Router
+# 9mm Smart Router
 
-`@pancakeswap/smart-router` is a SDK for getting best trade routes from Pancakeswap AMM.
+`@pancakeswap/smart-router` is a SDK for getting best trade routes from 9mm AMM.
 
 ## Install
 

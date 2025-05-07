@@ -51,11 +51,11 @@ export function transactionErrorToUserReadableMessage(error: any, t: TranslateFu
     case 'Too much requested':
     case 'STF':
       return t(
-        'This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Pancakeswap V3.',
+        'This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with 9mm V3.',
       )
     case 'TF':
       return t(
-        'The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Pancakeswap V3.',
+        'The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with 9mm V3.',
       )
     default:
       if (reason?.indexOf('undefined is not an object') !== -1) {

@@ -37,7 +37,7 @@ export function ActivateProfileButton({ saleFinished }: Props) {
   const tips = (
     <Flex flexDirection="column" justifyContent="flex-start">
       <ProfileAvatar width={40} height={40} src="https://via.placeholder.com" />
-      <Text mt="0.625rem">{t('Pancakeswap profile is needed for IFO public sale eligibility.')}</Text>
+      <Text mt="0.625rem">{t('9mm profile is needed for IFO public sale eligibility.')}</Text>
     </Flex>
   )
 
