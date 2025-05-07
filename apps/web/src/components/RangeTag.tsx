@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { QuestionHelper, Tag, TagProps, Flex } from '@pancakeswap/uikit'
+import { Flex, QuestionHelper, Tag, TagProps } from '@pancakeswap/uikit'
 import { styleVariants } from '@pancakeswap/uikit/components/Tag/theme'
 import { ReactNode } from 'react'
 
@@ -14,7 +14,7 @@ export function RangeTag({ removed, outOfRange, children, lowContrast = false, .
   const { t } = useTranslation()
 
   return removed ? (
-    <Tag variant={lowContrast ? 'tertiary' : 'textSubtle'} {...props}>
+    <Tag variant={lowContrast ? 'tertiary' : 'textDisabled'} {...props}>
       {children || t('Closed')}
     </Tag>
   ) : outOfRange ? (

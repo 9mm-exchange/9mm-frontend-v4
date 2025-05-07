@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
     .bccb-widget-transfer-input-container {
       margin-top: 16px;
       .bccb-widget-transfer-max > div {
-        color: ${({ theme }) => (theme.isDark ? '#48D0DB' : '#02919D')}; 
+        color: ${({ theme }) => (theme.isDark ? '#22c55e' : '#02919D')}; 
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -672,12 +672,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .bccb-widget-received-info-route-open > div {
-      color: ${({ theme }) => (theme.isDark ? '#48D0DB' : '#02919D')}; 
+      color: ${({ theme }) => (theme.isDark ? '#22c55e' : '#02919D')}; 
       font-size: 14px;
       font-weight: 600;
       line-height: 150%; /* 21px */
       &:hover {
-        color: ${({ theme }) => (theme.isDark ? '#48D0DB' : '#02919D')}; 
+        color: ${({ theme }) => (theme.isDark ? '#22c55e' : '#02919D')}; 
         opacity: 0.6;
       }
     }

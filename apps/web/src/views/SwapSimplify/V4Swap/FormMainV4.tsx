@@ -15,10 +15,11 @@ import { useCurrencyBalances } from 'state/wallet/hooks'
 import { currencyId } from 'utils/currencyId'
 import { maxAmountSpend } from 'utils/maxAmountSpend'
 
+import { FlipButton } from 'views/Swap/V3Swap/containers/FlipButton'
 import { useAccount } from 'wagmi'
 import useWarningImport from '../../Swap/hooks/useWarningImport'
 import { useIsWrapping } from '../../Swap/V3Swap/hooks'
-import { AssignRecipientButton, FlipButton } from './FlipButton'
+import { AssignRecipientButton } from './FlipButton'
 import { FormContainer } from './FormContainer'
 import { Recipient } from './Recipient'
 
