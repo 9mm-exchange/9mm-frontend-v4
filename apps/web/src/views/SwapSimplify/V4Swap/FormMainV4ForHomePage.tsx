@@ -103,7 +103,7 @@ export function FormMainForHomePage({ inputAmount, outputAmount, tradeLoading }:
             </Text>
           }
         />
-        <FlipButton compact={isMobile} replaceBrowser={false} />
+        <FlipButton />
         <CurrencyInputPanelSimplify
           id="swap-currency-output"
           showUSDPrice
