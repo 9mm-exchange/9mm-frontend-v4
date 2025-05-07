@@ -174,7 +174,7 @@ export default function V3FormView({
     formState,
   )
   const hasZapV3Pool = useMemo(() => {
-    if (pool) {
+    if (pool && pool.chainId !== 369) {
       const zapV3Whitelist = ZAP_V3_POOL_ADDRESSES[pool.chainId]
       if (zapV3Whitelist) {
         if (zapV3Whitelist.length === 0) return true

@@ -11,8 +11,8 @@ import { useDerivedPositionInfo } from 'hooks/v3/useDerivedPositionInfo'
 import useV3DerivedInfo from 'hooks/v3/useV3DerivedInfo'
 import { useV3PositionFromTokenId, useV3TokenIdsByAccount } from 'hooks/v3/useV3Positions'
 import { useCallback, useMemo, useState } from 'react'
-import { CurrencyField as Field } from 'utils/types'
 import { maxAmountSpend } from 'utils/maxAmountSpend'
+import { CurrencyField as Field } from 'utils/types'
 
 import { useTranslation } from '@pancakeswap/localization'
 import { AppHeader } from 'components/App'
@@ -35,9 +35,9 @@ import { isUserRejected } from 'utils/sentry'
 import { getViemClients } from 'utils/viem'
 import { hexToBigInt } from 'viem'
 
-import { transactionErrorToUserReadableMessage } from 'utils/transactionErrorToUserReadableMessage'
 import { ZapLiquidityWidget } from 'components/ZapLiquidityWidget'
 import { ZAP_V3_POOL_ADDRESSES } from 'config/constants/zapV3'
+import { transactionErrorToUserReadableMessage } from 'utils/transactionErrorToUserReadableMessage'
 import { V3SubmitButton } from './components/V3SubmitButton'
 import LockedDeposit from './formViews/V3FormView/components/LockedDeposit'
 import { PositionPreview } from './formViews/V3FormView/components/PositionPreview'
@@ -125,7 +125,7 @@ export default function IncreaseLiquidityV3({ currencyA: baseCurrency, currencyB
   )
 
   const hasZapV3Pool = useMemo(() => {
-    if (pool) {
+    if (pool && pool.chainId !== 369) {
       const zapV3Whitelist = ZAP_V3_POOL_ADDRESSES[pool.chainId]
       if (zapV3Whitelist) {
         if (zapV3Whitelist.length === 0) return true

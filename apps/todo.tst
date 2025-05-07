@@ -17,17 +17,25 @@ To DO
 Issues
 
 
-1. swap page switch button color
-2. APR Issue fix for v2 & v3
-3. Check token serach is why not working
 
+1. APR Issue fix for v2 & v3
+2. Check token serach is why not working
+5. Change Bunny image on add liquidity page v2
 
-
-1. Bridge Add Comming Soon
+Future Work
+1. Bridge 
 2. Ramp buy sell
-2. Check can we work with notications if doable do , otherwise remove the option
+2. Notifications
 3. Make a profile
 4. Implement Stable swaps
 5. Implement Syrup Pools
 6. Implement Farming
-7. Only available when farming is active https://v3dev.9mm.pro/liquidity/pools [create API] 
+7. V4 
+
+
+API Issues
+
+1. https://routing-api.pancakeswap.com/v0/v3-pools-tvl/369
+2. https://configs.pancakeswap.com/api/data/cached/farms?chainId=369
+3. https://v3dev.9mm.pro/api/cached/pools/apr/v2/pulse/0x0d88c5bc824b8f4d21dc0b5375be90bE768fdfD9 v2 pool apr API
+4. https://v3dev.9mm.pro/api/cached/pools/v3/pulse/list/top chcek why it caching [] pools

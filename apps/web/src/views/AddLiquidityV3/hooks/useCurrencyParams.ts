@@ -29,7 +29,7 @@ export function useCurrencyParams(): {
     // ETH-USDC on all other EVM deployments
     return [
       native.symbol,
-      USDC[chainId]?.address || USDT[chainId]?.address || CAKE[chainId]?.address || STABLE_COIN[chainId]?.address,
+      CAKE[chainId]?.address || USDC[chainId]?.address || USDT[chainId]?.address || STABLE_COIN[chainId]?.address,
     ]
   }
 
