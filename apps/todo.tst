@@ -20,7 +20,6 @@ Issues
 
 1. APR Issue fix for v2 & v3
 2. Check token serach is why not working
-5. Change Bunny image on add liquidity page v2
 
 Future Work
 1. Bridge 
