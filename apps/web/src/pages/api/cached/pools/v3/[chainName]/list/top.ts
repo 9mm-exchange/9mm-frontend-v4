@@ -15,7 +15,7 @@ interface PoolsDataResponse {
  * - 5 minutes fresh period
  * - 5 minutes stale window (for background revalidation)
  */
-const CACHE_DURATION = 300 // 5 minutes in seconds
+const CACHE_DURATION = 1500 // 25 minutes in seconds
 const CACHE_HEADERS = {
   'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${CACHE_DURATION}`,
   'CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
@@ -37,8 +37,8 @@ const getPoolsDataWithRedis = async (chainId: number, token?: string): Promise<P
       cacheKey,
       async () => {
         const freshData = await getPoolsData(chainId, normalizedToken)
-        if (freshData.error) {
-          throw new Error('Failed to fetch pools data')
+        if (freshData.error || !freshData.data?.length) {
+          throw new Error('Failed to fetch pools or top pool data')
         }
         return freshData
       },

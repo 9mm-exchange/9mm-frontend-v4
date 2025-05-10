@@ -1,5 +1,5 @@
 import { NextApiHandler } from 'next'
-import { getPoolAprData } from 'queries/pools/apr'
+import { getPoolAprData } from 'queries/pools/v2/apr'
 import { multiChainId } from 'state/info/constant'
 
 const CACHE_HEADERS = {

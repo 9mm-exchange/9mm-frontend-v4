@@ -6,13 +6,11 @@ import { multiChainId } from 'state/info/constant'
 
 /**
  * Cache Configuration:
- * - 8 minutes fresh period (token data updates moderately frequently)
- * - 8 minutes stale window (for background revalidation)
+ * - 25 minutes fresh period (token data updates moderately frequently)
  */
-const CACHE_DURATION = 960 // 16 minutes in seconds
-const STALE_WINDOW = 960 // 16 minutes in seconds
+const CACHE_DURATION = 1500 // 25 minutes in seconds
 const CACHE_HEADERS = {
-  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${STALE_WINDOW}`,
+  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${CACHE_DURATION}`,
   'CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
   'Vercel-CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
 }
@@ -33,8 +31,8 @@ const getTopTokensWithRedis = async (chainId: number) => {
     cacheKey,
     async () => {
       const freshData = await fetchTopTokens(undefined, chainId)
-      if (freshData.error) {
-        throw new Error('Failed to fetch top tokens')
+      if (freshData.error || !freshData.data?.length) {
+        throw new Error('Failed to fetch pools or top tokens data')
       }
       return freshData
     },
