@@ -13,6 +13,7 @@ import {
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 
 import { ChainLogo } from 'components/Logo/ChainLogo'
+import { optichain } from 'config/chains'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import { useRouter } from 'next/router'
 import { useCallback, useMemo } from 'react'
@@ -75,7 +76,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   )
 }
 
-const targetChains = [pulsechain, base, sonic]
+const targetChains = [pulsechain, base, sonic, optichain]
 
 export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex }) => {
   const { t } = useTranslation()

@@ -36,6 +36,7 @@ const SUCCESS_RATE_CONFIG = {
   [ChainId.BSC]: 0.1,
   [ChainId.ETHEREUM]: 0.1,
   [ChainId.PULSECHAIN]: 0.1,
+  [ChainId.OPTIPULSE]: 0.1,
   [ChainId.SONIC]: 0.1,
   [ChainId.GOERLI]: 0.1,
   [ChainId.ARBITRUM_ONE]: 0.1,

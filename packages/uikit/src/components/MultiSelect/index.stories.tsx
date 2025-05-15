@@ -12,7 +12,8 @@ export default {
 const chains = [
   { label: "BNB", value: "BNB", icon: "https://assets.pancakeswap.finance/web/chains/56.png" },
   { label: "Ethereum", value: "Ethereum", icon: "https://assets.pancakeswap.finance/web/chains/1.png" },
-  { label: "Pulsechain", value: "Pulsechain", icon: "https://tokens.9mm.pro/web/chains/1.png" },
+  { label: "Pulsechain", value: "Pulsechain", icon: "https://tokens.9mm.pro/web/chains/369.png" },
+  { label: "Optipulse", value: "Optipulse", icon: "https://tokens.9mm.pro/web/chains/94128.png" },
   { label: "Sonic", value: "Sonic", icon: "https://tokens.9mm.pro/web/chains/146.png" },
   { label: "Polygon zkEVM", value: "Polygon zkEVM", icon: "https://assets.pancakeswap.finance/web/chains/1101.png" },
   { label: "zkSync Era", value: "zkSync Era", icon: "https://assets.pancakeswap.finance/web/chains/324.png" },

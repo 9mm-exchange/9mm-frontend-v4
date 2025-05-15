@@ -1,6 +1,7 @@
 export enum ChainId {
   ETHEREUM = 1,
   PULSECHAIN = 369,
+  OPTIPULSE = 94128,
   SONIC = 146,
   GOERLI = 5,
   BSC = 56,

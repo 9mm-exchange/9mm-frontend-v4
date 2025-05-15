@@ -1,6 +1,33 @@
 import { ChainId, chainNames } from '@pancakeswap/chains'
 import memoize from 'lodash/memoize'
+import { defineChain } from 'viem/utils'
 import { Chain, base, bsc as bsc_, pulsechain, sonic } from 'wagmi/chains'
+
+export const optichain = defineChain({
+  id: 94128,
+  name: 'OptiPulse',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Test Pulse',
+    symbol: 'TPLS',
+  },
+  rpcUrls: {
+    default: { http: ['https://rpc-testnet.optipulse.io'] },
+  },
+  blockExplorers: {
+    default: {
+      name: 'OptiPulse Explorer',
+      url: 'https://testnet-explorer.optipulse.io/',
+    },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      blockCreated: 60,
+    },
+  },
+  testnet: false,
+})
 
 export const CHAIN_QUERY_NAME = chainNames
 
@@ -45,6 +72,7 @@ export const L2_CHAIN_IDS: ChainId[] = [
   ChainId.LINEA_TESTNET,
   ChainId.LINEA,
   ChainId.BASE,
+  ChainId.OPTIPULSE,
   ChainId.BASE_TESTNET,
   ChainId.OPBNB,
   ChainId.OPBNB_TESTNET,
@@ -75,4 +103,5 @@ export const CHAINS: [Chain, ...Chain[]] = [
   pulsechain,
   base,
   sonic,
+  optichain,
 ]

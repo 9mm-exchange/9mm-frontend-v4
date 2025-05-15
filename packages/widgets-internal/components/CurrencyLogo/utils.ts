@@ -13,6 +13,7 @@ const mapping: { [key: number]: string } = {
   [ChainId.ZKSYNC]: "zksync",
   [ChainId.BASE]: "base-logos",
   [ChainId.PULSECHAIN]: "token-logo",
+  [ChainId.OPTIPULSE]: "optipulse",
   [ChainId.SONIC]: "sonic-logos",
   [ChainId.LINEA]: "linea",
   [ChainId.OPBNB]: "opbnb",
@@ -52,6 +53,7 @@ export const chainName: { [key: number]: string } = {
   [ChainId.BASE]: "base",
   [ChainId.OPBNB]: "opbnb",
   [ChainId.PULSECHAIN]: "pulse",
+  [ChainId.OPTIPULSE]: "optipulse",
   [ChainId.SONIC]: "sonic",
   [ChainId.MONAD_TESTNET]: "monad-testnet",
 };

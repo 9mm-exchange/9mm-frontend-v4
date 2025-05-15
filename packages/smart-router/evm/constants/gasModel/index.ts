@@ -16,6 +16,7 @@ import {
   monadTestnetTokens,
   opBnbTestnetTokens,
   opBnbTokens,
+  optiTokens,
   polygonZkEvmTestnetTokens,
   polygonZkEvmTokens,
   pulseTokens,
@@ -28,6 +29,7 @@ import {
 export const usdGasTokensByChain = {
   [ChainId.ETHEREUM]: [ethereumTokens.usdt],
   [ChainId.PULSECHAIN]: [pulseTokens.dai],
+  [ChainId.OPTIPULSE]: [optiTokens.dai],
   [ChainId.SONIC]: [sonicTokens.usdc],
   [ChainId.GOERLI]: [goerliTestnetTokens.usdc],
   [ChainId.BSC]: [bscTokens.usdt],

@@ -54,6 +54,14 @@ export const USDC_PULSE = new ERC20Token(
   'USD Coin',
 )
 
+export const USDC_OPTI = new ERC20Token(
+  ChainId.OPTIPULSE,
+  '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+  6,
+  'USDC',
+  'USD Coin',
+)
+
 export const USDC_SONIC = new ERC20Token(
   ChainId.SONIC,
   '0x29219dd400f2Bf60E5a23d13Be72B486D4038894',
@@ -90,6 +98,15 @@ export const USDT_ETH = new ERC20Token(
 
 export const USDT_PULSE = new ERC20Token(
   ChainId.PULSECHAIN,
+  '0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f',
+  6,
+  'USDT',
+  'Tether USD',
+  'https://tether.to/',
+)
+
+export const USDT_OPTI = new ERC20Token(
+  ChainId.OPTIPULSE,
   '0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f',
   6,
   'USDT',
@@ -180,6 +197,14 @@ export const CAKE = {
     18,
     '9MM',
     '9mm Dex Token',
+    '',
+  ),
+  [ChainId.OPTIPULSE]: new ERC20Token(
+    ChainId.OPTIPULSE,
+    '0xB3112fdA56C1109029D2151a847566c2d814199C',
+    18,
+    'TST',
+    'Test',
     '',
   ),
   [ChainId.SONIC]: new ERC20Token(
@@ -303,6 +328,7 @@ export const USDC = {
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.PULSECHAIN]: USDC_PULSE,
+  [ChainId.OPTIPULSE]: USDC_OPTI,
   [ChainId.SONIC]: USDC_SONIC,
   [ChainId.GOERLI]: USDC_GOERLI,
   [ChainId.ZKSYNC]: new ERC20Token(
@@ -431,6 +457,7 @@ export const USDT = {
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
   [ChainId.PULSECHAIN]: USDT_PULSE,
+  [ChainId.OPTIPULSE]: USDT_OPTI,
   [ChainId.SONIC]: USDT_SONIC,
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
@@ -547,6 +574,14 @@ export const DAI = {
     'Dai Stablecoin',
     'https://www.makerdao.com/',
   ),
+  [ChainId.OPTIPULSE]: new ERC20Token(
+    ChainId.OPTIPULSE,
+    '0xefD766cCb38EaF1dfd701853BFCe31359239F305',
+    18,
+    'DAI',
+    'Dai Stablecoin',
+    'https://www.makerdao.com/',
+  ),
   [ChainId.POLYGON_ZKEVM]: new ERC20Token(
     ChainId.POLYGON_ZKEVM,
     '0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4',
@@ -585,6 +620,7 @@ export const WBTC_ETH = new ERC20Token(
 export const STABLE_COIN = {
   [ChainId.ETHEREUM]: USDT[ChainId.ETHEREUM],
   [ChainId.PULSECHAIN]: DAI[ChainId.PULSECHAIN],
+  [ChainId.OPTIPULSE]: DAI[ChainId.OPTIPULSE],
   [ChainId.SONIC]: USDC[ChainId.SONIC],
   [ChainId.GOERLI]: USDC[ChainId.GOERLI],
   [ChainId.BSC]: USDT[ChainId.BSC],

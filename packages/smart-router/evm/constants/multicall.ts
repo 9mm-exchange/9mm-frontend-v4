@@ -19,6 +19,13 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
   [ChainId.BSC]: DEFAULT,
   [ChainId.ETHEREUM]: DEFAULT,
   [ChainId.PULSECHAIN]: DEFAULT,
+  [ChainId.OPTIPULSE]: {
+    ...DEFAULT,
+    defaultConfig: {
+      ...DEFAULT.defaultConfig,
+      dropUnexecutedCalls: true,
+    },
+  },
   [ChainId.SONIC]: DEFAULT,
   [ChainId.GOERLI]: DEFAULT,
   [ChainId.ARBITRUM_ONE]: DEFAULT,

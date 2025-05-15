@@ -59,9 +59,9 @@ const TermsOfService = () => {
       <Text as="h3">Introduction</Text>
       <Text as="p">
         The Website provides access to (a) a decentralized protocol on various public blockchains, including but not
-        limited to Pulsechain Chain, Sonic and Base, that allow users to trade certain compatible digital assets (“the
-        9mm Swap protocol” or the “Protocol”), among other services. The Website is one, but not the exclusive, means of
-        accessing the Protocol.
+        limited to Pulsechain Chain, Sonic, OptiPulse and Base, that allow users to trade certain compatible digital
+        assets (“the 9mm Swap protocol” or the “Protocol”), among other services. The Website is one, but not the
+        exclusive, means of accessing the Protocol.
       </Text>
       <Text as="p">
         To access the Website, you must use non-custodial wallet software, which allows you to interact with public
@@ -97,13 +97,13 @@ const TermsOfService = () => {
         The Website is distinct from the Protocol and is one, but not the exclusive, means of accessing the Protocol.
         The Protocol itself has three versions, designated as v1, v2, and v3, each of which comprises open-source or
         source-available self-executing smart contracts that are deployed on various public blockchains, such as
-        PulseChain, Base and Sonic. 9mm Swap does not control or operate any version of the Protocol on any blockchain
-        network. By using the Website, you understand that you are not buying or selling digital assets from us and that
-        we do not operate any liquidity pools on the Protocol or control trade execution on the Protocol. When traders
-        pay fees for trades, those fees accrue to liquidity providers for the Protocol. As a general matter, the 9mm
-        Swap team is not a liquidity provider into Protocol liquidity pools and liquidity providers are independent
-        third parties. The Protocol was initially deployed on the PulseChain blockchain, and has since been deployed on
-        several other blockchain networks.
+        PulseChain, Base, OptiPulse and Sonic. 9mm Swap does not control or operate any version of the Protocol on any
+        blockchain network. By using the Website, you understand that you are not buying or selling digital assets from
+        us and that we do not operate any liquidity pools on the Protocol or control trade execution on the Protocol.
+        When traders pay fees for trades, those fees accrue to liquidity providers for the Protocol. As a general
+        matter, the 9mm Swap team is not a liquidity provider into Protocol liquidity pools and liquidity providers are
+        independent third parties. The Protocol was initially deployed on the PulseChain blockchain, and has since been
+        deployed on several other blockchain networks.
       </Text>
 
       <Text as="h3">Eligibility</Text>
