@@ -4,19 +4,19 @@ import { ERC20Token, WETH9 } from '@pancakeswap/sdk'
 export const optiTokens = {
   weth: WETH9[ChainId.OPTIPULSE],
 
-  pls: new ERC20Token(ChainId.OPTIPULSE, '0xed22410bF8e1F0Fc7b556d556C9428f359FC37Af', 18, 'PLS', 'Pulse'),
+  pls: new ERC20Token(ChainId.OPTIPULSE, '0xed22410bF8e1F0Fc7b556d556C9428f359FC37Af', 18, 'WTPLS', 'Test Pulse'),
 
-  dai: new ERC20Token(ChainId.OPTIPULSE, '0xefD766cCb38EaF1dfd701853BFCe31359239F305', 18, 'DAI', 'DAI from Ethereum'),
+  dai: new ERC20Token(ChainId.OPTIPULSE, '0xB3112fdA56C1109029D2151a847566c2d814199C', 18, 'DAI', 'DAI from Ethereum'),
 
   usdt: new ERC20Token(
     ChainId.OPTIPULSE,
-    '0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f',
-    6,
+    '0x6B2A32f4B3ed3d86ba64b594ADb906d296c5774E',
+    18,
     'USDT',
     'USDT from Ethereum',
   ),
 
-  ninemm: new ERC20Token(ChainId.OPTIPULSE, '0xB3112fdA56C1109029D2151a847566c2d814199C', 18, 'TST', 'Test', ''),
+  nineMM: new ERC20Token(ChainId.OPTIPULSE, '0xF856b792526FB3192992ff916d97Ef38E1b5F74b', 18, '9mm', '9mm', ''),
 
   pussy: new ERC20Token(ChainId.OPTIPULSE, '0x4CB4eDdE04772332a42ECb039f3790e17733B4B8', 18, 'PUSSY', 'PUSSY (HOAX)'),
 
@@ -26,7 +26,7 @@ export const optiTokens = {
 
   usdc: new ERC20Token(
     ChainId.OPTIPULSE,
-    '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    '0x36653868210124Af5db4A777BB717f91C095C994',
     18,
     'USDC',
     'USDC from Ethereum',

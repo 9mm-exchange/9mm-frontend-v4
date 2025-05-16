@@ -27,7 +27,7 @@ export const WETH9 = {
     ChainId.OPTIPULSE,
     '0xed22410bF8e1F0Fc7b556d556C9428f359FC37Af',
     18,
-    'TWPLS',
+    'WTPLS',
     'Wrapped Test Pulse',
     'https://weth.io',
   ),

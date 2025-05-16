@@ -56,8 +56,8 @@ export const USDC_PULSE = new ERC20Token(
 
 export const USDC_OPTI = new ERC20Token(
   ChainId.OPTIPULSE,
-  '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-  6,
+  '0x36653868210124Af5db4A777BB717f91C095C994',
+  18,
   'USDC',
   'USD Coin',
 )
@@ -107,8 +107,8 @@ export const USDT_PULSE = new ERC20Token(
 
 export const USDT_OPTI = new ERC20Token(
   ChainId.OPTIPULSE,
-  '0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f',
-  6,
+  '0x6B2A32f4B3ed3d86ba64b594ADb906d296c5774E',
+  18,
   'USDT',
   'Tether USD',
   'https://tether.to/',
@@ -201,10 +201,10 @@ export const CAKE = {
   ),
   [ChainId.OPTIPULSE]: new ERC20Token(
     ChainId.OPTIPULSE,
-    '0xB3112fdA56C1109029D2151a847566c2d814199C',
+    '0xF856b792526FB3192992ff916d97Ef38E1b5F74b',
     18,
-    'TST',
-    'Test',
+    '9mm',
+    '9mm',
     '',
   ),
   [ChainId.SONIC]: new ERC20Token(
@@ -576,7 +576,7 @@ export const DAI = {
   ),
   [ChainId.OPTIPULSE]: new ERC20Token(
     ChainId.OPTIPULSE,
-    '0xefD766cCb38EaF1dfd701853BFCe31359239F305',
+    '0xB3112fdA56C1109029D2151a847566c2d814199C',
     18,
     'DAI',
     'Dai Stablecoin',
