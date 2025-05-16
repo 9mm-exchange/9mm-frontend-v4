@@ -38,3 +38,9 @@ API Issues
 2. https://configs.pancakeswap.com/api/data/cached/farms?chainId=369
 3. https://v3dev.9mm.pro/api/cached/pools/apr/v2/pulse/0x0d88c5bc824b8f4d21dc0b5375be90bE768fdfD9 v2 pool apr API
 4. https://v3dev.9mm.pro/api/cached/pools/v3/pulse/list/top chcek why it caching [] pools
+
+
+OPTIPULSE
+
+1. Subgraphs
+2. Universal Router
