@@ -1,24 +1,24 @@
-import invariant from 'tiny-invariant'
+import { TypeTagStruct, parseTypeTag } from '@aptos-labs/ts-sdk'
 import {
-  Price,
   BigintIsh,
+  CurrencyAmount,
   FIVE,
+  InsufficientInputAmountError,
+  InsufficientReservesError,
+  MINIMUM_LIQUIDITY,
   ONE,
+  Price,
   ZERO,
   _10000,
   _9975,
-  InsufficientInputAmountError,
-  InsufficientReservesError,
-  CurrencyAmount,
   sqrt,
-  MINIMUM_LIQUIDITY,
 } from '@pancakeswap/swap-sdk-core'
-import { TypeTagStruct, parseTypeTag } from '@aptos-labs/ts-sdk'
+import invariant from 'tiny-invariant'
 
-import { HexString } from './hexString'
-import { Currency } from './currency'
-import { PAIR_LP_TYPE_TAG, PAIR_RESERVE_TYPE_TAG } from './constants'
 import { Coin } from './coin'
+import { PAIR_LP_TYPE_TAG, PAIR_RESERVE_TYPE_TAG } from './constants'
+import { Currency } from './currency'
+import { HexString } from './hexString'
 
 const typeArgToAddress = (typeArg: TypeTagStruct): string => {
   const children = typeArg.value.typeArgs
@@ -72,8 +72,8 @@ export class Pair {
       tokenA.chainId,
       Pair.getAddress(tokenA, tokenB),
       8,
-      'Cake-LP',
-      `Pancake-${token0.symbol}-${token1.symbol}-LP`
+      '9mm-LP',
+      `9mm-${token0.symbol}-${token1.symbol}-LP`
     )
   }
 

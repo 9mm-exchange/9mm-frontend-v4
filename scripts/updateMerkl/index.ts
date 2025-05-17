@@ -43,8 +43,8 @@ const parseMerklConfig = (merklConfigResponse: any[]): MerklConfigPool[] => {
     })
     .filter(
       (opportunity) =>
-        (opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('cake-lp') ||
-          opportunity?.protocol?.id?.toLowerCase().startsWith('pancakeswap')) &&
+        (opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('9mm-lp') ||
+          opportunity?.protocol?.id?.toLowerCase().startsWith('9mm')) &&
         opportunity?.apr > 0,
     )
     .map((pool) => ({

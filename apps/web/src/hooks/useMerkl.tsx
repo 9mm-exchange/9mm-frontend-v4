@@ -1,3 +1,4 @@
+import { supportedChainIdV4 } from '@pancakeswap/farms'
 import { useTranslation } from '@pancakeswap/localization'
 import { Currency, CurrencyAmount, Token } from '@pancakeswap/sdk'
 import { TokenInfo } from '@pancakeswap/token-lists'
@@ -10,16 +11,15 @@ import { DISTRIBUTOR_ADDRESSES } from 'config/merkl'
 import useAccountActiveChain from 'hooks/useAccountActiveChain'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import useCatchTxError from 'hooks/useCatchTxError'
+import { useMasterchefV3 } from 'hooks/useContract'
 import uniq from 'lodash/uniq'
 import { useCallback, useMemo } from 'react'
+import { useCurrentBlockTimestamp as useBlockTimestamp } from 'state/block/hooks'
 import { useAllLists } from 'state/lists/hooks'
+import { isAddressEqual } from 'utils'
 import { getContract } from 'utils/contractHelpers'
 import { Address } from 'viem'
 import { useWalletClient } from 'wagmi'
-import { useMasterchefV3 } from 'hooks/useContract'
-import { isAddressEqual } from 'utils'
-import { useCurrentBlockTimestamp as useBlockTimestamp } from 'state/block/hooks'
-import { supportedChainIdV4 } from '@pancakeswap/farms'
 
 export const MERKL_API_V4 = 'https://api.merkl.xyz/v4'
 
@@ -58,8 +58,8 @@ export function useMerklInfo(poolAddress?: string): {
 
       const opportunities = merklDataV4?.filter(
         (opportunity) =>
-          opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('cake-lp') ||
-          opportunity?.protocol?.id?.toLowerCase().startsWith('pancakeswap'),
+          opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('9mm-lp') ||
+          opportunity?.protocol?.id?.toLowerCase().startsWith('9mm'),
       )
 
       if (!opportunities || !opportunities.length) return undefined

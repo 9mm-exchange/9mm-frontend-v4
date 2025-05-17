@@ -235,8 +235,8 @@ export const getAllNetworkMerklApr = async (signal?: AbortSignal) => {
     const result = await resp.json()
     const pancakeResult = result?.filter(
       (opportunity) =>
-        opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('cake-lp') ||
-        opportunity?.protocol?.id?.toLowerCase().startsWith('pancakeswap'),
+        opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('9mm-lp') ||
+        opportunity?.protocol?.id?.toLowerCase().startsWith('9mm'),
     )
     const aprs = await Promise.all(supportedChainIdV4.map((chainId) => getMerklApr(pancakeResult, chainId)))
     return aprs.reduce((acc, apr) => Object.assign(acc, apr), {})
