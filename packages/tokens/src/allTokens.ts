@@ -15,6 +15,7 @@ import { lineaTestnetTokens } from './constants/lineaTestnet'
 import { monadTestnetTokens } from './constants/monadTestnet'
 import { opBnbTokens } from './constants/opBNB'
 import { opBnbTestnetTokens } from './constants/opBnbTestnet'
+import { optiTokens } from './constants/optiPulse'
 import { polygonZkEvmTokens } from './constants/polygonZkEVM'
 import { polygonZkEvmTestnetTokens } from './constants/polygonZkEVMTestnet'
 import { pulseTokens } from './constants/pulse'
@@ -30,6 +31,7 @@ export const allTokens = {
   [ChainId.BSC_TESTNET]: bscTestnetTokens,
   [ChainId.ETHEREUM]: ethereumTokens,
   [ChainId.PULSECHAIN]: pulseTokens,
+  [ChainId.OPTIPULSE]: optiTokens,
   [ChainId.SONIC]: sonicTokens,
   [ChainId.ARBITRUM_ONE]: arbitrumTokens,
   [ChainId.POLYGON_ZKEVM]: polygonZkEvmTokens,

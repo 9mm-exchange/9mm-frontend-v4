@@ -5,6 +5,7 @@ export const ZAP_V3_POOL_ADDRESSES: Record<number, string[]> = {
   [ChainId.BSC]: [] as string[],
   [ChainId.PULSECHAIN]: [] as string[],
   [ChainId.SONIC]: [] as string[],
+  [ChainId.OPTIPULSE]: [] as string[],
   [ChainId.BASE]: [] as string[],
   [ChainId.ETHEREUM]: [
     '0x04c8577958CcC170EB3d2CCa76F9d51bc6E42D8f', // USDC-USDT 0.01%

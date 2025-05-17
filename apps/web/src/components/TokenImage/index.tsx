@@ -27,6 +27,7 @@ export const tokenImageChainNameMapping = {
   [ChainId.LINEA]: 'linea/',
   [ChainId.BASE]: 'base-logos/',
   [ChainId.SONIC]: 'sonic-logo/',
+  [ChainId.OPTIPULSE]: 'optipulse/',
   [ChainId.OPBNB]: 'opbnb/',
 }
 

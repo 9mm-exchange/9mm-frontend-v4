@@ -834,6 +834,8 @@ export const useChainNameByQuery = (): MultiChainName => {
         return 'PULSE'
       case 'sonic':
         return 'SONIC'
+      case 'optipulse':
+        return 'OPTIPULSE'
       case 'polygon-zkevm':
         return 'POLYGON_ZKEVM'
       case 'zksync':

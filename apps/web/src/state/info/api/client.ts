@@ -92,6 +92,7 @@ export const chainIdToExplorerInfoChainName = {
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.PULSECHAIN]: 'pulse',
   [ChainId.SONIC]: 'sonic',
+  [ChainId.OPTIPULSE]: 'optipulse',
   [ChainId.POLYGON_ZKEVM]: 'polygon-zkevm',
   [ChainId.ZKSYNC]: 'zksync',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',
