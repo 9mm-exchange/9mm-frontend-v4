@@ -935,6 +935,7 @@ export interface components {
     ChainName:
       | 'bsc'
       | 'pulse'
+      | 'optipulse'
       | 'sonic'
       | 'bsc-testnet'
       | 'ethereum'
@@ -1197,6 +1198,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1333,6 +1335,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1371,6 +1374,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1409,6 +1413,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1475,6 +1480,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1517,6 +1523,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1563,6 +1570,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1607,6 +1615,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1650,6 +1659,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1693,6 +1703,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1757,6 +1768,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1800,6 +1812,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1835,6 +1848,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1893,6 +1907,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -1957,6 +1972,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2070,6 +2086,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2113,6 +2130,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2151,6 +2169,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2192,6 +2211,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2233,6 +2253,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2276,6 +2297,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2341,6 +2363,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2376,6 +2399,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2441,6 +2465,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2507,6 +2532,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -2540,6 +2566,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -3443,6 +3470,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'optipulse'
               | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
@@ -3456,6 +3484,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'optipulse'
               | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
@@ -3540,6 +3569,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'optipulse'
               | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
@@ -3553,6 +3583,7 @@ export interface operations {
           | (
               | 'bsc'
               | 'pulse'
+              | 'optipulse'
               | 'sonic'
               | 'bsc-testnet'
               | 'ethereum'
@@ -3618,6 +3649,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -3714,6 +3746,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -3868,6 +3901,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -3933,6 +3967,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4030,6 +4065,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4232,6 +4268,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4273,6 +4310,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4313,6 +4351,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4380,6 +4419,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4453,6 +4493,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
@@ -4499,6 +4540,7 @@ export interface operations {
         chainName:
           | 'bsc'
           | 'pulse'
+          | 'optipulse'
           | 'sonic'
           | 'bsc-testnet'
           | 'ethereum'
