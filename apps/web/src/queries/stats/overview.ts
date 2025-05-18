@@ -92,28 +92,28 @@ export const getOverviewData = async (
     const result: OverviewData = {
       totalFeeUSD: current.totalFeesUSD,
       totalFeeUSD24h: parseFloat(historical24.totalFeesUSD).toString(),
-      totalFeeUSD48h: parseFloat(historical48.totalFeesUSD).toString(),
-      totalFeeUSD30d: parseFloat(historical30d.totalFeesUSD).toString(),
+      totalFeeUSD48h: parseFloat(historical48?.totalFeesUSD).toString(),
+      totalFeeUSD30d: parseFloat(historical30d?.totalFeesUSD).toString(),
 
       totalProtocolFeeUSD: current.totalProtocolFeesUSD,
       totalProtocolFeeUSD24h: parseFloat(historical24.totalProtocolFeesUSD).toString(),
-      totalProtocolFeeUSD48h: parseFloat(historical48.totalProtocolFeesUSD).toString(),
-      totalProtocolFeeUSD30d: parseFloat(historical30d.totalProtocolFeesUSD).toString(),
+      totalProtocolFeeUSD48h: parseFloat(historical48?.totalProtocolFeesUSD).toString(),
+      totalProtocolFeeUSD30d: parseFloat(historical30d?.totalProtocolFeesUSD).toString(),
 
       tvlUSD: current.totalValueLockedUSD,
       tvlUSD24h: historical24.totalValueLockedUSD,
-      tvlUSD48h: historical48.totalValueLockedUSD,
-      tvlUSD30d: historical30d.totalValueLockedUSD,
+      tvlUSD48h: historical48?.totalValueLockedUSD,
+      tvlUSD30d: historical30d?.totalValueLockedUSD,
 
       totalVolumeUSD: current.totalVolumeUSD,
       volumeUSD24h: (parseFloat(current.totalVolumeUSD) - parseFloat(historical24.totalVolumeUSD)).toString(),
-      volumeUSD48h: (parseFloat(current.totalVolumeUSD) - parseFloat(historical48.totalVolumeUSD)).toString(),
-      volumeUSD30d: (parseFloat(current.totalVolumeUSD) - parseFloat(historical30d.totalVolumeUSD)).toString(),
+      volumeUSD48h: (parseFloat(current.totalVolumeUSD) - parseFloat(historical48?.totalVolumeUSD)).toString(),
+      volumeUSD30d: (parseFloat(current.totalVolumeUSD) - parseFloat(historical30d?.totalVolumeUSD)).toString(),
 
       totalTxCount: parseInt(current.txCount, 10),
       txCount24h: parseInt(current.txCount, 10) - parseInt(historical24.txCount, 10),
-      txCount48h: parseInt(current.txCount, 10) - parseInt(historical48.txCount, 10),
-      txCount30d: parseInt(current.txCount, 10) - parseInt(historical30d.txCount, 10),
+      txCount48h: parseInt(current.txCount, 10) - parseInt(historical48?.txCount, 10),
+      txCount30d: parseInt(current.txCount, 10) - parseInt(historical30d?.txCount, 10),
     }
 
     return { error: false, data: result }

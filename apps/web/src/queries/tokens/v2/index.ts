@@ -95,9 +95,6 @@ export async function fetchTopTokens(
     }
 
     const blocks = await getBlocksByTimestamp([t24, t48, t7d], chainId)
-    if (!blocks || blocks.length < 3) {
-      throw new Error('Failed to fetch required blocks')
-    }
 
     const blacklist = multiChainTokenBlackList[chainName]?.map((id) => id.toLowerCase()) ?? []
     let tokenAddresses: string[] = tokenAddress ? [tokenAddress] : []
