@@ -44,10 +44,7 @@ export const v2Clients = {
 }
 
 export const infoStableSwapClients: Record<(typeof STABLE_SUPPORTED_CHAIN_IDS)[number], GraphQLClient> = {
-  [ChainId.BSC]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.BSC]),
-  [ChainId.ARBITRUM_ONE]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.ARBITRUM_ONE]),
-  [ChainId.ETHEREUM]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.ETHEREUM]),
-  [ChainId.BSC_TESTNET]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.BSC_TESTNET]),
+  [ChainId.OPTIPULSE]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.OPTIPULSE]),
 }
 
 export const bitQueryServerClient = new GraphQLClient(BIT_QUERY, {

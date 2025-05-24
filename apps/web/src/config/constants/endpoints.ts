@@ -74,6 +74,7 @@ export const STABLESWAP_SUBGRAPHS_URLS = {
   [ChainId.BSC]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-bsc`,
   [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-arb`,
   [ChainId.ETHEREUM]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-eth`,
+  [ChainId.OPTIPULSE]: '',
 }
 
 export const TRADING_REWARD_API = 'https://trading-reward.pancakeswap.com/api/v1'
