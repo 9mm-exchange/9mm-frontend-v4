@@ -26,7 +26,6 @@ import {
 import TransactionsModal from 'components/App/Transactions/TransactionsModal'
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import { SettingsMode } from 'components/Menu/GlobalSettings/types'
-import { ASSET_CDN } from 'config/constants/endpoints'
 import intersection from 'lodash/intersection'
 import NextLink from 'next/link'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -311,13 +310,7 @@ const EmptyListPlaceholder = ({ text, imageUrl }: { text: string; imageUrl?: str
 
   return (
     <FlexGap alignItems="center" flexDirection="column" gap="16px">
-      <img
-        width={156}
-        height={179}
-        alt="empty placeholder"
-        src={imageUrl ?? `${ASSET_CDN}/web/universalFarms/empty_list_bunny.png`}
-      />
-      <Text fontSize="14px" color="textSubtle" textAlign="center">
+      <Text fontSize="14px" color="textSubtle" textAlign="center" style={{ marginTop: '10px' }}>
         {text}
       </Text>
       {!account ? <ConnectWalletButton /> : null}
