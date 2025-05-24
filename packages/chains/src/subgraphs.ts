@@ -27,7 +27,7 @@ export function getV3Subgraphs({
   theGraphApiKey = '2e49631ace452362bcf744c2c94ca145',
 }: SubgraphParams) {
   return {
-    [ChainId.ETHEREUM]: `https://api.studio.thegraph.com/query/80328/9-mmethv-3/version/latest`,
+    [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/45F3dvAke57HRSEQfjoirVuzVKeiyS4oQKfmrZ742UxG`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm-v3-latest`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v3`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/EatYuv9ktFGrSDGRw9cNwkKXweCX52hRAiamGXQb29Ah`,
@@ -61,7 +61,7 @@ export function getV2Subgraphs({
 }: SubgraphParams) {
   return {
     [ChainId.BSC]: 'https://proxy-worker-api.pancakeswap.com/bsc-exchange',
-    [ChainId.ETHEREUM]: `https://api.studio.thegraph.com/query/80328/9-mmeth/version/latest`,
+    [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/GH9mv6ABa7gZcwi84CvfQeWWNT1rWwcKjb72DySLTgAd`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v2`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/3BKTRZC8H2zfh4CohDNk6EoRt78o9k1sUfXeFwKSAARf`,
