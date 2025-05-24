@@ -7,7 +7,7 @@ export type VaultsConfigByChain = {
   [chainId in SupportedChainId]: VaultConfig[]
 }
 
-export const PM_V2_SS_BOOSTER_SUPPORT_CHAINS = [ChainId.BSC, ChainId.ETHEREUM]
+export const PM_V2_SS_BOOSTER_SUPPORT_CHAINS = [ChainId.BSC]
 
 export function isPCSVaultConfig(config: VaultConfig): config is PCSDuoTokenVaultConfig {
   return config.manager === MANAGER.PCS
