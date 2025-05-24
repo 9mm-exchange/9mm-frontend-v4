@@ -7,10 +7,10 @@ import { BIG_INT_ZERO } from 'config/constants/exchange'
 import { PairState } from 'hooks/usePairs'
 import useTotalSupply from 'hooks/useTotalSupply'
 import { useContext, useMemo } from 'react'
-import { CurrencyField as Field } from 'utils/types'
 import { useAddLiquidityV2FormState } from 'state/mint/reducer'
 import { useSingleCallResult } from 'state/multicall/hooks'
 import { useCurrencyBalances } from 'state/wallet/hooks'
+import { CurrencyField as Field } from 'utils/types'
 import { Address } from 'viem'
 import { useEstimatedAmount } from 'views/Swap/hooks/useEstimatedAmount'
 import { StableConfigContext, UseStableSwapInfoContract } from 'views/Swap/hooks/useStableConfig'
@@ -126,6 +126,7 @@ function useMintedStableLP({
     args: inputs,
   })
 
+  console.log({ stableSwapInfoContract, result, error })
   // TODO: Combine get_add_liquidity_mint_amount + balances in one call
   const balanceResult = useSingleCallResult({
     contract: stableSwapInfoContract,
@@ -251,6 +252,8 @@ export function useStableLPDerivedMintInfo(
     }
     return undefined
   }, [targetAmount, estimatedOutputAmount, currencyA, currencyB, currencyBAmountQuotient, currencyAAmountQuotient])
+
+  console.log('stableConfigContext', stableConfigContext?.stableSwapInfoContract)
 
   const {
     reserves,

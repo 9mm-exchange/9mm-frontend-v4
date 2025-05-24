@@ -2,7 +2,7 @@ import { ChainId } from '@pancakeswap/chains'
 import type { Address } from 'viem'
 
 export const V3_QUOTER_ADDRESSES = {
-  [ChainId.ETHEREUM]: '0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997',
+  [ChainId.ETHEREUM]: '0xC740740Dd73D596f71950294CEec609e4AA1a6C4',
   [ChainId.PULSECHAIN]: '0x500260dD7C27eCE20b89ea0808d05a13CF867279',
   [ChainId.OPTIPULSE]: '0xecFf5782e20b6CE5b3a3102833Cdfcc8BB938a38',
   [ChainId.SONIC]: '0x5A810a28C1f41aF91f4537A86f11d602E4eA9dF1',

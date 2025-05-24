@@ -1,7 +1,7 @@
 import { ChainId, chainNames } from '@pancakeswap/chains'
 import memoize from 'lodash/memoize'
 import { defineChain } from 'viem/utils'
-import { Chain, base, bsc as bsc_, pulsechain, sonic } from 'wagmi/chains'
+import { Chain, base, bsc as bsc_, mainnet, pulsechain, sonic } from 'wagmi/chains'
 
 export const optichain = defineChain({
   id: 94128,
@@ -22,7 +22,7 @@ export const optichain = defineChain({
   },
   contracts: {
     multicall3: {
-      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      address: '0xcA11bde05977b3631167028862bE2a173976CA11',
       blockCreated: 60,
     },
   },
@@ -100,6 +100,7 @@ export const CHAINS: [Chain, ...Chain[]] = [
   // opBNBTestnet,
   // scrollSepolia,
   // monadTestnet,
+  mainnet,
   pulsechain,
   base,
   sonic,

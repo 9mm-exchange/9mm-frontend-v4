@@ -11,6 +11,7 @@ import { arbitrum, base, bsc, linea, mainnet, opBNB, polygonZkEvm, pulsechain, s
 export type MultiChainName =
   | 'BSC'
   | 'ETH'
+  | 'ETHEREUM'
   | 'PULSE'
   | 'SONIC'
   | 'OPTIPULSE'
@@ -45,6 +46,7 @@ export const multiChainShortName: Record<number, string> = {
 export const multiChainQueryMainToken: Record<MultiChainName, string> = {
   BSC: 'BNB',
   ETH: 'ETH',
+  ETHEREUM: 'ETH',
   SONIC: 'ETH',
   OPTIPULSE: 'ETH',
   PULSE: 'ETH',
@@ -59,6 +61,7 @@ export const multiChainQueryMainToken: Record<MultiChainName, string> = {
 export const multiChainId: Record<MultiChainName, ChainId> = {
   BSC: ChainId.BSC,
   ETH: ChainId.ETHEREUM,
+  ETHEREUM: ChainId.ETHEREUM,
   PULSE: ChainId.PULSECHAIN,
   OPTIPULSE: ChainId.OPTIPULSE,
   SONIC: ChainId.SONIC,
@@ -124,6 +127,7 @@ export const multiChainScan: Record<MultiChainName, string> = {
   SONIC: sonic.blockExplorers.default.name,
   OPTIPULSE: optichain.blockExplorers.default.name,
   ETH: mainnet.blockExplorers.default.name,
+  ETHEREUM: mainnet.blockExplorers.default.name,
   POLYGON_ZKEVM: polygonZkEvm.blockExplorers.default.name,
   ZKSYNC: zkSync.blockExplorers.default.name,
   ARB: arbitrum.blockExplorers.default.name,
@@ -144,6 +148,7 @@ export const multiChainTokenBlackList: Record<MultiChainName, string[]> = mapVal
   {
     BSC: TOKEN_BLACKLIST,
     ETH: ETH_TOKEN_BLACKLIST,
+    ETHEREUM: ETH_TOKEN_BLACKLIST,
     PULSE: ['0x'],
     SONIC: ['0x'],
     OPTIPULSE: ['0x'],
@@ -161,6 +166,7 @@ export const multiChainTokenWhiteList: Record<MultiChainName, string[]> = mapVal
   {
     BSC: BSC_TOKEN_WHITELIST,
     ETH: ETH_TOKEN_WHITELIST,
+    ETHEREUM: ETH_TOKEN_WHITELIST,
     PULSE: [],
     SONIC: [],
     OPTIPULSE: [],

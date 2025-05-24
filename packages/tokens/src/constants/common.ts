@@ -185,11 +185,11 @@ export const BUSD = {
 export const CAKE = {
   [ChainId.ETHEREUM]: new ERC20Token(
     ChainId.ETHEREUM,
-    '0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898',
+    '0x5d0b15b9EAb298450202aE84dD8F7D982e50205d',
     18,
-    'CAKE',
+    'TST',
     '9mm Swap Token',
-    'https://pancakeswap.finance/',
+    'https://9mm.pro/',
   ),
   [ChainId.PULSECHAIN]: new ERC20Token(
     ChainId.PULSECHAIN,

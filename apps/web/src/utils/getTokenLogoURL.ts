@@ -6,7 +6,7 @@ import { isAddress } from 'viem'
 
 const mapping = {
   [ChainId.BSC]: 'smartchain',
-  [ChainId.ETHEREUM]: 'ethereum',
+  [ChainId.ETHEREUM]: 'eth',
   [ChainId.PULSECHAIN]: 'token-logo',
   [ChainId.SONIC]: 'sonic-logos',
   [ChainId.OPTIPULSE]: 'optipulse',

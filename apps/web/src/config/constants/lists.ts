@@ -3,7 +3,8 @@ import { ChainId } from '@pancakeswap/chains'
 export const PANCAKE_EXTENDED = 'https://tokens.pancakeswap.finance/pancakeswap-extended.json'
 
 const COINGECKO = 'https://tokens.pancakeswap.finance/coingecko.json'
-export const PANCAKE_ETH_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-eth-default.json'
+export const PANCAKE_ETH_DEFAULT =
+  'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/eth-tokenlist.json'
 export const PANCAKE_PULSE_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/9mm-tokenlist.json'
 export const PANCAKE_SONIC_DEFAULT =
@@ -20,7 +21,6 @@ export const PANCAKE_BASE_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/base-tokenlist.json'
 export const PANCAKE_OPBNB_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-opbnb-default.json'
 
-export const PANCAKE_ETH_MM = 'https://tokens.pancakeswap.finance/pancakeswap-eth-mm.json'
 export const PITEAS_PULSE_MM =
   'https://raw.githubusercontent.com/piteasio/app-tokens/refs/heads/main/piteas-tokenlist.json'
 export const PANCAKE_BSC_MM = 'https://tokens.pancakeswap.finance/pancakeswap-bnb-mm.json'
@@ -36,7 +36,7 @@ const COINGECKO_SONIC = 'https://tokens.coingecko.com/sonic/all.json'
 const PULSE_URLS = [PANCAKE_PULSE_DEFAULT, PITEAS_PULSE_MM, COINGECKO_PULSE]
 const SONIC_URLS = [PANCAKE_SONIC_DEFAULT, COINGECKO_SONIC]
 const OPTIPULSE_URLS = [PANCAKE_OPTIPULSE_DEFAULT]
-const ETH_URLS = [PANCAKE_ETH_DEFAULT, PANCAKE_ETH_MM, COINGECKO_ETH]
+const ETH_URLS = [PANCAKE_ETH_DEFAULT, COINGECKO_ETH]
 const BSC_URLS = [PANCAKE_EXTENDED, COINGECKO, PANCAKE_BSC_MM]
 const POLYGON_ZKEVM_URLS = [
   PANCAKE_POLYGON_ZKEVM_DEFAULT,
@@ -91,7 +91,6 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
   PANCAKE_SONIC_DEFAULT,
   PANCAKE_OPTIPULSE_DEFAULT,
   PANCAKE_BASE_DEFAULT,
-  PANCAKE_ETH_MM,
   PANCAKE_BSC_MM,
   PANCAKE_ARB_MM,
   PANCAKE_ETH_DEFAULT,

@@ -102,6 +102,7 @@ export const getOverviewData = async (
 
       tvlUSD: current.totalValueLockedUSD,
       tvlUSD24h: historical24.totalValueLockedUSD,
+
       tvlUSD48h: historical48?.totalValueLockedUSD,
       tvlUSD30d: historical30d?.totalValueLockedUSD,
 

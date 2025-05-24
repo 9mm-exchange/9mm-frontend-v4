@@ -27,7 +27,7 @@ export function getV3Subgraphs({
   theGraphApiKey = '2e49631ace452362bcf744c2c94ca145',
 }: SubgraphParams) {
   return {
-    [ChainId.ETHEREUM]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/CJYGNhb7RvnhfBDjqpRnD3oxgyhibzc7fkAMa38YV3oS`,
+    [ChainId.ETHEREUM]: `https://api.studio.thegraph.com/query/80328/9-mmethv-3/version/latest`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm-v3-latest`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v3`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/EatYuv9ktFGrSDGRw9cNwkKXweCX52hRAiamGXQb29Ah`,
@@ -61,7 +61,7 @@ export function getV2Subgraphs({
 }: SubgraphParams) {
   return {
     [ChainId.BSC]: 'https://proxy-worker-api.pancakeswap.com/bsc-exchange',
-    [ChainId.ETHEREUM]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/9opY17WnEPD4REcC43yHycQthSeUMQE26wyoeMjZTLEx`,
+    [ChainId.ETHEREUM]: `https://api.studio.thegraph.com/query/80328/9-mmeth/version/latest`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v2`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/3BKTRZC8H2zfh4CohDNk6EoRt78o9k1sUfXeFwKSAARf`,
@@ -79,7 +79,8 @@ export function getV2Subgraphs({
 export function getBlocksSubgraphs({ noderealApiKey }: SubgraphParams) {
   return {
     [ChainId.BSC]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks',
-    [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
+    [ChainId.ETHEREUM]:
+      'https://gateway.thegraph.com/api/2e49631ace452362bcf744c2c94ca145/subgraphs/id/9A6bkprqEG2XsZUYJ5B2XXp6ymz9fNcn4tVPxMWDztYC',
     [ChainId.PULSECHAIN]: 'https://graph.9mm.pro/subgraphs/name/block-client',
     [ChainId.OPTIPULSE]: 'https://testnet-graphs.optipulse.io/subgraphs/name/block-client',
     [ChainId.SONIC]:

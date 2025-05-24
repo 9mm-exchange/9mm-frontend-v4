@@ -21,7 +21,7 @@ import { multiChainId, multiChainPaths, multiChainShortName } from 'state/info/c
 import { useChainNameByQuery, useMultiChainPath } from 'state/info/hooks'
 import { styled } from 'styled-components'
 import { chains } from 'utils/wagmi'
-import { base, pulsechain, sonic } from 'wagmi/chains'
+import { base, mainnet, pulsechain, sonic } from 'wagmi/chains'
 import { v3InfoPath } from '../../constants'
 import Search from '../Search'
 
@@ -76,7 +76,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   )
 }
 
-const targetChains = [pulsechain, base, sonic, optichain]
+const targetChains = [mainnet, pulsechain, base, sonic, optichain]
 
 export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex }) => {
   const { t } = useTranslation()

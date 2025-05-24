@@ -84,9 +84,9 @@ const handler: NextApiHandler = async (req, res) => {
     if (!chainId) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(400).json({
-        error: 'Unsupported chain',
+        error: `Unsupported chain: ${chainName}`,
         supportedChains: Object.keys(multiChainId),
-        documentation: 'https://docs.your-api.com/overview#supported-chains',
+        documentation: 'https://docs.your-api.com/overview#supported-chains2',
       })
     }
 

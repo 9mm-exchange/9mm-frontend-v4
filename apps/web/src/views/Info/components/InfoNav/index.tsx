@@ -16,6 +16,7 @@ import { ChainId } from '@pancakeswap/chains'
 import { useTranslation } from '@pancakeswap/localization'
 import { STABLE_SUPPORTED_CHAIN_IDS } from '@pancakeswap/stable-swap-sdk'
 import { ChainLogo } from 'components/Logo/ChainLogo'
+import { optichain } from 'config/chains'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import {} from 'hooks/useSwitchNetwork'
 import { useRouter } from 'next/router'
@@ -25,8 +26,7 @@ import { useChainIdByQuery, useChainNameByQuery, useMultiChainPath } from 'state
 import { styled } from 'styled-components'
 import { chains } from 'utils/wagmi'
 import Search from 'views/Info/components/InfoSearch'
-import { base, pulsechain, sonic } from 'wagmi/chains'
-import { optichain } from 'config/chains'
+import { base, mainnet, pulsechain, sonic } from 'wagmi/chains'
 
 const NavWrapper = styled(Flex)`
   background: ${({ theme }) => theme.colors.gradientCardHeader};
@@ -98,7 +98,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   )
 }
 
-const targetChains = [pulsechain, base, sonic, optichain]
+const targetChains = [mainnet, pulsechain, base, sonic, optichain]
 
 export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex }) => {
   const { t } = useTranslation()
