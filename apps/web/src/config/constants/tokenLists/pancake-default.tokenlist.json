@@ -7080,7 +7080,7 @@
       "symbol": "HEX",
       "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/base-logos/0xe0c4Aa6A461f5032F3153DC2801dD5fcEf9D469e.png",
       "chainId": 8453,
-      "decimals": 18
+      "decimals": 8
     },
     {
       "address": "0x8badd5256A22f3452AFbFEeC3a3CAF3F98173c25",
