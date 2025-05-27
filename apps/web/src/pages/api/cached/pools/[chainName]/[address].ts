@@ -1,5 +1,7 @@
 import { NextApiHandler } from 'next'
 import { getPoolData } from 'queries/pools'
+import { getPoolData as getV2PoolData } from 'queries/pools/v2'
+
 import { multiChainId } from 'state/info/constant'
 
 const CACHE_HEADERS = {
@@ -26,10 +28,15 @@ const handler: NextApiHandler = async (req, res) => {
       return res.status(400).json({ error: 'Invalid pool address format' })
     }
 
+    // check v2 pool or v3
+
     // Fetch pool data
-    const poolData = await getPoolData(address.toLowerCase(), chainId)
+    let poolData = await getV2PoolData(address.toLowerCase(), chainId)
     if (poolData.error || !poolData.data) {
-      return res.status(404).json({ name: 'Error', message: 'no result' })
+      poolData = await getPoolData(address.toLowerCase(), chainId)
+      if (poolData.error || !poolData.data) {
+        return res.status(404).json({ name: 'Error', message: 'no result' })
+      }
     }
 
     // Return successful response
