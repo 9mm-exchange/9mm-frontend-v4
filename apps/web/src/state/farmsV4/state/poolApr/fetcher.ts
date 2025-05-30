@@ -58,6 +58,7 @@ export const getLpApr = async (pool: PoolInfo, apr24h: boolean = false, signal?:
   }
 
   if (apr24h) {
+    console.log('apr24h---->', resp.data.apr24h)
     return resp.data.apr24h ? parseFloat(resp.data.apr24h) : 0
   }
   return resp.data.apr7d ? parseFloat(resp.data.apr7d) : 0
