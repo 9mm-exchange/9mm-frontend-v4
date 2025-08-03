@@ -5,7 +5,7 @@ import { safeGetAddress } from 'utils'
 import { isAddress } from 'viem'
 
 const mapping = {
-  [ChainId.BSC]: 'smartchain',
+  [ChainId.BSC]: 'bsc-logos',
   [ChainId.ETHEREUM]: 'eth',
   [ChainId.PULSECHAIN]: 'token-logo',
   [ChainId.SONIC]: 'sonic-logos',

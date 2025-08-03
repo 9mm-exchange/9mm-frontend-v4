@@ -56,6 +56,7 @@ export function homePageChainsInfo() {
     ChainId.PULSECHAIN,
     ChainId.SONIC,
     ChainId.OPTIPULSE,
+    ChainId.BSC,
     ChainId.BASE,
     // ChainId.ARBITRUM_ONE,
     // ChainId.ZKSYNC,

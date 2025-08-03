@@ -6,7 +6,7 @@ import { getAddress } from "viem";
 import { CurrencyInfo } from "./types";
 
 const mapping: { [key: number]: string } = {
-  [ChainId.BSC]: "smartchain",
+  [ChainId.BSC]: "bsc-logos",
   [ChainId.ETHEREUM]: "ethereum",
   [ChainId.POLYGON_ZKEVM]: "polygonzkevm",
   [ChainId.ARBITRUM_ONE]: "arbitrum",

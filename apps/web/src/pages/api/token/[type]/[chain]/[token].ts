@@ -32,6 +32,8 @@ const chainNameForQuery = (chain: string) => {
       return 'base'
     case 'pulse':
       return 'pulse'
+    case 'bsc':
+      return 'bsc'
     case 'sonic':
       return 'sonic'
     case 'optipulse':

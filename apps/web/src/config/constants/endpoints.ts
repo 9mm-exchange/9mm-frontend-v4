@@ -71,9 +71,9 @@ export const V3_SUBGRAPH_URLS = {
 
 export const STABLESWAP_SUBGRAPHS_URLS = {
   ...STABLESWAP_SUBGRAPHS,
-  [ChainId.BSC]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-bsc`,
+  [ChainId.BSC]: ``,
   [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-arb`,
-  [ChainId.ETHEREUM]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-eth`,
+  [ChainId.ETHEREUM]: ``,
   [ChainId.OPTIPULSE]: '',
 }
 

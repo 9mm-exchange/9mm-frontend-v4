@@ -22,6 +22,8 @@ export const useExplorerChainNameByQuery = (): components['schemas']['ChainName'
         return 'pulse'
       case 'sonic':
         return 'sonic'
+      case 'bsc':
+        return 'bsc'
       case 'optipulse':
         return 'optipulse'
       case 'opbnb':
