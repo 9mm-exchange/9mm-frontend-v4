@@ -44,7 +44,7 @@ export const multiChainShortName: Record<number, string> = {
 }
 
 export const multiChainQueryMainToken: Record<MultiChainName, string> = {
-  BSC: 'BNB',
+  BSC: 'ETH',
   ETH: 'ETH',
   ETHEREUM: 'ETH',
   SONIC: 'ETH',
@@ -74,7 +74,7 @@ export const multiChainId: Record<MultiChainName, ChainId> = {
 }
 
 export const multiChainPaths = {
-  [ChainId.BSC]: '',
+  [ChainId.BSC]: '/bsc',
   [ChainId.ETHEREUM]: '/eth',
   [ChainId.PULSECHAIN]: '/pulse',
   [ChainId.SONIC]: '/sonic',
@@ -88,7 +88,7 @@ export const multiChainPaths = {
 }
 
 export const multiChainPriceAPIPaths = {
-  [ChainId.BSC]: '',
+  [ChainId.BSC]: '/bsc',
   [ChainId.ETHEREUM]: '/eth',
   [ChainId.PULSECHAIN]: '/pulsechain',
   [ChainId.SONIC]: '/sonic',
