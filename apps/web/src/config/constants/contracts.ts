@@ -186,7 +186,7 @@ export default {
     [ChainId.SONIC]: '0x4FEd4AACA7C5FFAF82D9B6609495872abEd29666',
     [ChainId.OPTIPULSE]: '0x180662E029a6038C1E8b18eA655D67feF5C72928',
     [ChainId.GOERLI]: '0x46A15B0b27311cedF172AB29E4f4766fbE7F4364',
-    [ChainId.BSC]: '0xbC203d7f83677c7ed3F7acEc959963E7F4ECC5C2',
+    [ChainId.BSC]: '0xf0C3E7A1489b929C1bA4200D07b8873eB65FAD6e',
     [ChainId.BSC_TESTNET]: '0x46A15B0b27311cedF172AB29E4f4766fbE7F4364',
     [ChainId.ZKSYNC_TESTNET]: '0x7627931617A60Fe58EDBf4881ac166E1eDe2379e',
     [ChainId.ZKSYNC]: '0x556A72A7A3bB3bbd293D923e59b6B56898fB405D',
@@ -207,22 +207,22 @@ export default {
   quoter: V3_QUOTER_ADDRESSES,
   v3Airdrop: {
     [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0xe934d2C5bE5db0295A4de3177762A9E8c74Ae4f4',
+    [ChainId.BSC]: '0x',
     [ChainId.BSC_TESTNET]: '0x',
   },
   affiliateProgram: {
     [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0x92C73D90F709DFf7e5E7307e8F2EE20e39396b12',
+    [ChainId.BSC]: '0x',
     [ChainId.BSC_TESTNET]: '0x1B8a475B5E5De05fB3Ac2D9ec3C2809fBF24e51c',
   },
   tradingRewardTopTrades: {
     [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0x41920b6A17CB73D1B60f4F41D82c35eD0a46fD71',
+    [ChainId.BSC]: '0x',
     [ChainId.BSC_TESTNET]: '0x',
   },
   vCake: {
     [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0xa3b8321173Cf3DdF37Ce3e7548203Fc25d86402F',
+    [ChainId.BSC]: '0x',
     [ChainId.BSC_TESTNET]: '0x5DD37E97716A8b358BCbc731516F36FFff978454',
   },
   revenueSharingPool: {

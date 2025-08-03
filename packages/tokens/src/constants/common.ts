@@ -3,11 +3,11 @@ import { ERC20Token } from '@pancakeswap/sdk'
 
 export const CAKE_MAINNET = new ERC20Token(
   ChainId.BSC,
-  '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
+  '0x986eEB30dFaf2c7bbcc3Ed8b3EA67d2038095841',
   18,
-  'CAKE',
-  '9mm Swap Token',
-  'https://pancakeswap.finance/',
+  'TST',
+  'Test',
+  'https://dex.9mm.pro/',
 )
 
 export const CAKE_TESTNET = new ERC20Token(

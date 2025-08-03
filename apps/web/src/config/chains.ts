@@ -100,6 +100,7 @@ export const CHAINS: [Chain, ...Chain[]] = [
   // opBNBTestnet,
   // scrollSepolia,
   // monadTestnet,
+  bsc,
   mainnet,
   pulsechain,
   base,

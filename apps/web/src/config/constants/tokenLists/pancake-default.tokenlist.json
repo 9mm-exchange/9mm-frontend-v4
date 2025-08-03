@@ -13651,6 +13651,14 @@
       "chainId": 1,
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/eth/0x5d0b15b9EAb298450202aE84dD8F7D982e50205d.png"
+    },
+    {
+      "name": "Test Token",
+      "symbol": "TST",
+      "address": "0x986eEB30dFaf2c7bbcc3Ed8b3EA67d2038095841",
+      "chainId": 1,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/eth/0x5d0b15b9EAb298450202aE84dD8F7D982e50205d.png"
     }
   ],
   "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/bc312698a8a54c33f1b501eb504ddde539e8a6db/9mm.png"

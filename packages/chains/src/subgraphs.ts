@@ -32,7 +32,7 @@ export function getV3Subgraphs({
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v3`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/EatYuv9ktFGrSDGRw9cNwkKXweCX52hRAiamGXQb29Ah`,
     [ChainId.GOERLI]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-goerli',
-    [ChainId.BSC]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/Hv1GncLY5docZoGtXjo4kwbTvxm3MAhVZqBZE4sUT9eZ`,
+    [ChainId.BSC]: 'https://api.studio.thegraph.com/query/80328/bsc-v-3/v0.0.2',
     [ChainId.BSC_TESTNET]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/7xd5KmL3FbzRYbmAM9SSe4wdrsJV71pJQhCBqzU7y8Qi`,
     [ChainId.ARBITRUM_ONE]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/251MHFNN1rwjErXD2efWMpNS73SANZN8Ua192zw6iXve`,
     [ChainId.ARBITRUM_GOERLI]: 'https://api.thegraph.com/subgraphs/name/chef-jojo/exhange-v3-arb-goerli',
@@ -60,7 +60,7 @@ export function getV2Subgraphs({
   theGraphApiKey = '2e49631ace452362bcf744c2c94ca145',
 }: SubgraphParams) {
   return {
-    [ChainId.BSC]: 'https://proxy-worker-api.pancakeswap.com/bsc-exchange',
+    [ChainId.BSC]: `https://api.studio.thegraph.com/query/80328/bnb-v-2/latest`,
     [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/GH9mv6ABa7gZcwi84CvfQeWWNT1rWwcKjb72DySLTgAd`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v2`,
@@ -78,7 +78,8 @@ export function getV2Subgraphs({
 
 export function getBlocksSubgraphs({ noderealApiKey }: SubgraphParams) {
   return {
-    [ChainId.BSC]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks',
+    [ChainId.BSC]:
+      'https://gateway.thegraph.com/api/2e49631ace452362bcf744c2c94ca145/subgraphs/id/9dSPXfKXaqYpoGAPXx96LyDF1VYR8PiT6HA7HRKEGRdS',
     [ChainId.ETHEREUM]:
       'https://gateway.thegraph.com/api/2e49631ace452362bcf744c2c94ca145/subgraphs/id/9A6bkprqEG2XsZUYJ5B2XXp6ymz9fNcn4tVPxMWDztYC',
     [ChainId.PULSECHAIN]: 'https://graph.9mm.pro/subgraphs/name/block-client',

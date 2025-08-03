@@ -2,7 +2,7 @@ import { ChainId } from '@pancakeswap/chains'
 import { ClassicOrder, OrderType, PriceOrder, XOrder } from '@pancakeswap/price-api-sdk'
 import { Currency, TradeType } from '@pancakeswap/swap-sdk-core'
 
-export const TWAP_SUPPORTED_CHAINS = [ChainId.BSC, ChainId.ARBITRUM_ONE, ChainId.LINEA]
+export const TWAP_SUPPORTED_CHAINS = [ChainId.ARBITRUM_ONE, ChainId.LINEA]
 
 export const isTwapSupported = (chainId?: ChainId) => {
   return !chainId ? false : TWAP_SUPPORTED_CHAINS.includes(chainId)

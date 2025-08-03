@@ -1,7 +1,6 @@
 import { ResetCSS, ScrollToTopButtonV2, ToastListener } from '@pancakeswap/uikit'
 import BigNumber from 'bignumber.js'
 import { SentryErrorBoundary } from 'components/ErrorBoundary'
-import GlobalCheckClaimStatus from 'components/GlobalCheckClaimStatus'
 import { PageMeta } from 'components/Layout/Page'
 import { SimpleStakingSunsetModal } from 'components/Modal/SimpleStakingSunsetModal'
 import { NetworkModal } from 'components/NetworkModal'
@@ -30,7 +29,6 @@ import { DesktopCard } from 'components/AdPanel/DesktopCard'
 import { MobileCard } from 'components/AdPanel/MobileCard'
 import { layoutDesktopAdIgnoredPages, layoutMobileAdIgnoredPages } from 'components/AdPanel/config'
 import { shouldRenderOnPages } from 'components/AdPanel/renderConditions'
-import { Cb1Membership } from 'components/Cb1/Cb1Membership'
 import { ZKSyncAirdropModalWithAutoPopup } from 'components/ClaimZksyncAirdropModal'
 import { useDataDogRUM } from 'hooks/useDataDogRUM'
 import { useLoadExperimentalFeatures } from 'hooks/useExperimentalFeatureEnabled'
@@ -113,7 +111,7 @@ function MyApp(props: AppProps<{ initialReduxState: any; dehydratedState: any }>
         <GlobalHooks />
         <ResetCSS />
         <GlobalStyle />
-        <GlobalCheckClaimStatus excludeLocations={[]} />
+        {/* <GlobalCheckClaimStatus excludeLocations={[]} /> */}
         <PersistGate loading={null} persistor={persistor}>
           <Updaters />
           <App {...props} />
@@ -193,7 +191,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <ZKSyncAirdropModalWithAutoPopup />
       <SimpleStakingSunsetModal />
       <VercelToolbar />
-      <Cb1Membership />
+      {/* <Cb1Membership /> */}
     </ProductionErrorBoundary>
   )
 }

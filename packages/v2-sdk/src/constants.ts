@@ -1,7 +1,7 @@
 import { ChainId } from '@pancakeswap/chains'
 import type { Address, Hash } from 'viem'
 
-export const FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
+export const FACTORY_ADDRESS = '0x81582DeF68a80bdc5E0BDf8311e4Ad5e3235688f'
 
 const FACTORY_ADDRESS_ETH = '0x1097053Fd2ea711dad45caCcc45EfF7548fCB362'
 
@@ -32,7 +32,7 @@ export const FACTORY_ADDRESS_MAP = {
   [ChainId.MONAD_TESTNET]: '0x82438CE666d9403e488bA720c7424434e8Aa47CD',
 } as const satisfies Record<ChainId, Address>
 
-export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5'
+export const INIT_CODE_HASH = '0x6039d803db8e6f74aa7b5585b3209f67e1ebf47ee6c88fc044271912b14a862e'
 
 const INIT_CODE_HASH_ETH = '0x57224589c67f3f30a6b0d7a1b54cf3153ab84563bc609ef41dfb34f8b2974d2d'
 export const INIT_CODE_HASH_MAP = {
