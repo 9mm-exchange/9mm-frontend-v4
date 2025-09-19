@@ -55,7 +55,7 @@ export function homePageChainsInfo() {
     // ChainId.ETHEREUM,
     ChainId.PULSECHAIN,
     ChainId.SONIC,
-    ChainId.OPTIPULSE,
+    ChainId.PULPCHAIN,
     ChainId.BSC,
     ChainId.BASE,
     // ChainId.ARBITRUM_ONE,

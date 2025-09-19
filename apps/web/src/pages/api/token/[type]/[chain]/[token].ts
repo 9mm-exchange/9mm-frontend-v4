@@ -36,8 +36,8 @@ const chainNameForQuery = (chain: string) => {
       return 'bsc'
     case 'sonic':
       return 'sonic'
-    case 'optipulse':
-      return 'optipulse'
+    case 'pulpchain':
+      return 'pulpchain'
     case 'opbnb':
       return 'opbnb'
     default:

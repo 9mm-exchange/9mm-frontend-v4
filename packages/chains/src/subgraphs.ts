@@ -17,7 +17,7 @@ export const STABLESWAP_SUBGRAPHS = getStableSwapSubgraphs(publicSubgraphParams)
 
 export function getStableSwapSubgraphs({ theGraphApiKey }: Pick<SubgraphParams, 'theGraphApiKey'> = {}) {
   return {
-    [ChainId.BSC]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/C5EuiZwWkCge7edveeMcvDmdr7jjc1zG4vgn8uucLdfz`,
+    // [ChainId.BSC]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/C5EuiZwWkCge7edveeMcvDmdr7jjc1zG4vgn8uucLdfz`,
     [ChainId.ARBITRUM_ONE]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/y7G5NUSq5ngsLH2jBGQajjxuLgW1bcqWiBqKmBk3MWM`,
   } as const
 }
@@ -29,7 +29,7 @@ export function getV3Subgraphs({
   return {
     [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/45F3dvAke57HRSEQfjoirVuzVKeiyS4oQKfmrZ742UxG`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm-v3-latest`,
-    [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v3`,
+    [ChainId.PULPCHAIN]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v3`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/EatYuv9ktFGrSDGRw9cNwkKXweCX52hRAiamGXQb29Ah`,
     [ChainId.GOERLI]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-goerli',
     [ChainId.BSC]: 'https://api.studio.thegraph.com/query/80328/bsc-v-3/version/latest',
@@ -63,7 +63,7 @@ export function getV2Subgraphs({
     [ChainId.BSC]: `https://api.studio.thegraph.com/query/80328/bnb-v-2/version/latest`,
     [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/GH9mv6ABa7gZcwi84CvfQeWWNT1rWwcKjb72DySLTgAd`,
     [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm`,
-    [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v2`,
+    [ChainId.PULPCHAIN]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v2`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/3BKTRZC8H2zfh4CohDNk6EoRt78o9k1sUfXeFwKSAARf`,
     [ChainId.POLYGON_ZKEVM]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/37WmH5kBu6QQytRpMwLJMGPRbXvHgpuZsWqswW4Finc2`,
     [ChainId.ZKSYNC_TESTNET]: 'https://api.studio.thegraph.com/query/45376/exchange-v2-zksync-testnet/version/latest',
@@ -83,7 +83,7 @@ export function getBlocksSubgraphs({ noderealApiKey }: SubgraphParams) {
     [ChainId.ETHEREUM]:
       'https://gateway.thegraph.com/api/2e49631ace452362bcf744c2c94ca145/subgraphs/id/9A6bkprqEG2XsZUYJ5B2XXp6ymz9fNcn4tVPxMWDztYC',
     [ChainId.PULSECHAIN]: 'https://graph.9mm.pro/subgraphs/name/block-client',
-    [ChainId.OPTIPULSE]: 'https://testnet-graphs.optipulse.io/subgraphs/name/block-client',
+    [ChainId.PULPCHAIN]: 'https://testnet-graphs.optipulse.io/subgraphs/name/block-client',
     [ChainId.SONIC]:
       'https://gateway.thegraph.com/api/2e49631ace452362bcf744c2c94ca145/subgraphs/id/JCDpWYWQrdeehm9dPthvU3QUgNE6VfqTmFYeumXNemDE',
     [ChainId.POLYGON_ZKEVM]: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',

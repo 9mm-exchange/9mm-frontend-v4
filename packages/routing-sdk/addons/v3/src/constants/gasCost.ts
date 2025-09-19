@@ -9,7 +9,7 @@ export const BASE_SWAP_COST_V3 = (id: ChainId): bigint => {
     case ChainId.BSC_TESTNET:
     case ChainId.ETHEREUM:
     case ChainId.PULSECHAIN:
-    case ChainId.OPTIPULSE:
+    case ChainId.PULPCHAIN:
     case ChainId.SONIC:
     case ChainId.GOERLI:
     case ChainId.ZKSYNC:
@@ -30,7 +30,7 @@ export const COST_PER_INIT_TICK = (id: ChainId): bigint => {
     case ChainId.BSC_TESTNET:
     case ChainId.ETHEREUM:
     case ChainId.PULSECHAIN:
-    case ChainId.OPTIPULSE:
+    case ChainId.PULPCHAIN:
     case ChainId.SONIC:
     case ChainId.GOERLI:
     case ChainId.ZKSYNC:
@@ -52,7 +52,7 @@ export const COST_PER_HOP_V3 = (id: ChainId): bigint => {
     case ChainId.BSC_TESTNET:
     case ChainId.ETHEREUM:
     case ChainId.PULSECHAIN:
-    case ChainId.OPTIPULSE:
+    case ChainId.PULPCHAIN:
     case ChainId.SONIC:
     case ChainId.GOERLI:
     case ChainId.ZKSYNC:

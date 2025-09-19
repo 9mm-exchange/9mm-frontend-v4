@@ -23,8 +23,8 @@ export const WETH9 = {
     'Wrapped Pulse',
     'https://weth.io',
   ),
-  [ChainId.OPTIPULSE]: new ERC20Token(
-    ChainId.OPTIPULSE,
+  [ChainId.PULPCHAIN]: new ERC20Token(
+    ChainId.PULPCHAIN,
     '0xed22410bF8e1F0Fc7b556d556C9428f359FC37Af',
     18,
     'WTPLS',
@@ -247,7 +247,7 @@ export const WBNB = {
 export const WNATIVE = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.PULSECHAIN]: WETH9[ChainId.PULSECHAIN],
-  [ChainId.OPTIPULSE]: WETH9[ChainId.OPTIPULSE],
+  [ChainId.PULPCHAIN]: WETH9[ChainId.PULPCHAIN],
   [ChainId.SONIC]: WETH9[ChainId.SONIC],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
@@ -286,7 +286,7 @@ const PLS = {
 } as const
 
 const TPLS = {
-  name: 'OptiPulse Chain Native Token',
+  name: 'PulpChain Chain Native Token',
   symbol: 'TPLS',
   decimals: 18,
 } as const
@@ -300,7 +300,7 @@ const S = {
 export const NATIVE = {
   [ChainId.ETHEREUM]: ETHER,
   [ChainId.PULSECHAIN]: PLS,
-  [ChainId.OPTIPULSE]: TPLS,
+  [ChainId.PULPCHAIN]: TPLS,
   [ChainId.SONIC]: S,
   [ChainId.GOERLI]: { name: 'Goerli Ether', symbol: 'GOR', decimals: 18 },
   [ChainId.BSC]: BNB,

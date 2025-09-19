@@ -16,7 +16,7 @@ import { ChainId } from '@pancakeswap/chains'
 import { useTranslation } from '@pancakeswap/localization'
 import { STABLE_SUPPORTED_CHAIN_IDS } from '@pancakeswap/stable-swap-sdk'
 import { ChainLogo } from 'components/Logo/ChainLogo'
-import { optichain } from 'config/chains'
+import { pulpchain } from 'config/chains'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import {} from 'hooks/useSwitchNetwork'
 import { useRouter } from 'next/router'
@@ -98,7 +98,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
   )
 }
 
-const targetChains = [mainnet, pulsechain, base, bsc, sonic, optichain]
+const targetChains = [mainnet, pulsechain, base, bsc, sonic, pulpchain]
 
 export const NetworkSwitcher: React.FC<{ activeIndex: number }> = ({ activeIndex }) => {
   const { t } = useTranslation()

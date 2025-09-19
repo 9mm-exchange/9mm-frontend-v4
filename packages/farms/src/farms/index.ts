@@ -7,7 +7,7 @@ import { bscTestnetFarmConfig } from './bscTestnet'
 import { polygonZkEVMTestnetFarmConfig } from './polygonZkEVMTestnet'
 import { zkSyncTestnetFarmConfig } from './zkSyncTestnet'
 
-const chainIds: ChainId[] = [ChainId.BASE, ChainId.PULSECHAIN, ChainId.OPTIPULSE, ChainId.SONIC]
+const chainIds: ChainId[] = [ChainId.BASE, ChainId.PULSECHAIN, ChainId.PULPCHAIN, ChainId.SONIC]
 
 export const fetchAllUniversalFarms = async (): Promise<UniversalFarmConfig[]> => {
   try {

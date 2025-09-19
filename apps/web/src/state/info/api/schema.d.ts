@@ -935,7 +935,7 @@ export interface components {
     ChainName:
       | 'bsc'
       | 'pulse'
-      | 'optipulse'
+      | 'pulpchain'
       | 'sonic'
       | 'bsc-testnet'
       | 'ethereum'

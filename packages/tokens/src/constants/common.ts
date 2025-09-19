@@ -55,7 +55,7 @@ export const USDC_PULSE = new ERC20Token(
 )
 
 export const USDC_OPTI = new ERC20Token(
-  ChainId.OPTIPULSE,
+  ChainId.PULPCHAIN,
   '0x36653868210124Af5db4A777BB717f91C095C994',
   18,
   'USDC',
@@ -106,7 +106,7 @@ export const USDT_PULSE = new ERC20Token(
 )
 
 export const USDT_OPTI = new ERC20Token(
-  ChainId.OPTIPULSE,
+  ChainId.PULPCHAIN,
   '0x6B2A32f4B3ed3d86ba64b594ADb906d296c5774E',
   18,
   'USDT',
@@ -199,8 +199,8 @@ export const CAKE = {
     '9mm Dex Token',
     '',
   ),
-  [ChainId.OPTIPULSE]: new ERC20Token(
-    ChainId.OPTIPULSE,
+  [ChainId.PULPCHAIN]: new ERC20Token(
+    ChainId.PULPCHAIN,
     '0xF856b792526FB3192992ff916d97Ef38E1b5F74b',
     18,
     '9mm',
@@ -328,7 +328,7 @@ export const USDC = {
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.PULSECHAIN]: USDC_PULSE,
-  [ChainId.OPTIPULSE]: USDC_OPTI,
+  [ChainId.PULPCHAIN]: USDC_OPTI,
   [ChainId.SONIC]: USDC_SONIC,
   [ChainId.GOERLI]: USDC_GOERLI,
   [ChainId.ZKSYNC]: new ERC20Token(
@@ -457,7 +457,7 @@ export const USDT = {
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
   [ChainId.PULSECHAIN]: USDT_PULSE,
-  [ChainId.OPTIPULSE]: USDT_OPTI,
+  [ChainId.PULPCHAIN]: USDT_OPTI,
   [ChainId.SONIC]: USDT_SONIC,
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
@@ -574,8 +574,8 @@ export const DAI = {
     'Dai Stablecoin',
     'https://www.makerdao.com/',
   ),
-  [ChainId.OPTIPULSE]: new ERC20Token(
-    ChainId.OPTIPULSE,
+  [ChainId.PULPCHAIN]: new ERC20Token(
+    ChainId.PULPCHAIN,
     '0xB3112fdA56C1109029D2151a847566c2d814199C',
     18,
     'DAI',
@@ -620,7 +620,7 @@ export const WBTC_ETH = new ERC20Token(
 export const STABLE_COIN = {
   [ChainId.ETHEREUM]: USDT[ChainId.ETHEREUM],
   [ChainId.PULSECHAIN]: DAI[ChainId.PULSECHAIN],
-  [ChainId.OPTIPULSE]: DAI[ChainId.OPTIPULSE],
+  [ChainId.PULPCHAIN]: DAI[ChainId.PULPCHAIN],
   [ChainId.SONIC]: USDC[ChainId.SONIC],
   [ChainId.GOERLI]: USDC[ChainId.GOERLI],
   [ChainId.BSC]: USDT[ChainId.BSC],

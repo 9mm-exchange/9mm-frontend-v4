@@ -3,21 +3,21 @@ import memoize from 'lodash/memoize'
 import { defineChain } from 'viem/utils'
 import { Chain, base, bsc as bsc_, mainnet, pulsechain, sonic } from 'wagmi/chains'
 
-export const optichain = defineChain({
+export const pulpchain = defineChain({
   id: 94128,
-  name: 'OptiPulse',
+  name: 'PulpChain',
   nativeCurrency: {
     decimals: 18,
     name: 'Test Pulse',
     symbol: 'TPLS',
   },
   rpcUrls: {
-    default: { http: ['https://rpc-testnet.optipulse.io'] },
+    default: { http: ['https://rpc-testnet.pulpchain.pro'] },
   },
   blockExplorers: {
     default: {
-      name: 'OptiPulse Explorer',
-      url: 'https://testnet-explorer.optipulse.io/',
+      name: 'PulpChain Explorer',
+      url: 'https://testnet-explorer.pulpchain.pro/',
     },
   },
   contracts: {
@@ -72,7 +72,7 @@ export const L2_CHAIN_IDS: ChainId[] = [
   ChainId.LINEA_TESTNET,
   ChainId.LINEA,
   ChainId.BASE,
-  ChainId.OPTIPULSE,
+  ChainId.PULPCHAIN,
   ChainId.BASE_TESTNET,
   ChainId.OPBNB,
   ChainId.OPBNB_TESTNET,
@@ -105,5 +105,5 @@ export const CHAINS: [Chain, ...Chain[]] = [
   pulsechain,
   base,
   sonic,
-  optichain,
+  pulpchain,
 ]

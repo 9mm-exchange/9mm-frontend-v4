@@ -13655,10 +13655,66 @@
     {
       "name": "Test Token",
       "symbol": "TST",
-      "address": "0x986eEB30dFaf2c7bbcc3Ed8b3EA67d2038095841",
+      "address": "0x5d0b15b9EAb298450202aE84dD8F7D982e50205d",
       "chainId": 1,
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/eth/0x5d0b15b9EAb298450202aE84dD8F7D982e50205d.png"
+    },
+    {
+      "name": "Test Token",
+      "symbol": "TST",
+      "address": "0x986eEB30dFaf2c7bbcc3Ed8b3EA67d2038095841",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0x986eEB30dFaf2c7bbcc3Ed8b3EA67d2038095841.png"
+    },
+    {
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+    },
+    {
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+    },
+    {
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+    },
+    {
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png"
+    },
+    {
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0x55d398326f99059fF775485246999027B3197955.png"
+    },
+    {
+      "name": "PancakeSwap Token",
+      "symbol": "CAKE",
+      "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/main/bsc-logos/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     }
   ],
   "logoURI": "https://raw.githubusercontent.com/9mm-exchange/app-tokens/bc312698a8a54c33f1b501eb504ddde539e8a6db/9mm.png"

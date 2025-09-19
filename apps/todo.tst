@@ -40,7 +40,7 @@ API Issues
 4. https://v3dev.9mm.pro/api/cached/pools/v3/pulse/list/top chcek why it caching [] pools
 
 
-OPTIPULSE
+PULPCHAIN
 
 1. Subgraphs
 2. Universal Router

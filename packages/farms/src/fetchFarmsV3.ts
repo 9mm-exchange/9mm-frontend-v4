@@ -27,7 +27,7 @@ export const multiChainPriceAPIPaths = {
   [ChainId.BSC]: '',
   [ChainId.ETHEREUM]: '/eth',
   [ChainId.PULSECHAIN]: '/pulsechain',
-  [ChainId.OPTIPULSE]: '/optipulse',
+  [ChainId.PULPCHAIN]: '/pulpchain',
   [ChainId.SONIC]: '/sonic',
   [ChainId.POLYGON_ZKEVM]: '/polygon-zkevm',
   [ChainId.ZKSYNC]: '/zksync',

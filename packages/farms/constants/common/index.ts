@@ -8,8 +8,8 @@ import {
   ethereumTokens,
   lineaTokens,
   opBnbTokens,
-  optiTokens,
   polygonZkEvmTokens,
+  pulpTokens,
   pulseTokens,
   sonicTokens,
   zkSyncTestnetTokens,
@@ -31,8 +31,8 @@ export const priceHelperTokens = {
   [ChainId.PULSECHAIN]: {
     list: [pulseTokens.weth, pulseTokens.usdc, pulseTokens.usdt, pulseTokens.dai],
   },
-  [ChainId.OPTIPULSE]: {
-    list: [optiTokens.weth, optiTokens.usdc, optiTokens.usdt, optiTokens.dai],
+  [ChainId.PULPCHAIN]: {
+    list: [pulpTokens.weth, pulpTokens.usdc, pulpTokens.usdt, pulpTokens.dai],
   },
   [ChainId.SONIC]: {
     list: [sonicTokens.weth, sonicTokens.usdc, sonicTokens.usdt],
@@ -80,7 +80,7 @@ export const priceHelperTokens = {
 export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> = {
   [ChainId.ETHEREUM]: {},
   [ChainId.PULSECHAIN]: {},
-  [ChainId.OPTIPULSE]: {},
+  [ChainId.PULPCHAIN]: {},
   [ChainId.SONIC]: {},
   [ChainId.BSC]: {},
   [ChainId.BSC_TESTNET]: {

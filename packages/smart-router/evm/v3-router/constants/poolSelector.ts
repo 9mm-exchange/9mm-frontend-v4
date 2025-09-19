@@ -45,7 +45,7 @@ export const V3_DEFAULT_POOL_SELECTOR_CONFIG: PoolSelectorConfigChainMap = {
     topNWithEachBaseToken: 3,
     topNWithBaseToken: 4,
   },
-  [ChainId.OPTIPULSE]: {
+  [ChainId.PULPCHAIN]: {
     topN: 2,
     topNDirectSwaps: 2,
     topNTokenInOut: 2,
@@ -104,7 +104,7 @@ export const V2_DEFAULT_POOL_SELECTOR_CONFIG: PoolSelectorConfigChainMap = {
     topNWithEachBaseToken: 3,
     topNWithBaseToken: 3,
   },
-  [ChainId.OPTIPULSE]: {
+  [ChainId.PULPCHAIN]: {
     topN: 3,
     topNDirectSwaps: 2,
     topNTokenInOut: 2,

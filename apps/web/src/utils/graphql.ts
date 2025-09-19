@@ -10,7 +10,7 @@ export const v3Clients = {
   [ChainId.ETHEREUM]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.ETHEREUM]),
   [ChainId.PULSECHAIN]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.PULSECHAIN]),
   [ChainId.SONIC]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.SONIC]),
-  [ChainId.OPTIPULSE]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.OPTIPULSE]),
+  [ChainId.PULPCHAIN]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.PULPCHAIN]),
   [ChainId.GOERLI]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.GOERLI]),
   [ChainId.BSC]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.BSC]),
   [ChainId.BSC_TESTNET]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.BSC_TESTNET]),
@@ -33,7 +33,7 @@ export const v2Clients = {
   [ChainId.ETHEREUM]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.ETHEREUM]),
   [ChainId.PULSECHAIN]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.PULSECHAIN]),
   [ChainId.SONIC]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.SONIC]),
-  [ChainId.OPTIPULSE]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.OPTIPULSE]),
+  [ChainId.PULPCHAIN]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.PULPCHAIN]),
   [ChainId.BSC]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.BSC]),
   [ChainId.POLYGON_ZKEVM]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.POLYGON_ZKEVM]),
   [ChainId.ZKSYNC]: new GraphQLClient(V2_SUBGRAPH_URLS[ChainId.ZKSYNC]),
@@ -44,7 +44,7 @@ export const v2Clients = {
 }
 
 export const infoStableSwapClients: Record<(typeof STABLE_SUPPORTED_CHAIN_IDS)[number], GraphQLClient> = {
-  [ChainId.OPTIPULSE]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.OPTIPULSE]),
+  [ChainId.PULPCHAIN]: new GraphQLClient(STABLESWAP_SUBGRAPHS_URLS[ChainId.PULPCHAIN]),
 }
 
 export const bitQueryServerClient = new GraphQLClient(BIT_QUERY, {
