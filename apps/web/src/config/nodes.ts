@@ -52,7 +52,7 @@ export const SERVER_NODES = {
     'https://sonic.drpc.org',
     'https://rpc.soniclabs.com',
   ],
-  [ChainId.PULPCHAIN]: ['https://rpc-testnet.pulpchain.pro'],
+  [ChainId.OPTIPULSE]: ['https://rpc-testnet.optipulse.io'],
   [ChainId.GOERLI]: [
     getNodeRealUrl(ChainId.GOERLI, process.env.SERVER_NODE_REAL_API_GOERLI) || '',
     'https://eth-goerli.public.blastapi.io',
@@ -138,7 +138,7 @@ export const PUBLIC_NODES: Record<ChainId, string[] | readonly string[]> = {
     'https://sonic.drpc.org',
     'https://rpc.soniclabs.com',
   ].filter(Boolean),
-  [ChainId.PULPCHAIN]: ['https://rpc-testnet.pulpchain.pro'].filter(Boolean),
+  [ChainId.OPTIPULSE]: ['https://rpc-testnet.optipulse.io'].filter(Boolean),
 
   [ChainId.GOERLI]: [
     getNodeRealUrl(ChainId.GOERLI, process.env.NEXT_PUBLIC_NODE_REAL_API_GOERLI) || '',

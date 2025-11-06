@@ -12,7 +12,7 @@ export const tradingRewardPairConfigChainMap: Record<FarmV3SupportedChainId, Com
   [ChainId.ETHEREUM]: [],
   [ChainId.PULSECHAIN]: [],
   [ChainId.SONIC]: [],
-  [ChainId.PULPCHAIN]: [],
+  [ChainId.OPTIPULSE]: [],
   [ChainId.BSC]: [...tradingRewardBscV3Pair],
   [ChainId.BSC_TESTNET]: [],
   [ChainId.POLYGON_ZKEVM]: [...tradingRewardZkEvmV3Pair],

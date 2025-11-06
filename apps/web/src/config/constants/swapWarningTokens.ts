@@ -22,7 +22,7 @@ const SwapWarningTokens = <WarningTokenList>{
   },
   [ChainId.PULSECHAIN]: {},
   [ChainId.SONIC]: {},
-  [ChainId.PULPCHAIN]: {},
+  [ChainId.OPTIPULSE]: {},
   [ChainId.BSC]: {
     safemoon,
     bondly,

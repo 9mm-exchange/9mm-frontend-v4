@@ -9,7 +9,7 @@ export type StableSwapPoolMap<TChainId extends number> = {
 }
 
 export const STABLE_POOL_MAP = {
-  [ChainId.PULPCHAIN]: pulpPools,
+  [ChainId.OPTIPULSE]: pulpPools,
 } satisfies StableSwapPoolMap<StableSupportedChainId>
 
 export const isStableSwapSupported = (chainId: number | undefined): chainId is StableSupportedChainId => {
@@ -19,6 +19,6 @@ export const isStableSwapSupported = (chainId: number | undefined): chainId is S
   return STABLE_SUPPORTED_CHAIN_IDS.includes(chainId)
 }
 
-export const STABLE_SUPPORTED_CHAIN_IDS = [ChainId.PULPCHAIN] as const
+export const STABLE_SUPPORTED_CHAIN_IDS = [ChainId.OPTIPULSE] as const
 
 export type StableSupportedChainId = (typeof STABLE_SUPPORTED_CHAIN_IDS)[number]

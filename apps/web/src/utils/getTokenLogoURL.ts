@@ -9,7 +9,7 @@ const mapping = {
   [ChainId.ETHEREUM]: 'eth',
   [ChainId.PULSECHAIN]: 'token-logo',
   [ChainId.SONIC]: 'sonic-logos',
-  [ChainId.PULPCHAIN]: 'pulpchain',
+  [ChainId.OPTIPULSE]: 'optipulse',
   [ChainId.POLYGON_ZKEVM]: 'polygonzkevm',
   [ChainId.ZKSYNC]: 'zksync',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',

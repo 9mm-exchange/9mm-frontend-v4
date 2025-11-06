@@ -10,7 +10,7 @@ export const PANCAKE_PULSE_DEFAULT =
 export const PANCAKE_SONIC_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/sonic-tokenlist.json'
 
-export const PANCAKE_PULPCHAIN_DEFAULT =
+export const PANCAKE_OPTIPULSE_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/pulpchain-tokenlist.json'
 
 export const PANCAKE_ZKSYNC_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json'
@@ -35,7 +35,7 @@ const COINGECKO_SONIC = 'https://tokens.coingecko.com/sonic/all.json'
 
 const PULSE_URLS = [PANCAKE_PULSE_DEFAULT, PITEAS_PULSE_MM, COINGECKO_PULSE]
 const SONIC_URLS = [PANCAKE_SONIC_DEFAULT, COINGECKO_SONIC]
-const PULPCHAIN_URLS = [PANCAKE_PULPCHAIN_DEFAULT]
+const OPTIPULSE_URLS = [PANCAKE_OPTIPULSE_DEFAULT]
 const ETH_URLS = [PANCAKE_ETH_DEFAULT, COINGECKO_ETH]
 const BSC_URLS = [PANCAKE_EXTENDED, COINGECKO, PANCAKE_BSC_MM]
 const POLYGON_ZKEVM_URLS = [
@@ -70,7 +70,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   ...ETH_URLS,
   ...PULSE_URLS,
   ...SONIC_URLS,
-  ...PULPCHAIN_URLS,
+  ...OPTIPULSE_URLS,
   ...ZKSYNC_URLS,
   ...LINEA_URLS,
   ...POLYGON_ZKEVM_URLS,
@@ -89,7 +89,7 @@ export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
   PANCAKE_ETH_DEFAULT,
   PANCAKE_PULSE_DEFAULT,
   PANCAKE_SONIC_DEFAULT,
-  PANCAKE_PULPCHAIN_DEFAULT,
+  PANCAKE_OPTIPULSE_DEFAULT,
   PANCAKE_BASE_DEFAULT,
   PANCAKE_BSC_MM,
   PANCAKE_ARB_MM,
@@ -111,7 +111,7 @@ export const MULTI_CHAIN_LIST_URLS: { [chainId: number]: string[] } = {
   [ChainId.ETHEREUM]: ETH_URLS,
   [ChainId.PULSECHAIN]: PULSE_URLS,
   [ChainId.SONIC]: SONIC_URLS,
-  [ChainId.PULPCHAIN]: PULPCHAIN_URLS,
+  [ChainId.OPTIPULSE]: OPTIPULSE_URLS,
   [ChainId.ZKSYNC]: ZKSYNC_URLS,
   [ChainId.POLYGON_ZKEVM]: POLYGON_ZKEVM_URLS,
   [ChainId.ARBITRUM_ONE]: ARBITRUM_URLS,

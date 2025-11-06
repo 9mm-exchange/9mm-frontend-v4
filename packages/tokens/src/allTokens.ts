@@ -31,7 +31,7 @@ export const allTokens = {
   [ChainId.BSC_TESTNET]: bscTestnetTokens,
   [ChainId.ETHEREUM]: ethereumTokens,
   [ChainId.PULSECHAIN]: pulseTokens,
-  [ChainId.PULPCHAIN]: pulpTokens,
+  [ChainId.OPTIPULSE]: pulpTokens,
   [ChainId.SONIC]: sonicTokens,
   [ChainId.ARBITRUM_ONE]: arbitrumTokens,
   [ChainId.POLYGON_ZKEVM]: polygonZkEvmTokens,

@@ -6,7 +6,7 @@ export const BLOCK_CONFLICT_TOLERANCE: { [key in ChainId]?: number } = {
   [ChainId.BSC]: 3,
   [ChainId.ETHEREUM]: 1,
   [ChainId.PULSECHAIN]: 1,
-  [ChainId.PULPCHAIN]: 1,
+  [ChainId.OPTIPULSE]: 1,
   [ChainId.SONIC]: 1,
   [ChainId.ARBITRUM_ONE]: 5,
   [ChainId.POLYGON_ZKEVM]: 1,

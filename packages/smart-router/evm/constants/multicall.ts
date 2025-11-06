@@ -19,7 +19,7 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
   [ChainId.BSC]: DEFAULT,
   [ChainId.ETHEREUM]: DEFAULT,
   [ChainId.PULSECHAIN]: DEFAULT,
-  [ChainId.PULPCHAIN]: {
+  [ChainId.OPTIPULSE]: {
     ...DEFAULT,
     defaultConfig: {
       ...DEFAULT.defaultConfig,

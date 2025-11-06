@@ -31,7 +31,7 @@ const chainSupportsGasEstimates = (chainId?: number): boolean => {
     chainId === ChainId.ETHEREUM ||
     chainId === ChainId.PULSECHAIN ||
     chainId === ChainId.SONIC ||
-    chainId === ChainId.PULPCHAIN ||
+    chainId === ChainId.OPTIPULSE ||
     chainId === ChainId.BSC
   )
 }

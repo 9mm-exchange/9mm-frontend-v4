@@ -31,7 +31,7 @@ export const priceHelperTokens = {
   [ChainId.PULSECHAIN]: {
     list: [pulseTokens.weth, pulseTokens.usdc, pulseTokens.usdt, pulseTokens.dai],
   },
-  [ChainId.PULPCHAIN]: {
+  [ChainId.OPTIPULSE]: {
     list: [pulpTokens.weth, pulpTokens.usdc, pulpTokens.usdt, pulpTokens.dai],
   },
   [ChainId.SONIC]: {
@@ -80,7 +80,7 @@ export const priceHelperTokens = {
 export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> = {
   [ChainId.ETHEREUM]: {},
   [ChainId.PULSECHAIN]: {},
-  [ChainId.PULPCHAIN]: {},
+  [ChainId.OPTIPULSE]: {},
   [ChainId.SONIC]: {},
   [ChainId.BSC]: {},
   [ChainId.BSC_TESTNET]: {

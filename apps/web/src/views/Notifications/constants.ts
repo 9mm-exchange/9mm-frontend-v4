@@ -118,7 +118,7 @@ export const CHAIN_NAME_TO_CHAIN_ID = {
   ethereum: ChainId.ETHEREUM,
   pulsechain: ChainId.PULSECHAIN,
   sonic: ChainId.SONIC,
-  pulpchain: ChainId.PULPCHAIN,
+  optipulse: ChainId.OPTIPULSE,
   polygon_zkevm: ChainId.POLYGON_ZKEVM,
   era: ChainId.ZKSYNC,
   arbitrum: ChainId.ARBITRUM_ONE,

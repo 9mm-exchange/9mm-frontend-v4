@@ -29,7 +29,7 @@ import {
 export const usdGasTokensByChain = {
   [ChainId.ETHEREUM]: [ethereumTokens.usdt],
   [ChainId.PULSECHAIN]: [pulseTokens.dai],
-  [ChainId.PULPCHAIN]: [pulpTokens.dai],
+  [ChainId.OPTIPULSE]: [pulpTokens.dai],
   [ChainId.SONIC]: [sonicTokens.usdc],
   [ChainId.GOERLI]: [goerliTestnetTokens.usdc],
   [ChainId.BSC]: [bscTokens.usdt],
