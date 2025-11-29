@@ -58,7 +58,7 @@ const HarvestAction: React.FC<React.PropsWithChildren<FarmCardActionsProps>> = (
     : '< 0.00001'
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     `${tooltipBalance} ${t(
-      `CAKE has been harvested to the farm booster contract and will be automatically sent to your wallet upon the next harvest.`,
+      `WTPLS has been harvested to the farm booster contract and will be automatically sent to your wallet upon the next harvest.`,
     )}`,
     {
       placement: 'bottom',

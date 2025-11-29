@@ -29,8 +29,8 @@ import Cookie from 'js-cookie'
 import { useCallback, useMemo } from 'react'
 import { farmFetcher } from 'state/farms'
 import { styled } from 'styled-components'
-import { useFarmCProxyAddress } from 'views/Farms/hooks/useFarmCProxyAddress'
 import useCrossChainHarvestFarm from 'views/Farms/hooks/useCrossChainHarvestFarm'
+import { useFarmCProxyAddress } from 'views/Farms/hooks/useFarmCProxyAddress'
 
 const TokenWrapper = styled.div`
   padding-right: 8px;
@@ -138,7 +138,7 @@ const MultiChainHarvestModal: React.FC<MultiChainHarvestModalProp> = ({
         <LightGreyCard padding="16px">
           <Box mb="8px">
             <Text fontSize="12px" color="secondary" bold as="span">
-              {t('CAKE')}
+              {t('WTPLS')}
             </Text>
             <Text fontSize="12px" color="textSubtle" ml="4px" bold as="span">
               {t('Earned')}

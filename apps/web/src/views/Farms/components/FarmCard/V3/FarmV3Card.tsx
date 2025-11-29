@@ -55,6 +55,8 @@ interface FarmCardProps {
 }
 
 export const FarmV3Card: React.FC<React.PropsWithChildren<FarmCardProps>> = ({ farm, removed, account }) => {
+  console.log('farm---->', farm)
+
   const { t } = useTranslation()
   const { chainId } = useActiveChainId()
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -64,7 +66,7 @@ export const FarmV3Card: React.FC<React.PropsWithChildren<FarmCardProps>> = ({ f
   const farmCakePerSecond = getFarmCakePerSecond(farm.poolWeight)
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.replace(/pancake/gi, '')
-  const earnLabel = t('CAKE + Fees')
+  const earnLabel = t('WTPLS + Fees')
   const { lpAddress } = farm
   const isPromotedFarm = farm.token.symbol === 'CAKE'
   const { status: boostStatus } = useBoostStatus(farm.pid)
@@ -85,11 +87,7 @@ export const FarmV3Card: React.FC<React.PropsWithChildren<FarmCardProps>> = ({ f
   }, [])
   const aprTooltip = useTooltip(
     <>
-      <Text>
-        {t(
-          'Global APR calculated using the total amount of active & staked liquidity with the pool CAKE reward emissions.',
-        )}
-      </Text>
+      <Text>{t('Global APR calculated using the total amount of active & staked liquidity with the pool.')}</Text>
       <br />
       <Text>{t('APRs for individual positions may vary depend on their price range settings.')}</Text>
     </>,

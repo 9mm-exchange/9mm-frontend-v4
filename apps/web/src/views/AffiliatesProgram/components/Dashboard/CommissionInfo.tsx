@@ -129,7 +129,7 @@ const CommissionInfo: React.FC<React.PropsWithChildren<CommissionInfoProps>> = (
             </StyledFlex>
             <StyledFlex pl="10%">
               <Text color="secondary" bold fontSize={['12px']} textTransform="uppercase">
-                {t('Total cake earned')}
+                {t('Total wtpls earned')}
               </Text>
               <Text fontSize={['32px']} bold>{`~ ${totalCakeEarned}`}</Text>
               <Text color="textSubtle" fontSize="14px">{`$ ${formatNumber(Number(totalEarnFeeUSD))}`}</Text>

@@ -1,5 +1,5 @@
 import { useTranslation } from "@pancakeswap/localization";
-import { Balance, Flex, Button, Text } from "@pancakeswap/uikit";
+import { Balance, Button, Flex, Text } from "@pancakeswap/uikit";
 import { ActionContent, ActionTitles } from "./styles";
 
 export interface HarvestActionProps {
@@ -25,7 +25,7 @@ const HarvestAction: React.FunctionComponent<React.PropsWithChildren<HarvestActi
     <Flex height="100%" flexDirection="column" width="100%">
       <ActionTitles>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="4px">
-          CAKE
+          WTPLS
         </Text>
         <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {t("Earned")}

@@ -17,7 +17,7 @@ export const RewardPerDay: React.FC<{ rewardPerSec: number; symbol?: string } & 
         variant="secondary"
         {...props}
       >
-        {cakePerDay === 0 ? '0.00' : cakePerDay.toFixed(2)} {symbol ?? t('CAKE')}{' '}
+        {cakePerDay === 0 ? '0.00' : cakePerDay.toFixed(2)} {symbol ?? t('WTPLS')}{' '}
       </Tag>
     )
   },

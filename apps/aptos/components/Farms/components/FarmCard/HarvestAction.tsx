@@ -97,7 +97,7 @@ const HarvestAction: React.FC<React.PropsWithChildren<FarmCardActionsProps>> = (
         )}
       </Flex>
       <Button mt="16px" disabled={rawEarningsBalance.eq(0) || pendingTx || !isUserIpPass} onClick={handleHarvest}>
-        {pendingTx ? t('Harvesting') : t('Harvest')}
+        {pendingTx ? t('Harvesting') : t('Harvest3')}
       </Button>
     </Flex>
   )

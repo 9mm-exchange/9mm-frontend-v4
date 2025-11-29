@@ -1,7 +1,7 @@
 import { ChainId } from '@pancakeswap/chains'
 import { ERC20Token, WETH9 } from '@pancakeswap/sdk'
 
-export const pulpTokens = {
+export const optiTokens = {
   weth: WETH9[ChainId.OPTIPULSE],
 
   pls: new ERC20Token(ChainId.OPTIPULSE, '0xed22410bF8e1F0Fc7b556d556C9428f359FC37Af', 18, 'WTPLS', 'Test Pulse'),

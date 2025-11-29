@@ -85,7 +85,7 @@ const HowItWork = () => {
                 {t('Earning')}
               </Text>
               <Text fontSize={['40px']} bold color="failure" lineHeight="110%">
-                {t('CAKE')}
+                {t('WTPLS')}
               </Text>
               <Text fontSize={['14px']} mt="24px">
                 {t('Earn up to 20% referral commissions in CAKE')}

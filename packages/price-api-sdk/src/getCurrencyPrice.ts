@@ -79,6 +79,7 @@ export async function getCurrencyListUsdPrice(
   options?: RequestInit,
 ): Promise<CurrencyUsdResult> {
   const requestUrl = getRequestUrl(currencyListParams)
+
   if (!requestUrl || !currencyListParams) {
     throw new Error(`Invalid request for currency prices, request url: ${requestUrl}`)
   }

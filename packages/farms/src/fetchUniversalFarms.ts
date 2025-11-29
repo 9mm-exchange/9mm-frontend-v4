@@ -1,7 +1,8 @@
+// fetchUniversalFarms.ts
 import { ChainId } from '@pancakeswap/chains'
 import { ERC20Token } from '@pancakeswap/sdk'
-import { FARMS_API } from '../config/endpoint'
 import { Protocol, UniversalFarmConfig } from './types'
+import { universalFarmsData } from './universalFarmsData'
 
 const farmCache: Record<string, UniversalFarmConfig[]> = {}
 
@@ -14,16 +15,15 @@ export const fetchUniversalFarms = async (chainId: ChainId, protocol?: Protocol)
   }
 
   try {
-    const params = { chainId, ...(protocol && { protocol }) }
-    const queryString = Object.entries(params)
-      .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-      .join('&')
+    // Filter data based on chainId and protocol
+    let filteredData = universalFarmsData.filter((farm) => farm.chainId === chainId)
 
-    const response = await fetch(`${FARMS_API}?${queryString}`, {
-      signal: AbortSignal.timeout(3000),
-    })
-    const result = await response.json()
-    const newData: UniversalFarmConfig[] = result.map((p: any) => ({
+    if (protocol) {
+      filteredData = filteredData.filter((farm) => farm.protocol === protocol)
+    }
+
+    // Convert to ERC20Token instances
+    const newData: UniversalFarmConfig[] = filteredData.map((p: any) => ({
       ...p,
       token0: new ERC20Token(
         p.token0.chainId,
@@ -48,6 +48,7 @@ export const fetchUniversalFarms = async (chainId: ChainId, protocol?: Protocol)
 
     return newData
   } catch (error) {
+    console.error('Error loading universal farms from local data:', error)
     return []
   }
 }

@@ -84,7 +84,7 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
       : ''
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.replace(/pancake/gi, '')
-  const earnLabel = t('CAKE + Fees')
+  const earnLabel = t('WTPLS + Fees')
 
   const liquidityUrlPathParts = getLiquidityUrlPathParts({
     quoteTokenAddress: farm.quoteToken.address,

@@ -287,7 +287,7 @@ export const ActionPanelV3: FC<ActionPanelV3Props> = ({
                 </ValueWrapper>
                 <ValueWrapper>
                   <Text>{t('Staked Liquidity')}</Text>
-                  <StakedLiquidity {...stakedLiquidity} />
+                  Total active (in-range) liquidity staked in the farm4.
                 </ValueWrapper>
               </>
             )}

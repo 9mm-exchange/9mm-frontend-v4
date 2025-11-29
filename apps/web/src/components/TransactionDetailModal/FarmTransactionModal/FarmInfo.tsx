@@ -1,9 +1,9 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Box, Flex, LightBulbIcon, StyledLink, Text, useTooltip } from '@pancakeswap/uikit'
-import { FarmTransactionStatus, CrossChainFarmStepType } from 'state/transactions/actions'
+import NextLink from 'next/link'
+import { CrossChainFarmStepType, FarmTransactionStatus } from 'state/transactions/actions'
 import { TransactionDetails } from 'state/transactions/reducer'
 import { styled } from 'styled-components'
-import NextLink from 'next/link'
 
 const ListStyle = styled.div`
   position: relative;
@@ -84,7 +84,7 @@ const FarmResult: React.FC<React.PropsWithChildren<FarmInfoProps>> = ({ pickedDa
         <NextLink href="/prediction?chain=bsc">
           <LinkStyle>{t('Win')}</LinkStyle>
         </NextLink>
-        {t('with your CAKE earned.')}
+        {t('with your WTPLS earned.')}
       </ListStyle>
     </Flex>,
     { placement: 'top' },

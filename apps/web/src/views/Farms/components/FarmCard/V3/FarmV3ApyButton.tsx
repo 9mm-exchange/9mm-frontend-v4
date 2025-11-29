@@ -284,7 +284,7 @@ function FarmV3ApyButton_({
       </ul>
       <br />
       <Text>
-        {t('Calculated using the total active liquidity staked versus the CAKE reward emissions for the farm.')}
+        {t('Calculated using the total active liquidity staked versus the WTPLS reward emissions for the farm.')}
       </Text>
       {canBoosted && (
         <Text mt="15px">

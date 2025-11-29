@@ -12,6 +12,7 @@ import { ProxyFarmCardContainer } from '.'
 const FarmsHistoryPage = () => {
   const { address: account } = useAccount()
   const { chosenFarmsMemoized } = useContext(FarmsV3Context)
+
   const cakePrice = useCakePrice()
 
   return (

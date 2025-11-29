@@ -8,8 +8,8 @@ import {
   ethereumTokens,
   lineaTokens,
   opBnbTokens,
+  optiTokens,
   polygonZkEvmTokens,
-  pulpTokens,
   pulseTokens,
   sonicTokens,
   zkSyncTestnetTokens,
@@ -32,7 +32,7 @@ export const priceHelperTokens = {
     list: [pulseTokens.weth, pulseTokens.usdc, pulseTokens.usdt, pulseTokens.dai],
   },
   [ChainId.OPTIPULSE]: {
-    list: [pulpTokens.weth, pulpTokens.usdc, pulpTokens.usdt, pulpTokens.dai],
+    list: [optiTokens.weth, optiTokens.usdc, optiTokens.usdt, optiTokens.dai],
   },
   [ChainId.SONIC]: {
     list: [sonicTokens.weth, sonicTokens.usdc, sonicTokens.usdt],

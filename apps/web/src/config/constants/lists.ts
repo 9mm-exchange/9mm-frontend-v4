@@ -11,7 +11,7 @@ export const PANCAKE_SONIC_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/sonic-tokenlist.json'
 
 export const PANCAKE_OPTIPULSE_DEFAULT =
-  'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/pulpchain-tokenlist.json'
+  'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/optipulse-tokenlist.json'
 
 export const PANCAKE_ZKSYNC_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json'
 export const PANCAKE_POLYGON_ZKEVM_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-polygon-zkevm-default.json'

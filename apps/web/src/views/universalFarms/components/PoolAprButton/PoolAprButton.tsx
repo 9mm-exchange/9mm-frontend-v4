@@ -35,8 +35,6 @@ export const PoolAprButton: React.FC<PoolGlobalAprButtonProps> = ({ pool, lpApr,
 
   const modal = useModalV2()
 
-  console.log('lpApr---->', lpApr)
-
   const { tooltip, targetRef, tooltipVisible } = useTooltip(
     <AprTooltipContent
       combinedApr={boostApr ?? baseApr}

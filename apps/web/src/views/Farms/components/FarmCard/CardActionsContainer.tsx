@@ -111,7 +111,7 @@ const CardActions: React.FC<React.PropsWithChildren<FarmCardActionsProps>> = ({
             <RowBetween flexDirection="column" alignItems="flex-start" flex={1} width="100%">
               <Flex>
                 <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="4px">
-                  CAKE
+                  WTPLS
                 </Text>
                 <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
                   {t('Earned')}

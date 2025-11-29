@@ -52,6 +52,8 @@ export const V3PoolPositionAprButton: React.FC<PoolPositionAprButtonProps<Positi
   const { lpApr, cakeApr, merklApr, numerator, denominator } = useV3PositionApr(pool, userPosition)
   const { updateTotalApr } = useMyPositions()
 
+  console.log('lpApr--->', lpApr)
+
   useEffect(() => {
     if (!numerator.isZero())
       updateTotalApr(`${pool.chainId}:${pool.lpAddress}:${userPosition.tokenId}`, numerator, denominator)
@@ -198,7 +200,10 @@ export const useV3PositionApr = (pool: PoolInfo, userPosition: PositionDetail) =
   ])
 
   const lpApr = useMemo(() => {
+    console.log('userTVLUsd--->', userTVLUsd.isZero())
+
     if (outOfRange || removed || userTVLUsd.isZero()) return 0
+
     const apr = new BigNumber(pool.fee24hUsd ?? 0)
       .times(365)
       .times(V3_LP_FEE_RATE[pool.feeTier] ?? 1)
@@ -207,6 +212,7 @@ export const useV3PositionApr = (pool: PoolInfo, userPosition: PositionDetail) =
       .toNumber()
     return apr
   }, [outOfRange, pool.fee24hUsd, pool.feeTier, pool.liquidity, removed, userPosition.liquidity, userTVLUsd])
+
   const merklApr = outOfRange ? 0 : parseFloat(merklApr_ ?? 0) ?? 0
 
   const numerator = useMemo(() => {

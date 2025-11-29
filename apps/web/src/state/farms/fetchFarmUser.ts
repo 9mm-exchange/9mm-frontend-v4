@@ -1,11 +1,11 @@
 import { ChainId } from '@pancakeswap/chains'
 import BigNumber from 'bignumber.js'
-import { masterChefV2ABI } from 'config/abi/masterchefV2'
 import { crossFarmingVaultABI } from 'config/abi/crossFarmingVault'
+import { masterChefV2ABI } from 'config/abi/masterchefV2'
 import { v2BCakeWrapperABI } from 'config/abi/v2BCakeWrapper'
 import { SerializedFarmConfig, SerializedFarmPublicData } from 'config/constants/types'
 import { farmFetcher } from 'state/farms'
-import { getMasterChefV2Address, getCrossFarmingVaultAddress } from 'utils/addressHelpers'
+import { getCrossFarmingVaultAddress, getMasterChefV2Address } from 'utils/addressHelpers'
 import { getCrossFarmingReceiverContract } from 'utils/contractHelpers'
 import { verifyBscNetwork } from 'utils/verifyBscNetwork'
 import { publicClient } from 'utils/wagmi'
@@ -236,7 +236,7 @@ export const fetchFarmUserEarnings = async (
 ) => {
   const isBscNetwork = verifyBscNetwork(chainId)
   const multiCallChainId = farmFetcher.isTestnet(chainId) ? ChainId.BSC_TESTNET : ChainId.BSC
-  const userAddress = isBscNetwork ? account : await fetchCProxyAddress(account, multiCallChainId)
+  const userAddress = account
   const masterChefAddress = getMasterChefV2Address(multiCallChainId)!
 
   const rawEarnings = await publicClient({ chainId: multiCallChainId }).multicall({
