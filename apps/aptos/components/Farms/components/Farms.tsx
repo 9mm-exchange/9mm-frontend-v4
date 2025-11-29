@@ -408,7 +408,6 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
           )}
           {poolLength && <div ref={observerRef} />}
         </NoSSR>
-        <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} />
       </Page>
     </FarmsContext.Provider>
   )
