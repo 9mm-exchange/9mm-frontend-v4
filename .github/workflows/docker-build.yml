@@ -35,15 +35,44 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     
+    - name: Extract metadata (tags, labels)
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: spiritmonkey/dex
+        tags: |
+          type=raw,value=latest
+          type=sha,prefix=
+          type=raw,value={{date 'YYYYMMDD-HHmmss'}}
+
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
         platforms: linux/amd64
-        tags: spiritmonkey/devdex:latest
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
         build-args: |
           NODE_OPTIONS=--max-old-space-size=8192
+
+    - name: Image digest
+      run: echo "Image pushed with tags - ${{ steps.meta.outputs.tags }}"
+
+    # Deploy to Kubernetes
+    - name: Set up kubectl
+      uses: azure/setup-kubectl@v3
+
+    - name: Configure kubeconfig
+      run: |
+        mkdir -p $HOME/.kube
+        echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
+        chmod 600 $HOME/.kube/config
+
+    - name: Restart Kubernetes Deployment
+      run: |
+        kubectl rollout restart deployment/dex -n ninemm-frontend
+        kubectl rollout status deployment/dex -n ninemm-frontend --timeout=180s
 
