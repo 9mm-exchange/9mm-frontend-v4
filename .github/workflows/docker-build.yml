@@ -54,7 +54,7 @@ jobs:
         build-args: |
           NODE_OPTIONS=--max-old-space-size=8192
           NEXT_PUBLIC_SNAPSHOT_BASE_URL=https://hub.snapshot.org
-          NEXT_PUBLIC_EXPLORE_API_ENDPOINT=https://v3dev.9mm.pro/api
+          NEXT_PUBLIC_EXPLORE_API_ENDPOINT=/api
           NEXT_PUBLIC_SENTRY_DSN=https://9b2da63c55645f13b6035e91d06347af@o4510433552891904.ingest.de.sentry.io/4510435212525648
           SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
 
