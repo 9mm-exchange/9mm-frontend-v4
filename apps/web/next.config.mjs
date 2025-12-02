@@ -160,6 +160,11 @@ const config = {
   async redirects() {
     return [
       {
+        source: '/',
+        destination: '/swap',
+        permanent: false,
+      },
+      {
         source: '/send',
         destination: '/swap',
         permanent: true,
