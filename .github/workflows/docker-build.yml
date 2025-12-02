@@ -1,13 +1,9 @@
-name: Docker Build and Push
+name: Docker Build and Push (DevUI)
 
 on:
   push:
     branches:
-      - docker
-      - 'docker/**'
-  pull_request:
-    branches:
-      - docker
+      - docker-dev
   workflow_dispatch:
 
 jobs:
@@ -39,7 +35,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: spiritmonkey/dex
+        images: spiritmonkey/devui
         tags: |
           type=raw,value=latest
           type=sha,prefix=
@@ -77,6 +73,6 @@ jobs:
 
     - name: Restart Kubernetes Deployment
       run: |
-        kubectl rollout restart deployment/dex -n ninemm-frontend
-        kubectl rollout status deployment/dex -n ninemm-frontend --timeout=180s
+        kubectl rollout restart deployment/devui -n ninemm-frontend
+        kubectl rollout status deployment/devui -n ninemm-frontend --timeout=180s
 
