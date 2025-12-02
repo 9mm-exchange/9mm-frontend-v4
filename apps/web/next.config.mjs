@@ -57,6 +57,7 @@ const config = {
     fallbackNodePolyfills: false,
     optimizePackageImports: ['@pancakeswap/widgets-internal', '@pancakeswap/uikit'],
   },
+  output: 'standalone',
   outputFileTracingRoot: path.join(__dirname, '../../'),
   outputFileTracingExcludes: {
     '*': [],
