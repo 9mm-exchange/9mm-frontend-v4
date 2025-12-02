@@ -2,7 +2,12 @@ name: Docker Build and Push
 
 on:
   push:
-    branches: [ "docker" ]
+    branches:
+      - docker
+      - 'docker/**'
+  pull_request:
+    branches:
+      - docker
   workflow_dispatch:
 
 jobs:
