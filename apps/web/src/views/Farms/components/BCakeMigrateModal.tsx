@@ -102,7 +102,7 @@ export const InfoBox = styled.div`
   padding: 16px;
   background: ${({ theme }) => theme.colors.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 16px;
+  border-radius: 5px;
   font-size: 12px;
   color: ${({ theme }) => theme.colors.textSubtle};
   line-height: 120%;

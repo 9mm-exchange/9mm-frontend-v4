@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import {
   DropdownMenuItems,
   FlexGap,
@@ -14,6 +13,7 @@ import orderBy from 'lodash/orderBy'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { useEffect, useMemo, useState } from 'react'
+import styled from 'styled-components'
 import { NetworkSwitcher } from './NetworkSwitcher'
 import { WalletButton } from './WalletButton'
 
@@ -59,7 +59,7 @@ const MenuWrapper = styled.div`
     position: relative;
     align-items: center;
     border: 0px;
-    border-radius: 16px;
+    border-radius: 5px;
     cursor: pointer;
     display: inline-flex;
     font-size: 16px;

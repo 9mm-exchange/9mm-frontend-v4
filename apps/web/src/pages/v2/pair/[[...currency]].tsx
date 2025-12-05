@@ -22,27 +22,27 @@ import Page from 'views/Page'
 
 import { getLegacyFarmConfig, Protocol } from '@pancakeswap/farms'
 import { useTranslation } from '@pancakeswap/localization'
+import { formatFiatNumber } from '@pancakeswap/utils/formatFiatNumber'
 import { useQuery } from '@tanstack/react-query'
 import { LightGreyCard } from 'components/Card'
+import { MerklSection } from 'components/Merkl/MerklSection'
+import { MerklTag } from 'components/Merkl/MerklTag'
 import { usePoolTokenPercentage } from 'components/PositionCard'
 import { useCurrency } from 'hooks/Tokens'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useMasterchef } from 'hooks/useContract'
 import { useV2Pair } from 'hooks/usePairs'
+import { useTotalPriceUSD } from 'hooks/useTotalPriceUSD'
 import { useRouter } from 'next/router'
-import { useAccount } from 'wagmi'
+import { useMemo } from 'react'
 import { useAccountPositionDetailByPool } from 'state/farmsV4/state/accountPositions/hooks'
 import { usePoolInfo } from 'state/farmsV4/state/extendPools/hooks'
-import React, { useMemo } from 'react'
-import { formatFiatNumber } from '@pancakeswap/utils/formatFiatNumber'
-import { useTotalPriceUSD } from 'hooks/useTotalPriceUSD'
 import { useLPApr } from 'state/swap/useLPApr'
 import { formatAmount } from 'utils/formatInfoNumbers'
-import { MerklSection } from 'components/Merkl/MerklSection'
-import { MerklTag } from 'components/Merkl/MerklTag'
+import { useAccount } from 'wagmi'
 
 export const BodyWrapper = styled(Card)`
-  border-radius: 24px;
+  border-radius: 5px;
   max-width: 858px;
   width: 100%;
   z-index: 1;

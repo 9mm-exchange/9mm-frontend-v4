@@ -22,7 +22,7 @@ const BCakeInfoWrapper = styled.div`
   flex-direction: column;
   margin-top: 16px;
   margin-bottom: 16px;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 16px;
 `
 

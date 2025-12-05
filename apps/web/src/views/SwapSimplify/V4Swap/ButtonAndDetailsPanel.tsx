@@ -7,10 +7,7 @@ export const PanelWrapper = styled.div`
   flex-direction: column;
   gap: 8px;
   width: 100%;
-  padding: 16px;
-  border-radius: 24px;
-  background-color: ${({ theme }) => theme.colors.card};
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  margin-bottom: 10px;
 `
 interface ButtonAndDetailsPanelProps {
   shouldRenderDetails?: boolean

@@ -71,7 +71,7 @@ const LinkItem = styled.a`
   text-decoration: none;
   width: 111px;
   height: 128px;
-  border-radius: 24px;
+  border-radius: 5px;
   border-top-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 2px;

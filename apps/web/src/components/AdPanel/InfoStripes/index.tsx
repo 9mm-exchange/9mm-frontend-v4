@@ -38,7 +38,7 @@ const InnerContainer = styled(Flex)`
 
 const SpeechBubble = styled(Flex)`
   position: relative;
-  border-radius: 16px;
+  border-radius: 5px;
   width: 100%;
   height: 80%;
   align-items: center;

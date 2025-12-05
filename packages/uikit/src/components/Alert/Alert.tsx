@@ -1,13 +1,13 @@
 import React from "react";
-import { styled, DefaultTheme } from "styled-components";
-import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
-import ErrorIcon from "../Svg/Icons/Error";
-import BlockIcon from "../Svg/Icons/Block";
-import InfoIcon from "../Svg/Icons/Info";
-import { Text } from "../Text";
+import { DefaultTheme, styled } from "styled-components";
+import Flex from "../Box/Flex";
 import { IconButton } from "../Button";
 import { CloseIcon } from "../Svg";
-import Flex from "../Box/Flex";
+import BlockIcon from "../Svg/Icons/Block";
+import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
+import ErrorIcon from "../Svg/Icons/Error";
+import InfoIcon from "../Svg/Icons/Info";
+import { Text } from "../Text";
 import { AlertProps, variants } from "./types";
 
 interface ThemedIconLabel {
@@ -69,7 +69,7 @@ const CloseHandler = styled.div`
 const StyledAlert = styled(Flex)`
   position: relative;
   background-color: ${({ theme }) => theme.alert.background};
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
 `;
 

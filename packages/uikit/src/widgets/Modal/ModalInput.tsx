@@ -1,15 +1,15 @@
-import BigNumber from "bignumber.js";
-import { useMemo } from "react";
-import { styled } from "styled-components";
 import { useTranslation } from "@pancakeswap/localization";
 import { displayBalance } from "@pancakeswap/utils/displayBalance";
 import { trimTrailZero } from "@pancakeswap/utils/trimTrailZero";
-import { Flex } from "../../components/Box";
-import { Text } from "../../components/Text";
-import { Link } from "../../components/Link";
-import { Button } from "../../components/Button";
+import BigNumber from "bignumber.js";
+import { useMemo } from "react";
+import { styled } from "styled-components";
 import { Balance } from "../../components/Balance";
+import { Flex } from "../../components/Box";
+import { Button } from "../../components/Button";
 import { Input, InputProps } from "../../components/Input";
+import { Link } from "../../components/Link";
+import { Text } from "../../components/Text";
 
 interface ModalInputProps {
   max: string;
@@ -31,7 +31,7 @@ const StyledTokenInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: ${({ theme, isWarning }) => (isWarning ? theme.colors.warning : theme.shadows.inset)};
   color: ${({ theme }) => theme.colors.text};
   padding: 8px 16px 8px 0;

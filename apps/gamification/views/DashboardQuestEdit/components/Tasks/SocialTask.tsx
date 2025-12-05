@@ -116,7 +116,7 @@ export const SocialTask: React.FC<SocialTaskProps> = ({ task, isDrafted }) => {
                 <StyledInput
                   value={task.socialLink}
                   isError={isUrlError}
-                  style={{ borderRadius: '24px' }}
+                  style={{ borderRadius: '5px' }}
                   disabled={disableInput}
                   placeholder={taskInputPlaceholder(social)}
                   onChange={(e) => handleUrlChange(e, 'socialLink')}
@@ -131,7 +131,7 @@ export const SocialTask: React.FC<SocialTaskProps> = ({ task, isDrafted }) => {
                 <StyledInput
                   value={task.accountId}
                   isError={isAccountIdError}
-                  style={{ borderRadius: '24px' }}
+                  style={{ borderRadius: '5px' }}
                   disabled={disableInput}
                   placeholder={socialAccountIdName(task.taskType)}
                   onChange={(e) => handleUrlChange(e, 'accountId')}
@@ -147,7 +147,7 @@ export const SocialTask: React.FC<SocialTaskProps> = ({ task, isDrafted }) => {
                 value={task.title}
                 isError={isTitleError}
                 disabled={disableInput}
-                style={{ borderRadius: '24px' }}
+                style={{ borderRadius: '5px' }}
                 onChange={(e) => handleUrlChange(e, 'title')}
               />
             </InputGroup>
@@ -156,7 +156,7 @@ export const SocialTask: React.FC<SocialTaskProps> = ({ task, isDrafted }) => {
           <StyledInput
             placeholder={t('Description (Optional)')}
             value={task.description}
-            style={{ borderRadius: '24px' }}
+            style={{ borderRadius: '5px' }}
             disabled={disableInput}
             onChange={(e) => handleUrlChange(e, 'description')}
           />

@@ -9,7 +9,7 @@ const Choice = styled.label`
   overflow: hidden;
   display: flex;
   padding: 8px 16px;
-  border-radius: 16px;
+  border-radius: 5px;
   margin-bottom: 16px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   flex-direction: column;
@@ -45,7 +45,7 @@ const ContainerStyled = styled(Flex)`
   padding: 8px;
   max-width: 140px;
   min-width: 140px;
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.input};
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
 `
@@ -65,7 +65,7 @@ const DisableText = styled(Box)`
   max-width: 140px;
   min-width: 140px;
   padding: 8px;
-  border-radius: 16px;
+  border-radius: 5px;
   text-align: center;
   height: 42px;
   line-height: 24px;

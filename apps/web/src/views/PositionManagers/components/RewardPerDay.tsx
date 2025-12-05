@@ -38,7 +38,7 @@ const CakeOutlineIcon: React.FC<React.PropsWithChildren<SvgProps>> = memo((props
         stroke="#fff"
         strokeWidth={1.4}
         strokeLinejoin="round"
-        fill={props.color || '#22c55e'}
+        fill={props.color || '#ef4444'}
       />
     </Svg>
   )

@@ -1,7 +1,7 @@
-import { styled } from 'styled-components'
-import { Box, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { PostersItemData, PostersItemDataType } from '@pancakeswap/games'
+import { Box, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useIsIOS } from 'hooks/useIsIOS'
+import { styled } from 'styled-components'
 
 const StyledCarouselContainer = styled(Box)<{ isHorizontal: boolean }>`
   padding: 16px 16px 2px 16px;
@@ -18,7 +18,7 @@ const StyledCarouselContainer = styled(Box)<{ isHorizontal: boolean }>`
     width: 100%;
     margin: 0;
     padding: 16px;
-    border-radius: 16px;
+    border-radius: 5px;
 
     height: ${({ isHorizontal }) => (isHorizontal ? 'auto' : '100%')};
   }

@@ -17,7 +17,7 @@ const StyledInput = styled(UIKitStyledInput)`
 `
 
 const StyledPercentInput = styled(StyledBalanceInput)`
-  border-radius: 16px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;

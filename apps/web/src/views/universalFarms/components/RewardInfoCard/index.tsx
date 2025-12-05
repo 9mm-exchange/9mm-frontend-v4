@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const StyledCard = styled.div`
   background: ${({ theme }) => theme.colors.positive10};
   border: 1px solid ${({ theme }) => theme.colors.positive20};
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 16px;
   margin-top: 16px;
   margin-bottom: 16px;

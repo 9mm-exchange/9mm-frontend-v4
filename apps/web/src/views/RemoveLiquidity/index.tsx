@@ -70,7 +70,7 @@ import ConfirmLiquidityModal from '../Swap/components/ConfirmRemoveLiquidityModa
 
 const BorderCard = styled.div`
   border: solid 1px ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 16px;
 `
 

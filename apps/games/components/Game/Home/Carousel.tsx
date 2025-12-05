@@ -1,7 +1,7 @@
+import { PostersItemData, PostersItemDataType } from '@pancakeswap/games'
+import { Box, ChevronLeftIcon, ChevronRightIcon, Flex } from '@pancakeswap/uikit'
 import { useCallback, useState } from 'react'
 import { styled } from 'styled-components'
-import { PostersItemDataType, PostersItemData } from '@pancakeswap/games'
-import { Flex, Box, ChevronLeftIcon, ChevronRightIcon } from '@pancakeswap/uikit'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -103,7 +103,7 @@ const StyledSwiperContainer = styled(Box)<{ isHorizontal: boolean }>`
 
   ${({ theme }) => theme.mediaQueries.xl} {
     width: 100%;
-    border-radius: 16px;
+    border-radius: 5px;
     margin: ${({ isHorizontal }) => (isHorizontal ? '32px 0 0 0px' : '0 0px 24px 0px')};
 
     &:before {

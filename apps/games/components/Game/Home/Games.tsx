@@ -109,7 +109,7 @@ const ArrowButton = styled.div`
   width: 32px;
   min-width: 32px;
   height: 32px;
-  border-radius: 16px;
+  border-radius: 5px;
   border: 2px solid ${({ theme }) => theme.colors.primary};
   svg path {
     fill: ${({ theme }) => theme.colors.primary};

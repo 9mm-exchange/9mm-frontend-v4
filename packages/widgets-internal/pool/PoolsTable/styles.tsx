@@ -1,11 +1,11 @@
-import { styled } from "styled-components";
 import { Flex } from "@pancakeswap/uikit";
+import { styled } from "styled-components";
 
 export const ActionContainer = styled(Flex)`
   flex-direction: column;
   padding: 16px;
   border: 2px solid ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   margin-bottom: 16px;
 
   ${({ theme }) => theme.mediaQueries.sm} {

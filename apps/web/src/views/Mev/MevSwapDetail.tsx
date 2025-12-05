@@ -7,7 +7,7 @@ import { useIsMEVEnabled } from './hooks'
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => (theme.isDark ? '#323037' : '#F7F7F7')};
-  border-radius: 16px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   padding: 12px 16px;
   margin-top: 8px;

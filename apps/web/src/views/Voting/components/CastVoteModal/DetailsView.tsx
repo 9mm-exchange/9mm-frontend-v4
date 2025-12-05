@@ -21,7 +21,7 @@ const FixedTermWrapper = styled(Box)<{ expired?: boolean }>`
   width: 100%;
   margin: 16px 0;
   padding: 1px 1px 3px 1px;
-  background: ${({ theme, expired }) => (expired ? theme.colors.warning : 'linear-gradient(180deg, #53dee9, #22c55e)')};
+  background: ${({ theme, expired }) => (expired ? theme.colors.warning : 'linear-gradient(180deg, #53dee9, #ef4444)')};
   border-radius: ${({ theme }) => theme.radii.default};
 `
 

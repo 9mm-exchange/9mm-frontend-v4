@@ -98,7 +98,7 @@ function MyApp(props: AppProps<{ initialReduxState: any; dehydratedState: any }>
           name="description"
           content="Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on BNB Smart Chain (BSC) with the best farms in DeFi and a lottery for CAKE."
         />
-        <meta name="theme-color" content="#22c55e" />
+        <meta name="theme-color" content="#ef4444" />
       </Head>
       <DefaultSeo {...SEO} />
       {/* <LoadVConsole /> */}

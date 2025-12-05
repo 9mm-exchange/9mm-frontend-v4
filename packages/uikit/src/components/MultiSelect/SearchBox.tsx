@@ -21,7 +21,7 @@ const StyledBox = styled(Box)<{ isFocus: boolean }>`
   margin: 16px;
   padding: 5px 8px;
   min-height: 42px;
-  ${({ isFocus }) => isFocus && `box-shadow: 0px 0px 0px 4px #22c55e33, 0px 0px 0px 1px #22c55e;`}
+  ${({ isFocus }) => isFocus && `box-shadow: 0px 0px 0px 4px #ef444433, 0px 0px 0px 1px #ef4444;`}
 `;
 
 const LabelsContainer = styled(Flex)`

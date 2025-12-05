@@ -14,7 +14,7 @@ const Wrapper = styled(Flex)`
   padding: 1px;
   width: 100%;
   margin: 46px auto auto auto;
-  background: linear-gradient(180deg, #53dee9, #22c55e);
+  background: linear-gradient(180deg, #53dee9, #ef4444);
   border-radius: ${({ theme }) => theme.radii.default};
 
   ${({ theme }) => theme.mediaQueries.md} {

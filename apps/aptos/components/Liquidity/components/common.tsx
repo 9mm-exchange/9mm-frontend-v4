@@ -33,13 +33,13 @@ const Dot = styled(Box)<{ scale?: 'sm' | 'md' }>`
 const CircleSvg = ({ percent = 1, ...props }: SvgProps & { percent?: number }) => (
   <Svg width="60px" height="60px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g filter="url(#filter0_i_1147_113741)">
-      <circle r="10" cx="10" cy="10" fill="#22c55e" />
+      <circle r="10" cx="10" cy="10" fill="#ef4444" />
       <circle
         r="5"
         cx="10"
         cy="10"
         fill="transparent"
-        stroke="#22c55e"
+        stroke="#ef4444"
         strokeWidth="10"
         strokeDasharray={`calc(${percent * 100}px * 31.4 / 100) 31.4`}
         transform="rotate(-90) translate(-20)"

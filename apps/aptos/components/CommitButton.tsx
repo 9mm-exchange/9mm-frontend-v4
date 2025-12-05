@@ -1,6 +1,6 @@
-import { Button, ButtonProps } from '@pancakeswap/uikit'
 import { useAccount } from '@pancakeswap/awgmi'
 import { useIsMounted } from '@pancakeswap/hooks'
+import { Button, ButtonProps } from '@pancakeswap/uikit'
 import { useActiveNetwork } from 'hooks/useNetwork'
 import { ConnectWalletButton } from './ConnectWalletButton'
 import Trans from './Trans'

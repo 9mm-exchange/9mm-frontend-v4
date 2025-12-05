@@ -14,7 +14,7 @@ const DropDownContainer = styled.div<{ error: boolean }>`
   padding: 12px 16px;
   box-shadow: ${({ theme, error }) => (error ? theme.shadows.danger : theme.shadows.inset)};
   border: 1px solid ${({ theme, error }) => (error ? theme.colors.failure : theme.colors.inputSecondary)};
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.input};
   cursor: pointer;
   position: relative;

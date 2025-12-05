@@ -32,7 +32,7 @@ export const ToggleWrapper = styled.div`
   display: flex;
   width: 100%;
   gap: 4px;
-  border-radius: 16px;
+  border-radius: 5px;
   align-items: center;
   justify-content: space-between;
   margin-top: 8px;

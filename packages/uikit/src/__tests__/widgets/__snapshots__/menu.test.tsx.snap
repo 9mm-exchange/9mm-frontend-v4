@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
   position: relative;
   align-items: center;
   border: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
@@ -104,7 +104,7 @@ exports[`renders correctly 1`] = `
   position: relative;
   align-items: center;
   border: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
@@ -271,7 +271,7 @@ exports[`renders correctly 1`] = `
 .c11 {
   background-color: var(--colors-backgroundAlt);
   border: 1px solid var(--colors-cardBorder);
-  border-radius: 16px;
+  border-radius: 5px;
   padding-bottom: 4px;
   padding-top: 4px;
   pointer-events: auto;
@@ -375,7 +375,7 @@ exports[`renders correctly 1`] = `
 
 .c10:hover {
   background: var(--colors-tertiary);
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .c16 {
@@ -402,7 +402,7 @@ exports[`renders correctly 1`] = `
 
 .c16:hover {
   background: var(--colors-tertiary);
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .c19 {
@@ -429,7 +429,7 @@ exports[`renders correctly 1`] = `
 
 .c19:hover {
   background: var(--colors-tertiary);
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .c49 {
@@ -1234,7 +1234,7 @@ exports[`renders correctly 1`] = `
                     />
                     <stop
                       offset="1"
-                      stop-color="#22c55e"
+                      stop-color="#ef4444"
                     />
                   </lineargradient>
                 </defs>
@@ -1667,7 +1667,7 @@ exports[`renders correctly 1`] = `
   position: relative;
   align-items: center;
   border: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
@@ -1713,7 +1713,7 @@ exports[`renders correctly 1`] = `
   position: relative;
   align-items: center;
   border: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
@@ -1757,7 +1757,7 @@ exports[`renders correctly 1`] = `
   position: relative;
   align-items: center;
   border: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
@@ -2059,7 +2059,7 @@ exports[`renders correctly 1`] = `
 .c31 {
   align-items: center;
   background-color: var(--colors-textDisabled);
-  border-radius: 24px;
+  border-radius: 5px;
   box-shadow: var(--shadows-inset);
   cursor: pointer;
   display: inline-flex;
@@ -3244,7 +3244,7 @@ exports[`renders correctly 1`] = `
                     />
                     <stop
                       offset="1"
-                      stop-color="#22c55e"
+                      stop-color="#ef4444"
                     />
                   </lineargradient>
                 </defs>
@@ -3407,7 +3407,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c3:hover {
-  border-radius: 16px;
+  border-radius: 5px;
 }
 
 .c3:hover,
@@ -3491,7 +3491,7 @@ html[data-useragent*="TokenPocket_iOS"] .c1 {
 .c13 {
   background-color: var(--colors-backgroundAlt);
   border: 1px solid var(--colors-cardBorder);
-  border-radius: 16px;
+  border-radius: 5px;
   padding-bottom: 4px;
   padding-top: 4px;
   pointer-events: auto;

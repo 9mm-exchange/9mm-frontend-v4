@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
 import { useTranslation } from "@pancakeswap/localization";
+import { Button, Flex, Text } from "@pancakeswap/uikit";
+import { ReactNode } from "react";
 import { styled } from "styled-components";
-import { Text, Button, Flex } from "@pancakeswap/uikit";
 
-import { ActionTitles, ActionContent } from "./styles";
+import { ActionContent, ActionTitles } from "./styles";
 
 const ActionContainer = styled.div`
   padding: 16px;
   border: 2px solid ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   flex-grow: 1;
   flex-basis: 0;
   margin-bottom: 16px;

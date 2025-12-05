@@ -41,7 +41,7 @@ const Selector = styled(Flex)<{ isOpen: boolean; isSingleToken?: boolean }>`
   ${({ theme }) => theme.mediaQueries.lg} {
     left: -12px;
     margin-top: 15px;
-    border-radius: 16px;
+    border-radius: 5px;
     min-width: 272px;
     height: ${({ isOpen }) => (isOpen ? 'auto' : '42px')};
   }

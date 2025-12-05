@@ -28,7 +28,7 @@ import { Address } from 'viem'
 import { useBalance } from 'wagmi'
 
 const COLORS = {
-  ETH: '#627EEA',
+  ETH: '#2b2b2d',
   BNB: '#14151A',
 }
 

@@ -23,7 +23,7 @@ const floatingAnim = (x: string, y: string) => keyframes`
 const StyledContainer = styled(Box)`
   position: relative;
   padding: 0 16px;
-  background: linear-gradient(180deg, #22c55e 0%, #5121b1 100%);
+  background: linear-gradient(180deg, #ef4444 0%, #5121b1 100%);
 `
 
 const ImageWrapper = styled.div`

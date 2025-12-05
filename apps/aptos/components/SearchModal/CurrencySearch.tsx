@@ -1,15 +1,15 @@
 /* eslint-disable no-restricted-syntax */
 import { Currency, Token } from '@pancakeswap/aptos-swap-sdk'
+import { APTOS_COIN, isStructTag } from '@pancakeswap/awgmi'
 import { useDebounce, useSortedTokensByQuery } from '@pancakeswap/hooks'
 import { useTranslation } from '@pancakeswap/localization'
+import { WrappedTokenInfo, createFilterToken } from '@pancakeswap/token-lists'
 import { AutoColumn, Box, Column, Input, Row, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { useAudioPlay } from '@pancakeswap/utils/user/audioPlay'
 import useNativeCurrency from 'hooks/useNativeCurrency'
 import { KeyboardEvent, RefObject, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { APTOS_COIN, isStructTag } from '@pancakeswap/awgmi'
-import { WrappedTokenInfo, createFilterToken } from '@pancakeswap/token-lists'
 import { FixedSizeList } from 'react-window'
 import { useAllLists, useInactiveListUrls } from 'state/lists/hooks'
-import { useAudioPlay } from '@pancakeswap/utils/user/audioPlay'
 
 import { useActiveChainId } from 'hooks/useNetwork'
 import { useAllTokens, useIsUserAddedToken, useToken } from '../../hooks/Tokens'

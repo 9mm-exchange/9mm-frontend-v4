@@ -19,7 +19,7 @@ export const TerminalWrapper = styled.div`
   }
 
   .focus-within\:shadow-swap-input-dark:focus-within {
-    --tw-shadow: 0px 0px 0px 1px #22c55e, 0px 0px 0px 4px rgba(34, 197, 94, 0.2);
+    --tw-shadow: 0px 0px 0px 1px #ef4444, 0px 0px 0px 4px rgba(34, 197, 94, 0.2);
   }
 
   .text-black {
@@ -155,7 +155,7 @@ export const TerminalWrapper = styled.div`
   }
 
   .pcs-pari-search-box {
-    border-radius: 16px;
+    border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
     background-color: ${({ theme }) => theme.colors.input};
     padding: 8px 16px;

@@ -45,7 +45,7 @@ export const Description = styled.div<{ show: boolean; elementHeight: number }>`
 `
 export const StyledFeesContainer = styled(Box)<{ disabled: boolean }>`
   padding: 6px 16px;
-  border-radius: 16px;
+  border-radius: 5px;
   z-index: 10;
   background: ${({ theme }) => theme.colors.backgroundAlt};
   position: relative;
@@ -63,7 +63,7 @@ export const StyledFeesContainer = styled(Box)<{ disabled: boolean }>`
 
 export const StyledFeesContainer3 = styled(Flex)`
   padding: 2px 16px;
-  border-radius: 16px;
+  border-radius: 5px;
   z-index: 10;
   // background: ${({ theme }) => theme.colors.backgroundAlt};
   background: ${({ theme }) => theme.colors.input};
@@ -150,7 +150,7 @@ export const DropDownContainer = styled.div<{ error: boolean }>`
   padding: 12px 16px;
   box-shadow: ${({ theme, error }) => (error ? theme.shadows.danger : theme.shadows.inset)};
   border: 1px solid ${({ theme, error }) => (error ? theme.colors.failure : theme.colors.inputSecondary)};
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.input};
   cursor: pointer;
   position: relative;
@@ -236,7 +236,7 @@ const InputExtended = styled('input').withConfig({
   shouldForwardProp: (props) => !['scale', 'isSuccess', 'isWarning'].includes(props),
 })<InputProps & { height: string }>`
   background-color: ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme }) => theme.colors.text};
   display: block;

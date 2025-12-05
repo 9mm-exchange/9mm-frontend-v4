@@ -1,9 +1,9 @@
-import { scales, variants } from "./types";
 import { vars } from "../../css/vars.css";
+import { scales, variants } from "./types";
 
 export const scaleVariants = {
   [scales.MD]: {
-    height: "48px",
+    height: "50px",
     padding: "0 24px",
   },
   [scales.SM]: {

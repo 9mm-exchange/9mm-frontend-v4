@@ -17,7 +17,7 @@ import { PriceData } from "./types";
 
 const PriceDisplayContainer = styled(Flex)`
   padding: 0.25em 0.5em;
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.background};
 `;
 

@@ -145,7 +145,7 @@ export const AddSwap: React.FC<AddSwapProps> = ({ task, isDrafted }) => {
                 <StyledInput
                   placeholder={t('Title')}
                   value={task.title}
-                  style={{ borderRadius: '24px' }}
+                  style={{ borderRadius: '5px' }}
                   disabled={disableInput}
                   onChange={(e) => handleInputChange(e, 'title')}
                 />
@@ -153,7 +153,7 @@ export const AddSwap: React.FC<AddSwapProps> = ({ task, isDrafted }) => {
               <StyledInput
                 placeholder={t('Description (Optional)')}
                 value={task.description}
-                style={{ borderRadius: '24px' }}
+                style={{ borderRadius: '5px' }}
                 disabled={disableInput}
                 onChange={(e) => handleInputChange(e, 'description')}
               />

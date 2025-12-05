@@ -39,7 +39,7 @@ export type LineChartProps = {
 
 const Chart = ({
   data,
-  color = '#22c55e',
+  color = '#ef4444',
   value,
   label,
   setValue,

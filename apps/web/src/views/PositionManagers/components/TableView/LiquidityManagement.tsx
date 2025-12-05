@@ -1,9 +1,9 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { memo, useCallback, useMemo, useState } from 'react'
-import { styled, useTheme } from 'styled-components'
 import { AtomBox, Button, Flex, RowBetween, useMatchBreakpoints } from '@pancakeswap/uikit'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import { memo, useCallback, useMemo, useState } from 'react'
 import { useCurrencyBalances } from 'state/wallet/hooks'
+import { styled, useTheme } from 'styled-components'
 import { StatusView } from 'views/Farms/components/YieldBooster/components/bCakeV3/StatusView'
 import { StatusViewButtons } from 'views/Farms/components/YieldBooster/components/bCakeV3/StatusViewButtons'
 import { useBCakeBoostLimitAndLockInfo } from 'views/Farms/components/YieldBooster/hooks/bCakeV3/useBCakeV3Info'
@@ -24,7 +24,7 @@ import { StakedAssets } from '../StakedAssets'
 
 export const ActionContainer = styled(Flex)`
   width: 100%;
-  border-radius: 16px;
+  border-radius: 5px;
   flex-grow: 1;
   flex-basis: 0;
   margin-bottom: 8px;

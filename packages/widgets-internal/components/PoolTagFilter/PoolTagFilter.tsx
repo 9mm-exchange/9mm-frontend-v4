@@ -12,13 +12,13 @@ const Container = styled(Box)<{ isShow: boolean }>`
   && .p-treeselect {
      border: 1px solid ${theme.colors.secondary};
      border-bottom: 1px solid ${theme.colors.inputSecondary};
-     box-shadow: -2px -2px 2px 2px #22c55e33, 2px -2px 2px 2px #22c55e33;
+     box-shadow: -2px -2px 2px 2px #ef444433, 2px -2px 2px 2px #ef444433;
      border-bottom-left-radius: 0;
      border-bottom-right-radius: 0;
   }
   && .p-treeselect-panel {
     border: 1px solid ${theme.colors.secondary};
-    box-shadow: 2px 2px 2px 2px #22c55e33, -2px 2px 2px 2px #22c55e33;
+    box-shadow: 2px 2px 2px 2px #ef444433, -2px 2px 2px 2px #ef444433;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;

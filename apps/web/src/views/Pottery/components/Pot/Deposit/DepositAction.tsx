@@ -26,7 +26,7 @@ const InputPanel = styled.div`
 `
 
 const Container = styled.div<InputProps>`
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 8px 16px;
   background-color: ${({ theme }) => theme.colors.input};
   box-shadow: ${({ theme, isWarning }) => (isWarning ? theme.shadows.warning : theme.shadows.inset)};

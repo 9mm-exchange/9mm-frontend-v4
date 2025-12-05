@@ -9,7 +9,7 @@ const Container = styled(Box)`
   position: relative;
   margin-top: 14px;
   padding: 24px 16px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 2px dashed ${({ theme }) => (theme.isDark ? `${theme.colors.input}` : `${theme.colors.inputSecondary}`)};
 `
 
@@ -93,7 +93,7 @@ const StyledCheckedIcon = styled(CheckedIcon)`
 const OutlineContainer = styled(Box)<{ $checked?: boolean }>`
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 5px;
 
   > div > div {
     cursor: pointer !important;

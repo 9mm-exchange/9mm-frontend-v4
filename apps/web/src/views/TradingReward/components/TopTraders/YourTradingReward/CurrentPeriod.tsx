@@ -119,7 +119,7 @@ const CurrentPeriod: React.FC<React.PropsWithChildren<CurrentPeriodProps>> = ({
                 )} CAKE`}</Text>
               </GreyCard>
 
-              <Message mt="24px" variant="success" icon={<LightBulbIcon color="#22c55e" width="24px" />}>
+              <Message mt="24px" variant="success" icon={<LightBulbIcon color="#ef4444" width="24px" />}>
                 <MessageText>
                   <Box>
                     <Text fontSize="14px" color="primary" as="span">

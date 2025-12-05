@@ -8,7 +8,7 @@ it("renders correctly", () => {
     <DocumentFragment>
       .c0 {
       align-items: center;
-      border-radius: 16px;
+      border-radius: 5px;
       color: #ffffff;
       display: inline-flex;
       font-weight: 400;

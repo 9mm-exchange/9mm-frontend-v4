@@ -1,11 +1,11 @@
-import { useState, useMemo, useEffect } from "react";
-import { styled } from "styled-components";
-import debounce from "lodash/debounce";
 import { useTranslation } from "@pancakeswap/localization";
+import debounce from "lodash/debounce";
+import { useEffect, useMemo, useState } from "react";
+import { styled } from "styled-components";
 import { Input } from "../Input";
 
 const StyledInput = styled(Input)`
-  border-radius: 16px;
+  border-radius: 5px;
   margin-left: auto;
 `;
 

@@ -40,7 +40,7 @@ const Input = styled("input").withConfig({
   shouldForwardProp: (props) => !["scale", "isSuccess", "isWarning", "isError"].includes(props),
 })<InputProps>`
   background-color: ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme }) => theme.colors.text};
   display: block;

@@ -342,7 +342,7 @@ const TotalRedeemBox = styled(Box)`
   margin-top: 8px;
   background: ${({ theme }) => theme.colors.gradientBubblegum};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 16px;
+  border-radius: 5px;
   padding-top: 8px;
   padding-right: 16px;
   padding-bottom: 8px;
@@ -371,7 +371,7 @@ const Container = styled.div`
 const StyledCard = styled(Card)`
   max-width: 550px;
   margin: 0 auto;
-  border-radius: 24px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.backgroundAlt};
   box-shadow: 0px 2px 0px 0px ${({ theme }) => theme.colors.inputSecondary};
 `
@@ -395,7 +395,7 @@ const FieldGroup = styled.div`
 const SubField = styled.div`
   padding: 16px;
   background: ${({ theme }) => theme.colors.background};
-  border-radius: 16px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `
 

@@ -74,7 +74,7 @@ export const RouterTypeText = styled.div<{ fontWeight?: string }>`
 export const CurrencyLogoWrapper = styled(AtomBox)`
   position: relative;
   padding: 2px;
-  background: linear-gradient(180deg, #53dee9 0%, #22c55e 76.22%);
+  background: linear-gradient(180deg, #53dee9 0%, #ef4444 76.22%);
   border-radius: 50%;
   z-index: 2;
 `

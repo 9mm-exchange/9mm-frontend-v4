@@ -5,7 +5,7 @@ import { styled } from 'styled-components'
 const StyledButton = styled(Button)`
   width: 100%;
   margin: 8px 0;
-  border-radius: 24px;
+  border-radius: 5px;
 `
 export const CLAIM_BUTTON_ID = 'campaign-claim-reward-button'
 

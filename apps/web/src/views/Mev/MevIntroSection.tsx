@@ -59,7 +59,7 @@ const Card = styled.div`
   min-height: 184px;
   background-color: ${({ theme }) => theme.colors.backgroundAlt};
   padding: 24px;
-  border-radius: 24px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-bottom-width: 2px;
   width: 100%;

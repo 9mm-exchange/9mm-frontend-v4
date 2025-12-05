@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
-import { Box, Flex, Text } from '@pancakeswap/uikit'
-import { styled } from 'styled-components'
 import { useTheme } from '@pancakeswap/hooks'
+import { Box, Flex, Text } from '@pancakeswap/uikit'
 import NoSSR from 'components/NoSSR'
+import { ReactNode } from 'react'
+import { styled } from 'styled-components'
 
 const StyledChoiceContainer = styled(Flex)`
   width: 100%;
@@ -15,7 +15,7 @@ const StyledChoiceContainer = styled(Flex)`
 
 const StyledContainer = styled(Flex)<{ isDark: boolean }>`
   position: relative;
-  border-radius: 24px;
+  border-radius: 5px;
   padding: 12px 16px;
   background: ${({ isDark }) =>
     isDark

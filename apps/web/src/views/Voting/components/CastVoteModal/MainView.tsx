@@ -28,7 +28,7 @@ import { CastVoteModalProps } from './types'
 
 const TextEllipsisStyled = styled(TextEllipsis)`
   padding: 12px;
-  border-radius: 16px;
+  border-radius: 5px;
   margin-bottom: 8px;
   background: ${({ theme }) => theme.colors.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
@@ -36,7 +36,7 @@ const TextEllipsisStyled = styled(TextEllipsis)`
 
 const WeightedVoteResultsContainer = styled(Flex)`
   padding: 0 12px 12px 12px;
-  border-radius: 16px;
+  border-radius: 5px;
   margin-bottom: 24px;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.background};

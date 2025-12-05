@@ -67,7 +67,7 @@ class MyDocument extends Document {
               left: 25%;
               width: 16rem;
               height: 16rem;
-              background-color: #22c55e; /* primary */
+              background-color: #ef4444; /* primary */
             }
 
             .blob2 {
@@ -98,10 +98,10 @@ class MyDocument extends Document {
               style={{ display: 'none', visibility: 'hidden' }}
             />
           </noscript>
-          <div className="background-blobs">
+          {/* <div className="background-blobs">
             <div className="blob blob1" />
             <div className="blob blob2" />
-          </div>
+          </div> */}
           <Main />
           <NextScript />
           <div id="portal-root" />

@@ -55,7 +55,7 @@ const StyledTableViewFlex = styled(Flex)`
   }
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    border-radius: 16px;
+    border-radius: 5px;
     background-color: ${({ theme }) => theme.colors.backgroundAlt};
     box-shadow: 0px 2px 0px 0px ${({ theme }) => theme.colors.cardBorder};
     border: 1px solid ${({ theme }) => theme.colors.tertiary};

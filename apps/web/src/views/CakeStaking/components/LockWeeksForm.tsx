@@ -209,7 +209,7 @@ const WeekInput: React.FC<{
             showBridgeWarning: false,
             error: false,
           })}
-          style={{ borderRadius: '24px' }}
+          style={{ borderRadius: '5px' }}
         >
           <AtomBox
             display="flex"

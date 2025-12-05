@@ -37,7 +37,7 @@ const InnerWrapper = styled.div`
 `
 
 const VideoStyled = styled.video`
-  border-radius: 24px;
+  border-radius: 5px;
 `
 
 export const Banner = () => {

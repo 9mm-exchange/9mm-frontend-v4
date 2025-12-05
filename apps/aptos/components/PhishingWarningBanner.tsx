@@ -24,7 +24,7 @@ const InnerContainer = styled(Flex)`
 
 const SpeechBubble = styled.div`
   background: rgba(39, 38, 44, 0.4);
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 8px;
   width: 60%;
   height: 80%;

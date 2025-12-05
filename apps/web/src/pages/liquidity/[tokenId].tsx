@@ -85,7 +85,7 @@ import { PageWithoutFAQ } from 'views/Page'
 import { useSendTransaction, useWalletClient } from 'wagmi'
 
 export const BodyWrapper = styled(Card)`
-  border-radius: 24px;
+  border-radius: 5px;
   max-width: 858px;
   width: 100%;
   z-index: 1;

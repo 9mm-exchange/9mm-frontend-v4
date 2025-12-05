@@ -20,28 +20,28 @@ import { styled } from 'styled-components'
 import { CHAIN_IDS } from 'utils/wagmi'
 import Page from 'views/Page'
 
+import { Protocol } from '@pancakeswap/farms'
 import { useTranslation } from '@pancakeswap/localization'
 import { CurrencyAmount } from '@pancakeswap/sdk'
+import { formatFiatNumber } from '@pancakeswap/utils/formatFiatNumber'
 import { LightGreyCard } from 'components/Card'
 import { CurrencyLogo } from 'components/Logo'
 import { usePoolTokenPercentage, useTotalUSDValue } from 'components/PositionCard'
+import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useInfoStableSwapContract } from 'hooks/useContract'
+import { useTotalPriceUSD } from 'hooks/useTotalPriceUSD'
+import { useAccountPositionDetailByPool } from 'state/farmsV4/state/accountPositions/hooks'
+import { usePoolInfo } from 'state/farmsV4/state/extendPools/hooks'
 import { useSingleCallResult } from 'state/multicall/hooks'
+import { useLPApr } from 'state/swap/useLPApr'
+import { isAddressEqual } from 'utils'
 import currencyId from 'utils/currencyId'
 import { formatCurrencyAmount } from 'utils/formatCurrencyAmount'
-import { useAccount } from 'wagmi'
-import { Protocol } from '@pancakeswap/farms'
-import { useAccountPositionDetailByPool } from 'state/farmsV4/state/accountPositions/hooks'
-import { useActiveChainId } from 'hooks/useActiveChainId'
-import { usePoolInfo } from 'state/farmsV4/state/extendPools/hooks'
-import { formatFiatNumber } from '@pancakeswap/utils/formatFiatNumber'
-import { useTotalPriceUSD } from 'hooks/useTotalPriceUSD'
-import { useLPApr } from 'state/swap/useLPApr'
 import { formatAmount } from 'utils/formatInfoNumbers'
-import { isAddressEqual } from 'utils'
+import { useAccount } from 'wagmi'
 
 export const BodyWrapper = styled(Card)`
-  border-radius: 24px;
+  border-radius: 5px;
   max-width: 858px;
   width: 100%;
   z-index: 1;

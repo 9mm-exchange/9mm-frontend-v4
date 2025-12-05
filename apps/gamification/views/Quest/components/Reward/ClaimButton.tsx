@@ -18,7 +18,7 @@ import { SuccessClaimedModal } from 'views/Quest/components/Reward/SuccessClaime
 const StyledButton = styled(Button)<{ $outline?: boolean }>`
   width: 100%;
   margin: 8px 0;
-  border-radius: 24px;
+  border-radius: 5px;
 
   ${({ $outline }) =>
     $outline &&

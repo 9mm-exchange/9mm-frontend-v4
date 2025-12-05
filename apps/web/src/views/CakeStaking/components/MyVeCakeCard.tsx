@@ -5,8 +5,8 @@ import { useVeCakeBalance } from 'hooks/useTokenBalance'
 import styled from 'styled-components'
 
 export const StyledBox = styled(Box)`
-  border-radius: 16px;
-  background: linear-gradient(229deg, #22c55e -13.69%, #22c55e 91.33%);
+  border-radius: 5px;
+  background: linear-gradient(229deg, #ef4444 -13.69%, #ef4444 91.33%);
   padding-top: 16px;
   padding-bottom: 16px;
   display: flex;

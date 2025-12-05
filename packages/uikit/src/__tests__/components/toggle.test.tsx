@@ -45,7 +45,7 @@ it("renders correctly", () => {
     .c0 {
       align-items: center;
       background-color: var(--colors-success);
-      border-radius: 24px;
+      border-radius: 5px;
       box-shadow: var(--shadows-inset);
       cursor: pointer;
       display: inline-flex;
@@ -114,7 +114,7 @@ it("renders correctly scale sm", () => {
     .c0 {
       align-items: center;
       background-color: var(--colors-success);
-      border-radius: 24px;
+      border-radius: 5px;
       box-shadow: var(--shadows-inset);
       cursor: pointer;
       display: inline-flex;

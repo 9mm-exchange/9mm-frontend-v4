@@ -10,18 +10,18 @@ export const SwapFormWrapper = styled.div`
   gap: 16px;
   max-width: 480px;
   margin: 0 auto 56px;
+  background-color: ${({ theme }) => theme.colors.backgroundAlt};
+  border-radius: 5px;
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  box-shadow: 0 0 15px rgba(54, 56, 56, 0.5);
+  padding: 1rem;
 `;
 
 export const InputPanelWrapper = styled(Flex)`
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1rem;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.backgroundAlt};
-  border-radius: 24px;
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
 `;
 
 export const SwapTabAndInputPanelWrapper = styled(Flex)`

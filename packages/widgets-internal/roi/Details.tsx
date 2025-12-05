@@ -8,7 +8,7 @@ import { ReactNode, memo, useState } from "react";
 import { styled } from "styled-components";
 
 const StyledFooter = styled(Footer)`
-  border-radius: 16px;
+  border-radius: 5px;
 `;
 
 interface Props {

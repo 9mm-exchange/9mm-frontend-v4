@@ -69,7 +69,7 @@ const chartConfig: ChartInfo[] = [
   {
     id: 'totalV2SwapEarnFeeUSD',
     name: <Trans>V2 Swap Earn Fee</Trans>,
-    chartColor: '#22c55e',
+    chartColor: '#ef4444',
     usdValue: '0',
     cakeValue: '0',
     cakeValueAsNumber: 0,

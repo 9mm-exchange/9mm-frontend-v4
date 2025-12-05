@@ -76,7 +76,7 @@ import { useV3FormAddLiquidityCallback, useV3FormState } from './form/reducer'
 const StyledInput = styled(NumericalInput)`
   background-color: ${({ theme }) => theme.colors.input};
   box-shadow: ${({ theme, error }) => theme.shadows[error ? 'warning' : 'inset']};
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 8px 16px;
   font-size: 16px;
   width: 100%;

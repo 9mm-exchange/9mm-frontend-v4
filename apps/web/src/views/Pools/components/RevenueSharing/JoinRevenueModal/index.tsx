@@ -23,7 +23,7 @@ const TooltipContainer = styled(Box)`
   max-width: 264px;
   margin: 0 0 10px 10px;
   height: fit-content;
-  border-radius: 16px;
+  border-radius: 5px;
   background-color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262c')};
 
   ${Text} {

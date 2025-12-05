@@ -15,7 +15,7 @@ const DropDownContainer = styled.div<{ error: boolean }>`
   justify-content: space-between;
   padding: 6px 12px;
 
-  border-radius: 16px;
+  border-radius: 5px;
 
   cursor: pointer;
   position: relative;

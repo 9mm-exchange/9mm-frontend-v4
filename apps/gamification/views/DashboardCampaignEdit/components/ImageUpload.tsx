@@ -17,7 +17,7 @@ const StyledThumbnail = styled('div')`
 
 const EmptyContainer = styled(Flex)`
   flex-direction: column;
-  border-radius: 16px;
+  border-radius: 5px;
   justify-content: center;
   padding: 60px 30px;
   border: dashed 2px ${({ theme }) => theme.colors.cardBorder};

@@ -26,7 +26,7 @@ interface AIBetResultProps {
 
 const StyledBetResult = styled(Box)`
   border: 2px solid ${({ theme }) => theme.colors.textDisabled};
-  border-radius: 16px;
+  border-radius: 5px;
   margin-bottom: 24px;
   padding: 16px;
 `

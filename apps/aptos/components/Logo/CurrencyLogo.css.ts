@@ -9,7 +9,7 @@ export const aptosLogoClass = recipe({
     isProduction: {
       false: {
         opacity: 0.35,
-        border: 'solid 2px #22c55e',
+        border: 'solid 2px #ef4444',
       },
     },
   },

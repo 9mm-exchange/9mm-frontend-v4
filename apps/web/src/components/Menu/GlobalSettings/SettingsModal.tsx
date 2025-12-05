@@ -14,7 +14,6 @@ import {
   Modal,
   ModalV2,
   NotificationDot,
-  PancakeToggle,
   PreTitle,
   QuestionHelper,
   RowFixed,
@@ -58,7 +57,7 @@ const WebNotiToggle = lazy(() => import('./WebNotiToggle'))
 
 const BetaTag = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.success};
-  border-radius: 16px;
+  border-radius: 5px;
   padding-left: 6px;
   padding-right: 6px;
   padding-top: 3px;

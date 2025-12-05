@@ -191,7 +191,7 @@ export const AddHoldToken: React.FC<AddHoldTokenProps> = ({ task, isDrafted }) =
                   placeholder={t('Title')}
                   value={task.title}
                   disabled={disableInput}
-                  style={{ borderRadius: '24px' }}
+                  style={{ borderRadius: '5px' }}
                   onChange={(e) => handleInputChange(e, 'title')}
                 />
               </InputGroup>
@@ -199,7 +199,7 @@ export const AddHoldToken: React.FC<AddHoldTokenProps> = ({ task, isDrafted }) =
                 placeholder={t('Description (Optional)')}
                 value={task.description}
                 disabled={disableInput}
-                style={{ borderRadius: '24px' }}
+                style={{ borderRadius: '5px' }}
                 onChange={(e) => handleInputChange(e, 'description')}
               />
             </FlexGap>

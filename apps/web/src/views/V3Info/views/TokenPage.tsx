@@ -360,7 +360,7 @@ const TokenPage: React.FC<{ address: string; chain?: string }> = ({ address, cha
                   ) : view === ChartView.VOL ? (
                     <BarChart
                       data={formattedVolumeData}
-                      color="#22c55e"
+                      color="#ef4444"
                       minHeight={340}
                       value={latestValue}
                       label={valueLabel}

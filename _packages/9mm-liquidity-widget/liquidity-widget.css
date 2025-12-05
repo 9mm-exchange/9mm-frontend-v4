@@ -5,7 +5,7 @@
   --ks-lw-background: #08060b;
   --ks-lw-inputBackground: #372f47;
   --ks-lw-inputBorder: #55496E;
-  --ks-lw-primary: #22c55e;
+  --ks-lw-primary: #ef4444;
   --ks-lw-secondary: #a881fc;
   --ks-lw-tertiary: #353547;
   --ks-lw-textSecondary: #b8add2;
@@ -21,7 +21,7 @@
   --ks-lw-error: #ff3333;
 }
 .ks-lw {
-  border-radius: 24px;
+  border-radius: 5px;
   background: var(--ks-lw-cardBackground);
   color: var(--ks-lw-textPrimary);
   font-family: Kanit, Sans-serif;
@@ -370,7 +370,7 @@
   align-items: center;
   justify-content: center;
   justify-self: end;
-  border-radius: 16px;
+  border-radius: 5px;
   border-width: 1px;
   border-bottom-width: 2px;
   border-color: var(--ks-lw-primary);
@@ -406,7 +406,7 @@
   align-items: center;
   justify-content: center;
   justify-self: end;
-  border-radius: 16px;
+  border-radius: 5px;
   border-width: 2px;
   border-color: var(--ks-lw-primary);
   background-color: transparent;
@@ -469,7 +469,7 @@
   max-height: 96vh;
   width: 100%;
   max-width: 450px;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 1.5rem;
   background-color: var(--ks-lw-cardBackground);
   color: var(--ks-lw-textPrimary);
@@ -487,7 +487,7 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  border-radius: 16px;
+  border-radius: 5px;
   border-width: 1px;
   border-color: transparent;
   z-index: 9999;
@@ -561,7 +561,7 @@
 }
 .ks-lw-style .ks-lw-card {
   margin-top: 0.5rem;
-  border-radius: 16px;
+  border-radius: 5px;
   border-width: 1px;
   border-color: var(--ks-lw-cardBorder);
   background-color: var(--ks-lw-background);
@@ -926,7 +926,7 @@
   border-radius: 9999px;
 }
 .ks-lw-style .rounded-md {
-  border-radius: 16px;
+  border-radius: 5px;
 }
 .ks-lw-style .border {
   border-width: 1px;

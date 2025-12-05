@@ -53,7 +53,7 @@ const LeverageText = styled(Text)<StyledProps>`
   font-size: ${({ isMobile, isTablet }) => getFontSize(isMobile, isTablet)};
   font-weight: 600;
   padding: 6px 12px;
-  border-radius: 24px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.colors.positive60};
 `
 

@@ -6,7 +6,7 @@ import styled, { keyframes } from 'styled-components'
 export const Menu = styled.div<{ $isOpen: boolean; $overrideHeight: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 24px;
+  border-radius: 5px;
   // padding-bottom: 4px;
   pointer-events: auto;
   width: 400px;
@@ -179,7 +179,7 @@ export const StyledLink = styled(Link)<{ hidden?: boolean }>`
   max-height: 45px;
   height: 45px;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => `${theme.colors.primary}`};
   color: ${({ theme }) => `${theme.colors.background}`};
   font-weight: bold;

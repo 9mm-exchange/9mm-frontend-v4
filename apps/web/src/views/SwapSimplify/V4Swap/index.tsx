@@ -24,7 +24,6 @@ import { useBuyCryptoInfo } from '../hooks/useBuyCryptoInfo'
 import { useIsPriceImpactTooHigh } from '../hooks/useIsPriceImpactTooHigh'
 import { useUserInsufficientBalance } from '../hooks/useUserInsufficientBalance'
 import { ButtonAndDetailsPanel } from './ButtonAndDetailsPanel'
-import { BuyCryptoPanel } from './BuyCryptoPanel'
 import { CommitButton } from './CommitButton'
 import { FormMain } from './FormMainV4'
 import { PricingAndSlippage } from './PricingAndSlippage'
@@ -141,7 +140,7 @@ export function V4SwapForm() {
           isUserInsufficientBalance={isUserInsufficientBalance}
         />
       </SwapUIV2.SwapTabAndInputPanelWrapper>
-      {shouldShowBuyCrypto && <BuyCryptoPanel link={buyCryptoLink} />}
+      {/* {shouldShowBuyCrypto && <BuyCryptoPanel link={buyCryptoLink} />} */}
       {(shouldRiskPanelDisplay || isPriceImpactTooHigh || isSlippageTooHigh) && (
         <RiskDetailsPanel
           isPriceImpactTooHigh={isPriceImpactTooHigh}

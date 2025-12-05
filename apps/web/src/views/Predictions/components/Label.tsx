@@ -85,7 +85,7 @@ export const Tooltip = styled.div`
   position: absolute;
   top: -5px;
   left: 55px;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 16px;
   background: ${({ theme }) => theme.tooltip.background};
   box-shadow: ${({ theme }) => theme.tooltip.boxShadow};

@@ -19,7 +19,7 @@ const SHORT_NAME = {
 const NETWORK_COLOR_DEFAULT = {
   [ChainId.BSC]: '#1E1E1E',
   [ChainId.OPBNB]: '#1E1E1E',
-  [ChainId.ETHEREUM]: '#627EEA',
+  [ChainId.ETHEREUM]: '#2b2b2d',
   [ChainId.POLYGON_ZKEVM]: 'linear-gradient(180deg, #9132D2 0%, #803DE1 100%)',
   [ChainId.ZKSYNC]: '#1E1E1E',
   [ChainId.ARBITRUM_ONE]: '#2D364D',
@@ -30,7 +30,7 @@ const NETWORK_COLOR_DEFAULT = {
 const NETWORK_COLOR_COLORED = {
   [ChainId.BSC]: '#F0B90B',
   [ChainId.OPBNB]: '#1E1E1E',
-  [ChainId.ETHEREUM]: '#627EEA',
+  [ChainId.ETHEREUM]: '#2b2b2d',
   [ChainId.POLYGON_ZKEVM]: 'linear-gradient(180deg, #9132D2 0%, #803DE1 100%)',
   [ChainId.ZKSYNC]: '#3567F6',
   [ChainId.ARBITRUM_ONE]: '#2D364D',

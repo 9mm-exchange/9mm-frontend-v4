@@ -1,7 +1,7 @@
+import { FlexGap, Link, OpenNewIcon, Text } from "@pancakeswap/uikit";
 import { ReactNode, useCallback } from "react";
-import { FlexGap, Text, OpenNewIcon, Link } from "@pancakeswap/uikit";
-import { space, SpaceProps } from "styled-system";
 import styled from "styled-components";
+import { space, SpaceProps } from "styled-system";
 
 const LinkCard = styled(FlexGap).attrs({
   gap: "0.5rem",
@@ -11,7 +11,7 @@ const LinkCard = styled(FlexGap).attrs({
 })`
   cursor: pointer;
   padding: 1rem;
-  border-radius: 16px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   background: ${({ theme }) => theme.colors.background};
 

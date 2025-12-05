@@ -211,7 +211,7 @@ const V3FeeTag: React.FC<TagProps & { feeAmount?: FeeAmount }> = ({ feeAmount, .
 
 const EthTag: React.FC<React.PropsWithChildren<TagProps>> = (props) => {
   return (
-    <Tag style={{ background: "#627EEA" }} startIcon={<EthChainIcon width="10px" mr="4px" />} {...props}>
+    <Tag style={{ background: "#2b2b2d" }} startIcon={<EthChainIcon width="10px" mr="4px" />} {...props}>
       ETH
     </Tag>
   );

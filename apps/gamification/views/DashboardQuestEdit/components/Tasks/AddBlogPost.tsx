@@ -115,7 +115,7 @@ export const AddBlogPost: React.FC<AddBlogPostProps> = ({ task, isDrafted }) => 
               <StyledInput
                 value={task.blogUrl}
                 isError={isUrlError}
-                style={{ borderRadius: '24px' }}
+                style={{ borderRadius: '5px' }}
                 disabled={disableInput}
                 placeholder={taskInputPlaceholder(TaskType.VISIT_BLOG_POST)}
                 onChange={(e) => handleUrlChange(e, 'blogUrl')}
@@ -126,14 +126,14 @@ export const AddBlogPost: React.FC<AddBlogPostProps> = ({ task, isDrafted }) => 
           <StyledInput
             placeholder={t('Title')}
             value={task.title}
-            style={{ borderRadius: '24px' }}
+            style={{ borderRadius: '5px' }}
             disabled={disableInput}
             onChange={(e) => handleUrlChange(e, 'title')}
           />
           <StyledInput
             placeholder={t('Description (Optional)')}
             value={task.description}
-            style={{ borderRadius: '24px' }}
+            style={{ borderRadius: '5px' }}
             disabled={disableInput}
             onChange={(e) => handleUrlChange(e, 'description')}
           />

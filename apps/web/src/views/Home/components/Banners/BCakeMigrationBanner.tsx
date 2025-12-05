@@ -35,7 +35,7 @@ const StyledButtonLinkAction = styled(ButtonLinkAction)`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     height: 48px;
-    border-radius: 16px;
+    border-radius: 5px;
   }
 `
 

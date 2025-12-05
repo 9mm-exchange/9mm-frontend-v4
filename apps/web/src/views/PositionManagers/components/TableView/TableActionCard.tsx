@@ -8,6 +8,6 @@ export const TableActionCard = styled.div`
   gap: 24px;
   flex: 1 0 0;
   align-self: stretch;
-  border-radius: 16px;
+  border-radius: 5px;
   border: 2px solid ${({ theme }) => theme.colors.cardBorder};
 `

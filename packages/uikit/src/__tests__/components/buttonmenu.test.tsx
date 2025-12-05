@@ -17,7 +17,7 @@ it("renders correctly", () => {
       .c0 {
       background-color: var(--colors-tertiary);
       border: 1px solid var(--colors-disabled);
-      border-radius: 16px;
+      border-radius: 5px;
       display: inline-flex;
       width: auto;
       align-items: center;
@@ -42,7 +42,7 @@ it("renders correctly", () => {
       position: relative;
       align-items: center;
       border: 0;
-      border-radius: 16px;
+      border-radius: 5px;
       box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
       cursor: pointer;
       display: inline-flex;

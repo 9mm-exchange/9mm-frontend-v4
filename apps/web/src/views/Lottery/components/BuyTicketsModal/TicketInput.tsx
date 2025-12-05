@@ -12,7 +12,7 @@ const InputsContainer = styled.div<{ focused: boolean; isDuplicate: boolean }>`
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.colors.input};
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-  border-radius: 16px;
+  border-radius: 5px;
   margin-bottom: 8px;
   ${({ isDuplicate }) =>
     isDuplicate &&
@@ -23,7 +23,7 @@ const InputsContainer = styled.div<{ focused: boolean; isDuplicate: boolean }>`
   ${({ focused }) =>
     focused &&
     `
-    border: 1px solid #22c55e;
+    border: 1px solid #ef4444;
     box-shadow: 0px 0px 0px 2px #E4DAF7;
   `}
 `

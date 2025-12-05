@@ -14,8 +14,8 @@ const lightStyle = {
   error: '#ed4b9e',
   warning: '#ffb237',
   success: '#31d0aa',
-  primary: '#22c55e',
-  secondary: '#22c55e',
+  primary: '#ef4444',
+  secondary: '#ef4444',
   secondaryContent: '#280d5f',
   neutral: '#FFFFFF',
   roundedBtn: '26px',
@@ -33,8 +33,8 @@ const darkStyle = {
   error: '#ed4b9e',
   warning: '#ffb237',
   success: '#31d0aa',
-  primary: '#22c55e',
-  secondary: '#22c55e',
+  primary: '#ef4444',
+  secondary: '#ef4444',
   secondaryContent: '#280d5f',
   neutral: '#26272c',
   roundedBtn: '26px',
@@ -80,7 +80,7 @@ const Axelar = () => {
           .tw-flex ul li > span:first-child,
           .tw-flex ul li > span:first-child a,
           .tw-rounded-t-box.tw-flex.tw-flex-col span.tw-flex.tw-flex-row.tw-items-center:first-child {
-            color: #22c55e !important;
+            color: #ef4444 !important;
             font-weight: 600 !important;
           }
         }

@@ -1,14 +1,14 @@
 import { useTranslation } from "@pancakeswap/localization";
 import { FlexGap, Text } from "@pancakeswap/uikit";
-import { PropsWithChildren, useMemo } from "react";
-import styled from "styled-components";
 import { BigNumber } from "bignumber.js";
 import Image from "next/image";
+import { PropsWithChildren, useMemo } from "react";
+import styled from "styled-components";
 
 import { BalanceDisplay } from "./BalanceDisplay";
 
 const Container = styled(FlexGap)`
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.gradientPrimary};
   padding: 0.75rem 1rem;
 `;

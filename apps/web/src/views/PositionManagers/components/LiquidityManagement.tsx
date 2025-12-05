@@ -31,7 +31,7 @@ import { StakedAssets } from './StakedAssets'
 export const ActionContainer = styled(Flex)`
   width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   flex-grow: 1;
   flex-basis: 0;
   margin-bottom: 8px;

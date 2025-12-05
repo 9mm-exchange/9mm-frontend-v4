@@ -121,7 +121,7 @@ const getBackgroundColor = ({
   hasEntered,
 }: RoundResultBoxProps & { theme: DefaultTheme }) => {
   if (isNext) {
-    return 'linear-gradient(180deg, #53DEE9 0%, #22c55e 100%)'
+    return 'linear-gradient(180deg, #53DEE9 0%, #ef4444 100%)'
   }
 
   if (hasEntered || isLive) {
@@ -142,7 +142,7 @@ const getBackgroundColor = ({
 
 const Background = styled(Box)<RoundResultBoxProps>`
   background: ${getBackgroundColor};
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 2px;
 `
 

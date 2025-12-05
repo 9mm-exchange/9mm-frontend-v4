@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { AtomBox, Text, ArrowDownIcon, AutoColumn, ColumnCenter } from '@pancakeswap/uikit'
+import { ArrowDownIcon, AtomBox, AutoColumn, ColumnCenter, Text } from '@pancakeswap/uikit'
 import { Liquidity } from '@pancakeswap/widgets-internal'
 import { LightGreyCard } from 'components/Card'
 import { CurrencyLogo } from 'components/Logo'
@@ -10,7 +10,7 @@ import { Field } from '../type'
 
 const BorderCard = styled.div`
   border: solid 1px ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 16px;
 `
 

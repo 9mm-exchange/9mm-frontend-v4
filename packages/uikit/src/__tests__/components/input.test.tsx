@@ -10,7 +10,7 @@ it("renders correctly", () => {
     <DocumentFragment>
       .c0 {
       background-color: var(--colors-input);
-      border-radius: 16px;
+      border-radius: 5px;
       box-shadow: var(--shadows-inset);
       color: var(--colors-text);
       display: block;

@@ -66,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     }
     .bccb-widget-network-button {
       padding: 0 8px;
-      border-radius: 16px;
+      border-radius: 5px;
       border: 1px solid;
       outline: none;
       height: 40px;
@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
     .bccb-widget-transfer-input-container {
       margin-top: 16px;
       .bccb-widget-transfer-max > div {
-        color: ${({ theme }) => (theme.isDark ? '#22c55e' : '#02919D')}; 
+        color: ${({ theme }) => (theme.isDark ? '#ef4444' : '#02919D')}; 
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -96,7 +96,7 @@ const GlobalStyle = createGlobalStyle`
       }
       .bccb-widget-transfer-input-wrapper {
         margin-top: 2px;
-        border-radius: 16px;
+        border-radius: 5px;
         border: 1px solid;
         border-color: ${({ theme }) => (theme.isDark ? '#55496E' : '#D7CAEC')};
         padding: 4px 4px 4px 16px;
@@ -127,7 +127,7 @@ const GlobalStyle = createGlobalStyle`
         }
         .bccb-widget-token-select-button {
           outline: none;
-          border-radius: 16px;
+          border-radius: 5px;
           border: 1px solid rgba(0, 0, 0, 0.20);
           border-bottom: 2px solid rgba(0, 0, 0, 0.20);
           background: ${({ theme }) => (theme.isDark ? '#B8ADD2' : '#7A6EAA')};
@@ -149,7 +149,7 @@ const GlobalStyle = createGlobalStyle`
       }
       
       .bccb-widget-received-info-route-content {
-        border-radius: 16px;
+        border-radius: 5px;
         gap: 4px; 
         border: 1px solid ${({ theme }) => (theme.isDark ? '#383241' : '#E7E3EB')};
         padding: 12px;
@@ -192,7 +192,7 @@ const GlobalStyle = createGlobalStyle`
     }
     .bccb-widget-to-account-container {
       .bccb-widget-to-account-input {
-        border-radius: 16px;
+        border-radius: 5px;
         &:not(.input-error).input-focused {
             &, &:hover {
             box-shadow: 0px 0px 0px 1px #A881FC, 0px 0px 0px 4px rgba(168, 129, 252, 0.40);
@@ -208,7 +208,7 @@ const GlobalStyle = createGlobalStyle`
           font-weight: 400;
           line-height: 24px;
           letter-spacing: -0.2px;
-          border-radius: 16px;
+          border-radius: 5px;
           border: 1px solid;
           border-color: ${({ theme }) => (theme.isDark ? '#55496E' : '#D7CAEC')};
           &::placeholder {
@@ -248,15 +248,15 @@ const GlobalStyle = createGlobalStyle`
           border: none;
         }
         height: 48px;
-        border-radius: 16px;
+        border-radius: 5px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-        background: #22c55e;
+        background: #ef4444;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 24px;
         &:not(.disabled):hover {
-          background: #22c55e;
+          background: #ef4444;
           opacity: 0.65;
         }
       }
@@ -457,7 +457,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         font-weight: 400;
         line-height: 150%; /* 24px */
-        border-radius: 16px;
+        border-radius: 5px;
         color: ${({ theme }) => (theme.isDark ? '#B8ADD2' : '#7A6EAA')};
         background: ${({ theme }) => (theme.isDark ? '#372F47' : '#EEEAF4')};
         outline: none;
@@ -531,7 +531,7 @@ const GlobalStyle = createGlobalStyle`
       box-shadow: none;
       .bccb-widget-route-container-inner {
         border: 1px solid;
-        border-radius: 24px;
+        border-radius: 5px;
         border-bottom: 2px solid;
         border-color: ${({ theme }) => (theme.isDark ? '#383241' : '#E7E3EB')};
         gap: 8px;
@@ -560,7 +560,7 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .bccb-widget-route-wrapper-selected {
-        border: 2px solid #22c55e;
+        border: 2px solid #ef4444;
       }
       .bccb-widget-route-wrapper {
         border-color: ${({ theme }) => (theme.isDark ? '#383241' : '#E7E3EB')};
@@ -571,13 +571,13 @@ const GlobalStyle = createGlobalStyle`
           }
         }
         &:not(.route-error):hover {
-          border-color: #22c55e;
+          border-color: #ef4444;
         }
       }
       .bccb-widget-route-wrapper,
       .bccb-widget-route-wrapper-selected {
         color: ${({ theme }) => (theme.isDark ? '#F4EEFF' : '#280D5F')};
-        border-radius: 16px;
+        border-radius: 5px;
         background: ${({ theme }) => (theme.isDark ? '#08060B' : '#FAF9FA')};
         .bccb-widget-route-name {
           svg, img {
@@ -672,12 +672,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .bccb-widget-received-info-route-open > div {
-      color: ${({ theme }) => (theme.isDark ? '#22c55e' : '#02919D')}; 
+      color: ${({ theme }) => (theme.isDark ? '#ef4444' : '#02919D')}; 
       font-size: 14px;
       font-weight: 600;
       line-height: 150%; /* 21px */
       &:hover {
-        color: ${({ theme }) => (theme.isDark ? '#22c55e' : '#02919D')}; 
+        color: ${({ theme }) => (theme.isDark ? '#ef4444' : '#02919D')}; 
         opacity: 0.6;
       }
     }
@@ -689,26 +689,26 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .bccb-widget-modal-main-button {
-      border-radius: 16px;
+      border-radius: 5px;
       border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-      background: #22c55e;
+      background: #ef4444;
       font-size: 16px;
       font-weight: 600;
       line-height: 150%; /* 24px */
       color: #FFF;
       &:hover {
-        background: #22c55e;
+        background: #ef4444;
         color: #FFF;
         opacity: 0.65;
       }
     }
 
     .bccb-widget-modal-second-button {
-      border-radius: 16px;
-      border: 2px solid #22c55e;
+      border-radius: 5px;
+      border: 2px solid #ef4444;
       color: #02919D;
       &:hover {
-        border: 2px solid #22c55e;
+        border: 2px solid #ef4444;
         background: none;
         opacity: 0.65;
         color: #02919D;
@@ -722,12 +722,12 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
       font-weight: 400;
       line-height: 150%; /* 21px */
-      background: #22c55e;
+      background: #ef4444;
       padding: 2px 9px;
       height: 25px;
     }
     .bccb-widget-route-name-tag-bestTime {
-      background: ${({ theme }) => (theme.isDark ? '#A881FC' : '#22c55e')};
+      background: ${({ theme }) => (theme.isDark ? '#A881FC' : '#ef4444')};
     }
 
     .bccb-widget-modal-route-content {
@@ -792,7 +792,7 @@ const GlobalStyle = createGlobalStyle`
     .bccb-widget-info-tooltip {
       background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};
       color: ${({ theme }) => (theme.isDark ? '#27262C' : '#FFFFFF')};
-      border-radius: 16px;
+      border-radius: 5px;
       padding: 16px;
       font-size: 14px;
       line-height: 150%;
@@ -813,7 +813,7 @@ const GlobalStyle = createGlobalStyle`
       .bccb-widget-route-token-tooltip-content {
         --popper-arrow-bg: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};;
         background: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#27262C')};
-        border-radius: 16px;
+        border-radius: 5px;
         padding: 16px;
       }
 

@@ -1,14 +1,14 @@
-import { styled } from 'styled-components'
-import Trans from 'components/Trans'
 import { useTranslation } from '@pancakeswap/localization'
-import { Text, Button, Flex, Box, Balance } from '@pancakeswap/uikit'
-import { WinRateCalculatorState } from 'views/Pottery/hooks/useWinRateCalculator'
+import { Balance, Box, Button, Flex, Text } from '@pancakeswap/uikit'
+import Trans from 'components/Trans'
 import { ReactNode } from 'react'
+import { styled } from 'styled-components'
+import { WinRateCalculatorState } from 'views/Pottery/hooks/useWinRateCalculator'
 
 const StyledBox = styled(Box)`
   background-color: ${({ theme }) => theme.colors.input};
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: ${({ theme }) => theme.shadows.inset};
   padding: 8px 16px;
 `

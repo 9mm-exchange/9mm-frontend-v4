@@ -43,7 +43,7 @@ const TagBox = styled.div<ThemedTagBox>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 24px;
+  border-radius: 5px;
   margin-right: 4px;
   padding: 2px 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;

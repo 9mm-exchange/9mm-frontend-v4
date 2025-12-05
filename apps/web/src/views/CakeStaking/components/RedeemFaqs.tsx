@@ -176,7 +176,7 @@ export const RedeemFaqs = () => (
 const StyledCard = styled(Card)`
   max-width: 550px;
   margin: 0 auto;
-  border-radius: 24px;
+  border-radius: 5px;
   margin-top: 36px;
 
   ul li {

@@ -10,7 +10,7 @@ export const DropDownHeader = styled(Flex)`
   padding: 0px 16px;
   box-shadow: ${({ theme }) => theme.shadows.inset};
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-  border-radius: 16px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.input};
   transition: border-radius 0.15s;
 `;
@@ -20,7 +20,7 @@ export const DropDownContainer = styled(Button)`
   width: 100%;
   position: relative;
   background: ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 5px;
   height: 40px;
   min-width: 136px;
   user-select: none;

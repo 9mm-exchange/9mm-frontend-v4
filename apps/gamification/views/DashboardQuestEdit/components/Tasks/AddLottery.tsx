@@ -141,13 +141,13 @@ export const AddLottery: React.FC<AddLotteryProps> = ({ task, isDrafted }) => {
           <StyledInput
             placeholder={t('Title')}
             value={task.description}
-            style={{ borderRadius: '24px' }}
+            style={{ borderRadius: '5px' }}
             onChange={(e) => handleInputChange(e, 'title')}
           />
           <StyledInput
             placeholder={t('Description (Optional)')}
             value={task.description}
-            style={{ borderRadius: '24px' }}
+            style={{ borderRadius: '5px' }}
             disabled={disableInput}
             onChange={(e) => handleInputChange(e, 'description')}
           />

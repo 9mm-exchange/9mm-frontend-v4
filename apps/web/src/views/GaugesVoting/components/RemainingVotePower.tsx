@@ -10,8 +10,8 @@ import { useCakeLockStatus } from 'views/CakeStaking/hooks/useVeCakeUserInfo'
 import { useEpochVotePower } from '../hooks/useEpochVotePower'
 
 const StyledBox = styled(Box)<{ $isMobile?: boolean }>`
-  border-radius: 16px;
-  background: linear-gradient(229deg, #22c55e -13.69%, #22c55e 91.33%);
+  border-radius: 5px;
+  background: linear-gradient(229deg, #ef4444 -13.69%, #ef4444 91.33%);
   padding: 8px 16px;
   display: inline-flex;
   align-items: center;

@@ -38,7 +38,7 @@ const RiskModalDetailCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border-radius: 16px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   background-color: ${({ theme }) => theme.colors.background};
   padding: 16px;

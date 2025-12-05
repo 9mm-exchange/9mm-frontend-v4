@@ -11,7 +11,7 @@ const DropdownContainer = styled(Flex)`
   flex-direction: column;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.card.background};
   border: solid 1px ${({ theme }) => theme.colors.cardBorder};
 

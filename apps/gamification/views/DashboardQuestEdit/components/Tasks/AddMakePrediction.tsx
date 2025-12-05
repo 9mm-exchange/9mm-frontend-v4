@@ -169,7 +169,7 @@ export const AddMakePrediction: React.FC<AddMakePredictionProps> = ({ task, isDr
                 <StyledInput
                   value={task.link}
                   isError={isUrlError}
-                  style={{ borderRadius: '24px' }}
+                  style={{ borderRadius: '5px' }}
                   disabled={disableInput}
                   placeholder={taskInputPlaceholder(TaskType.MAKE_A_PREDICTION)}
                   onChange={(e) => handleUrlChange(e, 'link')}
@@ -185,7 +185,7 @@ export const AddMakePrediction: React.FC<AddMakePredictionProps> = ({ task, isDr
                 value={task.title}
                 isError={isTitleError}
                 disabled={disableInput}
-                style={{ borderRadius: '24px' }}
+                style={{ borderRadius: '5px' }}
                 onChange={(e) => handleUrlChange(e, 'title')}
               />
             </InputGroup>
@@ -194,7 +194,7 @@ export const AddMakePrediction: React.FC<AddMakePredictionProps> = ({ task, isDr
           <StyledInput
             placeholder={t('Description (Optional)')}
             value={task.description}
-            style={{ borderRadius: '24px' }}
+            style={{ borderRadius: '5px' }}
             disabled={disableInput}
             onChange={(e) => handleUrlChange(e, 'description')}
           />
