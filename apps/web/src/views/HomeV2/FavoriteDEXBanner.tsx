@@ -1,9 +1,8 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Flex, MotionBox, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { MotionBox, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { HomepageChain } from 'pages/api/home/types'
 import React from 'react'
 import styled from 'styled-components'
-import { MultipleLogos } from './cards/component/MultipleLogos'
 
 const Wrapper = styled(MotionBox)<{
   isMobile: boolean
@@ -71,9 +70,9 @@ export const FavoriteDEXBanner: React.FC<FavoriteDEXBannerProps> = ({ chains }) 
         {t('Favorite DEX')}
       </HighlightedText>
       <DescriptionText isMobile={isMobile} isTablet={isTablet}>
-        {t('Trade Crypto Instantly Across %count%+ Chains', { count: 3 })}
+        {t('Trade Crypto Instantly Across %count%+ Chains', { count: 6 })}
       </DescriptionText>
-      <Flex
+      {/* <Flex
         alignItems="center"
         justifyContent={isMobile || isTablet ? 'center' : 'flex-start'}
         style={{
@@ -92,7 +91,7 @@ export const FavoriteDEXBanner: React.FC<FavoriteDEXBannerProps> = ({ chains }) 
             maxDisplay={20}
           />
         </Box>
-      </Flex>
+      </Flex> */}
     </Wrapper>
   )
 }

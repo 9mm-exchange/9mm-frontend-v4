@@ -126,7 +126,7 @@ export const darkColors = {
   destructive: "#ED4B9E",
   warning10: "#452E14",
   warning20: "#754300",
-  gradientPrimary: "linear-gradient(228.54deg, #ef4444 -13.69%, #9A6AFF 91.33%)",
+  gradientPrimary: "linear-gradient(228.54deg, #ef4444 -13.69%,rgb(214, 55, 55) 91.33%)",
   gradientBubblegum: "radial-gradient(rgba(16, 185, 129, .1) 2px, transparent 0)",
   gradientInverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
   gradientCardHeader: "#000",
@@ -134,6 +134,6 @@ export const darkColors = {
   gradientViolet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",
   gradientVioletAlt: "linear-gradient(180deg, #434575 0%, #66578D 100%)",
   gradientGold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
-  gradientBold: "linear-gradient(#53DEE9, #9A6AFF)",
+  gradientBold: "linear-gradient(#53DEE9, #ef4444)",
   transparent: "transparent",
 };
