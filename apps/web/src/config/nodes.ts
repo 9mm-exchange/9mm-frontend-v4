@@ -41,11 +41,12 @@ export const SERVER_NODES = {
     'https://cloudflare-eth.com',
   ],
   [ChainId.PULSECHAIN]: [
+    process.env.SERVER_PULSECHAIN_RPC || '',
     getNodeRealUrl(ChainId.PULSECHAIN, process.env.SERVER_NODE_REAL_API_PULSE) || '',
     'https://pulsechain-rpc.publicnode.com',
     'https://rpc-pulsechain.g4mm4.io',
     'https://rpc.pulsechain.com',
-  ],
+  ].filter(Boolean),
   [ChainId.SONIC]: [
     getNodeRealUrl(ChainId.SONIC, process.env.SERVER_NODE_REAL_API_PULSE) || '',
     'https://sonic-rpc.publicnode.com',
@@ -124,6 +125,7 @@ export const PUBLIC_NODES: Record<ChainId, string[] | readonly string[]> = {
     'https://cloudflare-eth.com',
   ].filter(Boolean),
   [ChainId.PULSECHAIN]: [
+    process.env.NEXT_PUBLIC_PULSECHAIN_RPC || '',
     getNodeRealUrl(ChainId.PULSECHAIN, process.env.NEXT_PUBLIC_NODE_REAL_API_PULSE) || '',
     process.env.NEXT_PUBLIC_NODIES_PULSE || '',
     'https://pulsechain-rpc.publicnode.com',
