@@ -53,7 +53,7 @@ interface TitleProps {
 }
 
 const Title = styled.div<TitleProps>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => {
     if (isMobile) return '14px'
@@ -77,7 +77,7 @@ interface ValueProps {
 }
 
 export const Additional = styled.div`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -87,7 +87,7 @@ export const Additional = styled.div`
 `
 
 const Value = styled.div<ValueProps>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => {
     if (isMobile) return '32px'

@@ -126,7 +126,7 @@ const LabelWrapper = styled.div`
 
 const LabelText = styled(Text)`
   color: ${({ theme }) => theme.colors.textSubtle};
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 120%;
@@ -141,7 +141,7 @@ const ValueWrapper = styled.div`
 `
 
 const ValueText = styled(Text)`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -153,7 +153,7 @@ const SymbolText = styled.span``
 
 const UsdValueText = styled(Text)`
   color: ${({ theme }) => theme.colors.textSubtle};
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 120%;

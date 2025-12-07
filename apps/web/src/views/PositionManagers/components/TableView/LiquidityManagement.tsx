@@ -35,7 +35,7 @@ export const ActionContainer = styled(Flex)`
 export const Title = styled.div`
   color: ${({ theme }) => theme.colors.textSubtle};
   font-feature-settings: 'liga' off;
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;

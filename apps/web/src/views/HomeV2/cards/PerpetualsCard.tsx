@@ -25,7 +25,7 @@ interface StyledProps {
 }
 
 const PriceText = styled(Text)<StyledProps>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getFontSize(isMobile, isTablet)};
   line-height: 21px;

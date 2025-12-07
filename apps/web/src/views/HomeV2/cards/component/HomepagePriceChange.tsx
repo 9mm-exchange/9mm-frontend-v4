@@ -9,7 +9,7 @@ const getFontSize = (isMobile: boolean, isTablet: boolean) => {
 }
 
 const Percent = styled(Text)<{ isMobile?: boolean; isTablet?: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getFontSize(Boolean(isMobile), Boolean(isTablet))};
   line-height: 21px;

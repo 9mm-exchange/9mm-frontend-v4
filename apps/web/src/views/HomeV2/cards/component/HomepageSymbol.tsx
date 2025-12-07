@@ -13,7 +13,7 @@ export const HomepageSymbol = styled(Text)<{
   isMobile?: boolean
   isTablet?: boolean
 }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   letter-spacing: -1%;
   cursor: pointer;

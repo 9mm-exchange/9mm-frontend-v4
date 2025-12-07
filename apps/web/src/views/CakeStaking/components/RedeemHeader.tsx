@@ -63,19 +63,19 @@ const TextContent = styled.div`
 `
 
 const Title = styled.h1<{ $isMobile: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 600;
   line-height: 110%;
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-size: ${({ $isMobile }) => ($isMobile ? '32px' : '64px')};
   color: ${({ theme }) => theme.colors.secondary};
   margin-bottom: 16px;
 `
 
 const SubText = styled.p<{ $isMobile: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
@@ -85,7 +85,7 @@ const SubText = styled.p<{ $isMobile: boolean }>`
 
 const AnnouncementLinkMobile = styled(Link)`
   display: inline;
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -96,7 +96,7 @@ const AnnouncementLinkMobile = styled(Link)`
 const AnnouncementLink = styled(Link)`
   display: inline-flex;
   align-items: center;
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 120%;
@@ -106,7 +106,7 @@ const AnnouncementLink = styled(Link)`
 `
 
 const LinkText = styled.span`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
 `
 
 const StyledArrowForwardIcon = styled(ArrowForwardIcon)`

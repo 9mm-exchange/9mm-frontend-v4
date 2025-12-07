@@ -1,6 +1,6 @@
 import { atom, useAtom } from 'jotai'
 
-const showAdPanelAtom = atom<boolean>(true)
+const showAdPanelAtom = atom<boolean>(false)
 
 /**
  * Hook to show/hide the AdPanel rendered by DesktopCard and MobileCard.

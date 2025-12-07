@@ -48,7 +48,7 @@ const WinnerText = styled(Text)<{ isMobile?: boolean; isTablet?: boolean }>`
 `
 
 const TopWinnerTitle = styled(Text)<{ isMobile?: boolean; isTablet?: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getTopWinnerFontSize(isMobile, isTablet)};
   line-height: 21px;

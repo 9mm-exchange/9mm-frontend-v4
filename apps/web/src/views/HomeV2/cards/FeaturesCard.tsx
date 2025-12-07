@@ -63,7 +63,7 @@ export const FeaturesCard = () => {
 }
 
 const FeaturedText = styled(Text)<{ isMobile?: boolean; isTablet?: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${(props) => {
     if (props.isMobile) return '24px'

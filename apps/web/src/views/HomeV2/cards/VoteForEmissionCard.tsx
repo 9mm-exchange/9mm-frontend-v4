@@ -26,7 +26,7 @@ const StyledTitle = styled.p<{ isMobile?: boolean; isTablet?: boolean }>`
 `
 
 const StyledSubtitle = styled.p<{ isMobile?: boolean; isTablet?: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 12px; /* You could replace with a function if needed, for now keep minimal */
   line-height: 18px;

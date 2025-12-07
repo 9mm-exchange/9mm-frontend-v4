@@ -92,7 +92,7 @@ const LinkItem = styled.a`
 
 // Text with responsive font size
 const TextWrapper = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getTextFontSize(isMobile, isTablet)};
   line-height: 24px;

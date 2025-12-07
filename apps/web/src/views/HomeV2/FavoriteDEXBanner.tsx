@@ -14,7 +14,7 @@ const Wrapper = styled(MotionBox)<{
 `
 
 const TitleText = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => (isMobile ? '40px' : isTablet ? '64px' : '88px')};
   line-height: ${({ isMobile, isTablet }) => (isMobile ? '48px' : isTablet ? '72px' : '88px')};
@@ -24,7 +24,7 @@ const TitleText = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
 `
 
 const HighlightedText = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => (isMobile ? '40px' : isTablet ? '64px' : '88px')};
   line-height: ${({ isMobile, isTablet }) => (isMobile ? '40px' : isTablet ? '72px' : '88px')};
@@ -35,7 +35,7 @@ const HighlightedText = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
 `
 
 const DescriptionText = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => (isMobile ? '16px' : isTablet ? '20px' : '24px')};
   line-height: ${({ isMobile, isTablet }) => (isMobile ? '28px' : isTablet ? '32px' : '36px')};

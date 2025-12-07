@@ -37,12 +37,14 @@ class MyDocument extends Document {
           {process.env.NEXT_PUBLIC_NODE_PRODUCTION && (
             <link rel="preconnect" href={process.env.NEXT_PUBLIC_NODE_PRODUCTION} />
           )}
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href={FARMS_API} />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&amp;display=swap"
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
             rel="stylesheet"
           />
+
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/logo.png" />
           <link rel="manifest" href="/manifest.json" />
@@ -53,7 +55,10 @@ class MyDocument extends Document {
               z-index: 0;
               overflow: hidden;
             }
-
+            html, body, div#pair, a , button, button#swap-button, input{
+              text-transform: uppercase!important;
+            }
+            
             .blob {
               position: absolute;
               border-radius: 9999px;

@@ -36,7 +36,7 @@ const Badge = styled(Flex)<{ isMobile: boolean; isTablet: boolean; isHover: bool
 `
 
 const Percent = styled(Text)`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;

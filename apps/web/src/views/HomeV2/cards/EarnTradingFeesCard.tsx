@@ -31,7 +31,7 @@ const getChainTextFontSize = (isMobile?: boolean, isTablet?: boolean) => {
 }
 
 const ChainText = styled(Text)<{ isMobile?: boolean; isTablet?: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getChainTextFontSize(isMobile, isTablet)};
   line-height: 18px;

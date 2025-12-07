@@ -81,7 +81,7 @@ export const Snowflake = styled.div`
   z-index: 9999;
   color: #fff;
   font-size: 1em;
-  font-family: Arial;
+  font-family: 'JetBrains Mono', sans-serif;
   text-shadow: ${({ theme }) => (theme.isDark ? '0 0 1px #000' : 'none')};
   user-select: none;
   cursor: default;

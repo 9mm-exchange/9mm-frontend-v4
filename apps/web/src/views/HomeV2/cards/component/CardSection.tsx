@@ -119,7 +119,7 @@ interface CardSectionProps {
 }
 
 const Title = styled(Text)<{ isMobile: boolean; isTablet: boolean; isFrameless: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet, isFrameless }) => getTitleFontSize(isMobile, isTablet, isFrameless)};
   line-height: ${({ isMobile, isTablet }) => getTitleLineHeight(isMobile, isTablet)};
@@ -129,7 +129,7 @@ const Title = styled(Text)<{ isMobile: boolean; isTablet: boolean; isFrameless: 
 `
 
 const FramelessTitle = styled(Text)<{ isMobile: boolean; isTablet: boolean; isFrameless: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getFramelessTitleFontSize(isMobile, isTablet)};
   line-height: ${({ isMobile, isTablet }) => getFramelessTitleLineHeight(isMobile, isTablet)};
@@ -138,7 +138,7 @@ const FramelessTitle = styled(Text)<{ isMobile: boolean; isTablet: boolean; isFr
 `
 
 const Subtitle = styled(Text)<{ isMobile: boolean; isTablet: boolean }>`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: ${({ isMobile, isTablet }) => getSubtitleFontSize(isMobile, isTablet)};
   line-height: ${({ isMobile, isTablet }) => getSubtitleLineHeight(isMobile, isTablet)};

@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Kanit', sans-serif !important;
+    font-family: 'JetBrains Mono', sans-serif !important;
     .bccb-widget-transfer-widget-wrapper {
       border: 1px solid;
       border-bottom: 2px solid;

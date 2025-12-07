@@ -312,7 +312,7 @@ export const VeCakeRedeem: React.FC = () => {
 }
 
 const RedeemLabel = styled(Text)`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 120%;
@@ -322,7 +322,7 @@ const RedeemLabel = styled(Text)`
 `
 
 const StyledRedeemValue = styled(DisplayValue)`
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 120%;
@@ -379,7 +379,7 @@ const StyledCard = styled(Card)`
 const SectionTitle = styled(Text)<{ isMobile: boolean }>`
   color: ${({ theme }) => theme.colors.secondary};
   margin-bottom: 16px;
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 120%;
@@ -401,7 +401,7 @@ const SubField = styled.div`
 
 const RedeemTitle = styled(Text)`
   color: ${({ theme }) => theme.colors.secondary};
-  font-family: Kanit;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 120%;
