@@ -12,7 +12,9 @@ data:
   NEXT_PUBLIC_MM_API_URL: "https://linked-pool.pancakeswap.com/quote-service"
   NEXT_PUBLIC_QUOTING_API: "https://swap-quoting.pancakeswap.com/quoting-service"
   
-  # PulseChain Private RPC (internal K8s network)
-  NEXT_PUBLIC_PULSECHAIN_RPC: "http://192.168.226.228:8545"
+  # PulseChain RPC Configuration
+  # NEXT_PUBLIC_ = browser-facing (public HTTPS)
+  # SERVER_ = server-side only (private IP for low latency)
+  NEXT_PUBLIC_PULSECHAIN_RPC: "https://rpc.9mm.pro"
   SERVER_PULSECHAIN_RPC: "http://192.168.226.228:8545"
-  NEXT_PUBLIC_PULSECHAIN_WS: "ws://192.168.226.228:8546"
+  NEXT_PUBLIC_PULSECHAIN_WS: "wss://rpc.9mm.pro"
