@@ -27,21 +27,17 @@ const getTransactionsDataWithRedis = async (chainId: number, tokenAddress?: stri
   const cacheKey = `transactions-v2:${chainId}:${normalizedAddress || 'all'}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const transactionsData = pool
-          ? await fetchPoolTransactions(chainId, normalizedAddress)
-          : await fetchTopTransactions(chainId, normalizedAddress)
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const transactionsData = pool
+        ? await fetchPoolTransactions(chainId, normalizedAddress)
+        : await fetchTopTransactions(chainId, normalizedAddress)
 
-        if (transactionsData.error) {
-          throw new Error('Failed to fetch transactions data')
-        }
+      if (transactionsData.error) {
+        throw new Error('Failed to fetch transactions data')
+      }
 
-        return transactionsData
-      },
-      CACHE_DURATION,
-    )
+      return transactionsData
+    })
 
     return result.data
   } catch (error) {

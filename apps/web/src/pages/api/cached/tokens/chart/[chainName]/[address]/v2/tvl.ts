@@ -29,19 +29,15 @@ const getTokenTvlChartDataWithRedis = async (
   const cacheKey = `token-tvl-v2:${chainId}:${address.toLowerCase()}:${period || 'default'}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const tvlData = await fetchTokenTvlChartData(address.toLowerCase(), chainId, period)
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const tvlData = await fetchTokenTvlChartData(address.toLowerCase(), chainId, period)
 
-        if (tvlData.error) {
-          throw new Error('Failed to fetch TVL data')
-        }
+      if (tvlData.error) {
+        throw new Error('Failed to fetch TVL data')
+      }
 
-        return tvlData
-      },
-      CACHE_DURATION,
-    )
+      return tvlData
+    })
 
     return result.data
   } catch (error) {

@@ -44,19 +44,15 @@ const getPoolTvlChartDataWithRedis = async (
      * - On success, updates Redis cache
      * - On failure, falls back to Redis cached data if available
      */
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await fetchPoolTvlChartData(address.toLowerCase(), chainId, period)
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const freshData = await fetchPoolTvlChartData(address.toLowerCase(), chainId, period)
 
-        if (freshData.error) {
-          throw new Error('Failed to fetch fresh TVL data')
-        }
+      if (freshData.error) {
+        throw new Error('Failed to fetch fresh TVL data')
+      }
 
-        return freshData
-      },
-      CACHE_DURATION, // Redis cache expiration matches HTTP cache
-    )
+      return freshData
+    })
 
     return result.data
   } catch (error) {

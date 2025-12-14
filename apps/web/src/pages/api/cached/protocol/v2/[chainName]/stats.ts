@@ -1,121 +1,86 @@
 import RedisClient from 'lib/redis'
 import { NextApiHandler } from 'next'
-import { unstable_cache as unstableCache } from 'next/cache'
 import { getOverviewData } from 'queries/stats/v2/overview'
 import { multiChainId } from 'state/info/constant'
 
 /**
  * Cache Configuration:
- * - 1 minute fresh period (60 seconds) - balances freshness with performance
- * - 5 minutes stale window (300 seconds)
- * - Redis cache as persistent fallback
+ * - 1 minute TTL for cached data
  */
 const CACHE_DURATION = 60
-const STALE_WINDOW = 300
 const CACHE_HEADERS = {
-  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${STALE_WINDOW}`,
+  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${CACHE_DURATION}`,
   'CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
   'Vercel-CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
 }
 
 /**
- * Redis-backed overview data fetcher with fallback strategy
+ * API Handler for Protocol Stats V2
+ *
+ * Endpoint: /api/cached/protocol/v2/[chainName]/stats
+ *
+ * Cache-first approach:
+ * 1. Returns cached data immediately if available in Redis
+ * 2. If not cached, fetches live data, caches it, and returns it
+ * 3. After returning response, refreshes cache in background to keep it up-to-date
+ *
+ * Cache key format: protocol/v2/{chainName}/stats -> protocol-v2-{chainName}-stats
  */
-const getOverviewDataWithRedis = async (chainId: number) => {
-  const cacheKey = `overview-data-v2:${chainId}`
-
-  try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const overviewData = await getOverviewData(chainId)
-
-        if (overviewData.error) {
-          throw new Error('Failed to fetch overview data')
-        }
-
-        return overviewData
-      },
-      CACHE_DURATION,
-    )
-
-    return result.data
-  } catch (error) {
-    console.error('Redis cache operation failed:', error)
-    return {
-      data: null,
-      error: {
-        message: 'Failed to fetch overview data with cache fallback',
-      },
-    }
-  }
-}
-
-/**
- * Multi-layer cached overview data fetcher
- */
-const cachedFetchOverviewData = unstableCache(getOverviewDataWithRedis, ['overview-data-v2'], {
-  revalidate: CACHE_DURATION,
-  tags: ['overview-data-v2'],
-})
-
 const handler: NextApiHandler = async (req, res) => {
   try {
     const { chainName } = req.query as {
       chainName: string
     }
 
-    // ----------------------------
-    // Input Validation
-    // ----------------------------
     if (!chainName) {
+      res.setHeader('Cache-Control', 'no-store')
       return res.status(400).json({
-        error: 'Missing required parameter: chainName is required',
-        documentation: 'https://docs.your-api.com/errors/missing-parameters',
+        error: 'Missing required parameter: chainName',
       })
     }
 
     const chainId = multiChainId[chainName.toUpperCase()]
     if (!chainId) {
+      res.setHeader('Cache-Control', 'no-store')
       return res.status(400).json({
         error: 'Invalid chain name',
         supportedChains: Object.keys(multiChainId),
-        documentation: 'https://docs.your-api.com/errors/invalid-chain',
       })
     }
 
-    // ----------------------------
-    // Data Fetching with Caching
-    // ----------------------------
-    const overviewData = await cachedFetchOverviewData(chainId)
+    // Build API URL path for cache key generation
+    const apiPath = `protocol/v2/${chainName}/stats`
 
-    if (overviewData.error || !overviewData.data) {
+    // Fetch data with cache-first approach using URL-based cache key
+    const result = await RedisClient.fetchWithCache(apiPath, async () => {
+      const overviewData = await getOverviewData(chainId)
+      if (overviewData.error) {
+        throw new Error('Failed to fetch overview data')
+      }
+      return overviewData
+    })
+
+    if (result.data.error || !result.data.data) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(404).json({
         error: 'Overview data not found',
-        details: 'No overview data available for this chain',
-        documentation: 'https://docs.your-api.com/errors/no-overview-data',
       })
     }
 
-    // ----------------------------
-    // Response Preparation
-    // ----------------------------
+    // Set cache headers for successful responses
     Object.entries(CACHE_HEADERS).forEach(([key, value]) => {
       res.setHeader(key, value)
     })
 
-    return res.status(200).json(overviewData.data)
+    // Return cached or fresh data immediately
+    // Background refresh is already triggered by fetchWithCache
+    return res.status(200).json(result.data.data)
   } catch (error) {
-    console.error('API Route Error:', error)
-    res.setHeader('Cache-Control', 'no-store, max-age=0')
-
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
-
+    console.error('Protocol stats API error:', error)
+    res.setHeader('Cache-Control', 'no-store')
     return res.status(500).json({
-      error: 'Internal Server Error',
-      details: errorMessage,
-      documentation: 'https://docs.your-api.com/errors/internal-server-error',
+      error: 'Internal server error',
+      timestamp: new Date().toISOString(),
     })
   }
 }

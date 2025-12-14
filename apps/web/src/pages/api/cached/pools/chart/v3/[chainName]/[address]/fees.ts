@@ -44,19 +44,15 @@ const getPoolFeeChartDataWithRedis = async (
      * - On success, updates Redis cache
      * - On failure, falls back to Redis cached data if available
      */
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await fetchPoolFeeChartData(address.toLowerCase(), chainId, period)
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const freshData = await fetchPoolFeeChartData(address.toLowerCase(), chainId, period)
 
-        if (freshData.error) {
-          throw new Error('Failed to fetch fresh fee data')
-        }
+      if (freshData.error) {
+        throw new Error('Failed to fetch fresh fee data')
+      }
 
-        return freshData
-      },
-      CACHE_DURATION, // Redis cache expiration matches our HTTP cache
-    )
+      return freshData
+    })
 
     return result.data
   } catch (error) {

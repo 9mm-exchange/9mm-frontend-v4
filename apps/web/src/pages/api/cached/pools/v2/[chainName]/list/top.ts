@@ -25,19 +25,15 @@ const getPoolsDataWithRedis = async (chainId: number, tokenAddress?: string) => 
   const cacheKey = `v2-pools:${chainId}:${tokenAddress?.toLowerCase() || 'all'}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const poolsData = await getPoolsData(chainId, tokenAddress?.toLowerCase())
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const poolsData = await getPoolsData(chainId, tokenAddress?.toLowerCase())
 
-        if (poolsData.error) {
-          throw new Error('Failed to fetch pools data')
-        }
+      if (poolsData.error) {
+        throw new Error('Failed to fetch pools data')
+      }
 
-        return poolsData
-      },
-      CACHE_DURATION,
-    )
+      return poolsData
+    })
 
     return result.data
   } catch (error) {

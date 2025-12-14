@@ -29,19 +29,15 @@ const getTokenVolumeChartDataWithRedis = async (
   const cacheKey = `token-volume-v2:${chainId}:${address.toLowerCase()}:${period || 'default'}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const volumeData = await fetchTokenVolumeChartData(address.toLowerCase(), chainId, period)
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const volumeData = await fetchTokenVolumeChartData(address.toLowerCase(), chainId, period)
 
-        if (volumeData.error) {
-          throw new Error('Failed to fetch volume data')
-        }
+      if (volumeData.error) {
+        throw new Error('Failed to fetch volume data')
+      }
 
-        return volumeData
-      },
-      CACHE_DURATION,
-    )
+      return volumeData
+    })
 
     return result.data
   } catch (error) {

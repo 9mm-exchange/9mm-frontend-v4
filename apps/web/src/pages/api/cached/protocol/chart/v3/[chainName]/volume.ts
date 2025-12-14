@@ -1,72 +1,39 @@
 import RedisClient from 'lib/redis'
 import { NextApiHandler } from 'next'
-import { unstable_cache as unstableCache } from 'next/cache'
 import { fetchVolumeChartData } from 'queries/stats/volume'
 import { multiChainId } from 'state/info/constant'
 
 /**
  * Cache Configuration:
- * - 1 minute fresh period (volume data changes frequently)
- * - 1 minute stale window (for background revalidation)
- * - Redis cache as persistent fallback with shorter TTL
+ * - 1 minute TTL for cached data
  */
-const CACHE_DURATION = 60 // 1 minute in seconds
-const STALE_WINDOW = 60 // 1 minute in seconds
+const CACHE_DURATION = 60
 const CACHE_HEADERS = {
-  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${STALE_WINDOW}`,
+  'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${CACHE_DURATION}`,
   'CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
   'Vercel-CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
 }
 
 /**
- * Redis-backed Volume Data fetcher with optimized caching strategy:
- * 1. First tries to get fresh data
- * 2. Falls back to Redis cache with shorter TTL (1 minute)
- * 3. Returns error if both fail
+ * API Handler for Protocol Volume Chart
+ *
+ * Endpoint: /api/cached/protocol/chart/v3/[chainName]/volume
+ *
+ * Cache-first approach:
+ * 1. Returns cached data immediately if available in Redis
+ * 2. If not cached, fetches live data, caches it, and returns it
+ * 3. After returning response, refreshes cache in background to keep it up-to-date
+ *
+ * Cache key format: protocol/chart/v3/{chainName}/volume -> protocol-chart-v3-{chainName}-volume
  */
-
-const getVolumeChartDataWithRedis = async (chainId: number) => {
-  // Generate consistent cache key
-  const cacheKey = `volume-chart:${chainId}`
-
-  // Attempt to fetch data with Redis fallback
-  const { data } = await RedisClient.getWithFallback(
-    cacheKey,
-    async () => {
-      // Fetch fresh data from source
-      const freshData = await fetchVolumeChartData(chainId)
-
-      // Throw error if fresh data fetch fails
-      if (freshData.error) {
-        throw new Error('Failed to fetch protocol TVL data')
-      }
-
-      return freshData
-    },
-    CACHE_DURATION, // Cache duration in seconds
-  )
-
-  return data
-}
-
-/**
- * Multi-layer cached Volume Data fetcher optimized for frequent updates
- */
-const cachedFetchVolumeChartData = unstableCache(getVolumeChartDataWithRedis, ['volume-chart-data'], {
-  revalidate: CACHE_DURATION,
-  tags: ['volume-data'],
-})
-
 const handler: NextApiHandler = async (req, res) => {
   try {
     const { chainName } = req.query
 
-    // Validate input
     if (!chainName) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(400).json({
         error: 'Missing chainName',
-        documentation: 'https://docs.your-api.com/volume-chart',
       })
     }
 
@@ -79,32 +46,51 @@ const handler: NextApiHandler = async (req, res) => {
       })
     }
 
-    // Fetch with caching
-    const volumeData = await cachedFetchVolumeChartData(chainId)
+    // Build API URL path for cache key generation
+    const apiPath = `protocol/chart/v3/${chainName}/volume`
 
-    // Handle data not found scenario
-    if (volumeData.error || !volumeData.data) {
-      // Don't cache error responses
+    // Extract query parameters that affect the response
+    const { groupBy, period } = req.query
+    const queryParams: Record<string, string | undefined> = {}
+    if (groupBy) queryParams.groupBy = groupBy as string
+    if (period) queryParams.period = period as string
+
+    // Fetch data with cache-first approach using URL-based cache key with query params
+    // Cache persists indefinitely, refreshed in background
+    const result = await RedisClient.fetchWithCache(
+      apiPath,
+      async () => {
+        const freshData = await fetchVolumeChartData(chainId)
+        if (freshData.error) {
+          throw new Error('Failed to fetch protocol volume data')
+        }
+        return freshData
+      },
+      {
+        queryParams: Object.keys(queryParams).length > 0 ? queryParams : undefined,
+      },
+    )
+
+    if (result.data.error || !result.data.data) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(404).json({
         error: 'Volume chart data not found',
-        details: 'No data available for this chain',
-        documentation: 'https://docs.your-api.com/endpoints/tvl-chart#troubleshooting',
       })
     }
 
-    // Set cache headers
+    // Set cache headers for successful responses
     Object.entries(CACHE_HEADERS).forEach(([key, value]) => {
       res.setHeader(key, value)
     })
 
-    return res.status(200).json(volumeData.data)
+    // Return cached or fresh data immediately
+    // Background refresh is already triggered by fetchWithCache
+    return res.status(200).json(result.data.data)
   } catch (error) {
     console.error('Volume chart API error:', error)
     res.setHeader('Cache-Control', 'no-store')
     return res.status(500).json({
       error: 'Internal error',
-      requestId: res.getHeader('x-request-id'),
       timestamp: new Date().toISOString(),
     })
   }

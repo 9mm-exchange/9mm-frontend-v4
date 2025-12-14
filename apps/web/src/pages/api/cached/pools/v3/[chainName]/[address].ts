@@ -39,17 +39,13 @@ const getPoolDataWithRedis = async (address: string, chainId: number): Promise<P
   const cacheKey = `pool-data:${chainId}:${normalizedAddress}`
 
   try {
-    const { data, fromCache } = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await getPoolData(normalizedAddress, chainId)
-        if (freshData.error) {
-          throw new Error('Failed to fetch pool data')
-        }
-        return freshData
-      },
-      CACHE_DURATION,
-    )
+    const { data, fromCache } = await RedisClient.getWithFallback(cacheKey, async () => {
+      const freshData = await getPoolData(normalizedAddress, chainId)
+      if (freshData.error) {
+        throw new Error('Failed to fetch pool data')
+      }
+      return freshData
+    })
 
     return {
       data,

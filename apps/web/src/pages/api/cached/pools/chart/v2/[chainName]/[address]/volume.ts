@@ -29,19 +29,15 @@ const getPoolVolumeChartDataWithRedis = async (
   const cacheKey = `pool-volume-v2:${chainId}:${address.toLowerCase()}:${period || 'default'}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await fetchPoolVolumeChartData(address.toLowerCase(), chainId, period)
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const freshData = await fetchPoolVolumeChartData(address.toLowerCase(), chainId, period)
 
-        if (freshData.error) {
-          throw new Error('Failed to fetch fresh volume data')
-        }
+      if (freshData.error) {
+        throw new Error('Failed to fetch fresh volume data')
+      }
 
-        return freshData
-      },
-      CACHE_DURATION,
-    )
+      return freshData
+    })
 
     return result.data
   } catch (error) {

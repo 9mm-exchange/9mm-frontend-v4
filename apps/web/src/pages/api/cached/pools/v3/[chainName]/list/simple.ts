@@ -28,14 +28,10 @@ const getPoolsWithLiquidityWithRedis = async (tokenA: any, tokenB: any, chainId:
   const cacheKey = `pools-liquidity:${chainId}:${tokenA.address}:${tokenB.address}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await getPoolsWithLiquidityByFeeTiers(tokenA, tokenB, chainId)
-        return freshData.map((address) => address.toLowerCase())
-      },
-      CACHE_DURATION,
-    )
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const freshData = await getPoolsWithLiquidityByFeeTiers(tokenA, tokenB, chainId)
+      return freshData.map((address) => address.toLowerCase())
+    })
     return { data: result.data, error: false }
   } catch (error) {
     console.error('Redis cache operation failed:', error)
@@ -46,18 +42,14 @@ const getPoolsWithLiquidityWithRedis = async (tokenA: any, tokenB: any, chainId:
 const getPoolsDataWithRedis = async (chainId: number, addresses: string[]) => {
   const cacheKey = `pools-detail:${chainId}:${addresses.sort().join(',')}`
 
-  const { data, fromCache } = await RedisClient.getWithFallback(
-    cacheKey,
-    async () => {
-      const freshData = await getPoolsDataByAddresses(chainId, addresses)
-      if (freshData.error) {
-        throw new Error('Error in fetching pool data')
-      }
+  const { data, fromCache } = await RedisClient.getWithFallback(cacheKey, async () => {
+    const freshData = await getPoolsDataByAddresses(chainId, addresses)
+    if (freshData.error) {
+      throw new Error('Error in fetching pool data')
+    }
 
-      return freshData
-    },
-    CACHE_DURATION,
-  )
+    return freshData
+  })
 
   return data
 }

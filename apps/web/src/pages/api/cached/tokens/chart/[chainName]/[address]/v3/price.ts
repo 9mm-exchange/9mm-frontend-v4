@@ -29,16 +29,12 @@ const getTokenPriceChartDataWithRedis = async (
   const cacheKey = `token-price:${chainId}:${address.toLowerCase()}:${period || 'default'}`
 
   try {
-    const result = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await fetchTokenPriceChartData(address.toLowerCase(), chainId, period)
-        if (freshData.error) throw new Error('Failed to fetch fresh token chart data')
+    const result = await RedisClient.getWithFallback(cacheKey, async () => {
+      const freshData = await fetchTokenPriceChartData(address.toLowerCase(), chainId, period)
+      if (freshData.error) throw new Error('Failed to fetch fresh token chart data')
 
-        return freshData.data
-      },
-      CACHE_DURATION,
-    )
+      return freshData.data
+    })
 
     // Decompress the data before returning
     return {

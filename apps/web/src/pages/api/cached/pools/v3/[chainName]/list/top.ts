@@ -1,21 +1,13 @@
 import RedisClient from 'lib/redis'
 import { NextApiHandler } from 'next'
-import { unstable_cache as unstableCache } from 'next/cache'
 import { getPoolsData } from 'queries/pools'
 import { multiChainId } from 'state/info/constant'
 
-interface PoolsDataResponse {
-  data: any
-  error: boolean
-  isCached?: boolean
-}
-
 /**
  * Cache Configuration:
- * - 5 minutes fresh period
- * - 5 minutes stale window (for background revalidation)
+ * - 25 minutes TTL for cached data
  */
-const CACHE_DURATION = 1500 // 25 minutes in seconds
+const CACHE_DURATION = 1500
 const CACHE_HEADERS = {
   'Cache-Control': `public, s-maxage=${CACHE_DURATION}, stale-while-revalidate=${CACHE_DURATION}`,
   'CDN-Cache-Control': `public, s-maxage=${CACHE_DURATION}`,
@@ -23,60 +15,18 @@ const CACHE_HEADERS = {
 }
 
 /**
- * Fetches pools data with Redis fallback caching
- * @param chainId - Blockchain network ID
- * @param token - Optional token address filter
- * @returns Promise<PoolsDataResponse>
- */
-const getPoolsDataWithRedis = async (chainId: number, token?: string): Promise<PoolsDataResponse> => {
-  const normalizedToken = token?.toLowerCase()
-  const cacheKey = `pools-data:${chainId}:${normalizedToken || 'all'}`
-
-  try {
-    const { data, fromCache } = await RedisClient.getWithFallback(
-      cacheKey,
-      async () => {
-        const freshData = await getPoolsData(chainId, normalizedToken)
-        if (freshData.error || !freshData.data?.length) {
-          throw new Error('Failed to fetch pools or top pool data')
-        }
-        return freshData
-      },
-      CACHE_DURATION,
-    )
-
-    return {
-      data,
-      error: false,
-      isCached: fromCache,
-    }
-  } catch (error) {
-    console.error('Redis fallback error:', error)
-    return {
-      data: null,
-      error: true,
-    }
-  }
-}
-
-/**
- * Multi-layer cached pools data fetcher
- */
-const cachedGetPoolsData = unstableCache(getPoolsDataWithRedis, ['pools-data-cache'], {
-  revalidate: CACHE_DURATION,
-  tags: ['pools-data'],
-})
-
-/**
- * API Handler for Pools Data
+ * API Handler for Top Pools
  *
- * Endpoint: /api/pools-data?chainName=<chainName>&token=<tokenAddress>
+ * Endpoint: /api/cached/pools/v3/[chainName]/list/top
  *
- * Returns pools data for the specified blockchain network,
- * optionally filtered by token address.
+ * Cache-first approach:
+ * 1. Returns cached data immediately if available in Redis
+ * 2. If not cached, fetches live data, caches it, and returns it
+ * 3. After returning response, refreshes cache in background to keep it up-to-date
+ *
+ * Cache key format: pools/v3/{chainName}/list/top -> pools-v3-{chainName}-list-top
  */
 const handler: NextApiHandler = async (req, res) => {
-  // Set default headers
   res.setHeader('Content-Type', 'application/json')
 
   try {
@@ -85,12 +35,10 @@ const handler: NextApiHandler = async (req, res) => {
       token?: string
     }
 
-    // Input Validation
     if (!chainName) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(400).json({
         error: 'Missing required parameter: chainName',
-        documentation: 'https://docs.your-api.com/pools-data#parameters',
       })
     }
 
@@ -100,7 +48,6 @@ const handler: NextApiHandler = async (req, res) => {
       return res.status(400).json({
         error: 'Unsupported chain',
         supportedChains: Object.keys(multiChainId),
-        documentation: 'https://docs.your-api.com/pools-data#supported-chains',
       })
     }
 
@@ -109,41 +56,45 @@ const handler: NextApiHandler = async (req, res) => {
       return res.status(400).json({
         error: 'Invalid token address format',
         expectedFormat: '0x followed by 40 hexadecimal characters',
-        documentation: 'https://docs.your-api.com/pools-data#address-format',
       })
     }
 
-    // Data Fetching
-    const { data: poolsData } = await cachedGetPoolsData(chainId, token)
+    // Build API URL path for cache key generation
+    const normalizedToken = token?.toLowerCase()
+    const apiPath = normalizedToken
+      ? `pools/v3/${chainName}/list/top/${normalizedToken}`
+      : `pools/v3/${chainName}/list/top`
 
-    if (poolsData.error || !poolsData.data) {
+    // Fetch data with cache-first approach using URL-based cache key
+    const result = await RedisClient.fetchWithCache(apiPath, async () => {
+      const freshData = await getPoolsData(chainId, normalizedToken)
+      if (freshData.error || !freshData.data?.length) {
+        throw new Error('Failed to fetch pools or top pool data')
+      }
+      return freshData
+    })
+
+    if (result.data.error || !result.data.data) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(404).json({
         error: 'Pools data not found',
-        isCached: poolsData.isCached,
-        documentation: 'https://docs.your-api.com/pools-data#troubleshooting',
       })
     }
 
-    // Successful Response
+    // Set cache headers for successful responses
     Object.entries(CACHE_HEADERS).forEach(([key, value]) => {
       res.setHeader(key, value)
     })
 
-    return res.status(200).json(poolsData.data)
+    // Return cached or fresh data immediately
+    // Background refresh is already triggered by fetchWithCache
+    return res.status(200).json(result.data.data)
   } catch (error) {
-    // Error Handling
     console.error('Pools Data API Error:', error)
     res.setHeader('Cache-Control', 'no-store')
-
-    const errorMessage = error instanceof Error ? error.message : 'Internal server error'
-
     return res.status(500).json({
       error: 'Internal Server Error',
-      message: errorMessage,
-      requestId: res.getHeader('x-request-id'),
       timestamp: new Date().toISOString(),
-      documentation: 'https://docs.your-api.com/pools-data#errors',
     })
   }
 }
