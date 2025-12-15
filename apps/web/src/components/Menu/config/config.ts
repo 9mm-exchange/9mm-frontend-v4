@@ -59,7 +59,7 @@ const config: (
       showItemsOnMobile: false,
     },
     {
-      label: t('Stats & Graphs'),
+      label: t('Stats'),
       href: '/info/v3',
       icon: LineGraphIcon,
       fillIcon: LineGraphIcon,

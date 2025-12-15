@@ -105,5 +105,4 @@ export const CHAINS: [Chain, ...Chain[]] = [
   pulsechain,
   base,
   sonic,
-  optipulse,
 ]
