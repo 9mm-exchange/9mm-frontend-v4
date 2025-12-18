@@ -63,7 +63,6 @@ doc/
 .eslintrc
 .lintstagedrc
 crowdin.yml
-turbo.json
 
 # Examples
 examples/
