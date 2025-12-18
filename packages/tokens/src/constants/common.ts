@@ -3,11 +3,11 @@ import { ERC20Token } from '@pancakeswap/sdk'
 
 export const CAKE_MAINNET = new ERC20Token(
   ChainId.BSC,
-  '0x55d398326f99059ff775485246999027b3197955',
+  '0x986eEB30dFaf2c7bbcc3Ed8b3EA67d2038095841',
   18,
-  'USDT',
-  'Tether USD',
-  'https://tether.to/',
+  'TST',
+  'Test',
+  'https://dex.9mm.pro/',
 )
 
 export const CAKE_TESTNET = new ERC20Token(
@@ -185,11 +185,11 @@ export const BUSD = {
 export const CAKE = {
   [ChainId.ETHEREUM]: new ERC20Token(
     ChainId.ETHEREUM,
-    '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    '0x824b556259C69d7F2F12F3b21811Cfb00CE126aF',
     18,
-    'USDC',
-    'USD Coin',
-    'https://www.centre.io/usdc',
+    '9MM',
+    '9mm Dex Token',
+    'https://9mm.pro',
   ),
   [ChainId.PULSECHAIN]: new ERC20Token(
     ChainId.PULSECHAIN,
@@ -231,7 +231,14 @@ export const CAKE = {
     '9mm Swap Token',
     'https://pancakeswap.finance/',
   ),
-  [ChainId.BSC]: CAKE_MAINNET,
+  [ChainId.BSC]: new ERC20Token(
+    ChainId.BSC,
+    '0x55d398326f99059fF775485246999027B3197955',
+    18,
+    'USDT',
+    'Tether USD',
+    'https://9mm.pro',
+  ),
   [ChainId.BSC_TESTNET]: CAKE_TESTNET,
   [ChainId.POLYGON_ZKEVM]: new ERC20Token(
     ChainId.POLYGON_ZKEVM,

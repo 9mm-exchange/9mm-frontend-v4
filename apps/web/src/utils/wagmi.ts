@@ -17,20 +17,20 @@ export const injectedConnector = injected({
 })
 
 export const coinbaseConnector = coinbaseWallet({
-  appName: 'PancakeSwap',
-  appLogoUrl: 'https://pancakeswap.com/logo.png',
+  appName: '9mm Dex',
+  appLogoUrl: 'https://dex.9mm.pro/logo.png',
 })
 
 export const walletConnectConnector = walletConnect({
   // ignore the error in test environment
   // Error: To use QR modal, please install @walletconnect/modal package
   showQrModal: process.env.NODE_ENV !== 'test',
-  projectId: 'e542ff314e26ff34de2d4fba98db70bb',
+  projectId: '274e64cbda952049194b405a465d34d4',
 })
 
 export const walletConnectNoQrCodeConnector = walletConnect({
   showQrModal: false,
-  projectId: 'e542ff314e26ff34de2d4fba98db70bb',
+  projectId: '274e64cbda952049194b405a465d34d4',
 })
 
 export const metaMaskConnector = injected({ target: 'metaMask', shimDisconnect: false })
