@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dex-main
+  namespace: ninemm-frontend
+  labels:
+    app: dex-main
+spec:
+  type: ClusterIP
+  selector:
+    app: dex-main
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+
