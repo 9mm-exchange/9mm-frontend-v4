@@ -1,0 +1,116 @@
+name: Build & Deploy DEX Main
+
+on:
+  push:
+    branches:
+      - jetbrains-docker
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: 'Docker image tag'
+        required: false
+        default: 'latest'
+
+env:
+  DOCKER_IMAGE: spiritmonkey/dex-main
+  K8S_NAMESPACE: ninemm-frontend
+  K8S_DEPLOYMENT: dex-main
+
+jobs:
+  build-and-push:
+    name: Build & Push Docker Image
+    runs-on: ubuntu-latest
+    outputs:
+      image_tag: ${{ steps.meta.outputs.version }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.DOCKER_IMAGE }}
+          tags: |
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/jetbrains-docker' }}
+            type=sha,prefix=,format=short
+            type=raw,value=${{ github.event.inputs.image_tag }},enable=${{ github.event_name == 'workflow_dispatch' }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            NODE_ENV=production
+
+      - name: Image digest
+        run: echo "Image pushed with digest ${{ steps.build.outputs.digest }}"
+
+  deploy-to-kubernetes:
+    name: Deploy to Kubernetes
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+
+      - name: Configure kubeconfig
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
+          chmod 600 $HOME/.kube/config
+
+      - name: Deploy to Kubernetes
+        run: |
+          # Apply all k8s manifests
+          kubectl apply -k k8s/
+          
+          # Force rollout with new image
+          kubectl set image deployment/${{ env.K8S_DEPLOYMENT }} \
+            ${{ env.K8S_DEPLOYMENT }}=${{ env.DOCKER_IMAGE }}:latest \
+            -n ${{ env.K8S_NAMESPACE }}
+          
+          # Wait for rollout
+          kubectl rollout status deployment/${{ env.K8S_DEPLOYMENT }} \
+            -n ${{ env.K8S_NAMESPACE }} \
+            --timeout=300s
+
+      - name: Verify deployment
+        run: |
+          echo "=== Deployment Status ==="
+          kubectl get deployment ${{ env.K8S_DEPLOYMENT }} -n ${{ env.K8S_NAMESPACE }}
+          echo ""
+          echo "=== Pods ==="
+          kubectl get pods -l app=${{ env.K8S_DEPLOYMENT }} -n ${{ env.K8S_NAMESPACE }}
+          echo ""
+          echo "=== Ingress ==="
+          kubectl get ingress -l app.kubernetes.io/name=${{ env.K8S_DEPLOYMENT }} -n ${{ env.K8S_NAMESPACE }}
+
+      - name: Deployment summary
+        run: |
+          echo "✅ Deployment complete!"
+          echo "🌐 URL: https://dex.9mm.pro"
+          echo "🐳 Image: ${{ env.DOCKER_IMAGE }}:latest"
+
