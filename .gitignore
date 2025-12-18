@@ -63,3 +63,4 @@ scripts/dev/**
 
 # typescript
 *.tsbuildinfo
+apps/web/.env.production
