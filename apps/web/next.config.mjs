@@ -138,6 +138,24 @@ const config = {
         ],
       },
       {
+        source: '/logo-light.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=31536000',
+          },
+        ],
+      },
+      {
+        source: '/loading.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=31536000',
+          },
+        ],
+      },
+      {
         source: '/images/:all*',
         headers: [
           {
