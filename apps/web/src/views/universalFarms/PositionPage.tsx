@@ -11,7 +11,6 @@ import {
   IconButton,
   NotificationDot,
   Text,
-  Toggle,
   useMatchBreakpoints,
   useModal,
 } from '@pancakeswap/uikit'
@@ -64,11 +63,6 @@ import {
 import { useFilterToQueries, V3_STATUS } from './hooks/useFilterToQueries'
 import { MAINNET_CHAINS } from './hooks/useMultiChains'
 
-const ToggleWrapper = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-`
 const ButtonWrapper = styled.div`
   display: inline-flex;
   align-items: center;
@@ -353,13 +347,6 @@ export const PositionPage = () => {
     [filters, replaceURLQueriesByFilter],
   )
 
-  const toggleFarmsOnly = useCallback(() => {
-    replaceURLQueriesByFilter({
-      ...filters,
-      farmsOnly: !farmsOnly,
-    })
-  }, [filters, farmsOnly, replaceURLQueriesByFilter])
-
   const handleFilterChange: IPoolsFilterPanelProps['onChange'] = useCallback(
     (newFilters) => {
       replaceURLQueriesByFilter({
@@ -481,10 +468,6 @@ export const PositionPage = () => {
         <PoolsFilterPanel onChange={handleFilterChange} value={poolsFilter}>
           {(isMobile || isMd) && <AddLiquidityButton scale="sm" height="40px" width="100%" />}
           <ControlWrapper>
-            <ToggleWrapper>
-              <Text>{t('Farms only')}</Text>
-              <Toggle checked={farmsOnly} onChange={toggleFarmsOnly} scale="sm" />
-            </ToggleWrapper>
             <ButtonWrapper>
               <IconButton onClick={onPresentTransactionsModal} variant="text" scale="xs">
                 <HistoryIcon color="textSubtle" width="24px" />
