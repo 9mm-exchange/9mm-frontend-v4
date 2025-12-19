@@ -18,7 +18,7 @@ export const AdPCSX = (props: AdPlayerProps) => {
         <Text as="span" color="secondary" bold>
           {t('LOWEST')}
         </Text>{' '}
-        {t('Fee Swaps on Pulsechain, Sonic, Bsc, OptiPulse & Base')}
+        {t('Fee Swaps on Pulsechain, Sonic, Bsc, & Base')}
       </BodyText>
 
       <AdButton variant="text" href={learnMoreLink} isExternalLink>

@@ -59,9 +59,9 @@ const TermsOfService = () => {
       <Text as="h3">Introduction</Text>
       <Text as="p">
         The Website provides access to (a) a decentralized protocol on various public blockchains, including but not
-        limited to Pulsechain Chain, Sonic, OptiPulse, bsc and Base, that allow users to trade certain compatible
-        digital assets (“the 9mm Swap protocol” or the “Protocol”), among other services. The Website is one, but not
-        the exclusive, means of accessing the Protocol.
+        limited to Pulsechain Chain, Sonic, bsc and Base, that allow users to trade certain compatible digital assets
+        (“the 9mm Swap protocol” or the “Protocol”), among other services. The Website is one, but not the exclusive,
+        means of accessing the Protocol.
       </Text>
       <Text as="p">
         To access the Website, you must use non-custodial wallet software, which allows you to interact with public
