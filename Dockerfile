@@ -87,7 +87,20 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app ./
 COPY . .
-ENV NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production SKIP_ENV_VALIDATION=1 NODE_OPTIONS="--max-old-space-size=8192"
+
+# Build-time environment variables (NEXT_PUBLIC_ vars are embedded at build time)
+ARG NEXT_PUBLIC_SNAPSHOT_BASE_URL="https://hub.snapshot.org"
+ARG NEXT_PUBLIC_EXPLORE_API_ENDPOINT="https://dex.9mm.pro/api"
+ARG NEXT_PUBLIC_SENTRY_DSN=""
+
+ENV NEXT_PUBLIC_SNAPSHOT_BASE_URL=$NEXT_PUBLIC_SNAPSHOT_BASE_URL \
+    NEXT_PUBLIC_EXPLORE_API_ENDPOINT=$NEXT_PUBLIC_EXPLORE_API_ENDPOINT \
+    NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN \
+    NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=production \
+    SKIP_ENV_VALIDATION=1 \
+    NODE_OPTIONS="--max-old-space-size=8192"
+
 RUN pnpm turbo run build --filter=web...
 
 FROM node:20-alpine AS runner
