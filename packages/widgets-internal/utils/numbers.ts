@@ -1,4 +1,4 @@
-export const MAX_DECIMALS_DISPLAY = 6;
+export const MAX_DECIMALS_DISPLAY = 16;
 
 /**
  * Truncates a decimal string to a specified number of decimal places
