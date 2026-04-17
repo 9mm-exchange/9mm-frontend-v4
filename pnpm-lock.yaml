@@ -19,8 +19,8 @@ catalogs:
       specifier: 2.0.0
       version: 2.0.0
     next:
-      specifier: 15.2.3
-      version: 15.2.3
+      specifier: 15.2.6
+      version: 15.2.6
     react:
       specifier: ^18.2.0
       version: 18.2.0
@@ -322,7 +322,7 @@ importers:
         version: 1.14.0
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       '@vanilla-extract/recipes':
         specifier: ^0.5.0
         version: 0.5.1(@vanilla-extract/css@1.14.0)
@@ -343,13 +343,13 @@ importers:
         version: 4.17.21
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-seo:
         specifier: ^5.15.0
-        version: 5.15.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 5.15.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -431,16 +431,16 @@ importers:
         version: 5.52.1(react@18.2.0)
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-seo:
         specifier: ^5.15.0
-        version: 5.15.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 5.15.0(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       qs:
         specifier: ^6.0.0
         version: 6.11.2
@@ -519,7 +519,7 @@ importers:
         version: link:../../packages/utils
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       '@wagmi/core':
         specifier: ^0.10.11
         version: 0.10.17(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.6(@babel/core@7.23.9)(@babel/preset-env@7.23.3(@babel/core@7.23.9))(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)))(@types/react@18.2.37)(bufferutil@4.0.8)(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(immer@9.0.21)(react@18.2.0)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4)
@@ -537,10 +537,10 @@ importers:
         version: 4.17.21
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -623,7 +623,7 @@ importers:
         version: 5.52.1(react@18.2.0)
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       dayjs:
         specifier: ^1.11.10
         version: 1.11.10
@@ -632,13 +632,13 @@ importers:
         version: 4.17.21
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-seo:
         specifier: ^5.15.0
-        version: 5.15.0(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 5.15.0(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       qs:
         specifier: ^6.0.0
         version: 6.11.2
@@ -777,7 +777,7 @@ importers:
         version: 5.52.1(react@18.2.0)
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       '@wagmi/core':
         specifier: 2.10.5
         version: 2.10.5(@tanstack/query-core@5.69.0)(@types/react@18.2.37)(bufferutil@4.0.8)(immer@9.0.21)(react@18.2.0)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.23.2(bufferutil@4.0.8)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
@@ -810,16 +810,16 @@ importers:
         version: 4.17.21
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-auth:
         specifier: ^4.24.7
-        version: 4.24.7(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 4.24.7(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-seo:
         specifier: ^5.15.0
-        version: 5.15.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 5.15.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       oauth-1.0a:
         specifier: ^2.2.6
         version: 2.2.6
@@ -1024,16 +1024,16 @@ importers:
         version: 4.17.21
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-seo:
         specifier: ^5.15.0
-        version: 5.15.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 5.15.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       nuqs:
         specifier: ^1.17.4
-        version: 1.17.4(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))
+        version: 1.17.4(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))
       react:
         specifier: 'catalog:'
         version: 18.2.0
@@ -1124,16 +1124,16 @@ importers:
         version: 8.3.4
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.19.75)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.19.75)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.2
         version: 4.0.2(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(vite@5.0.12(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0))
       '@vercel/flags':
         specifier: ^2.3.0
-        version: 2.3.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 2.3.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@vercel/toolbar':
         specifier: ^0.1.13
-        version: 0.1.13(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)
+        version: 0.1.13(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)
       '@vitejs/plugin-react':
         specifier: 4.2.1
         version: 4.2.1(vite@5.0.12(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0))
@@ -1208,7 +1208,7 @@ importers:
     dependencies:
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1374,7 +1374,7 @@ importers:
         version: 1.9.7(react-redux@8.1.3(@types/react-dom@18.2.15)(@types/react@18.2.37)(react-dom@18.2.0(react@18.2.0))(react-native@0.73.6(@babel/core@7.23.9)(@babel/preset-env@7.23.3(@babel/core@7.23.9))(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10))(react@18.2.0)(redux@4.2.1))(react@18.2.0)
       '@sentry/nextjs':
         specifier: ^9.6.0
-        version: 9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))
       '@snapshot-labs/snapshot.js':
         specifier: ^0.4.40
         version: 0.4.110(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -1383,7 +1383,7 @@ importers:
         version: 5.52.1(react@18.2.0)
       '@vanilla-extract/next-plugin':
         specifier: ^2.3.0
-        version: 2.3.2(@types/node@18.19.75)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 2.3.2(@types/node@18.19.75)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
       '@vercel/functions':
         specifier: 'catalog:'
         version: 2.0.0
@@ -1485,16 +1485,16 @@ importers:
         version: 2.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       next-seo:
         specifier: ^5.15.0
-        version: 5.15.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 5.15.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       nuqs:
         specifier: ^1.17.4
-        version: 1.17.4(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))
+        version: 1.17.4(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))
       openapi-fetch:
         specifier: ^0.9.7
         version: 0.9.7
@@ -1654,10 +1654,10 @@ importers:
         version: 4.0.2(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(vite@5.0.12(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0))
       '@vercel/flags':
         specifier: ^2.3.0
-        version: 2.3.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 2.3.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@vercel/toolbar':
         specifier: ^0.1.13
-        version: 0.1.13(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)
+        version: 0.1.13(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)
       '@vitejs/plugin-react':
         specifier: 4.2.1
         version: 4.2.1(vite@5.0.12(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0))
@@ -1744,7 +1744,7 @@ importers:
         version: 18.2.15
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -2095,7 +2095,7 @@ importers:
         version: 3.0.5
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -2403,7 +2403,7 @@ importers:
     devDependencies:
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
 
   packages/pcsx-sdk:
     dependencies:
@@ -3201,7 +3201,7 @@ importers:
         version: 3.0.5
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       polished:
         specifier: ^4.2.2
         version: 4.2.2
@@ -3526,7 +3526,7 @@ importers:
     devDependencies:
       '@sentry/nextjs':
         specifier: ^9.6.0
-        version: 9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))
+        version: 9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))
       '@types/d3':
         specifier: ^7.4.0
         version: 7.4.3
@@ -3547,7 +3547,7 @@ importers:
         version: 3.1.2
       next:
         specifier: 'catalog:'
-        version: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+        version: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       polished:
         specifier: ^4.2.2
         version: 4.2.2
@@ -3639,16 +3639,17 @@ packages:
   '@aptos-labs/aptos-client@0.1.0':
     resolution: {integrity: sha512-q3s6pPq8H2buGp+tPuIRInWsYOuhSEwuNJPwd2YnsiID3YSLihn2ug39ktDJAcSOprUcp7Nid8WK7hKqnUmSdA==}
     engines: {node: '>=15.10.0'}
-    deprecated: <1.0.0 is no longer supported please upgrade to the latest version
+    deprecated: This version is deprecated.  Please upgrade to version 2.1.0 or later.
 
   '@aptos-labs/aptos-client@0.1.1':
     resolution: {integrity: sha512-kJsoy4fAPTOhzVr7Vwq8s/AUg6BQiJDa7WOqRzev4zsuIS3+JCuIZ6vUd7UBsjnxtmguJJulMRs9qWCzVBt2XA==}
     engines: {node: '>=15.10.0'}
-    deprecated: <1.0.0 is no longer supported please upgrade to the latest version
+    deprecated: This version is deprecated.  Please upgrade to version 2.1.0 or later.
 
   '@aptos-labs/ts-sdk@1.30.0':
     resolution: {integrity: sha512-zlb8+YLcq+daKJUbNZvKr4JvV+tRLwCRQnn1PRebgYJ1pieZfhT3Dtz5Ve130cGOLpTcxMHRW9siXukvUUMHiQ==}
     engines: {node: '>=11.0.0'}
+    deprecated: This version is deprecated, please upgrade to 5.2.1, or the latest version
 
   '@aw-web-design/x-default-browser@1.4.126':
     resolution: {integrity: sha512-Xk1sIhyNC/esHGGVjL/niHLowM0csl/kFO5uawBy4IrWwy0o1G8LGt3jP6nmWGz+USxeeqbihAmp/oVZju6wug==}
@@ -4685,6 +4686,7 @@ packages:
 
   '@cosmjs/crypto@0.31.3':
     resolution: {integrity: sha512-vRbvM9ZKR2017TO73dtJ50KxoGcFzKtKI7C8iO302BQ5p+DuB+AirUg1952UpSoLfv5ki9O416MFANNg8UN/EQ==}
+    deprecated: This uses elliptic for cryptographic operations, which contains several security-relevant bugs. To what degree this affects your application is something you need to carefully investigate. See https://github.com/cosmos/cosmjs/issues/1708 for further pointers. Starting with version 0.34.0 the cryptographic library has been replaced. However, private keys might still be at risk.
 
   '@cosmjs/encoding@0.27.1':
     resolution: {integrity: sha512-rayLsA0ojHeniaRfWWcqSsrE/T1rl1gl0OXVNtXlPwLJifKBeLEefGbOUiAQaT0wgJ8VNGBazVtAZBpJidfDhw==}
@@ -6129,6 +6131,7 @@ packages:
 
   '@jup-ag/terminal@4.0.1':
     resolution: {integrity: sha512-YYNqM+b7hbxY9osMsdBhDkt5PvMGCBJ1D/9WYYOZUmehPFtCWX/taNAsTqKBVJDRc7vRt+FcPqNKjKeKplwLSA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       '@solana/spl-token': ^0.1.8
       '@solana/web3.js': ^1.87.6
@@ -6363,6 +6366,7 @@ packages:
 
   '@metamask/sdk-communication-layer@0.32.0':
     resolution: {integrity: sha512-dmj/KFjMi1fsdZGIOtbhxdg3amxhKL/A5BqSU4uh/SyDKPub/OT+x5pX8bGjpTL1WPWY/Q0OIlvFyX3VWnT06Q==}
+    deprecated: No longer maintained, superseded by https://docs.metamask.io/metamask-connect
     peerDependencies:
       cross-fetch: ^4.0.0
       eciesjs: '*'
@@ -6372,9 +6376,11 @@ packages:
 
   '@metamask/sdk-install-modal-web@0.32.0':
     resolution: {integrity: sha512-TFoktj0JgfWnQaL3yFkApqNwcaqJ+dw4xcnrJueMP3aXkSNev2Ido+WVNOg4IIMxnmOrfAC9t0UJ0u/dC9MjOQ==}
+    deprecated: No longer maintained, superseded by https://docs.metamask.io/metamask-connect
 
   '@metamask/sdk@0.32.0':
     resolution: {integrity: sha512-WmGAlP1oBuD9hk4CsdlG1WJFuPtYJY+dnTHJMeCyohTWD2GgkcLMUUuvu9lO1/NVzuOoSi1OrnjbuY1O/1NZ1g==}
+    deprecated: No longer maintained, superseded by https://docs.metamask.io/metamask-connect
 
   '@metamask/utils@5.0.2':
     resolution: {integrity: sha512-yfmE79bRQtnMzarnKfX7AEJBwFTxvTyw3nBQlu/5rmGXrjAeAMltoGxO62TFurxrQAFMNa/fEjIHNvungZp0+g==}
@@ -6444,7 +6450,7 @@ packages:
   '@mui/base@5.0.0-beta.36':
     resolution: {integrity: sha512-6A8fYiXgjqTO6pgj31Hc8wm1M3rFYCxDRh09dBVk0L0W4cb2lnurRJa3cAyic6hHY+we1S58OdGYRbKmOsDpGQ==}
     engines: {node: '>=12.0.0'}
-    deprecated: This package has been replaced by @base-ui-components/react
+    deprecated: This package has been replaced by @base-ui/react
     peerDependencies:
       '@types/react': ^17.0.0 || ^18.0.0
       react: ^17.0.0 || ^18.0.0
@@ -6539,8 +6545,8 @@ packages:
   '@next/env@13.4.19':
     resolution: {integrity: sha512-FsAT5x0jF2kkhNkKkukhsyYOrRqtSxrEhfliniIq0bwWbuXLgyt3Gv0Ml+b91XwjwArmuP7NxCiGd++GGKdNMQ==}
 
-  '@next/env@15.2.3':
-    resolution: {integrity: sha512-a26KnbW9DFEUsSxAxKBORR/uD9THoYoKbkpFywMN/AFvboTt94b8+g/07T8J6ACsdLag8/PDU60ov4rPxRAixw==}
+  '@next/env@15.2.6':
+    resolution: {integrity: sha512-kp1Mpm4K1IzSSJ5ZALfek0JBD2jBw9VGMXR/aT7ykcA2q/ieDARyBzg+e8J1TkeIb5AFj/YjtZdoajdy5uNy6w==}
 
   '@next/eslint-plugin-next@13.0.0':
     resolution: {integrity: sha512-z+gnX4Zizatqatc6f4CQrcC9oN8Us3Vrq/OLyc98h7K/eWctrnV91zFZodmJHUjx0cITY8uYM7LXD7IdYkg3kg==}
@@ -6554,8 +6560,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-arm64@15.2.3':
-    resolution: {integrity: sha512-uaBhA8aLbXLqwjnsHSkxs353WrRgQgiFjduDpc7YXEU0B54IKx3vU+cxQlYwPCyC8uYEEX7THhtQQsfHnvv8dw==}
+  '@next/swc-darwin-arm64@15.2.5':
+    resolution: {integrity: sha512-4OimvVlFTbgzPdA0kh8A1ih6FN9pQkL4nPXGqemEYgk+e7eQhsst/p35siNNqA49eQA6bvKZ1ASsDtu9gtXuog==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -6566,8 +6572,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@15.2.3':
-    resolution: {integrity: sha512-pVwKvJ4Zk7h+4hwhqOUuMx7Ib02u3gDX3HXPKIShBi9JlYllI0nU6TWLbPT94dt7FSi6mSBhfc2JrHViwqbOdw==}
+  '@next/swc-darwin-x64@15.2.5':
+    resolution: {integrity: sha512-ohzRaE9YbGt1ctE0um+UGYIDkkOxHV44kEcHzLqQigoRLaiMtZzGrA11AJh2Lu0lv51XeiY1ZkUvkThjkVNBMA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -6578,8 +6584,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-arm64-gnu@15.2.3':
-    resolution: {integrity: sha512-50ibWdn2RuFFkOEUmo9NCcQbbV9ViQOrUfG48zHBCONciHjaUKtHcYFiCwBVuzD08fzvzkWuuZkd4AqbvKO7UQ==}
+  '@next/swc-linux-arm64-gnu@15.2.5':
+    resolution: {integrity: sha512-FMSdxSUt5bVXqqOoZCc/Seg4LQep9w/fXTazr/EkpXW2Eu4IFI9FD7zBDlID8TJIybmvKk7mhd9s+2XWxz4flA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -6590,8 +6596,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-arm64-musl@15.2.3':
-    resolution: {integrity: sha512-2gAPA7P652D3HzR4cLyAuVYwYqjG0mt/3pHSWTCyKZq/N/dJcUAEoNQMyUmwTZWCJRKofB+JPuDVP2aD8w2J6Q==}
+  '@next/swc-linux-arm64-musl@15.2.5':
+    resolution: {integrity: sha512-4ZNKmuEiW5hRKkGp2HWwZ+JrvK4DQLgf8YDaqtZyn7NYdl0cHfatvlnLFSWUayx9yFAUagIgRGRk8pFxS8Qniw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -6602,8 +6608,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-linux-x64-gnu@15.2.3':
-    resolution: {integrity: sha512-ODSKvrdMgAJOVU4qElflYy1KSZRM3M45JVbeZu42TINCMG3anp7YCBn80RkISV6bhzKwcUqLBAmOiWkaGtBA9w==}
+  '@next/swc-linux-x64-gnu@15.2.5':
+    resolution: {integrity: sha512-bE6lHQ9GXIf3gCDE53u2pTl99RPZW5V1GLHSRMJ5l/oB/MT+cohu9uwnCK7QUph2xIOu2a6+27kL0REa/kqwZw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -6614,8 +6620,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-linux-x64-musl@15.2.3':
-    resolution: {integrity: sha512-ZR9kLwCWrlYxwEoytqPi1jhPd1TlsSJWAc+H/CJHmHkf2nD92MQpSRIURR1iNgA/kuFSdxB8xIPt4p/T78kwsg==}
+  '@next/swc-linux-x64-musl@15.2.5':
+    resolution: {integrity: sha512-y7EeQuSkQbTAkCEQnJXm1asRUuGSWAchGJ3c+Qtxh8LVjXleZast8Mn/rL7tZOm7o35QeIpIcid6ufG7EVTTcA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -6626,8 +6632,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-arm64-msvc@15.2.3':
-    resolution: {integrity: sha512-+G2FrDcfm2YDbhDiObDU/qPriWeiz/9cRR0yMWJeTLGGX6/x8oryO3tt7HhodA1vZ8r2ddJPCjtLcpaVl7TE2Q==}
+  '@next/swc-win32-arm64-msvc@15.2.5':
+    resolution: {integrity: sha512-gQMz0yA8/dskZM2Xyiq2FRShxSrsJNha40Ob/M2n2+JGRrZ0JwTVjLdvtN6vCxuq4ByhOd4a9qEf60hApNR2gQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -6644,8 +6650,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@15.2.3':
-    resolution: {integrity: sha512-gHYS9tc+G2W0ZC8rBL+H6RdtXIyk40uLiaos0yj5US85FNhbFEndMA2nW3z47nzOWiSvXTZ5kBClc3rD0zJg0w==}
+  '@next/swc-win32-x64-msvc@15.2.5':
+    resolution: {integrity: sha512-tBDNVUcI7U03+3oMvJ11zrtVin5p0NctiuKmTGyaTIEAVj9Q77xukLXGXRnWxKRIIdFG4OTA2rUVGZDYOwgmAA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -6812,8 +6818,8 @@ packages:
       c-kzg:
         optional: true
 
-  '@nomicfoundation/slang@1.3.0':
-    resolution: {integrity: sha512-2PcwCF5cX2UjGi9cHd7E6XtLDaoyEVOTYt8WtOJ7GVpa68b+/sX0uFkb5/S67vxJb8eaVVFd2u6MTSVmE84QsQ==}
+  '@nomicfoundation/slang@1.3.4':
+    resolution: {integrity: sha512-ghzrPSYH1sZO65id6+Bq2Ood87HT54QP3RGC8EkmpcrJ6tT9Ky0RtaJfrzV5G4jpDsnNua6+YEDpzOMori04hQ==}
 
   '@nomicfoundation/solidity-analyzer-darwin-arm64@0.1.1':
     resolution: {integrity: sha512-KcTodaQw8ivDZyF+D76FokN/HdpgGpfjc/gFCImdLUyqB6eSWVaZPazMbeAjmfhx3R0zm/NYVzxwAokFKgrc0w==}
@@ -8274,6 +8280,9 @@ packages:
 
   '@sinonjs/text-encoding@0.7.2':
     resolution: {integrity: sha512-sXXKG+uL9IrKqViTtao2Ws6dy0znu9sOaP1di/jKGW1M6VssO8vlpXCQcpZ+jisQ1tTFAC5Jo/EOzFbggBagFQ==}
+    deprecated: |-
+      Deprecated: no longer maintained and no longer used by Sinon packages. See
+        https://github.com/sinonjs/nise/issues/243 for replacement details.
 
   '@snapshot-labs/snapshot.js@0.4.110':
     resolution: {integrity: sha512-Cie6CsVVSUh5vbuo8ZU/YuPD+iF8mKuVGsCDbm2PLyvXX2EPJVVmBYrvuQizpP79Q8NWtQucqb/fFVnDBRogxA==}
@@ -9826,6 +9835,7 @@ packages:
   '@toruslabs/solana-embed@0.3.4':
     resolution: {integrity: sha512-yj+aBJoBAneap7Jlu9/OOp7irWNuC5CqAhyhVcmb0IjWrCUFnioLdL0U7UfGaqVm/5O0leJh7/Z5Ll+3toWJBg==}
     engines: {node: '>=14.17.0', npm: '>=6.x'}
+    deprecated: This sdk is now deprecated. Please use @web3auth/ws-embed instead
     peerDependencies:
       '@babel/runtime': 7.x
 
@@ -10720,7 +10730,7 @@ packages:
 
   '@vercel/flags@2.3.0':
     resolution: {integrity: sha512-jRtq+HA+uCJQJwUmI/gapE52BQ3SyT6a7THVsV9W/BJJ8vDA7ANPZIRRruajEz1hbytCTae/vShP6uI9BGYwCQ==}
-    deprecated: This package was renamed to flags, which offers the same functionality. https://vercel.com/changelog/npm-i-flags
+    deprecated: This package has been renamed to flags. It offers the same functionality under a new name. Please follow the upgrade guide https://github.com/vercel/flags/blob/main/packages/flags/guides/upgrade-to-v4.md
     peerDependencies:
       next: '*'
       react: '*'
@@ -10950,15 +10960,19 @@ packages:
 
   '@walletconnect/ethereum-provider@2.11.0':
     resolution: {integrity: sha512-YrTeHVjuSuhlUw7SQ6xBJXDuJ6iAC+RwINm9nVhoKYJSHAy3EVSJZOofMKrnecL0iRMtD29nj57mxAInIBRuZA==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/ethereum-provider@2.14.0':
     resolution: {integrity: sha512-Cc2/DCn85VciA10BrsNWFM//3VC1D8yjwrjfUKjGndLPDz0YIdAxTgYZViIlMjE0lzQC/DMvPYEAnGfW0O1Bwg==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/ethereum-provider@2.17.0':
     resolution: {integrity: sha512-b+KTAXOb6JjoxkwpgYQQKPUcTwENGmdEdZoIDLeRicUmZTn/IQKfkMoC2frClB4YxkyoVMtj1oMV2JAax+yu9A==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/ethereum-provider@2.7.0':
     resolution: {integrity: sha512-6TwQ05zi6DP1TP1XNgSvLbmCmLf/sz7kLTfMaVk45YYHNgYTTBlXqkyjUpQZI9lpq+uXLBbHn/jx2OGhOPUP0Q==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
     peerDependencies:
       '@web3modal/standalone': '>=2'
     peerDependenciesMeta:
@@ -10967,6 +10981,7 @@ packages:
 
   '@walletconnect/ethereum-provider@2.9.0':
     resolution: {integrity: sha512-rSXkC0SXMigJRdIi/M2RMuEuATY1AwtlTWQBnqyxoht7xbO2bQNPCXn0XL4s/GRNrSUtoKSY4aPMHXV4W4yLBA==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
     peerDependencies:
       '@walletconnect/modal': '>=2'
     peerDependenciesMeta:
@@ -11059,9 +11074,11 @@ packages:
 
   '@walletconnect/modal@2.6.2':
     resolution: {integrity: sha512-eFopgKi8AjKf/0U4SemvcYw9zlLpx9njVN8sf6DAkowC2Md0gPU/UNEbH1Wwj407pEKnEds98pKWib1NN1ACoA==}
+    deprecated: Please follow the migration guide on https://docs.reown.com/appkit/upgrade/wcm
 
   '@walletconnect/modal@2.7.0':
     resolution: {integrity: sha512-RQVt58oJ+rwqnPcIvRFeMGKuXb9qkgSmwz4noF8JZGUym3gUAzVs+uW2NQ1Owm9XOJAV+sANrtJ+VoVq1ftElw==}
+    deprecated: Please follow the migration guide on https://docs.reown.com/appkit/upgrade/wcm
 
   '@walletconnect/notify-client@1.0.0':
     resolution: {integrity: sha512-UIvWHmEwEBCV4Pxu9YPZoF4fygjLKGUFkErixGyytPX+7LsLfKc3/EoSm7bn2D2EWSIgO215NXQsUjVx32k/5Q==}
@@ -11135,18 +11152,23 @@ packages:
 
   '@walletconnect/universal-provider@2.11.0':
     resolution: {integrity: sha512-zgJv8jDvIMP4Qse/D9oIRXGdfoNqonsrjPZanQ/CHNe7oXGOBiQND2IIeX+tS0H7uNA0TPvctljCLiIN9nw4eA==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/universal-provider@2.14.0':
     resolution: {integrity: sha512-Mr8uoTmD6H0+Hh+3gxBu4l3T2uP/nNPR02sVtwEujNum++F727mMk+ifPRIpkVo21V/bvXFEy8sHTs5hqyq5iA==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/universal-provider@2.17.0':
     resolution: {integrity: sha512-d3V5Be7AqLrvzcdMZSBS8DmGDRdqnyLk1DWmRKAGgR6ieUWykhhUKlvfeoZtvJrIXrY7rUGYpH1X41UtFkW5Pw==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/universal-provider@2.7.0':
     resolution: {integrity: sha512-aAIudO3ZlKD16X36VnXChpxBB6/JLK1SCJBfidk7E0GE2S4xr1xW5jXGSGS4Z+wIkNZXK0n7ULSK3PZ7mPBdog==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/universal-provider@2.9.0':
     resolution: {integrity: sha512-k3nkSBkF69sJJVoe17IVoPtnhp/sgaa2t+x7BvA/BKeMxE0DGdtRJdEXotTc8DBmI7o2tkq6l8+HyFBGjQ/CjQ==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/utils@2.11.0':
     resolution: {integrity: sha512-hxkHPlTlDQILHfIKXlmzgNJau/YcSBC3XHUSuZuKZbNEw3duFT6h6pm3HT/1+j1a22IG05WDsNBuTCRkwss+BQ==}
@@ -14424,32 +14446,34 @@ packages:
   glob@10.3.10:
     resolution: {integrity: sha512-fa46+tv1Ak0UPK1TOy/pZrIybNNt4HCv7SDzwyfiOZkvZLEbjsZkJBPtDHVshZjbecAoAGSC20MjLDG/qr679g==}
     engines: {node: '>=16 || 14 >=14.17'}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@7.1.7:
     resolution: {integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@7.2.0:
     resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@9.3.5:
     resolution: {integrity: sha512-e1LleDykUz2Iu+MTYdkSsuWX8lvAjAcs0Xef0lNIu0S2wOAzuTxCJtcd9S3cijlwYF18EsU3rzb8jPVobxDh9Q==}
     engines: {node: '>=16 || 14 >=14.17'}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -16492,6 +16516,7 @@ packages:
   next@13.4.19:
     resolution: {integrity: sha512-HuPSzzAbJ1T4BD8e0bs6B9C1kWQ6gv8ykZoRWs5AQoiIuqbGHHdQO7Ljuvg05Q0Z24E2ABozHe6FxDvI6HfyAw==}
     engines: {node: '>=16.8.0'}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -16504,9 +16529,10 @@ packages:
       sass:
         optional: true
 
-  next@15.2.3:
-    resolution: {integrity: sha512-x6eDkZxk2rPpu46E1ZVUWIBhYCLszmUY6fvHBFcbzJ9dD+qRX6vcHusaqqDlnY+VngKzKbAiG2iRCkPbmi8f7w==}
+  next@15.2.6:
+    resolution: {integrity: sha512-DIKFctUpZoCq5ok2ztVU+PqhWsbiqM9xNP7rHL2cAp29NQcmDp7Y6JnBBhHRbFt4bCsCZigj6uh+/Gwh2158Wg==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -17692,8 +17718,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-solidity@2.2.0:
-    resolution: {integrity: sha512-CjDixURb1rXdT+i/PYN3WykOPbusGBmbaZrxraEIfFMAGNtGhALOcoZ5UWhhMWbwUGtXz4c5pnjCzVaBNF/3CA==}
+  prettier-plugin-solidity@2.3.1:
+    resolution: {integrity: sha512-71sZM5oqgq6pnTlf+RH23U6Ej710APfCiMWO2Z/pHNjrXyvn9Nr0vTS1AUVaSf4GRW0V6hj6Djt0MyWudJUJbQ==}
     engines: {node: '>=20'}
     peerDependencies:
       prettier: '>=3.0.0'
@@ -18882,6 +18908,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.4:
+    resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   send@0.18.0:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
     engines: {node: '>= 0.8.0'}
@@ -19136,6 +19167,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
@@ -19608,10 +19640,12 @@ packages:
   tar@4.4.19:
     resolution: {integrity: sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==}
     engines: {node: '>=4.5'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tar@6.2.0:
     resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
     engines: {node: '>=10'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   telejson@7.2.0:
     resolution: {integrity: sha512-1QTEcJkJEhc8OnStBx/ILRu5J2p0GjvWsBx56bmZRqnrkdBMUe+nX92jxV+p3dB4CP6PZCdJMQJwCggkNBMzkQ==}
@@ -23176,15 +23210,15 @@ snapshots:
       isomorphic-fetch: 3.0.0
       lodash: 4.17.21
       prettier: 2.8.8
-      prettier-plugin-solidity: 2.2.0(prettier@2.8.8)
+      prettier-plugin-solidity: 2.3.1(prettier@2.8.8)
       web3: 1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     optionalDependencies:
       '@defi.org/chai-bignumber': 3.0.2(bignumber.js@9.1.2)
       '@nomiclabs/hardhat-etherscan': 3.1.8(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))
       '@nomiclabs/hardhat-web3': 2.0.0(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))(web3@1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))
       '@openzeppelin/contracts': 4.9.6
-      '@typechain/hardhat': 6.1.6(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(@typechain/ethers-v5@10.2.1(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))(typescript@5.7.3))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@4.9.5))
-      '@typechain/web3-v1': 6.0.7(typechain@8.3.2(typescript@4.9.5))(typescript@4.9.5)(web3-core@1.10.4)(web3-eth-contract@1.10.4)(web3@1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+      '@typechain/hardhat': 6.1.6(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(@typechain/ethers-v5@10.2.1(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))(typescript@5.7.3))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))
+      '@typechain/web3-v1': 6.0.7(typechain@8.3.2(typescript@5.7.3))(typescript@4.9.5)(web3-core@1.10.4)(web3-eth-contract@1.10.4)(web3@1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))
       '@types/chai': 4.3.14
       '@types/fs-extra': 11.0.4
       '@types/mocha': 10.0.6
@@ -24776,7 +24810,7 @@ snapshots:
       '@ledgerhq/errors': 6.19.1
       '@ledgerhq/logs': 6.12.0
       rxjs: 6.6.7
-      semver: 7.6.3
+      semver: 7.7.3
 
   '@ledgerhq/errors@6.19.1': {}
 
@@ -25217,7 +25251,7 @@ snapshots:
       pump: 3.0.0
       readable-stream: 3.6.2
       socket.io-client: 4.7.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      tslib: 2.7.0
+      tslib: 2.8.1
       util: 0.12.5
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -25231,7 +25265,7 @@ snapshots:
       '@ethereumjs/tx': 4.2.0
       '@types/debug': 4.1.12
       debug: 4.4.0(supports-color@9.4.0)
-      semver: 7.7.1
+      semver: 7.7.3
       superstruct: 1.0.3
     transitivePeerDependencies:
       - supports-color
@@ -25244,7 +25278,7 @@ snapshots:
       '@types/debug': 4.1.12
       debug: 4.4.0(supports-color@9.4.0)
       pony-cause: 2.1.10
-      semver: 7.7.1
+      semver: 7.7.3
       superstruct: 1.0.3
       uuid: 9.0.1
     transitivePeerDependencies:
@@ -25522,7 +25556,7 @@ snapshots:
 
   '@next/env@13.4.19': {}
 
-  '@next/env@15.2.3': {}
+  '@next/env@15.2.6': {}
 
   '@next/eslint-plugin-next@13.0.0':
     dependencies:
@@ -25535,43 +25569,43 @@ snapshots:
   '@next/swc-darwin-arm64@13.4.19':
     optional: true
 
-  '@next/swc-darwin-arm64@15.2.3':
+  '@next/swc-darwin-arm64@15.2.5':
     optional: true
 
   '@next/swc-darwin-x64@13.4.19':
     optional: true
 
-  '@next/swc-darwin-x64@15.2.3':
+  '@next/swc-darwin-x64@15.2.5':
     optional: true
 
   '@next/swc-linux-arm64-gnu@13.4.19':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@15.2.3':
+  '@next/swc-linux-arm64-gnu@15.2.5':
     optional: true
 
   '@next/swc-linux-arm64-musl@13.4.19':
     optional: true
 
-  '@next/swc-linux-arm64-musl@15.2.3':
+  '@next/swc-linux-arm64-musl@15.2.5':
     optional: true
 
   '@next/swc-linux-x64-gnu@13.4.19':
     optional: true
 
-  '@next/swc-linux-x64-gnu@15.2.3':
+  '@next/swc-linux-x64-gnu@15.2.5':
     optional: true
 
   '@next/swc-linux-x64-musl@13.4.19':
     optional: true
 
-  '@next/swc-linux-x64-musl@15.2.3':
+  '@next/swc-linux-x64-musl@15.2.5':
     optional: true
 
   '@next/swc-win32-arm64-msvc@13.4.19':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@15.2.3':
+  '@next/swc-win32-arm64-msvc@15.2.5':
     optional: true
 
   '@next/swc-win32-ia32-msvc@13.4.19':
@@ -25580,7 +25614,7 @@ snapshots:
   '@next/swc-win32-x64-msvc@13.4.19':
     optional: true
 
-  '@next/swc-win32-x64-msvc@15.2.3':
+  '@next/swc-win32-x64-msvc@15.2.5':
     optional: true
 
   '@ngraveio/bc-ur@1.1.13':
@@ -25718,7 +25752,7 @@ snapshots:
       ethereum-cryptography: 0.1.3
     optional: true
 
-  '@nomicfoundation/slang@1.3.0':
+  '@nomicfoundation/slang@1.3.4':
     dependencies:
       '@bytecodealliance/preview2-shim': 0.17.2
 
@@ -25774,7 +25808,7 @@ snapshots:
       chalk: 2.4.2
       debug: 4.4.0(supports-color@9.4.0)
       fs-extra: 7.0.1
-      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10)
+      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
       lodash: 4.17.21
       semver: 6.3.1
       table: 6.8.1
@@ -25786,7 +25820,7 @@ snapshots:
   '@nomiclabs/hardhat-web3@2.0.0(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))(web3@1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))':
     dependencies:
       '@types/bignumber.js': 5.0.0
-      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10)
+      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
       web3: 1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     optional: true
 
@@ -25887,7 +25921,7 @@ snapshots:
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.28.0
       forwarded-parse: 2.1.2
-      semver: 7.7.1
+      semver: 7.7.3
     transitivePeerDependencies:
       - supports-color
 
@@ -26012,7 +26046,7 @@ snapshots:
       '@types/shimmer': 1.2.0
       import-in-the-middle: 1.13.1
       require-in-the-middle: 7.3.0
-      semver: 7.7.1
+      semver: 7.7.3
       shimmer: 1.2.1
     transitivePeerDependencies:
       - supports-color
@@ -27511,7 +27545,7 @@ snapshots:
       tslib: 1.14.1
     optional: true
 
-  '@sentry/nextjs@9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))':
+  '@sentry/nextjs@9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.30.0
@@ -27524,7 +27558,7 @@ snapshots:
       '@sentry/vercel-edge': 9.6.1
       '@sentry/webpack-plugin': 3.2.2(webpack@5.98.0(esbuild@0.17.19))
       chalk: 3.0.0
-      next: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       resolve: 1.22.8
       rollup: 4.35.0
       stacktrace-parser: 0.1.10
@@ -27538,7 +27572,7 @@ snapshots:
       - supports-color
       - webpack
 
-  '@sentry/nextjs@9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))':
+  '@sentry/nextjs@9.6.1(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)(webpack@5.98.0(esbuild@0.17.19))':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.30.0
@@ -27551,7 +27585,7 @@ snapshots:
       '@sentry/vercel-edge': 9.6.1
       '@sentry/webpack-plugin': 3.2.2(webpack@5.98.0(esbuild@0.17.19))
       chalk: 3.0.0
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       resolve: 1.22.8
       rollup: 4.35.0
       stacktrace-parser: 0.1.10
@@ -30702,7 +30736,7 @@ snapshots:
       pretty-hrtime: 1.0.3
       prompts: 2.4.2
       read-pkg-up: 7.0.1
-      semver: 7.6.3
+      semver: 7.7.3
       telejson: 7.2.0
       tiny-invariant: 1.3.3
       ts-dedent: 2.2.0
@@ -31711,26 +31745,26 @@ snapshots:
       ethers: 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       lodash: 4.17.21
       ts-essentials: 7.0.3(typescript@5.7.3)
-      typechain: 8.3.2(typescript@4.9.5)
+      typechain: 8.3.2(typescript@5.7.3)
       typescript: 5.7.3
     optional: true
 
-  '@typechain/hardhat@6.1.6(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(@typechain/ethers-v5@10.2.1(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))(typescript@5.7.3))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@4.9.5))':
+  '@typechain/hardhat@6.1.6(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(@typechain/ethers-v5@10.2.1(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))(typescript@5.7.3))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))':
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@ethersproject/providers': 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@typechain/ethers-v5': 10.2.1(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.7.3))(typescript@5.7.3)
       ethers: 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       fs-extra: 9.1.0
-      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10)
-      typechain: 8.3.2(typescript@4.9.5)
+      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
+      typechain: 8.3.2(typescript@5.7.3)
     optional: true
 
-  '@typechain/web3-v1@6.0.7(typechain@8.3.2(typescript@4.9.5))(typescript@4.9.5)(web3-core@1.10.4)(web3-eth-contract@1.10.4)(web3@1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))':
+  '@typechain/web3-v1@6.0.7(typechain@8.3.2(typescript@5.7.3))(typescript@4.9.5)(web3-core@1.10.4)(web3-eth-contract@1.10.4)(web3@1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10))':
     dependencies:
       lodash: 4.17.21
       ts-essentials: 7.0.3(typescript@4.9.5)
-      typechain: 8.3.2(typescript@4.9.5)
+      typechain: 8.3.2(typescript@5.7.3)
       web3: 1.10.4(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       web3-core: 1.10.4
       web3-eth-contract: 1.10.4
@@ -32485,7 +32519,7 @@ snapshots:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.3
+      semver: 7.7.3
       tsutils: 3.21.0(typescript@5.2.2)
     optionalDependencies:
       typescript: 5.2.2
@@ -32665,10 +32699,10 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/next-plugin@2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))':
+  '@vanilla-extract/next-plugin@2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))':
     dependencies:
       '@vanilla-extract/webpack-plugin': 2.3.1(@types/node@18.0.4)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
-      next: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -32679,10 +32713,10 @@ snapshots:
       - terser
       - webpack
 
-  '@vanilla-extract/next-plugin@2.3.2(@types/node@18.0.4)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))':
+  '@vanilla-extract/next-plugin@2.3.2(@types/node@18.0.4)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))':
     dependencies:
       '@vanilla-extract/webpack-plugin': 2.3.1(@types/node@18.0.4)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -32693,10 +32727,10 @@ snapshots:
       - terser
       - webpack
 
-  '@vanilla-extract/next-plugin@2.3.2(@types/node@18.19.75)(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))':
+  '@vanilla-extract/next-plugin@2.3.2(@types/node@18.19.75)(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))':
     dependencies:
       '@vanilla-extract/webpack-plugin': 2.3.1(@types/node@18.19.75)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(webpack@5.98.0(esbuild@0.17.19))
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -32797,16 +32831,16 @@ snapshots:
       - supports-color
       - terser
 
-  '@vercel/flags@2.3.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@vercel/flags@2.3.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       jose: 5.2.1
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
   '@vercel/functions@2.0.0': {}
 
-  '@vercel/toolbar@0.1.13(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)':
+  '@vercel/toolbar@0.1.13(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react@18.2.0)':
     dependencies:
       '@tinyhttp/app': 1.3.0
       chokidar: 3.5.3
@@ -32815,7 +32849,7 @@ snapshots:
       get-port: 5.1.1
       strip-ansi: 6.0.1
     optionalDependencies:
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react: 18.2.0
 
   '@vitejs/plugin-react@3.1.0(vite@5.0.12(@types/node@22.7.5)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0))':
@@ -34876,7 +34910,7 @@ snapshots:
 
   aria-hidden@1.2.3:
     dependencies:
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   aria-query@5.1.3:
     dependencies:
@@ -35450,14 +35484,14 @@ snapshots:
 
   browserslist@4.22.1:
     dependencies:
-      caniuse-lite: 1.0.30001608
+      caniuse-lite: 1.0.30001707
       electron-to-chromium: 1.4.581
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001608
+      caniuse-lite: 1.0.30001707
       electron-to-chromium: 1.4.735
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
@@ -35625,7 +35659,7 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001608
+      caniuse-lite: 1.0.30001707
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
@@ -38878,7 +38912,7 @@ snapshots:
     dependencies:
       array-uniq: 1.0.3
       eth-gas-reporter: 0.2.27(bufferutil@4.0.8)(debug@4.4.0)(utf-8-validate@5.0.10)
-      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10)
+      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
       sha1: 1.1.1
     transitivePeerDependencies:
       - '@codechecks/client'
@@ -38889,14 +38923,14 @@ snapshots:
 
   hardhat-spdx-license-identifier@2.2.0(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)):
     dependencies:
-      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10)
+      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
     optional: true
 
   hardhat-tracer@1.3.0(chalk@5.3.0)(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)):
     dependencies:
       chalk: 5.3.0
       ethers: 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10)
+      hardhat: 2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10)
     optional: true
 
   hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@4.9.5)(utf-8-validate@5.0.10):
@@ -38945,8 +38979,63 @@ snapshots:
       uuid: 8.3.2
       ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     optionalDependencies:
-      ts-node: 10.9.1(@types/node@18.19.75)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.19.75)(typescript@5.7.3)
       typescript: 4.9.5
+    transitivePeerDependencies:
+      - bufferutil
+      - c-kzg
+      - supports-color
+      - utf-8-validate
+    optional: true
+
+  hardhat@2.22.2(bufferutil@4.0.8)(ts-node@10.9.1(@types/node@18.19.75)(typescript@5.7.3))(typescript@5.7.3)(utf-8-validate@5.0.10):
+    dependencies:
+      '@ethersproject/abi': 5.7.0
+      '@metamask/eth-sig-util': 4.0.1
+      '@nomicfoundation/edr': 0.3.3
+      '@nomicfoundation/ethereumjs-common': 4.0.4
+      '@nomicfoundation/ethereumjs-tx': 5.0.4
+      '@nomicfoundation/ethereumjs-util': 9.0.4
+      '@nomicfoundation/solidity-analyzer': 0.1.1
+      '@sentry/node': 5.30.0
+      '@types/bn.js': 5.1.5
+      '@types/lru-cache': 5.1.1
+      adm-zip: 0.4.16
+      aggregate-error: 3.1.0
+      ansi-escapes: 4.3.2
+      boxen: 5.1.2
+      chalk: 2.4.2
+      chokidar: 3.6.0
+      ci-info: 2.0.0
+      debug: 4.4.0(supports-color@9.4.0)
+      enquirer: 2.4.1
+      env-paths: 2.2.1
+      ethereum-cryptography: 1.2.0
+      ethereumjs-abi: 0.6.8
+      find-up: 2.1.0
+      fp-ts: 1.19.3
+      fs-extra: 7.0.1
+      glob: 7.2.0
+      immutable: 4.3.5
+      io-ts: 1.10.4
+      keccak: 3.0.4
+      lodash: 4.17.21
+      mnemonist: 0.38.5
+      mocha: 10.4.0
+      p-map: 4.0.0
+      raw-body: 2.5.1
+      resolve: 1.17.0
+      semver: 6.3.1
+      solc: 0.7.3(debug@4.4.0)
+      source-map-support: 0.5.21
+      stacktrace-parser: 0.1.10
+      tsort: 0.0.1
+      undici: 5.28.4
+      uuid: 8.3.2
+      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+    optionalDependencies:
+      ts-node: 10.9.1(@types/node@18.19.75)(typescript@5.7.3)
+      typescript: 5.7.3
     transitivePeerDependencies:
       - bufferutil
       - c-kzg
@@ -41089,13 +41178,13 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-auth@4.24.7(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-auth@4.24.7(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.24.7
       '@panva/hkdf': 1.2.1
       cookie: 0.5.0
       jose: 4.15.9
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       oauth: 0.9.15
       openid-client: 5.6.5
       preact: 10.19.1
@@ -41110,27 +41199,27 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  next-seo@5.15.0(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-seo@5.15.0(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      next: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  next-seo@5.15.0(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-seo@5.15.0(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  next-themes@0.2.1(next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-themes@0.2.1(next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      next: 15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  next-themes@0.2.1(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-themes@0.2.1(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
@@ -41168,26 +41257,26 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  next@15.2.3(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0):
+  next@15.2.6(@babel/core@7.23.3)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0):
     dependencies:
-      '@next/env': 15.2.3
+      '@next/env': 15.2.6
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.15
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001608
+      caniuse-lite: 1.0.30001707
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       styled-jsx: 5.1.6(@babel/core@7.23.3)(react@18.2.0)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 15.2.3
-      '@next/swc-darwin-x64': 15.2.3
-      '@next/swc-linux-arm64-gnu': 15.2.3
-      '@next/swc-linux-arm64-musl': 15.2.3
-      '@next/swc-linux-x64-gnu': 15.2.3
-      '@next/swc-linux-x64-musl': 15.2.3
-      '@next/swc-win32-arm64-msvc': 15.2.3
-      '@next/swc-win32-x64-msvc': 15.2.3
+      '@next/swc-darwin-arm64': 15.2.5
+      '@next/swc-darwin-x64': 15.2.5
+      '@next/swc-linux-arm64-gnu': 15.2.5
+      '@next/swc-linux-arm64-musl': 15.2.5
+      '@next/swc-linux-x64-gnu': 15.2.5
+      '@next/swc-linux-x64-musl': 15.2.5
+      '@next/swc-win32-arm64-msvc': 15.2.5
+      '@next/swc-win32-x64-msvc': 15.2.5
       '@opentelemetry/api': 1.9.0
       sass: 1.86.0
       sharp: 0.33.5
@@ -41195,26 +41284,26 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0):
+  next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0):
     dependencies:
-      '@next/env': 15.2.3
+      '@next/env': 15.2.6
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.15
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001608
+      caniuse-lite: 1.0.30001707
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       styled-jsx: 5.1.6(@babel/core@7.23.9)(react@18.2.0)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 15.2.3
-      '@next/swc-darwin-x64': 15.2.3
-      '@next/swc-linux-arm64-gnu': 15.2.3
-      '@next/swc-linux-arm64-musl': 15.2.3
-      '@next/swc-linux-x64-gnu': 15.2.3
-      '@next/swc-linux-x64-musl': 15.2.3
-      '@next/swc-win32-arm64-msvc': 15.2.3
-      '@next/swc-win32-x64-msvc': 15.2.3
+      '@next/swc-darwin-arm64': 15.2.5
+      '@next/swc-darwin-x64': 15.2.5
+      '@next/swc-linux-arm64-gnu': 15.2.5
+      '@next/swc-linux-arm64-musl': 15.2.5
+      '@next/swc-linux-x64-gnu': 15.2.5
+      '@next/swc-linux-x64-musl': 15.2.5
+      '@next/swc-win32-arm64-msvc': 15.2.5
+      '@next/swc-win32-x64-msvc': 15.2.5
       '@opentelemetry/api': 1.9.0
       sass: 1.86.0
       sharp: 0.33.5
@@ -41355,10 +41444,10 @@ snapshots:
       bn.js: 4.11.6
       strip-hex-prefix: 1.0.0
 
-  nuqs@1.17.4(next@15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)):
+  nuqs@1.17.4(next@15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)):
     dependencies:
       mitt: 3.0.1
-      next: 15.2.3(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
+      next: 15.2.6(@babel/core@7.23.9)(@opentelemetry/api@1.9.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.0)
 
   oauth-1.0a@2.2.6: {}
 
@@ -41694,7 +41783,7 @@ snapshots:
       minimist: 1.2.8
       open: 7.4.2
       rimraf: 2.7.1
-      semver: 7.7.1
+      semver: 7.7.3
       slash: 2.0.0
       tmp: 0.0.33
       yaml: 2.3.4
@@ -42055,7 +42144,7 @@ snapshots:
       yaml: 2.3.4
     optionalDependencies:
       postcss: 8.5.3
-      ts-node: 10.9.1(@types/node@18.19.75)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.19.75)(typescript@5.7.3)
 
   postcss-load-config@6.0.1(jiti@1.21.0)(postcss@8.5.3)(tsx@4.7.1):
     dependencies:
@@ -42402,12 +42491,12 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-solidity@2.2.0(prettier@2.8.8):
+  prettier-plugin-solidity@2.3.1(prettier@2.8.8):
     dependencies:
-      '@nomicfoundation/slang': 1.3.0
+      '@nomicfoundation/slang': 1.3.4
       '@solidity-parser/parser': 0.20.2
       prettier: 2.8.8
-      semver: 7.7.3
+      semver: 7.7.4
 
   prettier@2.8.8: {}
 
@@ -43886,6 +43975,8 @@ snapshots:
 
   semver@7.7.3: {}
 
+  semver@7.7.4: {}
+
   send@0.18.0:
     dependencies:
       debug: 2.6.9
@@ -44018,7 +44109,7 @@ snapshots:
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.3
-      semver: 7.7.1
+      semver: 7.7.3
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
@@ -44085,7 +44176,7 @@ snapshots:
 
   simple-update-notifier@2.0.0:
     dependencies:
-      semver: 7.6.3
+      semver: 7.7.3
 
   sinon@17.0.1:
     dependencies:
@@ -44222,7 +44313,7 @@ snapshots:
       js-yaml: 4.1.0
       lodash: 4.17.21
       pluralize: 8.0.0
-      semver: 7.7.1
+      semver: 7.7.3
       strip-ansi: 6.0.1
       table: 6.8.1
       text-table: 0.2.0
@@ -45517,6 +45608,23 @@ snapshots:
       ts-command-line-args: 2.5.1
       ts-essentials: 7.0.3(typescript@4.9.5)
       typescript: 4.9.5
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
+  typechain@8.3.2(typescript@5.7.3):
+    dependencies:
+      '@types/prettier': 2.7.3
+      debug: 4.4.0(supports-color@9.4.0)
+      fs-extra: 7.0.1
+      glob: 7.1.7
+      js-sha3: 0.8.0
+      lodash: 4.17.21
+      mkdirp: 1.0.4
+      prettier: 2.8.8
+      ts-command-line-args: 2.5.1
+      ts-essentials: 7.0.3(typescript@5.7.3)
+      typescript: 5.7.3
     transitivePeerDependencies:
       - supports-color
     optional: true
