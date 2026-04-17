@@ -38,9 +38,33 @@ const CHAIN_QUERY_NAME_TO_ID = Object.entries(CHAIN_QUERY_NAME).reduce((acc, [ch
   }
 }, {} as Record<string, ChainId>)
 
+// Common-name aliases so /liquidity/:id?chain=<fullname> resolves.
+const CHAIN_QUERY_ALIASES: Record<string, ChainId> = {
+  ethereum: ChainId.ETHEREUM,
+  mainnet: ChainId.ETHEREUM,
+  'eth-mainnet': ChainId.ETHEREUM,
+  binance: ChainId.BSC,
+  'bsc-mainnet': ChainId.BSC,
+  'binance-smart-chain': ChainId.BSC,
+  basechain: ChainId.BASE,
+  'base-mainnet': ChainId.BASE,
+  pulse: ChainId.PULSECHAIN,
+  pls: ChainId.PULSECHAIN,
+  pulsechain: ChainId.PULSECHAIN,
+  pulsechainmainnet: ChainId.PULSECHAIN,
+  arbitrum: ChainId.ARBITRUM_ONE,
+  'arbitrum-one': ChainId.ARBITRUM_ONE,
+  'sonic-mainnet': ChainId.SONIC,
+}
+
 export const getChainId = memoize((chainName: string) => {
   if (!chainName) return undefined
-  return CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] ? +CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] : undefined
+  const key = chainName.toLowerCase()
+  const fromMap = CHAIN_QUERY_NAME_TO_ID[key]
+  if (fromMap) return +fromMap
+  const fromAlias = CHAIN_QUERY_ALIASES[key]
+  if (fromAlias) return fromAlias
+  return undefined
 })
 
 const bsc = {

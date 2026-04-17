@@ -56,6 +56,8 @@ import useIsTickAtLimit from 'hooks/v3/useIsTickAtLimit'
 import { usePool } from 'hooks/v3/usePools'
 import { useV3PositionFees } from 'hooks/v3/useV3PositionFees'
 import { useV3PositionFromTokenId, useV3TokenIdsByAccount } from 'hooks/v3/useV3Positions'
+import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
+import { getChainId } from 'config/chains'
 import { formatTickPrice } from 'hooks/v3/utils/formatTickPrice'
 import getPriceOrderingFromPositionForUI from 'hooks/v3/utils/getPriceOrderingFromPositionForUI'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -63,7 +65,7 @@ import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { useRouter } from 'next/router'
-import { ReactNode, memo, useCallback, useMemo, useState } from 'react'
+import { ReactNode, memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { usePoolInfo } from 'state/farmsV4/state/extendPools/hooks'
 import { ChainLinkSupportChains } from 'state/info/constant'
 import { useSingleCallResult } from 'state/multicall/hooks'
@@ -203,6 +205,45 @@ export default function PoolPage() {
   }
 
   const parsedTokenId = tokenIdFromUrl ? BigInt(tokenIdFromUrl as string) : undefined
+  // Resolve the chain this tokenId lives on: explicit ?chain= wins,
+  // otherwise a server-side scan (/api/cached/position/lookup/:id)
+  // returns the chain that actually owns the position.
+  const hasExplicitChainParam =
+    typeof router.query.chain === 'string' && router.query.chain.length > 0
+
+  useMemo(() => {
+    const raw = router.query.chain
+    const name = typeof raw === 'string' ? raw : undefined
+    return name ? getChainId(name) : undefined
+  }, [router.query.chain])
+
+  const { data: inferredPositionChain } = useQuery<{ chainId: number } | null>({
+    queryKey: ['positionLookup', tokenIdFromUrl],
+    enabled: !hasExplicitChainParam && !!tokenIdFromUrl && /^\d+$/.test(String(tokenIdFromUrl ?? '')),
+    staleTime: 60_000,
+    gcTime: 300_000,
+    queryFn: async () => {
+      try {
+        const r = await fetch(`/api/cached/position/lookup/${tokenIdFromUrl}`)
+        if (!r.ok) return null
+        const j = await r.json()
+        return typeof j?.chainId === 'number' ? { chainId: j.chainId } : null
+      } catch {
+        return null
+      }
+    },
+  })
+
+  const { switchNetworkAsync } = useSwitchNetwork()
+  useEffect(() => {
+    if (hasExplicitChainParam) return
+    const target = inferredPositionChain?.chainId
+    if (!target || target === chainId) return
+    switchNetworkAsync?.(target).catch(() => {
+      /* user declined or switch unavailable — fall through to existing behaviour */
+    })
+  }, [hasExplicitChainParam, inferredPositionChain, chainId, switchNetworkAsync])
+
 
   const { loading, position: positionDetails } = useV3PositionFromTokenId(parsedTokenId)
 
