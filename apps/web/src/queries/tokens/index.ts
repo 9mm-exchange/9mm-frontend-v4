@@ -1,5 +1,6 @@
 import { V3_SUBGRAPHS } from '@pancakeswap/chains'
 import { gql, GraphQLClient, request } from 'graphql-request'
+import { applyTokenOverrides } from 'lib/tokenOverrides'
 import union from 'lodash/union'
 import { getBlocksByTimestamp } from 'queries/blocks'
 import { multiChainName, multiChainTokenBlackList, multiChainTokenWhiteList } from 'state/info/constant'
@@ -181,7 +182,7 @@ export async function fetchTopTokens(
       return [...acc, tokenData]
     }, [])
 
-    return { error: false, data: formatted }
+    return { error: false, data: await applyTokenOverrides(chainId, formatted) }
   } catch (error) {
     console.error(`Failed to fetch top tokens for chain ${chainId}:`, error)
     return { error: true, data: undefined }
