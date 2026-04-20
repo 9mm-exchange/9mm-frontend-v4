@@ -1,4 +1,5 @@
 import RedisClient from 'lib/redis' // Your Redis client utility
+import { getOverrideLivePrice, isTokenHidden } from 'lib/tokenOverrides'
 import { NextApiHandler } from 'next'
 import { unstable_cache as unstableCache } from 'next/cache'
 import { fetchTokenTvlChartData } from 'queries/stats/tvl'
@@ -137,6 +138,21 @@ const handler: NextApiHandler = async (req, res) => {
         documentation: 'https://docs.your-api.com/token-tvl#troubleshooting',
         retryAfter: CACHE_DURATION,
       })
+    }
+
+    // Token-price override layer — only kicks in for known-inflated addresses.
+    // Subgraph historical tvlUSD is already baked with the broken derivedETH,
+    // and we don't have the token-unit series in this response to rewrite
+    // point-by-point, so we 404 the TVL chart for both hidden and live-price
+    // overrides rather than show misleading data. Frontend falls back to its
+    // own empty-chart state.
+    if (isTokenHidden(chainId, address as string)) {
+      res.setHeader('Cache-Control', 'no-store')
+      return res.status(404).json({ error: 'Token not available' })
+    }
+    if ((await getOverrideLivePrice(chainId, address as string)) != null) {
+      res.setHeader('Cache-Control', 'no-store')
+      return res.status(404).json({ error: 'TVL chart unavailable — price correction in effect' })
     }
 
     // Set cache headers

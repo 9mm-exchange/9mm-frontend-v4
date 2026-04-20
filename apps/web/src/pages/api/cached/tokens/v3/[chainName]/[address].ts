@@ -71,7 +71,10 @@ const handler: NextApiHandler = async (req, res) => {
       return freshData
     })
 
-    if (result.data.error || !result.data.data) {
+    // `result.data.data` can be an empty array when a hidden override (e.g.
+    // MULE on Pulse) filters the only result out — treat that as 404 so the
+    // detail page doesn't render with `undefined` body.
+    if (result.data.error || !result.data.data || result.data.data.length === 0) {
       res.setHeader('Cache-Control', 'no-store')
       return res.status(404).json({
         error: 'Token data not found',

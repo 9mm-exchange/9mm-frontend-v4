@@ -1,4 +1,5 @@
 import RedisClient from 'lib/redis' // Your Redis client utility
+import { getOverrideLivePrice, isTokenHidden } from 'lib/tokenOverrides'
 import { NextApiHandler } from 'next'
 import { unstable_cache as unstableCache } from 'next/cache'
 import { fetchTokenPriceChartData } from 'queries/stats/price'
@@ -115,6 +116,29 @@ const handler: NextApiHandler = async (req, res) => {
         documentation: 'https://docs.your-api.com/token-price#troubleshooting',
         retryAfter: CACHE_DURATION,
       })
+    }
+
+    // Token-price override layer — untouched when no entry exists for
+    // (chainId, address). For hidden scam tokens we 404 the chart; for
+    // live-price overrides we flatten the OHLC series so the broken
+    // derivedETH doesn't produce a hockey-stick against the real price.
+    if (isTokenHidden(chainId, address as string)) {
+      res.setHeader('Cache-Control', 'no-store')
+      return res.status(404).json({ error: 'Token not available' })
+    }
+    const overrideLive = await getOverrideLivePrice(chainId, address as string)
+    if (overrideLive != null) {
+      const flat = data.map((p) => ({
+        ...p,
+        open: overrideLive,
+        close: overrideLive,
+        high: overrideLive,
+        low: overrideLive,
+      }))
+      Object.entries(CACHE_HEADERS).forEach(([key, value]) => {
+        res.setHeader(key, value)
+      })
+      return res.status(200).json(flat)
     }
 
     // Set cache headers
