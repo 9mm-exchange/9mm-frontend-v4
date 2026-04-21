@@ -50,6 +50,13 @@ export const TOKEN_OVERRIDES: Record<number, Record<string, TokenOverride>> = {
     '0xb17d901469b9208b17d916112988a3fed19b5ca1': { livePrice: true },
     // ナナナ The M.U.L.E. — scam; $79M reported TVL is not real market.
     '0xaa46fa6cf4f81b087ec3a968946fb2e705c6b89e': { hide: true },
+    // AxisAlive — broken price anchor reports ~$3.8B/token and $1.26T TVL.
+    '0xb0ebaf9378d6e7531ba09403a12636947cc2f84b': { hide: true },
+    // ナナナ The M.U.L.E. family — same broken-pool pattern as the original MULE,
+    // $78–110M phantom TVL with ~$1 prices that are not a real market.
+    '0x1b43c527564ec6c2c0e0f5a6c777895294f44bbd': { hide: true }, // Smithore
+    '0x2fa670f58092fb8a2f4b83f292506b88ec34ec45': { hide: true }, // Crystite
+    '0xf1f402518b025194eeb14ec00124160fd0db7a0c': { hide: true }, // NananaX
   },
 }
 
