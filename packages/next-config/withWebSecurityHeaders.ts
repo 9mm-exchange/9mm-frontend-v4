@@ -6,16 +6,13 @@ type Header = Headers[0]
 
 type HeaderArray = Headers[0]['headers']
 
-// function createCSP() {
-//   const IFRAME_WHITE_LIST = ['https://*.safe.global']
-//
-//   const rules = [`frame-ancestors 'self' ${IFRAME_WHITE_LIST.join(' ')}`, 'report-uri /api/_report/csp']
-//
-//   return {
-//     key: 'Content-Security-Policy',
-//     value: rules.join('; '),
-//   }
-// }
+function createCSP() {
+  const IFRAME_WHITE_LIST = ['https://*.safe.global']
+  return {
+    key: 'Content-Security-Policy',
+    value: `frame-ancestors 'self' ${IFRAME_WHITE_LIST.join(' ')}`,
+  }
+}
 
 export function withWebSecurityHeaders(config: NextConfig): NextConfig {
   const originalHeaders = config.headers || []
@@ -41,7 +38,11 @@ export function withWebSecurityHeaders(config: NextConfig): NextConfig {
             key: 'Cross-Origin-Opener-Policy',
             value: 'same-origin',
           },
-          // createCSP(),
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          createCSP(),
         ],
       },
     ]
