@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dex-main
+  namespace: ninemm-frontend-dev
+  labels:
+    app: dex-main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dex-main
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: dex-main
+    spec:
+      imagePullSecrets:
+      - name: ghcr-pull
+      containers:
+      - name: dex-main
+        image: ghcr.io/9mm-exchange/dex-main:dev-latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+        envFrom:
+        # Runtime env. dex-main-secrets is OPTIONAL on dev — pod boots without it.
+        # Populate via `kubectl -n ninemm-frontend-dev create secret generic dex-main-secrets …`
+        # if you need feature parity with prod (Redis, Sentry server-side, etc.).
+        - secretRef:
+            name: dex-main-secrets
+            optional: true
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30

@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dex-main-ingress
+  namespace: ninemm-frontend-dev
+  annotations:
+    # Uses DNS-01 (CF API token) — works regardless of CF proxy state, no HTTP-01 dance.
+    cert-manager.io/cluster-issuer: "letsencrypt-prod-dns01"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - dex-dev.9mm.pro
+    secretName: dex-dev-tls
+  rules:
+  - host: dex-dev.9mm.pro
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dex-main
+            port:
+              number: 80
