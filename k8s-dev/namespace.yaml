@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ninemm-frontend-dev
+  labels:
+    name: ninemm-frontend-dev
+    environment: dev
