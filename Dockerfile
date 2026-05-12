@@ -1,4 +1,8 @@
 FROM node:20-alpine AS base
+# OCI labels — link the GHCR package to this repo so it inherits visibility + appears under the repo's Packages tab.
+LABEL org.opencontainers.image.source="https://github.com/9mm-exchange/9mm-frontend-v4"
+LABEL org.opencontainers.image.description="9mm DEX frontend (PancakeSwap v3 fork) — Next.js app for dex.9mm.pro"
+LABEL org.opencontainers.image.licenses="GPL-3.0"
 RUN apk add --no-cache libc6-compat python3 make g++
 RUN corepack enable && corepack prepare pnpm@10.6.5 --activate
 WORKDIR /app
