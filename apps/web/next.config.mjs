@@ -54,7 +54,6 @@ const config = {
   },
   experimental: {
     scrollRestoration: true,
-    fallbackNodePolyfills: false,
     optimizePackageImports: ['@pancakeswap/widgets-internal', '@pancakeswap/uikit'],
   },
   output: 'standalone',

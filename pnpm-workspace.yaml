@@ -11,7 +11,7 @@ catalog:
   wagmi: ^2.14.11
   react: ^18.2.0
   react-dom: ^18.2.0
-  next: 15.2.6
+  next: 15.5.18
   '@vercel/functions': 2.0.0
   wrangler: 3.81.0
   '@aptos-labs/ts-sdk': 1.30.0
