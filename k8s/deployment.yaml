@@ -20,9 +20,11 @@ spec:
       labels:
         app: dex-main
     spec:
+      imagePullSecrets:
+      - name: ghcr-pull
       containers:
       - name: dex-main
-        image: spiritmonkey/dex-main:latest
+        image: ghcr.io/9mm-exchange/dex-main:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
