@@ -7,6 +7,8 @@ export const PANCAKE_ETH_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/eth-tokenlist.json'
 export const PANCAKE_PULSE_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/9mm-tokenlist.json'
+export const PANCAKE_PULSE_EXTENDED =
+  'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/9mm-tokenlist-extended.json'
 export const PANCAKE_SONIC_DEFAULT =
   'https://raw.githubusercontent.com/9mm-exchange/app-tokens/refs/heads/main/sonic-tokenlist.json'
 
@@ -33,7 +35,7 @@ const COINGECKO_SONIC = 'https://tokens.coingecko.com/sonic/all.json'
 
 // export const CMC = 'https://tokens.pancakeswap.finance/cmc.json' // not updated for a while
 
-const PULSE_URLS = [PANCAKE_PULSE_DEFAULT, PITEAS_PULSE_MM, COINGECKO_PULSE]
+const PULSE_URLS = [PANCAKE_PULSE_DEFAULT, PANCAKE_PULSE_EXTENDED, PITEAS_PULSE_MM, COINGECKO_PULSE]
 const SONIC_URLS = [PANCAKE_SONIC_DEFAULT, COINGECKO_SONIC]
 const OPTIPULSE_URLS = [PANCAKE_OPTIPULSE_DEFAULT]
 const ETH_URLS = [PANCAKE_ETH_DEFAULT, COINGECKO_ETH]
