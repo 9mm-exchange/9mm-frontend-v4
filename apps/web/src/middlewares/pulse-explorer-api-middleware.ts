@@ -16,8 +16,9 @@ const EXPLORER_API_BASE = 'https://graph-dev.9mm.pro'
  * Scope: ONLY pulsechain paths. Other chains pass through to the local
  * handler without further middleware processing.
  *
- * Failure mode: graceful — on graph-dev 5xx or network error, falls through
- * to the local handler.
+ * Failure mode: graceful — on any non-2xx response from graph-dev or network
+ * error/timeout, falls through to the local handler. Errors are logged to the
+ * server console for observability.
  */
 export const withPulseExplorerApi: MiddlewareFactory = (next: NextMiddleware) => {
   return async (request: ExtendedNextReq, event: NextFetchEvent) => {
@@ -34,9 +35,9 @@ export const withPulseExplorerApi: MiddlewareFactory = (next: NextMiddleware) =>
       try {
         const upstream = await fetch(`${EXPLORER_API_BASE}${devPath}${search}`, {
           headers: { Accept: 'application/json' },
-          signal: AbortSignal.timeout(15000),
+          signal: AbortSignal.timeout(5000),
         })
-        if (upstream.ok || upstream.status < 500) {
+        if (upstream.ok) {
           return new NextResponse(await upstream.text(), {
             status: upstream.status,
             headers: {
@@ -46,8 +47,16 @@ export const withPulseExplorerApi: MiddlewareFactory = (next: NextMiddleware) =>
             },
           })
         }
-      } catch {
-        // graph-dev unreachable — fall through to local handler.
+        // Non-2xx from graph-dev — log and fall through to local handler.
+        console.warn(
+          `[pulse-explorer-api] graph-dev returned ${upstream.status} for ${devPath} — falling back to local handler`,
+        )
+      } catch (err) {
+        // Network error / timeout — log and fall through to local handler.
+        const msg = err instanceof Error ? err.message : String(err)
+        console.warn(
+          `[pulse-explorer-api] graph-dev fetch failed for ${devPath}: ${msg} — falling back to local handler`,
+        )
       }
     }
 
