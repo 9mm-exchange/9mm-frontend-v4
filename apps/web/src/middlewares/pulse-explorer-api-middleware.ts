@@ -4,16 +4,18 @@ import { ExtendedNextReq, MiddlewareFactory, NextMiddleware } from './types'
 const EXPLORER_API_BASE = 'https://graph-dev.9mm.pro'
 
 /**
- * Routes /api/cached/**\/pulsechain/** requests to graph-dev.9mm.pro
+ * Routes /api/cached/**\/(pulse|pulsechain)/** requests to graph-dev.9mm.pro
  * (explorer-api with Redis cache) instead of the local Next.js handler.
  *
- * The local /api/cached/* handlers call `multiChainId[chainName.toUpperCase()]`
- * which maps "PULSE" → ChainId.PULSECHAIN, but the frontend URL contains
- * "pulsechain" — which is not a key in that map, so requests get a 400
- * "Unsupported chain: pulsechain". graph-dev accepts "pulsechain" directly
- * and serves the same response shape via explorer-api over ponder-pulse.
+ * Both slugs are caught because the frontend uses different spellings in
+ * different code paths: `multiChainPaths[PULSECHAIN] = '/pulse'` (used by
+ * Info/V3Info pages) and `multiChainPriceAPIPaths[PULSECHAIN] = '/pulsechain'`
+ * (used by price-api). The local /api/cached/* handlers map "PULSE" via
+ * multiChainId but produce subgraph queries against graph.9mm.pro, whose
+ * aggregation layer drifts vs the Ponder-backed explorer-api at graph-dev
+ * (see project_explorer_api_subgraph_gap memory).
  *
- * Scope: ONLY pulsechain paths. Other chains pass through to the local
+ * Scope: ONLY pulse/pulsechain paths. Other chains pass through to the local
  * handler without further middleware processing.
  *
  * Failure mode: graceful — on any non-2xx response from graph-dev or network
@@ -29,8 +31,8 @@ export const withPulseExplorerApi: MiddlewareFactory = (next: NextMiddleware) =>
       return next(request, event)
     }
 
-    // For Pulse paths, proxy to graph-dev.
-    if (/\/pulsechain(\/|$)/i.test(pathname)) {
+    // For Pulse paths (either /pulse/ or /pulsechain/), proxy to graph-dev.
+    if (/\/pulse(chain)?(\/|$)/i.test(pathname)) {
       const devPath = pathname.replace(/^\/api\//, '/')
       try {
         const upstream = await fetch(`${EXPLORER_API_BASE}${devPath}${search}`, {
