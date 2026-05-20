@@ -27,7 +27,7 @@ export function getStableSwapSubgraphs({ theGraphApiKey }: Pick<SubgraphParams, 
 export function getV3Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParams) {
   return {
     [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/45F3dvAke57HRSEQfjoirVuzVKeiyS4oQKfmrZ742UxG`,
-    [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm-v3-latest`,
+    [ChainId.PULSECHAIN]: `https://subgraph.9mm.pro/subgraphs/name/pulsechain/9mm-v3-latest`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v3`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/EatYuv9ktFGrSDGRw9cNwkKXweCX52hRAiamGXQb29Ah`,
     [ChainId.GOERLI]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-goerli',
@@ -58,7 +58,7 @@ export function getV2Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParam
   return {
     [ChainId.BSC]: `https://api.studio.thegraph.com/query/80328/bnb-v-2/version/latest`,
     [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/GH9mv6ABa7gZcwi84CvfQeWWNT1rWwcKjb72DySLTgAd`,
-    [ChainId.PULSECHAIN]: `https://graph.9mm.pro/subgraphs/name/pulsechain/9mm`,
+    [ChainId.PULSECHAIN]: `https://subgraph.9mm.pro/subgraphs/name/pulsechain/9mm`,
     [ChainId.OPTIPULSE]: `https://testnet-graphs.optipulse.io/subgraphs/name/optipulse/v2`,
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/3BKTRZC8H2zfh4CohDNk6EoRt78o9k1sUfXeFwKSAARf`,
     [ChainId.POLYGON_ZKEVM]: `https://gateway-arbitrum.network.thegraph.com/api/${theGraphApiKey}/subgraphs/id/37WmH5kBu6QQytRpMwLJMGPRbXvHgpuZsWqswW4Finc2`,
@@ -76,7 +76,7 @@ export function getBlocksSubgraphs({ noderealApiKey, theGraphApiKey }: SubgraphP
   return {
     [ChainId.BSC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/9dSPXfKXaqYpoGAPXx96LyDF1VYR8PiT6HA7HRKEGRdS`,
     [ChainId.ETHEREUM]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/9A6bkprqEG2XsZUYJ5B2XXp6ymz9fNcn4tVPxMWDztYC`,
-    [ChainId.PULSECHAIN]: 'https://graph.9mm.pro/subgraphs/name/block-client',
+    [ChainId.PULSECHAIN]: 'https://subgraph.9mm.pro/subgraphs/name/block-client',
     [ChainId.OPTIPULSE]: 'https://testnet-graphs.optipulse.io/subgraphs/name/block-client',
     [ChainId.SONIC]: `https://gateway.thegraph.com/api/${theGraphApiKey}/subgraphs/id/JCDpWYWQrdeehm9dPthvU3QUgNE6VfqTmFYeumXNemDE`,
     [ChainId.POLYGON_ZKEVM]: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',
