@@ -16,7 +16,7 @@
 import { multiChainPriceAPIPaths } from 'state/info/constant'
 
 export type TokenOverride = {
-  /** Pull the live price from price-api.9mm.pro instead of trusting the
+  /** Pull the live price from price-api-dev.9mm.pro instead of trusting the
    *  subgraph-derived value. Use for tokens whose `derivedETH` is broken.
    *  When set, the override also rewrites `tvlUSD` (from token-unit `tvl` ×
    *  live price) and flattens the three historical price fields to the live
@@ -64,7 +64,7 @@ async function fetchLivePrice(chainId: number, address: string): Promise<number 
   const path = (multiChainPriceAPIPaths as Record<number, string>)[chainId]
   if (!path) return null
   try {
-    const res = await fetch(`https://price-api.9mm.pro/api/price${path}/?address=${address}`, {
+    const res = await fetch(`https://price-api-dev.9mm.pro/api/price${path}/?address=${address}`, {
       signal: AbortSignal.timeout(4000),
     })
     if (!res.ok) return null
@@ -110,10 +110,7 @@ type OverridableTokenRow = {
  * Returns a new array; does not mutate the input. Rows for chains that have
  * no overrides (`TOKEN_OVERRIDES[chainId]` undefined) are returned as-is.
  */
-export async function applyTokenOverrides<T extends OverridableTokenRow>(
-  chainId: number,
-  rows: T[],
-): Promise<T[]> {
+export async function applyTokenOverrides<T extends OverridableTokenRow>(chainId: number, rows: T[]): Promise<T[]> {
   const overrides = TOKEN_OVERRIDES[chainId]
   if (!overrides) return rows
 
