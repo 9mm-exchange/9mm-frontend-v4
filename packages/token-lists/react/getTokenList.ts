@@ -17,13 +17,17 @@ export async function getTokenList(listUrl: string): Promise<TokenList> {
     try {
       const json = await fetchJson(url)
       if (!validator(json)) {
-        const preFilterErrors = validator.errors
+        // Filter individual tokens that don't match the @uniswap/token-lists
+        // schema (long names, invalid chars, etc.). The list still loads with
+        // the rest of the tokens. We used to console.warn the rejected ones,
+        // but that produced multi-KB JSON blobs in every browser session and
+        // was purely informational — the offending tokens are already
+        // dropped from the in-memory list.
         json.tokens = json.tokens.filter((token: any) => validator({ ...json, tokens: [token] }))
         if (!validator(json)) {
           const errors = validator.errors
           throw new Error(`Validation failed after filtering: ${JSON.stringify(errors)}`)
         }
-        console.warn(`Pre-filter validation errors: ${JSON.stringify(preFilterErrors)}`)
       }
       return json as TokenList
     } catch (error) {
