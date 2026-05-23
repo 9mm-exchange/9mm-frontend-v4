@@ -38,12 +38,27 @@ export const V3_DEFAULT_POOL_SELECTOR_CONFIG: PoolSelectorConfigChainMap = {
     topNWithBaseToken: 4,
   },
   [ChainId.PULSECHAIN]: {
-    topN: 2,
-    topNDirectSwaps: 2,
-    topNTokenInOut: 2,
-    topNSecondHop: 1,
-    topNWithEachBaseToken: 3,
-    topNWithBaseToken: 4,
+    // Widened from default (2,2,2,1,3,4) so the 9mm V3 router considers
+    // ALL 5 fee tiers (100/500/2500/10000/20000) as direct-swap candidates
+    // and more intermediate-hub diversity. preth supports a high gas cap so
+    // extra multicall quotes are essentially free here.
+    topN: 4,
+    topNDirectSwaps: 5,
+    topNTokenInOut: 4,
+    topNSecondHop: 2,
+    topNWithEachBaseToken: 4,
+    topNWithBaseToken: 6,
+  },
+  [ChainId.BASE]: {
+    // Previously fell through to DEFAULT (2,2,2,1,3,3). Widened to match
+    // the productive fee-tier coverage we use on PulseChain; Base public RPC
+    // (and Chainstack) both handle the extra multicalls comfortably.
+    topN: 4,
+    topNDirectSwaps: 5,
+    topNTokenInOut: 4,
+    topNSecondHop: 2,
+    topNWithEachBaseToken: 4,
+    topNWithBaseToken: 6,
   },
   [ChainId.OPTIPULSE]: {
     topN: 2,
@@ -97,12 +112,25 @@ export const V2_DEFAULT_POOL_SELECTOR_CONFIG: PoolSelectorConfigChainMap = {
     topNWithBaseToken: 3,
   },
   [ChainId.PULSECHAIN]: {
-    topN: 3,
-    topNDirectSwaps: 2,
-    topNTokenInOut: 2,
-    topNSecondHop: 1,
-    topNWithEachBaseToken: 3,
-    topNWithBaseToken: 3,
+    // V2 has no fee tiers per pool but multiple V2-style sources exist
+    // (9MMV2, NineInchV2, PulseXV1, PulseXV2). Widen TokenInOut + SecondHop
+    // so the router considers more cross-DEX V2 routes.
+    topN: 5,
+    topNDirectSwaps: 3,
+    topNTokenInOut: 4,
+    topNSecondHop: 2,
+    topNWithEachBaseToken: 4,
+    topNWithBaseToken: 5,
+  },
+  [ChainId.BASE]: {
+    // Previously fell through to DEFAULT. Many V2-style sources on Base
+    // (Aerodrome V2, PancakeSwap V2, UniswapV2, BaseSwap, AlienBase, etc).
+    topN: 5,
+    topNDirectSwaps: 3,
+    topNTokenInOut: 4,
+    topNSecondHop: 2,
+    topNWithEachBaseToken: 4,
+    topNWithBaseToken: 5,
   },
   [ChainId.OPTIPULSE]: {
     topN: 3,
