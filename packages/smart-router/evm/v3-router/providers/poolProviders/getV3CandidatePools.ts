@@ -131,9 +131,6 @@ export async function getV3CandidatePools(params: DefaultParams) {
   const fallbacks: GetV3Pools[] = []
 
   if (subgraphFallback) {
-    // Fallback to get pools from on chain and ref tvl by subgraph
-    fallbacks.push(getV3PoolsWithTvlFromOnChain)
-
     // Fallback to get all pools info from subgraph
     fallbacks.push(async (p) => {
       const { currencyA, currencyB, pairs: providedPairs, subgraphProvider } = p
@@ -147,8 +144,14 @@ export async function getV3CandidatePools(params: DefaultParams) {
     fallbacks.push(getV3PoolsWithTvlFromOnChainStaticFallback)
   }
 
-  // Deafult try get pools from on chain and ref tvl by subgraph cache
-  const getV3PoolsWithFallback = createGetV3CandidatePools(getV3PoolsWithTvlFromOnChainFallback, {
+  // Primary: on-chain pool data + subgraph TVL refs.
+  // Previously the primary was `getV3PoolsWithTvlFromOnChainFallback`, which
+  // fetched TVL from `routing-api.pancakeswap.com/v0/v3-pools-tvl/:chainId`.
+  // That upstream endpoint is CORS-blocked from dex.9mm.pro origin AND only
+  // knows about PancakeSwap's own pools (no NineMMV3 / Aerodrome / Uniswap V3
+  // / etc), so it was both broken in the browser and wrong for our routing.
+  // Subgraph TVL data is canonical for our forks.
+  const getV3PoolsWithFallback = createGetV3CandidatePools(getV3PoolsWithTvlFromOnChain, {
     fallbacks,
     fallbackTimeout,
   })
