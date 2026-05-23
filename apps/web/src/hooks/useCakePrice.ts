@@ -58,7 +58,7 @@ const fetchCakePrice = async (_chainId: number): Promise<BigNumber> => {
 
     // First try to fetch from 9mm API
     try {
-      const apiUrl = `https://price-api.9mm.pro/api/price${multiChainPriceAPIPaths[chainId]}/?address=${_cake.address}`
+      const apiUrl = `https://price-api-dev.9mm.pro/api/price${multiChainPriceAPIPaths[chainId]}/?address=${_cake.address}`
       const apiResponse = await fetch(apiUrl)
       const apiData = await apiResponse.json()
 
