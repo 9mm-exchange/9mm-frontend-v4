@@ -22,6 +22,7 @@ import {
   opBnbTokens,
   polygonZkEvmTestnetTokens,
   polygonZkEvmTokens,
+  pulseTokens,
   scrollSepoliaTokens,
   sepoliaTokens,
   zkSyncTestnetTokens,
@@ -113,12 +114,27 @@ export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
-  [ChainId.ETHEREUM]: [WNATIVE[ChainId.ETHEREUM], USDC[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
+  // Ethereum hubs: add DAI + wstETH alongside WETH/USDC/USDT/WBTC.
+  // DAI is a major stable hub; wstETH is the dominant LST and a productive
+  // intermediate for ETH-paired tokens.
+  [ChainId.ETHEREUM]: [
+    WNATIVE[ChainId.ETHEREUM],
+    USDC[ChainId.ETHEREUM],
+    USDT[ChainId.ETHEREUM],
+    DAI[ChainId.ETHEREUM],
+    WBTC_ETH,
+    ethereumTokens.wstETH,
+  ],
+  // PulseChain hubs: stablecoins + HEX + 9MM. HEX has the deepest liquidity
+  // on Pulse and is a productive hub for long-tail tokens. 9MM is the
+  // project's native token and a frequent intermediate.
   [ChainId.PULSECHAIN]: [
     WNATIVE[ChainId.PULSECHAIN],
     DAI[ChainId.PULSECHAIN],
     USDC[ChainId.PULSECHAIN],
     USDT[ChainId.PULSECHAIN],
+    pulseTokens.hex,
+    pulseTokens.ninemm,
   ],
   [ChainId.OPTIPULSE]: [WNATIVE[ChainId.OPTIPULSE], DAI[ChainId.OPTIPULSE]],
   [ChainId.SONIC]: [WNATIVE[ChainId.SONIC], USDC[ChainId.SONIC], USDT[ChainId.SONIC]],
@@ -143,7 +159,18 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.LINEA_TESTNET]: [lineaTestnetTokens.usdc, lineaTestnetTokens.weth],
   [ChainId.OPBNB]: [opBnbTokens.wbnb, opBnbTokens.usdt],
   [ChainId.OPBNB_TESTNET]: [opBnbTestnetTokens.usdc, opBnbTestnetTokens.wbnb],
-  [ChainId.BASE]: [baseTokens.usdc, baseTokens.weth],
+  // Base hubs: add cbBTC, DAI, 9MM, wXCH alongside USDC/WETH.
+  // 9MM and wXCH are the project tokens — both have deep WETH pools and
+  // are productive intermediates for long-tail tokens like PIIP. cbBTC and
+  // DAI are major stable/peg hubs on Base.
+  [ChainId.BASE]: [
+    baseTokens.usdc,
+    baseTokens.weth,
+    baseTokens.dai,
+    baseTokens.cbBTC,
+    baseTokens.nineMM,
+    baseTokens.wXCH,
+  ],
   [ChainId.BASE_TESTNET]: [baseTestnetTokens.usdc, baseTestnetTokens.weth],
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
   [ChainId.SEPOLIA]: [sepoliaTokens.usdc, sepoliaTokens.weth],
