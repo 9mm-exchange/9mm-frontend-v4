@@ -8,16 +8,33 @@ import { queryCakeRelated } from './queryCakeRelated'
 import { querySiteStats } from './querySiteStats'
 import { HomePageData } from './types'
 
+// Per-subsystem isolation: PCS-only paths (CAKE staking, Prediction market)
+// don't exist on 9mm, so they must fail independently instead of taking the
+// whole response with them. Same for queryPools — a transient farm-API hiccup
+// shouldn't 500 the homepage.
+async function safeAwait<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
+  try {
+    return await fn()
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error('[/api/home] subsystem failed, using fallback:', e instanceof Error ? e.message : e)
+    return fallback
+  }
+}
+
 async function _load() {
-  const [{ tokenMap, topTokens }, cakeRelated, stats, topWinner] = await Promise.all([
-    queryTokens(),
-    queryCakeRelated(),
-    querySiteStats(),
-    queryPredictionUser(),
+  const [tokensResult, cakeRelated, stats, topWinner] = await Promise.all([
+    safeAwait(queryTokens, { tokenMap: {}, topTokens: [] }),
+    safeAwait(queryCakeRelated, undefined as any),
+    safeAwait(querySiteStats, undefined as any),
+    safeAwait(queryPredictionUser, undefined as any),
   ])
-  const cake = topTokens.find((x) => x.symbol === 'CAKE')!
-  const cakePrice = cake.price
-  const pools = await queryPools(cakePrice, tokenMap)
+  const { tokenMap, topTokens } = tokensResult
+  // CAKE never appears in 9mm's topTokens — default to 0 so getCakeApr inside
+  // queryPools degrades to "no CAKE rewards" instead of throwing on .price.
+  const cake = topTokens.find((x) => x.symbol === 'CAKE')
+  const cakePrice = cake?.price ?? 0
+  const pools = await safeAwait(() => queryPools(cakePrice, tokenMap), [])
   const currencies = homePageCurrencies
   const chains = homePageChainsInfo()
   return {
