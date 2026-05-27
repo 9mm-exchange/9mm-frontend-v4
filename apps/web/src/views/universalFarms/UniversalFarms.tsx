@@ -7,6 +7,7 @@ import { PropsWithChildren, useMemo } from 'react'
 import styled from 'styled-components'
 import { PoolsBanner } from './components'
 import { AddLiquidityButton } from './components/AddLiquidityButton'
+import { PoolsPage } from './PoolsPage'
 import { PositionPage } from './PositionPage'
 
 const StyledTab = styled(Tab)`
@@ -42,10 +43,17 @@ const usePageInfo = () => {
         oldLink: '/liquidity',
         oldLinkText: t('Legacy Liquidity Page'),
       },
+      [PAGES_LINK.POOLS]: {
+        tabIdx: 1,
+        oldLink: '/liquidity',
+        oldLinkText: t('Legacy Liquidity Page'),
+      },
     }),
     [t],
   )
-  return useMemo(() => PAGES_MAP[router.pathname] ?? {}, [PAGES_MAP, router.pathname])
+  // Default to the My Positions tab (tabIdx 0) for any URL not in the map so
+  // a stray /liquidity/* link doesn't crash with tabsConfig[undefined].page().
+  return useMemo(() => PAGES_MAP[router.pathname] ?? { tabIdx: 0 }, [PAGES_MAP, router.pathname])
 }
 
 const LegacyPage = () => {
@@ -80,6 +88,14 @@ export const UniversalFarms: React.FC<PropsWithChildren> = () => {
           </StyledTab>
         ),
         page: () => <PositionPage />,
+      },
+      1: {
+        menu: () => (
+          <StyledTab key="pools">
+            <NextLinkFromReactRouter to={PAGES_LINK.POOLS}>{t('All Pools')}</NextLinkFromReactRouter>
+          </StyledTab>
+        ),
+        page: () => <PoolsPage />,
       },
     }
   }, [t])
