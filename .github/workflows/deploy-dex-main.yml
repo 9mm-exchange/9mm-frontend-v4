@@ -94,13 +94,21 @@ jobs:
         run: |
           # Apply all k8s manifests
           kubectl apply -k k8s/
-          
-          # Force rollout with new image
+
+          # `set image` with the unchanged :latest tag is a no-op — k8s sees
+          # the spec as identical and won't recycle existing pods, so they
+          # keep running the previous digest while the new chunks only live
+          # inside freshly created pods. Result: split-state pods that serve
+          # mismatched Next.js chunk hashes (404s in the browser). The
+          # follow-up `rollout restart` forces a full RS roll so every pod
+          # ends up on the freshly-pushed digest.
           kubectl set image deployment/${{ env.K8S_DEPLOYMENT }} \
             ${{ env.K8S_DEPLOYMENT }}=${{ env.DOCKER_IMAGE }}:latest \
             -n ${{ env.K8S_NAMESPACE }}
-          
-          # Wait for rollout
+
+          kubectl rollout restart deployment/${{ env.K8S_DEPLOYMENT }} \
+            -n ${{ env.K8S_NAMESPACE }}
+
           kubectl rollout status deployment/${{ env.K8S_DEPLOYMENT }} \
             -n ${{ env.K8S_NAMESPACE }} \
             --timeout=300s
