@@ -225,9 +225,26 @@ export const getMerklApr = async (result: any, chainId: number) => {
   }
 }
 
+// Merkl rejects the entire request with HTTP 400 if any chainId in the list
+// is unsupported, so the URL must only contain chains Merkl actually indexes.
+// Verified against api.merkl.xyz/v4/chains: our V4 set has three chains Merkl
+// doesn't list — PulseChain (369), OptiPulse (94128), opBNB (204). Filter them
+// here; remaining chains (BSC, ETH, Base, Sonic, zkSync, Polygon zkEVM, Linea,
+// Arbitrum) are where 9mm Merkl campaigns can live (e.g., Base).
+const MERKL_UNSUPPORTED_CHAINS: number[] = [
+  ChainId.PULSECHAIN,
+  ChainId.OPTIPULSE,
+  ChainId.OPBNB,
+]
+
 export const getAllNetworkMerklApr = async (signal?: AbortSignal) => {
+  const merklChainIds = supportedChainIdV4.filter(
+    (chainId) => !MERKL_UNSUPPORTED_CHAINS.includes(chainId as number),
+  )
+  if (merklChainIds.length === 0) return {}
+
   const resp = await fetch(
-    `https://api.merkl.xyz/v4/opportunities/?chainId=${supportedChainIdV4.join(
+    `https://api.merkl.xyz/v4/opportunities/?chainId=${merklChainIds.join(
       ',',
     )}&test=false&status=LIVE&items=1000&action=POOL,HOLD`,
     { signal },
@@ -239,7 +256,7 @@ export const getAllNetworkMerklApr = async (signal?: AbortSignal) => {
         opportunity?.tokens?.[0]?.symbol?.toLowerCase().startsWith('9mm-lp') ||
         opportunity?.protocol?.id?.toLowerCase().startsWith('9mm'),
     )
-    const aprs = await Promise.all(supportedChainIdV4.map((chainId) => getMerklApr(pancakeResult, chainId)))
+    const aprs = await Promise.all(merklChainIds.map((chainId) => getMerklApr(pancakeResult, chainId)))
     return aprs.reduce((acc, apr) => Object.assign(acc, apr), {})
   }
   throw resp
