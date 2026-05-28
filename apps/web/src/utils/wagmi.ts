@@ -21,16 +21,23 @@ export const coinbaseConnector = coinbaseWallet({
   appLogoUrl: 'https://dex.9mm.pro/logo.png',
 })
 
+// WalletConnect Cloud projectId — read at build time. Each deploy environment
+// (prod / dev) gets its own project so Allowed-Domains can differ: the prod
+// project whitelists dex.9mm.pro, the dev project whitelists dex-dev.9mm.pro.
+// Falls back to the prod project for local dev where the env isn't set.
+export const WALLETCONNECT_PROJECT_ID =
+  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '274e64cbda952049194b405a465d34d4'
+
 export const walletConnectConnector = walletConnect({
   // ignore the error in test environment
   // Error: To use QR modal, please install @walletconnect/modal package
   showQrModal: process.env.NODE_ENV !== 'test',
-  projectId: '274e64cbda952049194b405a465d34d4',
+  projectId: WALLETCONNECT_PROJECT_ID,
 })
 
 export const walletConnectNoQrCodeConnector = walletConnect({
   showQrModal: false,
-  projectId: '274e64cbda952049194b405a465d34d4',
+  projectId: WALLETCONNECT_PROJECT_ID,
 })
 
 export const metaMaskConnector = injected({ target: 'metaMask', shimDisconnect: false })
