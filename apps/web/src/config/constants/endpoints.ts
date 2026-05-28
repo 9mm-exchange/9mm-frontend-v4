@@ -42,37 +42,30 @@ export const ACCESS_RISK_API = 'https://red.alert.pancakeswap.com/red-api'
 
 export const CELER_API = 'https://api.celerscan.com/scan'
 
-export const V2_SUBGRAPH_URLS = {
-  ...V2_SUBGRAPHS,
-  [ChainId.POLYGON_ZKEVM]: `${THE_GRAPH_PROXY_API}/exchange-v2-polygon-zkevm`,
-  [ChainId.ETHEREUM]: `${THE_GRAPH_PROXY_API}/exchange-v2-eth`,
-  [ChainId.BSC]: `${THE_GRAPH_PROXY_API}/exchange-v2-bsc`,
-  [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-v2-arb`,
-  [ChainId.ZKSYNC]: `${THE_GRAPH_PROXY_API}/exchange-v2-zksync`,
-  [ChainId.LINEA]: `${THE_GRAPH_PROXY_API}/exchange-v2-linea`,
-  [ChainId.OPBNB]: `${THE_GRAPH_PROXY_API}/exchange-v2-opbnb`,
-}
+// V2_SUBGRAPHS (from @pancakeswap/chains) already returns official TheGraph
+// gateway URLs keyed by NEXT_PUBLIC_THE_GRAPH_API_KEY for ETH/BSC/Base/Sonic/
+// Arb/Linea/zkSync/Polygon-zkEVM, plus our own subgraph.9mm.pro for Pulse
+// (TheGraph doesn't index PulseChain). The previous PCS-proxy overrides here
+// pointed at thegraph.pancakeswap.com which doesn't whitelist our origin —
+// fall through to the source map instead.
+export const V2_SUBGRAPH_URLS = V2_SUBGRAPHS
 export const INFO_CLIENT_ETH = V2_SUBGRAPH_URLS[ChainId.ETHEREUM]
 
 export const BLOCKS_CLIENT_WITH_CHAIN = BLOCKS_SUBGRAPH_URLS
 
 export const ASSET_CDN = process.env.NEXT_PUBLIC_ASSET_CDN || 'https://tokens.9mm.pro'
 
-export const V3_SUBGRAPH_URLS = {
-  ...V3_SUBGRAPHS,
-  [ChainId.POLYGON_ZKEVM]: `${THE_GRAPH_PROXY_API}/exchange-v3-polygon-zkevm`,
-  [ChainId.ETHEREUM]: `${THE_GRAPH_PROXY_API}/exchange-v3-eth`,
-  [ChainId.BSC]: `${THE_GRAPH_PROXY_API}/exchange-v3-bsc`,
-  [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-v3-arb`,
-  [ChainId.ZKSYNC]: `${THE_GRAPH_PROXY_API}/exchange-v3-zksync`,
-  [ChainId.LINEA]: `${THE_GRAPH_PROXY_API}/exchange-v3-linea`,
-  [ChainId.OPBNB]: `${THE_GRAPH_PROXY_API}/exchange-v3-opbnb`,
-}
+// Same as V2: V3_SUBGRAPHS already has TheGraph gateway URLs per chain plus
+// subgraph.9mm.pro for Pulse. The PCS-proxy overrides previously here CORS-
+// blocked because our origin isn't whitelisted on thegraph.pancakeswap.com.
+export const V3_SUBGRAPH_URLS = V3_SUBGRAPHS
 
+// Stableswap is BSC + Arbitrum on PCS; we don't run stableswap pools, so the
+// PCS-proxy URL for Arb just adds CORS noise. Fall through to packages/chains
+// (which has Arb's TheGraph URL); set ETH/BSC/OptiPulse to empty as before.
 export const STABLESWAP_SUBGRAPHS_URLS = {
   ...STABLESWAP_SUBGRAPHS,
   [ChainId.BSC]: ``,
-  [ChainId.ARBITRUM_ONE]: `${THE_GRAPH_PROXY_API}/exchange-stableswap-arb`,
   [ChainId.ETHEREUM]: ``,
   [ChainId.OPTIPULSE]: '',
 }
