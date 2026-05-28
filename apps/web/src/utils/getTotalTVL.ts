@@ -1,13 +1,9 @@
 import { ChainId, testnetChainIds } from '@pancakeswap/chains'
-import addresses from 'config/constants/contracts'
 import dayjs from 'dayjs'
 import { gql } from 'graphql-request'
 import { chainIdToExplorerInfoChainName, explorerApiClient } from 'state/info/api/client'
-import { getCakeVaultAddress } from 'utils/addressHelpers'
-import { getCakeContract } from 'utils/contractHelpers'
 import { bitQueryServerClient } from 'utils/graphql'
 import { CHAIN_IDS } from 'utils/wagmi'
-import { formatEther } from 'viem'
 
 // Values fetched from TheGraph and BitQuery jan 24, 2022
 const txCount = 54780336
@@ -73,23 +69,17 @@ export const getTotalTvl = async () => {
       }
     }
 
-    const [v2Stats, v3Stats, stableStats, cakePriceResponse, totalCakeInVault, totalCakeInVE] = await Promise.all([
+    // CAKE-vault TVL is a PCS-specific aggregate that doesn't exist on this
+    // fork (no CAKE token, no veCake on our chains). Skip the CAKE price /
+    // vault / veCake reads entirely — total TVL = sum of per-chain protocol
+    // TVL from our own explorer-api stats endpoints.
+    const [v2Stats, v3Stats, stableStats] = await Promise.all([
       getStats('v2', mainnetChainIds),
       getStats('v3', mainnetChainIds),
       getStats('stable', [ChainId.ARBITRUM_ONE, ChainId.BSC]),
-      fetch('https://farms-api.pancakeswap.com/price/cake').then((res) => res.json()),
-      getCakeContract().read.balanceOf([getCakeVaultAddress()]),
-      getCakeContract().read.balanceOf([addresses.veCake[ChainId.BSC]]),
     ])
 
-    const cakePrice = cakePriceResponse.price
-
-    results.tvl =
-      parseFloat(formatEther(totalCakeInVault)) * cakePrice +
-      parseFloat(formatEther(totalCakeInVE)) * cakePrice +
-      v2Stats.totalTvl +
-      v3Stats.totalTvl +
-      stableStats.totalTvl
+    results.tvl = v2Stats.totalTvl + v3Stats.totalTvl + stableStats.totalTvl
 
     results.totalTx30Days = v2Stats.txCount30d + v3Stats.txCount30d + stableStats.txCount30d
   } catch (error) {

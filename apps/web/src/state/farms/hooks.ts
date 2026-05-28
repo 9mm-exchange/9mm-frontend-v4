@@ -55,14 +55,15 @@ export function useFarmV2PublicAPI() {
   const { chainId } = useActiveChainId()
   return useQuery({
     queryKey: ['farm-v2-pubic-api', chainId],
-
-    queryFn: async () => {
-      return fetch(`https://farms-api.pancakeswap.com/${chainId}`)
-        .then((res) => res.json())
-        .then((res) => res.data)
-    },
-
-    enabled: Boolean(chainId && supportedChainIdV2.includes(chainId)),
+    // farms-api.pancakeswap.com is upstream PCS infra that blocks our origin
+    // via CORS and 5xx's on unknown chains; we don't run a PCS-style farms
+    // program here, so the only consumer (add/[[...currency]].tsx pre-selecting
+    // V2 vs V3 form) safely degrades when data is undefined. The `any[]`
+    // return type preserves the original consumer's `farmsV2Public?.find(...)`
+    // typing (was implicitly `any` via res.data); narrowing to `undefined` here
+    // would make TS reject `.find` at the call site.
+    queryFn: async (): Promise<any[] | undefined> => undefined,
+    enabled: false,
     refetchOnReconnect: false,
     refetchOnWindowFocus: false,
     refetchOnMount: false,

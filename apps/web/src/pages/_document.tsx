@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import { FARMS_API } from 'config/constants/endpoints'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -37,7 +36,6 @@ class MyDocument extends Document {
           {process.env.NEXT_PUBLIC_NODE_PRODUCTION && (
             <link rel="preconnect" href={process.env.NEXT_PUBLIC_NODE_PRODUCTION} />
           )}
-          <link rel="preconnect" href={FARMS_API} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
