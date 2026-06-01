@@ -4,10 +4,22 @@ import { createCacheKey } from './cache-utils'
 class RedisClient {
   private static instance: Redis
 
-  private static lastSyncData: Map<string, any> = new Map()
+  // In-memory fallback; entries carry an expiry so a dead background-refresh
+  // can't serve data forever (see CACHE_TTL_MS).
+  private static lastSyncData: Map<string, { data: any; exp: number }> = new Map()
 
   // Cache stringified data to avoid re-stringifying (optimization)
   private static stringifiedCache: Map<string, string> = new Map()
+
+  // Max cache staleness. Background refresh keeps entries warm under traffic, but
+  // if refreshes stop succeeding (e.g. upstream down) entries EXPIRE instead of
+  // being served indefinitely — a no-TTL cache served 12-day-old PulseChain
+  // transactions when refreshes failed silently. Override via env.
+  private static readonly CACHE_TTL_SECONDS = Number(process.env.REDIS_CACHE_TTL_SECONDS ?? 300)
+
+  private static get CACHE_TTL_MS(): number {
+    return RedisClient.CACHE_TTL_SECONDS * 1000
+  }
 
   // Track ongoing refresh tasks to prevent duplicate refreshes
   private static refreshTasks: Map<string, Promise<void>> = new Map()
@@ -55,8 +67,9 @@ class RedisClient {
   }
 
   /**
-   * Background refresh task - updates cache without blocking
-   * Cache persists indefinitely, just gets refreshed in background
+   * Background refresh task - updates cache without blocking.
+   * Re-sets the TTL on every successful refresh, so warm keys stay alive while
+   * refreshes succeed and expire once they stop.
    */
   private static async refreshCacheInBackground<T>(key: string, fetchFn: () => Promise<T>): Promise<void> {
     const redis = RedisClient.getInstance()
@@ -64,11 +77,11 @@ class RedisClient {
     try {
       const data = await fetchFn()
 
-      // Update Redis and in-memory cache (no TTL - cache persists indefinitely)
+      // Update Redis and in-memory cache, bounding staleness with a TTL.
       try {
         const stringified = JSON.stringify(data)
-        await redis.set(key, stringified)
-        RedisClient.lastSyncData.set(key, data)
+        await redis.set(key, stringified, 'EX', RedisClient.CACHE_TTL_SECONDS)
+        RedisClient.lastSyncData.set(key, { data, exp: Date.now() + RedisClient.CACHE_TTL_MS })
         RedisClient.stringifiedCache.set(key, stringified)
         console.log(`✅ Background cache refresh completed for ${key}`)
       } catch (setErr) {
@@ -89,7 +102,8 @@ class RedisClient {
    * 2. Triggers background refresh to update cache (non-blocking)
    * 3. If no cache, fetches fresh data and caches it
    *
-   * Cache persists indefinitely - no TTL, just refreshed in background
+   * Cache is TTL-bounded (REDIS_CACHE_TTL_SECONDS, default 300s) and kept warm
+   * by background refresh; expires if refreshes stop succeeding.
    */
   static async getWithFallback<T>(key: string, fetchFn: () => Promise<T>): Promise<{ data: T; fromCache: boolean }> {
     const redis = RedisClient.getInstance()
@@ -118,7 +132,7 @@ class RedisClient {
           console.log(`✅ Redis CACHE HIT: ${key} (${cacheTime}ms) - returning cached data immediately`)
 
           // Update in-memory cache with the data we just got from Redis
-          RedisClient.lastSyncData.set(key, parsed)
+          RedisClient.lastSyncData.set(key, { data: parsed, exp: Date.now() + RedisClient.CACHE_TTL_MS })
           RedisClient.stringifiedCache.set(key, redisData) // Cache the stringified version
 
           // ✅ Cache hit - trigger background refresh (non-blocking)
@@ -152,9 +166,10 @@ class RedisClient {
       // Continue to check in-memory cache
     }
 
-    // 🔄 Step 2: Fallback to in-memory cache
-    if (RedisClient.lastSyncData.has(key)) {
-      const cachedData = RedisClient.lastSyncData.get(key)
+    // 🔄 Step 2: Fallback to in-memory cache (only if not expired — never serve
+    // unboundedly-stale data when Redis is unavailable)
+    const memEntry = RedisClient.lastSyncData.get(key)
+    if (memEntry && memEntry.exp > Date.now()) {
       console.log(`✅ In-Memory CACHE HIT: ${key}`)
 
       // ✅ In-memory cache hit - trigger background refresh (non-blocking)
@@ -166,7 +181,12 @@ class RedisClient {
         })
       }
 
-      return { data: cachedData, fromCache: true }
+      return { data: memEntry.data, fromCache: true }
+    }
+    if (memEntry) {
+      // expired — drop it so we fetch fresh below
+      RedisClient.lastSyncData.delete(key)
+      RedisClient.stringifiedCache.delete(key)
     }
 
     // ✅ Step 3: Cache miss - fetch fresh data and cache it
@@ -217,23 +237,23 @@ class RedisClient {
       }
 
       const stringified = JSON.stringify(data)
-      RedisClient.lastSyncData.set(key, data)
+      RedisClient.lastSyncData.set(key, { data, exp: Date.now() + RedisClient.CACHE_TTL_MS })
       RedisClient.stringifiedCache.set(key, stringified)
       console.log(`✅ In-memory cache set for ${key}`)
 
-      // Cache in Redis in background (non-blocking) - don't wait for it
-      // No TTL - cache persists indefinitely, just gets refreshed in background
+      // Cache in Redis in background (non-blocking) - don't wait for it.
+      // TTL-bounded so a stalled background refresh can't serve it forever.
       const cacheInBackground = async () => {
         try {
           const redisCacheStartTime = Date.now()
           await Promise.race([
-            redis.set(key, stringified),
+            redis.set(key, stringified, 'EX', RedisClient.CACHE_TTL_SECONDS),
             new Promise<void>((_, reject) => {
               setTimeout(() => reject(new Error('Redis set timeout')), 2000)
             }),
           ])
           const redisCacheTime = Date.now() - redisCacheStartTime
-          console.log(`✅ Data cached in Redis for ${key} (${redisCacheTime}ms) - no expiration`)
+          console.log(`✅ Data cached in Redis for ${key} (${redisCacheTime}ms, ttl ${RedisClient.CACHE_TTL_SECONDS}s)`)
         } catch (cacheErr) {
           const errorMsg = cacheErr instanceof Error ? cacheErr.message : String(cacheErr)
           if (errorMsg.includes('timeout')) {
@@ -243,7 +263,7 @@ class RedisClient {
           }
           // Retry caching in background after a short delay
           setTimeout(() => {
-            redis.set(key, stringified).catch(() => {
+            redis.set(key, stringified, 'EX', RedisClient.CACHE_TTL_SECONDS).catch(() => {
               // Silent fail on retry
             })
           }, 1000)
@@ -287,7 +307,8 @@ class RedisClient {
    * - "protocol/v3/pulse/stats" with { groupBy: '1D' } -> "protocol-v3-pulse-stats-groupBy-1D"
    * - "https://api.example.com/protocol/v3/pulse/stats" -> "protocol-v3-pulse-stats"
    *
-   * Cache persists indefinitely - no TTL, just refreshed in background
+   * Cache is TTL-bounded (REDIS_CACHE_TTL_SECONDS, default 300s) and kept warm
+   * by background refresh; expires if refreshes stop succeeding.
    *
    * @param url - API endpoint URL or path
    * @param fetchFn - Function that fetches the data
