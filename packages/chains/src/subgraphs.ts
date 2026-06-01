@@ -5,8 +5,13 @@ type SubgraphParams = {
   theGraphApiKey?: string
 }
 
+// All 9mm chains (pulse/eth/bsc/sonic/base) are served via graph.9mm.pro
+// (explorer-api proxies non-Pulse to The Graph with the key injected server-side),
+// so the key is no longer read here and is NOT inlined into the client bundle.
+// The remaining non-9mm chains below (arbitrum/zksync/linea/polygon-zkevm/bsc-testnet)
+// are unused and keep keyless (non-functional) gateway URLs.
 const publicSubgraphParams = {
-  theGraphApiKey: process.env.NEXT_PUBLIC_THE_GRAPH_API_KEY ?? '',
+  theGraphApiKey: '',
 }
 
 export const V3_SUBGRAPHS = getV3Subgraphs(publicSubgraphParams)
