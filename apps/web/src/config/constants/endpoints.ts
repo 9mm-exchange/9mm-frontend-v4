@@ -42,12 +42,11 @@ export const ACCESS_RISK_API = 'https://red.alert.pancakeswap.com/red-api'
 
 export const CELER_API = 'https://api.celerscan.com/scan'
 
-// V2_SUBGRAPHS (from @pancakeswap/chains) already returns official TheGraph
-// gateway URLs keyed by NEXT_PUBLIC_THE_GRAPH_API_KEY for ETH/BSC/Base/Sonic/
-// Arb/Linea/zkSync/Polygon-zkEVM, plus our own subgraph.9mm.pro for Pulse
-// (TheGraph doesn't index PulseChain). The previous PCS-proxy overrides here
-// pointed at thegraph.pancakeswap.com which doesn't whitelist our origin —
-// fall through to the source map instead.
+// V2_SUBGRAPHS (from @pancakeswap/chains) returns graph.9mm.pro URLs for all
+// 9mm chains (Pulse direct to explorer-api; ETH/BSC/Base/Sonic via the
+// explorer-api server-side proxy to The Graph, key injected server-side). The
+// previous PCS-proxy overrides here pointed at thegraph.pancakeswap.com which
+// doesn't whitelist our origin — fall through to the source map instead.
 export const V2_SUBGRAPH_URLS = V2_SUBGRAPHS
 export const INFO_CLIENT_ETH = V2_SUBGRAPH_URLS[ChainId.ETHEREUM]
 
