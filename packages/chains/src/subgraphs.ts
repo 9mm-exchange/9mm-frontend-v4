@@ -72,7 +72,7 @@ export function getV2Subgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParam
   }
 }
 
-export function getBlocksSubgraphs({ noderealApiKey, theGraphApiKey }: SubgraphParams) {
+export function getBlocksSubgraphs({ noderealApiKey }: SubgraphParams) {
   return {
     [ChainId.BSC]: 'https://graph.9mm.pro/subgraphs/name/bsc/blocks',
     [ChainId.ETHEREUM]: 'https://graph.9mm.pro/subgraphs/name/eth/blocks',
