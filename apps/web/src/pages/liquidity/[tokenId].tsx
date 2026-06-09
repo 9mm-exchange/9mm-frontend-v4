@@ -920,7 +920,7 @@ function PositionHistory_({
       const result = await client.request<PositionHistoryResult>(
         gql`
           query positionHistory($tokenId: String!) {
-            positionSnapshots(where: { position: $tokenId }, orderBy: timestamp, orderDirection: desc, first: 30) {
+            positionSnapshots(where: { position: $tokenId }, orderBy: timestamp, orderDirection: desc, first: 1000) {
               id
               transaction {
                 mints(where: { or: [{ amount0_gt: "0" }, { amount1_gt: "0" }] }) {
