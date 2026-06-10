@@ -10,6 +10,8 @@ type SubgraphParams = {
 // so the key is no longer read here and is NOT inlined into the client bundle.
 // The remaining non-9mm chains below (arbitrum/zksync/linea/polygon-zkevm/bsc-testnet)
 // are unused and keep keyless (non-functional) gateway URLs.
+// 2026-06-10: cache-bust touch — CI layer-cache served a pre-repoint chains build for the
+// prior commit, so the graph.9mm.pro repoint never reached the bundle; this forces a recompile.
 const publicSubgraphParams = {
   theGraphApiKey: '',
 }
