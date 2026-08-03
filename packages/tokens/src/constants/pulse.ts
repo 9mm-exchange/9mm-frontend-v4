@@ -22,12 +22,12 @@ export const pulseTokens = {
 
   dwb: new ERC20Token(ChainId.PULSECHAIN, '0xAEbcD0F8f69ECF9587e292bdfc4d731c1abedB68', 18, 'DWB', 'dickwifbutt'),
 
-  hex: new ERC20Token(ChainId.PULSECHAIN, '0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39', 18, 'HEX', 'HEX'),
+  hex: new ERC20Token(ChainId.PULSECHAIN, '0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39', 8, 'HEX', 'HEX'),
 
   usdc: new ERC20Token(
     ChainId.PULSECHAIN,
     '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    18,
+    6,
     'USDC',
     'USDC from Ethereum',
   ),
