@@ -26,7 +26,7 @@ export const coinbaseConnector = coinbaseWallet({
 // project whitelists dex.9mm.pro, the dev project whitelists dex-dev.9mm.pro.
 // Falls back to the prod project for local dev where the env isn't set.
 export const WALLETCONNECT_PROJECT_ID =
-  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '274e64cbda952049194b405a465d34d4'
+  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'c7975984ec94b14db1b1d2468a424a89'
 
 export const walletConnectConnector = walletConnect({
   // ignore the error in test environment
