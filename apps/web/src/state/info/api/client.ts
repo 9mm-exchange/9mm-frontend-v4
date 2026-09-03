@@ -5,7 +5,10 @@ import type { HasRequiredKeys, PathsWithMethod } from 'openapi-typescript-helper
 import { createQueryKey } from 'utils/reactQuery'
 import type { paths } from './schema.d'
 
-const endpoints = process.env.NEXT_PUBLIC_EXPLORE_API_ENDPOINT || '/api'
+const endpoints =
+  typeof window === 'undefined'
+    ? process.env.EXPLORE_API_SERVER_ENDPOINT || 'https://info-api.9mm.pro'
+    : process.env.NEXT_PUBLIC_EXPLORE_API_ENDPOINT || '/api'
 
 const throwOnError: Middleware = {
   async onResponse(res) {

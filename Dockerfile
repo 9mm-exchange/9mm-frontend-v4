@@ -94,7 +94,7 @@ COPY . .
 
 # Build-time environment variables (NEXT_PUBLIC_ vars are embedded at build time)
 ARG NEXT_PUBLIC_SNAPSHOT_BASE_URL="https://hub.snapshot.org"
-ARG NEXT_PUBLIC_EXPLORE_API_ENDPOINT="https://dex.9mm.pro/api"
+ARG NEXT_PUBLIC_EXPLORE_API_ENDPOINT=""
 ARG NEXT_PUBLIC_SENTRY_DSN=""
 ARG NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=""
 
