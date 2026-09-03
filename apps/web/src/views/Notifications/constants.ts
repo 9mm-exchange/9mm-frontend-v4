@@ -51,10 +51,12 @@ export const NotificationFilterTypes: OptionProps[] = [
   },
 ]
 
-// Same WalletConnect Cloud project as wagmi.ts uses. Env-var-driven so dev
-// can point at a separate project with dex-dev.9mm.pro in its Allowed Domains.
+// ⚠ DELIBERATELY NOT the wallet-pairing project in wagmi.ts. This id is the Web3Inbox/Notify
+// project, and it must match APP_DOMAIN below and the DID in public/.well-known/did.json —
+// all three are PancakeSwap's. Moving only this id orphans existing subscribers.
+// Change it only together with a 9mm Notify registration, DID keys and a re-subscription plan.
 export const WEB_NOTIFICATIONS_PROJECT_ID =
-  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'c7975984ec94b14db1b1d2468a424a89'
+  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '274e64cbda952049194b405a465d34d4'
 export const NEXT_PUBLIC_WEB_NOTIFICATION_SECURE_TOKEN = process.env.NEXT_PUBLIC_WEB_NOTIFICATION_SECURE_TOKEN ?? ''
 export const WEB_PUSH_ENCRYPTION_KEY = process.env.NEXT_PUBLIC_WEB_PUSH_ENCRYPTION_KEY ?? ''
 export const WEB_PUSH_IV = process.env.NEXT_PUBLIC_WEB_PUSH_IV ?? ''
